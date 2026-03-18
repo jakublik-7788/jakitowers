@@ -6,7 +6,7 @@ import { dailySongs } from "./songs";
 
 // ─── Data startu gry ──────────────────────────────────────────────────────────
 // Day #1 = 19 marca 2026
-const GAME_START_DATE = new Date("2026-03-17T00:00:00");
+const GAME_START_DATE = new Date("2026-03-20T00:00:00");
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
