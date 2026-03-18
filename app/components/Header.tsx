@@ -107,9 +107,9 @@ export const Header = ({
 
       {/* Górny pasek na mobile: logo i ikony w jednym rzędzie */}
       <div className="w-full flex items-center justify-between px-4 max-md:flex md:hidden">
-        {/* Małe logo (tylko inicjały lub skrót) */}
+        {/* Małe logo (litera T fioletowa) */}
         <div className="text-2xl font-black italic tracking-tighter text-white">
-          <span className="text-accent">J</span>TW
+          J<span className="text-accent">T</span>W
         </div>
 
         {/* Ikony po prawej */}
@@ -118,7 +118,7 @@ export const Header = ({
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={onStatsClick}
-            className="w-10 h-10 rounded-full flex items-center justify-center bg-zinc-800/50 border border-white/10"
+            className="w-10 h-10 rounded-full flex items-center justify-center bg-zinc-800/50 border border-white/10 active:bg-accent/20 transition-colors"
           >
             <BarChart2 size={20} className="text-zinc-300" />
           </motion.button>
@@ -128,7 +128,7 @@ export const Header = ({
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={onCalendarClick}
-              className="w-10 h-10 rounded-full flex items-center justify-center bg-zinc-800/50 border border-white/10"
+              className="w-10 h-10 rounded-full flex items-center justify-center bg-zinc-800/50 border border-white/10 active:bg-accent/20 transition-colors"
             >
               <Calendar size={20} className="text-zinc-300" />
             </motion.button>
@@ -138,15 +138,15 @@ export const Header = ({
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsSettingsOpen(true)}
-            className="w-10 h-10 rounded-full flex items-center justify-center bg-zinc-800/50 border border-white/10"
+            className="w-10 h-10 rounded-full flex items-center justify-center bg-zinc-800/50 border border-white/10 active:bg-accent/20 transition-colors"
           >
             <Settings size={20} className="text-zinc-300" />
           </motion.button>
         </div>
       </div>
 
-      {/* Logo główne (na desktopie) i na mobile (pełne logo) */}
-      <div className="max-md:mt-4">
+      {/* Logo główne (ukryte na mobile) */}
+      <div className="max-md:hidden">
         <Logo
           isHovered={isHovered}
           setIsHovered={setIsHovered}
