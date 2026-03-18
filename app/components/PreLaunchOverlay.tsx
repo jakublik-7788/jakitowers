@@ -29,7 +29,7 @@ export const PreLaunchOverlay = () => {
   if (!isBeforeMidnight) return null;
 
   return (
-    <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/40 backdrop-blur-xl">
+    <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/40 backdrop-blur-sm will-change-transform">
       <div className="text-center">
 
         <h1 className="text-4xl md:text-6xl font-black uppercase italic text-white mb-4">
