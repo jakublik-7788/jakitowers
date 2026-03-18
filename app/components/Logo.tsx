@@ -11,8 +11,8 @@ interface LogoProps {
   totalDays?: number;
 }
 
-export const Logo = ({ 
-  isHovered, 
+export const Logo = ({
+  isHovered,
   setIsHovered,
   onPrevDay,
   onNextDay,
@@ -29,9 +29,9 @@ export const Logo = ({
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.99 }}
       >
-        <h1 className="text-8xl max-md:text-6xl font-[1000] italic tracking-tighter uppercase select-none leading-none"> {/* mobile fix: mniejszy tekst na telefonie */}
+        <h1 className="text-8xl max-md:text-6xl font-[1000] italic tracking-tighter uppercase select-none leading-none">
           JAKI
-          <span className="text-accent not-italic ">TO</span>
+          <span className="text-accent not-italic">TO</span>
           WERS
         </h1>
 
@@ -84,16 +84,15 @@ export const Logo = ({
         </div>
       </motion.button>
 
-      {/* Strzałki i #1 - pokazuj tylko gdy onPrevDay i onNextDay istnieją (tryb daily) */}
       {onPrevDay && onNextDay && currentDay && totalDays && (
-        <div className="flex items-center gap-6 max-md:gap-4 mt-3"> {/* mobile fix */}
+        <div className="flex items-center gap-6 max-md:gap-4 mt-3">
           <motion.button
             whileHover={{ x: -3, color: "var(--accent-main)" }}
             whileTap={{ scale: 0.95 }}
             onClick={onPrevDay}
             disabled={currentDay === 1}
             className={`text-zinc-600 transition-colors ${
-              currentDay === 1 ? 'opacity-30 cursor-not-allowed' : 'hover:text-accent'
+              currentDay === 1 ? "opacity-30 cursor-not-allowed" : "hover:text-accent"
             }`}
           >
             <svg
@@ -109,20 +108,20 @@ export const Logo = ({
               <path d="m15 18-6-6 6-6" />
             </svg>
           </motion.button>
-          
-          <div className="bg-zinc-900/50 px-5 max-md:px-4 py-0.5 rounded-full border border-white/5 shadow-inner"> {/* mobile fix */}
-            <span className="text-accent font-black tracking-tighter text-base max-md:text-sm drop-shadow-[0_0_8px_rgba(188,19,254,0.5)]"> {/* mobile fix */}
+
+          <div className="bg-zinc-900/50 px-5 max-md:px-4 py-0.5 rounded-full border border-white/5 shadow-inner">
+            <span className="text-accent font-black tracking-tighter text-base max-md:text-sm drop-shadow-[0_0_8px_rgba(188,19,254,0.5)]">
               #{currentDay}
             </span>
           </div>
-          
+
           <motion.button
             whileHover={{ x: 3, color: "var(--accent-main)" }}
             whileTap={{ scale: 0.95 }}
             onClick={onNextDay}
             disabled={currentDay === totalDays}
             className={`text-zinc-600 transition-colors ${
-              currentDay === totalDays ? 'opacity-30 cursor-not-allowed' : 'hover:text-accent'
+              currentDay === totalDays ? "opacity-30 cursor-not-allowed" : "hover:text-accent"
             }`}
           >
             <svg
@@ -142,4 +141,4 @@ export const Logo = ({
       )}
     </div>
   );
-};
+}

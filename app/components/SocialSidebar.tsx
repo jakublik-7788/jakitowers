@@ -9,9 +9,9 @@ export const SocialSidebar = ({ variant }: { variant?: string }) => {
   const accentColor = "var(--accent-main)";
 
   const socials = [
-    { name: "Instagram",    icon: Instagram,    href: "https://jakitowers.pl" },
-    { name: "TikTok",       icon: Music2,        href: "https://jakitowers.pl" },
-    { name: "ExternalLink", icon: ExternalLink,  href: "https://jakitowers.pl" },
+    { name: "Instagram", icon: Instagram, href: "https://jakitowers.pl" },
+    { name: "TikTok", icon: Music2, href: "https://jakitowers.pl" },
+    { name: "ExternalLink", icon: ExternalLink, href: "https://jakitowers.pl" },
   ];
 
   return (
@@ -21,12 +21,11 @@ export const SocialSidebar = ({ variant }: { variant?: string }) => {
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: -40, opacity: 0 }}
       transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
-      className="fixed left-0 top-1/2 -translate-y-1/2 z-[100] flex items-center pr-12 cursor-none max-md:hidden" // mobile fix: ukryj na małych ekranach
+      className="fixed left-0 top-1/2 -translate-y-1/2 z-[100] flex items-center pr-12 cursor-none max-md:hidden"
       style={{ height: "300px" }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Pionowy pasek */}
       <motion.div
         className="w-1.5 rounded-r-full z-20"
         animate={{
@@ -37,7 +36,6 @@ export const SocialSidebar = ({ variant }: { variant?: string }) => {
         transition={{ duration: 0.3 }}
       />
 
-      {/* Napis SOCIALS */}
       <AnimatePresence>
         {!isHovered && (
           <motion.span
@@ -52,7 +50,6 @@ export const SocialSidebar = ({ variant }: { variant?: string }) => {
         )}
       </AnimatePresence>
 
-      {/* Panel z ikonami */}
       <AnimatePresence>
         {isHovered && (
           <motion.div
@@ -72,7 +69,11 @@ export const SocialSidebar = ({ variant }: { variant?: string }) => {
                   initial={{ x: -10, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: index * 0.05 }}
-                  whileHover={{ scale: 1.3, color: accentColor, filter: `drop-shadow(0 0 10px ${accentColor})` }}
+                  whileHover={{
+                    scale: 1.3,
+                    color: accentColor,
+                    filter: `drop-shadow(0 0 10px ${accentColor})`,
+                  }}
                   className="text-white/60 transition-all duration-300"
                 >
                   <social.icon size={22} />

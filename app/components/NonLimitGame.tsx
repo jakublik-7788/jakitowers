@@ -31,18 +31,8 @@ const TidalIcon = () => (
 
 const PLATFORMS = [
   { key: "spotify", Icon: SpotifyIcon, color: "#1DB954", label: "Spotify" },
-  {
-    key: "appleMusic",
-    Icon: AppleMusicIcon,
-    color: "#FC3C44",
-    label: "Apple Music",
-  },
-  {
-    key: "soundcloud",
-    Icon: SoundCloudIcon,
-    color: "#FF5500",
-    label: "SoundCloud",
-  },
+  { key: "appleMusic", Icon: AppleMusicIcon, color: "#FC3C44", label: "Apple Music" },
+  { key: "soundcloud", Icon: SoundCloudIcon, color: "#FF5500", label: "SoundCloud" },
   { key: "tidal", Icon: TidalIcon, color: "#00FFFF", label: "Tidal" },
 ] as const;
 
@@ -78,14 +68,8 @@ const normalizePolishChars = (str: string): string => {
 
 const hasCommonArtist = (a: string, b: string): boolean => {
   const norm = (s: string) => normalizePolishChars(s.toLowerCase().trim());
-  const split = (s: string) =>
-    s
-      .split(/[,&(]/)
-      .map(norm)
-      .filter((x) => x.length > 1);
-  return split(a).some((x) =>
-    split(b).some((y) => x.includes(y) || y.includes(x)),
-  );
+  const split = (s: string) => s.split(/[,&(]/).map(norm).filter((x) => x.length > 1);
+  return split(a).some((x) => split(b).some((y) => x.includes(y) || y.includes(x)));
 };
 
 interface NonLimitGameProps {
@@ -94,26 +78,17 @@ interface NonLimitGameProps {
   onGameEnd: (won: boolean, attempt: number | null) => void;
 }
 
-export const NonLimitGame = ({
-  volume,
-  soundEnabled,
-  onGameEnd,
-}: NonLimitGameProps) => {
+export const NonLimitGame = ({ volume, soundEnabled, onGameEnd }: NonLimitGameProps) => {
   const [currentSong, setCurrentSong] = useState<Song | null>(null);
   const [score, setScore] = useState(0);
   const [attempts, setAttempts] = useState<
-    {
-      display: string;
-      status: "correct" | "wrong" | "skipped" | "empty" | "artist";
-    }[]
+    { display: string; status: "correct" | "wrong" | "skipped" | "empty" | "artist" }[]
   >(Array(5).fill({ display: "", status: "empty" }));
   const [currentAttempt, setCurrentAttempt] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [inputValue, setInputValue] = useState("");
-  const [suggestions, setSuggestions] = useState<
-    { title: string; artist: string }[]
-  >([]);
+  const [suggestions, setSuggestions] = useState<{ title: string; artist: string }[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [gameStatus, setGameStatus] = useState<"win" | "lose" | null>(null);
   const [isFinished, setIsFinished] = useState(false);
@@ -123,7 +98,6 @@ export const NonLimitGame = ({
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-
   const { play } = useSoundEffects(soundEnabled);
 
   useEffect(() => {
@@ -187,9 +161,7 @@ export const NonLimitGame = ({
     let frameId: number;
     const syncLyrics = () => {
       setCurrentTime(audio.currentTime);
-      const last = currentSong.lyrics[0].words
-        .slice(0, currentAttempt + 1)
-        .at(-1);
+      const last = currentSong.lyrics[0].words.slice(0, currentAttempt + 1).at(-1);
       if (last && audio.currentTime >= last.end) {
         audio.pause();
         setIsPlaying(false);
@@ -224,13 +196,9 @@ export const NonLimitGame = ({
       const c = scrollContainerRef.current;
       const el = c.children[selectedIndex] as HTMLElement;
       if (el) {
-        if (el.offsetTop < c.scrollTop)
-          c.scrollTo({ top: el.offsetTop, behavior: "smooth" });
+        if (el.offsetTop < c.scrollTop) c.scrollTo({ top: el.offsetTop, behavior: "smooth" });
         else if (el.offsetTop + el.offsetHeight > c.scrollTop + c.offsetHeight)
-          c.scrollTo({
-            top: el.offsetTop + el.offsetHeight - c.offsetHeight,
-            behavior: "smooth",
-          });
+          c.scrollTo({ top: el.offsetTop + el.offsetHeight - c.offsetHeight, behavior: "smooth" });
       }
     }
   }, [selectedIndex]);
@@ -256,8 +224,7 @@ export const NonLimitGame = ({
       }
     } else if (e.key === "ArrowDown") {
       e.preventDefault();
-      if (suggestions.length > 0)
-        setSelectedIndex((p) => Math.min(p + 1, suggestions.length - 1));
+      if (suggestions.length > 0) setSelectedIndex((p) => Math.min(p + 1, suggestions.length - 1));
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
       if (suggestions.length > 0) setSelectedIndex((p) => Math.max(p - 1, 0));
@@ -298,10 +265,8 @@ export const NonLimitGame = ({
       status = "wrong";
       play("wrong");
     } else {
-      const isCorrect =
-        songInDb.title.toLowerCase() === currentSong.title.toLowerCase();
-      const artistMatch =
-        !isCorrect && hasCommonArtist(songInDb.artist, currentSong.artist);
+      const isCorrect = songInDb.title.toLowerCase() === currentSong.title.toLowerCase();
+      const artistMatch = !isCorrect && hasCommonArtist(songInDb.artist, currentSong.artist);
       displayText = `${songInDb.artist} - ${songInDb.title}`.toUpperCase();
       status = isCorrect ? "correct" : artistMatch ? "artist" : "wrong";
       if (isCorrect) play("correct");
@@ -347,83 +312,69 @@ export const NonLimitGame = ({
 
   if (!currentSong) return null;
 
-  const hasLongLines = currentSong.lyrics[0].words.some(
-    (p) => p.text.length >= 50,
-  );
-  const textSizeClass = hasLongLines
-    ? "text-sm md:text-xl"
-    : "text-base md:text-2xl";
+  const hasLongLines = currentSong.lyrics[0].words.some((p) => p.text.length >= 50);
+  const textSizeClass = hasLongLines ? "text-sm md:text-xl" : "text-base md:text-2xl";
 
   return (
     <div className="h-full flex flex-col relative z-10">
       <div className="flex-1 flex flex-col md:flex-row w-full max-w-[1600px] mx-auto overflow-hidden relative z-10">
-        {/* Player */}
-        <div className="flex-1 flex items-center justify-center p-4 border-r border-white/5">
-          <div className="bg-zinc-900/10 border-2 border-accent/20 rounded-[30px] p-5 md:p-7 shadow-[0_0_50px_theme(colors.accent-glow/10%)] flex items-center gap-5 md:gap-8 min-h-[120px] w-full max-w-xl backdrop-blur-sm">
+        <div className="flex-1 flex items-center justify-center p-4 max-md:p-2 border-r border-white/5 max-md:border-r-0 max-md:border-b max-md:border-white/5">
+          <div className="bg-zinc-900/10 border-2 border-accent/20 rounded-[30px] p-5 md:p-7 max-md:p-4 shadow-[0_0_50px_theme(colors.accent-glow/10%)] flex items-center gap-5 md:gap-8 max-md:gap-4 min-h-[120px] max-md:min-h-[100px] w-full max-w-xl backdrop-blur-sm">
             <div className="flex-shrink-0 self-center">
               <motion.button
                 onClick={isPlaying ? stopAudio : handlePlayClick}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className={`w-12 h-12 md:w-16 md:h-16 max-md:w-14 max-md:h-14 rounded-full flex items-center justify-center transition-all duration-300 ${ /* mobile fix */
-                  isPlaying ? "bg-accent text-white hover:bg-white hover:text-black" : "bg-white text-black hover:bg-accent hover:text-white"} shadow-[0_0_20px_var(--accent-glow)]`}
+                className={`w-12 h-12 md:w-16 md:h-16 max-md:w-14 max-md:h-14 rounded-full flex items-center justify-center transition-all duration-300 ${
+                  isPlaying
+                    ? "bg-accent text-white hover:bg-white hover:text-black"
+                    : "bg-white text-black hover:bg-accent hover:text-white"
+                } shadow-[0_0_20px_var(--accent-glow)]`}
               >
                 {isPlaying ? (
-                  <Pause
-                    fill="currentColor"
-                    size={20}
-                    className="md:w-7 md:h-7 max-md:w-6 max-md:h-6" /* mobile fix */
-                  />
+                  <Pause fill="currentColor" size={20} className="md:w-7 md:h-7 max-md:w-6 max-md:h-6" />
                 ) : (
                   <Play
                     fill="currentColor"
                     size={20}
-                    className="ml-1 md:w-7 md:h-7 md:ml-1.5 max-md:w-6 max-md:h-6" /* mobile fix */
+                    className="ml-1 md:w-7 md:h-7 md:ml-1.5 max-md:w-6 max-md:h-6"
                   />
                 )}
               </motion.button>
             </div>
-            <div className="flex-1 flex flex-col gap-3 min-w-0">
+            <div className="flex-1 flex flex-col gap-3 max-md:gap-2 min-w-0">
               <AnimatePresence mode="popLayout">
-                {currentSong.lyrics[0].words
-                  .slice(0, currentAttempt + 1)
-                  .map((phrase, i) => {
-                    const isActive =
-                      isPlaying &&
-                      currentTime >= phrase.start &&
-                      currentTime <= phrase.end;
-                    return (
-                      <motion.div
-                        layout
-                        key={i}
-                        initial={{ opacity: 0, y: 5 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="w-full"
+                {currentSong.lyrics[0].words.slice(0, currentAttempt + 1).map((phrase, i) => {
+                  const isActive = isPlaying && currentTime >= phrase.start && currentTime <= phrase.end;
+                  return (
+                    <motion.div
+                      layout
+                      key={i}
+                      initial={{ opacity: 0, y: 5 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="w-full"
+                    >
+                      <p
+                        className={`font-[1000] tracking-wide uppercase italic select-none leading-tight ${textSizeClass} max-md:text-xs`}
+                        style={{ color: isActive ? "var(--accent-main)" : "#1e1e21" }}
                       >
-                        <p
-                          className={`font-[1000] tracking-wide uppercase italic select-none leading-tight ${textSizeClass}`}
-                          style={{
-                            color: isActive ? "var(--accent-main)" : "#1e1e21",
-                          }}
-                        >
-                          {phrase.text}
-                        </p>
-                      </motion.div>
-                    );
-                  })}
+                        {phrase.text}
+                      </p>
+                    </motion.div>
+                  );
+                })}
               </AnimatePresence>
             </div>
           </div>
         </div>
 
-        {/* Progress */}
-        <div className="flex-1 flex items-center justify-center p-6 relative">
-          <div className="w-full max-w-sm flex flex-col gap-4">
+        <div className="flex-1 flex items-center justify-center p-6 max-md:p-3 relative">
+          <div className="w-full max-w-sm flex flex-col gap-4 max-md:gap-2">
             <div className="flex justify-between items-center mb-2">
-              <p className="text-[12px] font-black text-accent tracking-[0.7em] uppercase">
+              <p className="text-[12px] max-md:text-[10px] font-black text-accent tracking-[0.7em] uppercase">
                 HISTORIA PRÓB
               </p>
-              <p className="text-[12px] font-black text-zinc-500 tracking-widest uppercase bg-zinc-900/50 px-3 py-1 rounded-full border border-white/5">
+              <p className="text-[12px] max-md:text-[10px] font-black text-zinc-500 tracking-widest uppercase bg-zinc-900/50 px-3 py-1 rounded-full border border-white/5">
                 WYNIK: <span className="text-white">{score}</span>
               </p>
             </div>
@@ -431,33 +382,30 @@ export const NonLimitGame = ({
               <motion.div
                 layout
                 key={i}
-                className={`h-14 max-md:h-16 w-full rounded-2xl border-2 flex items-center justify-center px-6 transition-all duration-500 text-center backdrop-blur-sm relative overflow-hidden ${ /* mobile fix */
+                className={`h-14 max-md:h-12 w-full rounded-2xl border-2 flex items-center justify-center px-6 max-md:px-3 transition-all duration-500 text-center backdrop-blur-sm relative overflow-hidden ${
                   g.status === "correct"
                     ? "border-green-500 bg-green-500/15 text-green-400 shadow-[0_0_20px_rgba(34,197,94,0.4)]"
                     : g.status === "artist"
-                      ? "border-yellow-400 bg-yellow-400/15 text-yellow-300 shadow-[0_0_20px_rgba(234,179,8,0.4)]"
-                      : g.status === "wrong"
-                        ? "border-red-500 bg-red-500/15 text-red-500 shadow-[0_0_20px_rgba(239,68,68,0.4)]"
-                        : g.status === "skipped"
-                          ? "border-zinc-200 bg-white/15 text-zinc-100 shadow-[0_0_20px_rgba(255,255,255,0.2)]"
-                          : "border-zinc-800/80 bg-zinc-900/30 text-zinc-700"
+                    ? "border-yellow-400 bg-yellow-400/15 text-yellow-300 shadow-[0_0_20px_rgba(234,179,8,0.4)]"
+                    : g.status === "wrong"
+                    ? "border-red-500 bg-red-500/15 text-red-500 shadow-[0_0_20px_rgba(239,68,68,0.4)]"
+                    : g.status === "skipped"
+                    ? "border-zinc-200 bg-white/15 text-zinc-100 shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+                    : "border-zinc-800/80 bg-zinc-900/30 text-zinc-700"
                 }`}
               >
-                <span className="text-[10px] font-black tracking-widest uppercase truncate">
+                <span className="text-[10px] max-md:text-[9px] font-black tracking-widest uppercase truncate">
                   {g.display || `PRÓBA ${i + 1}`}
                 </span>
-                <div className="absolute right-4 flex items-center">
+                <div className="absolute right-4 max-md:right-2 flex items-center">
                   {g.status === "correct" && (
-                    <CheckCircle2
-                      className="shrink-0 text-green-400 max-md:w-5 max-md:h-5" /* mobile fix */
-                      size={16}
-                    />
+                    <CheckCircle2 className="shrink-0 text-green-400 max-md:w-4 max-md:h-4" size={16} />
                   )}
                   {g.status === "wrong" && (
-                    <XCircle className="shrink-0 text-red-500 max-md:w-5 max-md:h-5" size={16} /> /* mobile fix */
+                    <XCircle className="shrink-0 text-red-500 max-md:w-4 max-md:h-4" size={16} />
                   )}
                   {g.status === "artist" && (
-                    <span className="shrink-0 text-yellow-400 font-black text-base max-md:text-lg">~</span> /* mobile fix */
+                    <span className="shrink-0 text-yellow-400 font-black text-base max-md:text-sm">~</span>
                   )}
                 </div>
               </motion.div>
@@ -495,29 +443,29 @@ export const NonLimitGame = ({
                 <motion.div
                   initial={{ scale: 0.9, y: 20, opacity: 0 }}
                   animate={{ scale: 1, y: 0, opacity: 1 }}
-                  className="bg-zinc-950 border-2 border-accent/40 p-5 md:p-8 rounded-[36px] max-w-2xl w-full shadow-[0_0_30px_theme(colors.accent-glow/30%)] text-center relative overflow-hidden"
+                  className="bg-zinc-950 border-2 border-accent/40 p-5 md:p-8 max-md:p-4 rounded-[36px] max-w-2xl w-full shadow-[0_0_30px_theme(colors.accent-glow/30%)] text-center relative overflow-hidden"
                 >
                   <div className="absolute -top-24 -left-24 w-64 h-64 bg-accent/20 blur-[100px] rounded-full" />
                   <div className="flex justify-center mb-4">
                     {gameStatus === "win" ? (
                       <div className="bg-green-500/20 p-3 rounded-full border border-green-500/50 shadow-[0_0_30px_rgba(34,197,94,0.3)]">
-                        <CheckCircle2 className="text-green-400" size={38} />
+                        <CheckCircle2 className="text-green-400 max-md:w-8 max-md:h-8" size={38} />
                       </div>
                     ) : (
                       <div className="bg-red-500/20 p-3 rounded-full border border-red-500/50 shadow-[0_0_30px_rgba(239,68,68,0.3)]">
-                        <XCircle className="text-red-400" size={38} />
+                        <XCircle className="text-red-400 max-md:w-8 max-md:h-8" size={38} />
                       </div>
                     )}
                   </div>
                   <h2
-                    className={`text-4xl md:text-6xl font-[1000] italic uppercase tracking-tighter mb-2 ${gameStatus === "win" ? "text-green-400" : "text-red-500"}`}
+                    className={`text-4xl md:text-6xl max-md:text-3xl font-[1000] italic uppercase tracking-tighter mb-2 ${
+                      gameStatus === "win" ? "text-green-400" : "text-red-500"
+                    }`}
                   >
                     {gameStatus === "win" ? "GRATULACJE!" : "NIESTETY..."}
                   </h2>
-                  <p className="text-zinc-500 font-bold tracking-[0.3em] uppercase text-[10px] mb-5">
-                    {gameStatus === "win"
-                      ? "ZGADŁEŚ TĘ PIOSENKĘ!"
-                      : "NIE TYM RAZEM..."}
+                  <p className="text-zinc-500 font-bold tracking-[0.3em] uppercase text-[10px] max-md:text-[8px] mb-5">
+                    {gameStatus === "win" ? "ZGADŁEŚ TĘ PIOSENKĘ!" : "NIE TYM RAZEM..."}
                   </p>
                   <div className="aspect-video w-full rounded-[20px] overflow-hidden border-2 border-white/5 shadow-2xl mb-5 bg-black">
                     <iframe
@@ -532,16 +480,14 @@ export const NonLimitGame = ({
                     />
                   </div>
                   <div className="mb-6">
-                    <h3 className="text-xl md:text-2xl font-black uppercase italic leading-none text-white">
+                    <h3 className="text-xl md:text-2xl max-md:text-lg font-black uppercase italic leading-none text-white">
                       {currentSong.title}
                     </h3>
-                    <p className="text-accent font-bold tracking-widest uppercase mt-1.5 text-sm">
+                    <p className="text-accent font-bold tracking-widest uppercase mt-1.5 text-sm max-md:text-xs">
                       {currentSong.artist}
                     </p>
                     {(() => {
-                      const avail = PLATFORMS.filter(
-                        (p) => currentSong.platforms?.[p.key],
-                      );
+                      const avail = PLATFORMS.filter((p) => currentSong.platforms?.[p.key]);
                       return avail.length > 0 ? (
                         <div className="flex items-center justify-center gap-2 mt-2">
                           {avail.map(({ key, Icon, color, label }) => (
@@ -564,14 +510,14 @@ export const NonLimitGame = ({
                   {gameStatus === "win" ? (
                     <button
                       onClick={handleNextSong}
-                      className="w-full bg-accent text-white py-4 rounded-2xl font-black tracking-widest hover:scale-[1.02] active:scale-95 transition-all uppercase italic shadow-[0_0_30px_var(--accent-glow)]"
+                      className="w-full bg-accent text-white py-4 max-md:py-3 rounded-2xl font-black tracking-widest hover:scale-[1.02] active:scale-95 transition-all uppercase italic shadow-[0_0_30px_var(--accent-glow)] max-md:text-sm"
                     >
                       NASTĘPNA PIOSENKA
                     </button>
                   ) : (
                     <button
                       onClick={handleTryAgain}
-                      className="w-full bg-accent text-white py-4 rounded-2xl font-black tracking-widest hover:scale-[1.02] active:scale-95 transition-all uppercase italic shadow-[0_0_30px_var(--accent-glow)]"
+                      className="w-full bg-accent text-white py-4 max-md:py-3 rounded-2xl font-black tracking-widest hover:scale-[1.02] active:scale-95 transition-all uppercase italic shadow-[0_0_30px_var(--accent-glow)] max-md:text-sm"
                     >
                       NASTĘPNA PIOSENKA
                     </button>
@@ -584,4 +530,4 @@ export const NonLimitGame = ({
         )}
     </div>
   );
-};
+}

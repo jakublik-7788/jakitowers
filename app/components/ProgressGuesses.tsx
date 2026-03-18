@@ -10,8 +10,8 @@ interface ProgressGuessesProps {
 
 export const ProgressGuesses = ({ guesses, gameMode = "daily" }: ProgressGuessesProps) => {
   return (
-    <div className="w-full max-w-sm flex flex-col gap-4">
-      <p className="text-[12px] font-black text-accent tracking-[0.7em] uppercase mb-4 text-center">
+    <div className="w-full max-w-sm flex flex-col gap-4 max-md:gap-2">
+      <p className="text-[12px] max-md:text-[10px] font-black text-accent tracking-[0.7em] uppercase mb-4 max-md:mb-2 text-center">
         {gameMode === "daily" ? "HISTORIA PRÓB" : "HISTORIA PRÓB"}
       </p>
       {guesses.map((g, i) => {
@@ -22,7 +22,7 @@ export const ProgressGuesses = ({ guesses, gameMode = "daily" }: ProgressGuesses
           <motion.div
             layout
             key={i}
-            className={`h-14 max-md:h-16 w-full rounded-2xl border-2 flex items-center justify-center px-4 transition-all duration-500 text-center relative overflow-hidden ${ /* mobile fix: większa wysokość */
+            className={`h-14 max-md:h-12 w-full rounded-2xl border-2 flex items-center justify-center px-4 max-md:px-2 transition-all duration-500 text-center relative overflow-hidden ${
               g.status === "correct"
                 ? "border-green-500 bg-green-500/15 text-green-400 shadow-[0_0_20px_rgba(34,197,94,0.4)]"
                 : g.status === "artist"
@@ -37,22 +37,22 @@ export const ProgressGuesses = ({ guesses, gameMode = "daily" }: ProgressGuesses
             <span
               className="font-black tracking-widest uppercase truncate px-2"
               style={{
-                fontSize: !hasText ? '10px' : textLength > 35 ? '8px' : textLength > 25 ? '9px' : '10px',
-                lineHeight: '1'
+                fontSize: !hasText ? "10px" : textLength > 35 ? "8px" : textLength > 25 ? "9px" : "10px",
+                lineHeight: "1",
               }}
             >
               {g.display || (gameMode === "daily" ? `PRÓBA ${i + 1}` : "______")}
             </span>
 
-            <div className="absolute right-4 flex items-center">
+            <div className="absolute right-4 max-md:right-2 flex items-center">
               {g.status === "correct" && (
-                <CheckCircle2 className="shrink-0 text-green-400 max-md:w-5 max-md:h-5" size={16} /> /* mobile fix */
+                <CheckCircle2 className="shrink-0 text-green-400 max-md:w-4 max-md:h-4" size={16} />
               )}
               {g.status === "wrong" && (
-                <XCircle className="shrink-0 text-red-500 max-md:w-5 max-md:h-5" size={16} /> /* mobile fix */
+                <XCircle className="shrink-0 text-red-500 max-md:w-4 max-md:h-4" size={16} />
               )}
               {g.status === "artist" && (
-                <span className="shrink-0 text-yellow-400 font-black text-base max-md:text-lg">~</span> /* mobile fix */
+                <span className="shrink-0 text-yellow-400 font-black text-base max-md:text-sm">~</span>
               )}
             </div>
           </motion.div>
@@ -60,4 +60,4 @@ export const ProgressGuesses = ({ guesses, gameMode = "daily" }: ProgressGuesses
       })}
     </div>
   );
-};
+}

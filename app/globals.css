@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 :root {
-  /* TU WPISUJEMY KONKRETNE WARTOŚCI STARTOWE */
   --accent-main: #bc13fe;
   --accent-glow: rgba(188, 19, 254, 0.4);
   --accent-glow-strong: rgba(188, 19, 254, 0.2);
@@ -15,26 +14,57 @@
   --shadow-accent-glow: 0 0 20px var(--accent-glow);
 }
 
-a, button, [role="button"] {
-  cursor: none !important;
+/* Dla urządzeń z myszą (komputery) */
+@media (hover: hover) and (pointer: fine) {
+  a, button, [role="button"] {
+    cursor: none !important;
+  }
+
+  body {
+    cursor: none;
+  }
 }
 
-.social-sidebar-panel {
-  cursor: none !important;
+/* Dla urządzeń dotykowych (telefony, tablety) */
+@media (hover: none) and (pointer: coarse) {
+  a, button, [role="button"] {
+    cursor: auto !important;
+  }
+
+  body {
+    cursor: auto;
+  }
+
+  button, a {
+    touch-action: manipulation;
+  }
+}
+
+/* Poprawa przewijania dotykowego */
+.touch-pan-y {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+/* Większe obszary klikalne na małych ekranach */
+@media (max-width: 768px) {
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  input, select, textarea {
+    font-size: 16px; /* zapobiega automatycznemu zoomowi na iOS */
+  }
 }
 
 body {
-  cursor: none;
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
-/* Customowy scrollbar - reaguje na zmiany */
 .scrollbar-custom::-webkit-scrollbar {
   width: 5px;
 }
@@ -47,23 +77,4 @@ body {
 .scrollbar-custom::-webkit-scrollbar-thumb {
   background: var(--accent-main);
   border-radius: 10px;
-}
-
-
-/* Dodaj klasę dla lepszego przewijania dotykowego */
-.touch-pan-y {
-  -webkit-overflow-scrolling: touch;
-  overflow-y: auto;
-}
-
-/* Zwiększ rozmiar przycisków na małych ekranach */
-@media (max-width: 768px) {
-  button, a, [role="button"] {
-    min-height: 44px;
-    min-width: 44px;
-  }
-  
-  input, select, textarea {
-    font-size: 16px; /* zapobiega zoomowaniu na iOS */
-  }
 }

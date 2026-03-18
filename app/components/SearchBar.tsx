@@ -23,8 +23,24 @@ interface SearchBarProps {
 
 const normalizePolishChars = (str: string): string => {
   const polishMap: { [key: string]: string } = {
-    ą: "a", ć: "c", ę: "e", ł: "l", ń: "n", ó: "o", ś: "s", ź: "z", ż: "z",
-    Ą: "A", Ć: "C", Ę: "E", Ł: "L", Ń: "N", Ó: "O", Ś: "S", Ź: "Z", Ż: "Z",
+    ą: "a",
+    ć: "c",
+    ę: "e",
+    ł: "l",
+    ń: "n",
+    ó: "o",
+    ś: "s",
+    ź: "z",
+    ż: "z",
+    Ą: "A",
+    Ć: "C",
+    Ę: "E",
+    Ł: "L",
+    Ń: "N",
+    Ó: "O",
+    Ś: "S",
+    Ź: "Z",
+    Ż: "Z",
   };
   return str.replace(/[ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/g, (char) => polishMap[char] || char);
 };
@@ -45,10 +61,8 @@ export const SearchBar = ({
   guessedSongs,
 }: SearchBarProps) => {
   return (
-    <div className="relative z-20 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent pt-16 pb-2">
+    <div className="relative z-20 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent pt-16 max-md:pt-8 pb-2">
       <div className="max-w-4xl mx-auto relative px-4">
-
-        {/* Dropdown podpowiedzi */}
         <AnimatePresence>
           {suggestions.length > 0 && !isFinished && (
             <motion.div
@@ -59,7 +73,7 @@ export const SearchBar = ({
             >
               <div
                 ref={scrollContainerRef}
-                className="max-h-[350px] overflow-y-auto scrollbar-custom touch-pan-y" /* mobile fix: lepsze przewijanie dotykowe */
+                className="max-h-[350px] overflow-y-auto scrollbar-custom touch-pan-y"
               >
                 {suggestions.map((s, idx) => (
                   <button
@@ -75,19 +89,29 @@ export const SearchBar = ({
                         if (input) input.focus();
                       }, 0);
                     }}
-                    className={`w-full p-5 flex items-center justify-start border-b border-white/5 last:border-0 transition-all text-left ${
+                    className={`w-full p-5 max-md:p-3 flex items-center justify-start border-b border-white/5 last:border-0 transition-all text-left ${
                       selectedIndex === idx ? "bg-accent/15" : ""
                     }`}
                   >
                     <div className="flex-1">
-                      <p className={`font-bold text-lg max-md:text-base ${selectedIndex === idx ? "text-accent" : "text-white"}`}> {/* mobile fix */}
+                      <p
+                        className={`font-bold text-lg max-md:text-sm ${
+                          selectedIndex === idx ? "text-accent" : "text-white"
+                        }`}
+                      >
                         {s.title}
                       </p>
-                      <p className="text-zinc-500 text-xs uppercase tracking-widest max-md:text-[10px]">{s.artist}</p> {/* mobile fix */}
+                      <p className="text-zinc-500 text-xs uppercase tracking-widest max-md:text-[10px]">
+                        {s.artist}
+                      </p>
                     </div>
                     <Search
                       size={18}
-                      className={selectedIndex === idx ? "text-accent ml-4" : "text-zinc-700 ml-4"}
+                      className={
+                        selectedIndex === idx
+                          ? "text-accent ml-4"
+                          : "text-zinc-700 ml-4 max-md:w-4 max-md:h-4"
+                      }
                     />
                   </button>
                 ))}
@@ -96,20 +120,26 @@ export const SearchBar = ({
           )}
         </AnimatePresence>
 
-        {/* Pasek wyszukiwania */}
         <div
-          className={`flex gap-5 bg-zinc-900/60 border p-3 rounded-[30px] backdrop-blur-sm transition-all duration-300 ${
+          className={`flex gap-2 max-md:gap-1 bg-zinc-900/60 border p-2 max-md:p-1.5 rounded-[30px] backdrop-blur-sm transition-all duration-300 ${
             isStarted ? "border-accent/30" : "border-white/5 opacity-80"
           }`}
         >
-          <div className="flex-1 flex items-center pl-6 text-accent">
-            <Search size={26} className={isStarted ? "text-accent" : "text-zinc-700 max-md:w-5 max-md:h-5"} /> {/* mobile fix */}
+          <div className="flex-1 flex items-center pl-6 max-md:pl-3 text-accent">
+            <Search
+              size={26}
+              className={
+                isStarted
+                  ? "text-accent max-md:w-5 max-md:h-5"
+                  : "text-zinc-700 max-md:w-5 max-md:h-5"
+              }
+            />
             <input
               type="text"
               disabled={isFinished || !isStarted}
               onKeyDown={onKeyDown}
               autoFocus
-              className="bg-transparent w-full p-4 max-md:p-3 outline-none text-white text-lg max-md:text-base font-bold ml-4 placeholder:text-zinc-700 disabled:cursor-not-allowed" /* mobile fix */
+              className="bg-transparent w-full p-4 max-md:p-2 outline-none text-white text-lg max-md:text-base font-bold ml-4 max-md:ml-2 placeholder:text-zinc-700 disabled:cursor-not-allowed"
               placeholder={
                 isFinished
                   ? "KONIEC GRY"
@@ -129,7 +159,7 @@ export const SearchBar = ({
                       .filter((s) => {
                         const fullName = `${s.artist} - ${s.title}`.toLowerCase();
                         const isAlreadyGuessed = guessedSongs.some(
-                          (guess) => guess.toLowerCase() === fullName
+                          (guess) => guess.toLowerCase() === fullName,
                         );
                         if (isAlreadyGuessed) return false;
                         const title = s.title.toLowerCase();
@@ -141,7 +171,7 @@ export const SearchBar = ({
                           normalizePolishChars(artist).includes(normalizedSearchTerm)
                         );
                       })
-                      .slice(0, 15)
+                      .slice(0, 15),
                   );
                 } else {
                   setSuggestions([]);
@@ -152,7 +182,7 @@ export const SearchBar = ({
           <button
             disabled={isFinished || !isStarted}
             onClick={onGuess}
-            className={`px-12 max-md:px-8 py-5 rounded-[22px] font-[1000] text-sm tracking-[0.3em] transition-all duration-300 ${ /* mobile fix: mniejszy padding */
+            className={`px-12 max-md:px-4 py-5 max-md:py-3 rounded-[22px] font-[1000] text-sm tracking-[0.3em] transition-all duration-300 ${
               isFinished || !isStarted
                 ? "bg-zinc-800 text-zinc-600 cursor-not-allowed"
                 : inputError
@@ -166,9 +196,8 @@ export const SearchBar = ({
           </button>
         </div>
 
-        {/* Stopka z linkami i modalami */}
         <FooterModals />
       </div>
     </div>
   );
-};
+}

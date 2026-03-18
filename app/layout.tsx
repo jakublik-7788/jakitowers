@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { CustomCursor } from "./components/CustomCursor";
-import { PreLaunchOverlay } from "./components/PreLaunchOverlay"; // nowy komponent
+import { PreLaunchOverlay } from "./components/PreLaunchOverlay";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,19 +15,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "JAKI TO WERS ",
+  title: "JAKI TO WERS",
   description: "Zgaduj wersy najpopularniejszych rapowych hitów!",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 const AmbientGlow = () => (
   <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-    <div 
+    <div
       className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] rounded-full blur-[120px] opacity-[0.15] transition-colors duration-1000"
-      style={{ backgroundColor: 'var(--accent-main)' }}
+      style={{ backgroundColor: "var(--accent-main)" }}
     />
-    <div 
+    <div
       className="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] rounded-full blur-[120px] opacity-[0.15] transition-colors duration-1000"
-      style={{ backgroundColor: 'var(--accent-main)' }}
+      style={{ backgroundColor: "var(--accent-main)" }}
     />
   </div>
 );
@@ -39,20 +46,19 @@ export default function RootLayout({
     <html lang="pl">
       <body
         className={`
-          ${geistSans.variable} 
-          ${geistMono.variable} 
-          antialiased 
-          bg-background 
-          text-foreground 
-          min-h-dvh // zmiana z min-h-screen na min-h-dvh
+          ${geistSans.variable}
+          ${geistMono.variable}
+          antialiased
+          bg-background
+          text-foreground
+          min-h-dvh
           selection:bg-accent/30
         `}
       >
         <AmbientGlow />
-        <main className="relative z-10">
-          {children}
-        </main>
+        <main className="relative z-10">{children}</main>
         <CustomCursor />
+        {/* <PreLaunchOverlay /> */}
       </body>
     </html>
   );

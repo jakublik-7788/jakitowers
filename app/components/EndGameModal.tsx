@@ -36,18 +36,8 @@ const TidalIcon = () => (
 
 const PLATFORMS = [
   { key: "spotify", Icon: SpotifyIcon, color: "#1DB954", label: "Spotify" },
-  {
-    key: "appleMusic",
-    Icon: AppleMusicIcon,
-    color: "#FC3C44",
-    label: "Apple Music",
-  },
-  {
-    key: "soundcloud",
-    Icon: SoundCloudIcon,
-    color: "#FF5500",
-    label: "SoundCloud",
-  },
+  { key: "appleMusic", Icon: AppleMusicIcon, color: "#FC3C44", label: "Apple Music" },
+  { key: "soundcloud", Icon: SoundCloudIcon, color: "#FF5500", label: "SoundCloud" },
   { key: "tidal", Icon: TidalIcon, color: "#00FFFF", label: "Tidal" },
 ] as const;
 
@@ -59,18 +49,11 @@ interface EndGameModalProps {
   attempts: number;
 }
 
-export const EndGameModal = ({
-  status,
-  song,
-  onClose,
-  dayNumber,
-  attempts,
-}: EndGameModalProps) => {
+export const EndGameModal = ({ status, song, onClose, dayNumber, attempts }: EndGameModalProps) => {
   const shareCardRef = useRef<HTMLDivElement>(null);
   const availablePlatforms = PLATFORMS.filter((p) => song.platforms?.[p.key]);
 
   const handleMidnight = useCallback(() => {
-    // Odśwież stronę o północy, aby załadować nowy dzień
     window.location.reload();
   }, []);
 
@@ -87,38 +70,34 @@ export const EndGameModal = ({
         animate={{ scale: 1, y: 0, opacity: 1 }}
         exit={{ scale: 0.9, y: 20, opacity: 0 }}
         onClick={(e) => e.stopPropagation()}
-        className="bg-zinc-950 border-2 border-accent/40 p-5 md:p-8 rounded-[36px] max-w-2xl w-full shadow-[0_0_30px_theme(colors.accent-glow/30%)] text-center relative overflow-hidden cursor-default"
+        className="bg-zinc-950 border-2 border-accent/40 p-5 md:p-8 max-md:p-4 rounded-[36px] max-w-2xl w-full shadow-[0_0_30px_theme(colors.accent-glow/30%)] text-center relative overflow-hidden cursor-default"
       >
         <div className="absolute -top-24 -left-24 w-64 h-64 bg-accent/20 blur-[100px] rounded-full pointer-events-none" />
 
-        {/* Ikona */}
         <div className="flex justify-center mb-4">
           {status === "win" ? (
             <div className="bg-green-500/20 p-3 rounded-full border border-green-500/50 shadow-[0_0_30px_rgba(34,197,94,0.3)]">
-              <Trophy className="text-green-400" size={38} />
+              <Trophy className="text-green-400 max-md:w-8 max-md:h-8" size={38} />
             </div>
           ) : (
             <div className="bg-red-500/20 p-3 rounded-full border border-red-500/50 shadow-[0_0_30px_rgba(239,68,68,0.3)]">
-              <XCircle className="text-red-400" size={38} />
+              <XCircle className="text-red-400 max-md:w-8 max-md:h-8" size={38} />
             </div>
           )}
         </div>
 
         <h2
-          className={`text-4xl md:text-6xl font-[1000] italic uppercase tracking-tighter mb-1 ${
+          className={`text-4xl md:text-6xl max-md:text-3xl font-[1000] italic uppercase tracking-tighter mb-1 ${
             status === "win" ? "text-green-400" : "text-red-500"
           }`}
         >
           {status === "win" ? "GRATULACJE!" : "NIESTETY..."}
         </h2>
 
-        <p className="text-zinc-500 font-bold tracking-[0.3em] uppercase text-[10px] mb-5">
-          {status === "win"
-            ? "ODGADŁEŚ DZISIEJSZĄ NUTKĘ"
-            : "NIE TYM RAZEM, SPRÓBUJ JUTRO"}
+        <p className="text-zinc-500 font-bold tracking-[0.3em] uppercase text-[10px] max-md:text-[8px] mb-5">
+          {status === "win" ? "ODGADŁEŚ DZISIEJSZĄ NUTKĘ" : "NIE TYM RAZEM, SPRÓBUJ JUTRO"}
         </p>
 
-        {/* YouTube */}
         <div className="aspect-video w-full rounded-[20px] overflow-hidden border-2 border-white/5 shadow-2xl mb-5 bg-black">
           <iframe
             width="100%"
@@ -132,14 +111,9 @@ export const EndGameModal = ({
           />
         </div>
 
-        {/* Tytuł + artysta + platformy */}
         <div className="mb-6">
-          <h3 className="text-xl md:text-2xl font-black uppercase italic leading-none">
-            {song.title}
-          </h3>
-          <p className="text-accent font-bold tracking-widest uppercase mt-1.5 text-sm">
-            {song.artist}
-          </p>
+          <h3 className="text-xl md:text-2xl max-md:text-lg font-black uppercase italic leading-none text-white">{song.title}</h3>
+          <p className="text-accent font-bold tracking-widest uppercase mt-1.5 text-sm max-md:text-xs">{song.artist}</p>
           {availablePlatforms.length > 0 && (
             <div className="flex items-center justify-center gap-2 mt-2">
               {availablePlatforms.map(({ key, Icon, color, label }) => (
@@ -159,9 +133,8 @@ export const EndGameModal = ({
           )}
         </div>
 
-        {/* Przyciski */}
         <div className="flex flex-col gap-2.5">
-          <div className="w-full bg-zinc-900/80 text-white py-4 rounded-2xl font-black tracking-widest uppercase italic border border-white/10 flex items-center justify-center gap-2">
+          <div className="w-full bg-zinc-900/80 text-white py-4 max-md:py-3 rounded-2xl font-black tracking-widest uppercase italic border border-white/10 flex items-center justify-center gap-2 max-md:text-sm max-md:gap-1">
             <span>NOWA PIOSENKA ZA</span>
             <CountdownTimer onMidnight={handleMidnight} className="text-accent font-mono" />
           </div>
