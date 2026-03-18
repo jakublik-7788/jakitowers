@@ -2,48 +2,42 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Instagram, ExternalLink, MessageCircle, Music2 } from "lucide-react";
+import { Instagram, ExternalLink, Music2 } from "lucide-react";
 
 export const SocialSidebar = ({ variant }: { variant?: string }) => {
   const [isHovered, setIsHovered] = useState(false);
   const accentColor = "var(--accent-main)";
 
   const socials = [
-    { name: "Instagram", icon: Instagram, href: "https://instagram.com" },
-    { name: "TikTok", icon: Music2, href: "https://tiktok.com" },
-    { name: "Discord", icon: MessageCircle, href: "https://discord.com" },
-    { name: "ExternalLink", icon: ExternalLink, href: "" },
+    { name: "Instagram",    icon: Instagram,    href: "https://jakitowers.pl" },
+    { name: "TikTok",       icon: Music2,        href: "https://jakitowers.pl" },
+    { name: "ExternalLink", icon: ExternalLink,  href: "https://jakitowers.pl" },
   ];
 
   return (
     <motion.div
-      key={variant} 
+      key={variant}
       initial={{ x: -40, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: -40, opacity: 0 }}
-      transition={{ 
-        duration: 0.4, 
-        delay: 0.1, 
-        ease: "easeOut" 
-      }}
-      // ZWIĘKSZONY OBSZAR INTERAKCJI (padding-right i szerokość)
+      transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
       className="fixed left-0 top-1/2 -translate-y-1/2 z-[100] flex items-center pr-12 cursor-none"
       style={{ height: "300px" }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* 1. Pionowy pasek (uchwyt) */}
+      {/* Pionowy pasek */}
       <motion.div
-        className="h-30 w-1.5 rounded-r-full z-20"
-        animate={{ 
+        className="w-1.5 rounded-r-full z-20"
+        animate={{
           backgroundColor: isHovered ? accentColor : "rgba(255, 255, 255, 0.2)",
           height: isHovered ? "200px" : "128px",
-          boxShadow: isHovered ? `0 0 15px ${accentColor}` : "none"
+          boxShadow: isHovered ? `0 0 15px ${accentColor}` : "none",
         }}
         transition={{ duration: 0.3 }}
       />
 
-      {/* 2. Napis "SOCIALS" - teraz jest "bezpiecznym" obszarem hoveru */}
+      {/* Napis SOCIALS */}
       <AnimatePresence>
         {!isHovered && (
           <motion.span
@@ -51,18 +45,14 @@ export const SocialSidebar = ({ variant }: { variant?: string }) => {
             animate={{ opacity: 0.4, x: 0 }}
             exit={{ opacity: 0, x: -5 }}
             className="absolute left-6 text-[10px] tracking-[0.3em] font-bold uppercase pointer-events-none select-none"
-            style={{ 
-              writingMode: "vertical-rl", 
-              transform: "rotate(180deg)",
-              whiteSpace: "nowrap" 
-            }}
+            style={{ writingMode: "vertical-rl", transform: "rotate(180deg)", whiteSpace: "nowrap" }}
           >
             Socials
           </motion.span>
         )}
       </AnimatePresence>
 
-      {/* 3. Wysuwany panel z ikonami */}
+      {/* Panel z ikonami */}
       <AnimatePresence>
         {isHovered && (
           <motion.div
@@ -82,11 +72,7 @@ export const SocialSidebar = ({ variant }: { variant?: string }) => {
                   initial={{ x: -10, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: index * 0.05 }}
-                  whileHover={{ 
-                    scale: 1.3, 
-                    color: accentColor,
-                    filter: `drop-shadow(0 0 10px ${accentColor})` 
-                  }}
+                  whileHover={{ scale: 1.3, color: accentColor, filter: `drop-shadow(0 0 10px ${accentColor})` }}
                   className="text-white/60 transition-all duration-300"
                 >
                   <social.icon size={22} />

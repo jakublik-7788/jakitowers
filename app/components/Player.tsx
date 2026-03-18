@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Play, Pause } from "lucide-react";
-import { Song } from "@/app/songs";
+import { Song } from "@/app/scripts/songs";
 
 interface PlayerProps {
   isStarted: boolean;

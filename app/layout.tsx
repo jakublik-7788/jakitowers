@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { CustomCursor } from "./components/CustomCursor"; // Upewnij się, że ścieżka jest poprawna
+import { CustomCursor } from "./components/CustomCursor";
+import { PreLaunchOverlay } from "./components/PreLaunchOverlay"; // nowy komponent
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,11 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Neon Music Quiz",
-  description: "Zgadnij hit w neonowym klimacie",
+  title: "JAKI TO WERS ",
+  description: "Zgaduj wersy najpopularniejszych rapowych hitów!",
 };
 
-// Pomocniczy komponent dla poświaty tła (Ambient Glow)
 const AmbientGlow = () => (
   <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
     <div 
@@ -34,9 +34,7 @@ const AmbientGlow = () => (
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pl">
       <body
@@ -50,16 +48,13 @@ export default function RootLayout({
           selection:bg-accent/30
         `}
       >
-        {/* Poświata tła zmieniająca się z kolorem akcentu */}
         <AmbientGlow />
-        
-        {/* Twój interaktywny kursor */}
-
-        {/* Treść strony */}
         <main className="relative z-10">
           {children}
         </main>
         <CustomCursor />
+        {/* Nakładka z timerem – pojawia się przed północą */}
+        <PreLaunchOverlay />
       </body>
     </html>
   );

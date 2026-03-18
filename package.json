@@ -9,7 +9,11 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@upstash/redis": "^1.37.0",
+    "axios": "^1.13.6",
+    "cheerio": "^1.2.0",
     "framer-motion": "^12.35.2",
+    "genius-lyrics": "^4.4.7",
     "lucide-react": "^0.577.0",
     "modern-screenshot": "^4.6.8",
     "next": "16.1.6",
@@ -18,12 +22,14 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/cheerio": "^0.22.35",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }

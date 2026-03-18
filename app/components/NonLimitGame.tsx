@@ -3,14 +3,57 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Play, Pause, CheckCircle2, XCircle, Search } from "lucide-react";
-import { allSongs } from "@/app/allsongs";
-import { dailySongs } from "@/app/songs";
-import { Song } from "@/app/songs";
+import { Play, Pause, CheckCircle2, XCircle } from "lucide-react";
 
-// Funkcja do zamiany polskich znaków na ich podstawowe odpowiedniki
+const SpotifyIcon = () => (
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+  </svg>
+);
+const AppleMusicIcon = () => (
+  <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor">
+    <path
+      fillRule="evenodd"
+      d="m10.995 0 .573.001q.241 0 .483.007c.35.01.705.03 1.051.093.352.063.68.166.999.329a3.36 3.36 0 0 1 1.47 1.468c.162.32.265.648.328 1 .063.347.084.7.093 1.051q.007.241.007.483l.001.573v5.99l-.001.573q0 .241-.008.483c-.01.35-.03.704-.092 1.05a3.5 3.5 0 0 1-.33 1 3.36 3.36 0 0 1-1.468 1.468 3.5 3.5 0 0 1-1 .33 7 7 0 0 1-1.05.092q-.241.007-.483.008l-.573.001h-5.99l-.573-.001q-.241 0-.483-.008a7 7 0 0 1-1.052-.092 3.6 3.6 0 0 1-.998-.33 3.36 3.36 0 0 1-1.47-1.468 3.6 3.6 0 0 1-.328-1 7 7 0 0 1-.093-1.05Q.002 11.81 0 11.568V5.005l.001-.573q0-.241.007-.483c.01-.35.03-.704.093-1.05a3.6 3.6 0 0 1 .329-1A3.36 3.36 0 0 1 1.9.431 3.5 3.5 0 0 1 2.896.1 7 7 0 0 1 3.95.008Q4.19.002 4.432 0h.573zm-.107 2.518-4.756.959H6.13a.66.66 0 0 0-.296.133.5.5 0 0 0-.16.31c-.004.027-.01.08-.01.16v5.952c0 .14-.012.275-.106.39-.095.115-.21.15-.347.177l-.31.063c-.393.08-.65.133-.881.223a1.4 1.4 0 0 0-.519.333 1.25 1.25 0 0 0-.332.995c.031.297.166.582.395.792.156.142.35.25.578.296.236.047.49.031.858-.043.196-.04.38-.102.555-.205a1.4 1.4 0 0 0 .438-.405 1.5 1.5 0 0 0 .233-.55c.042-.202.052-.386.052-.588V6.347c0-.276.08-.35.302-.404.024-.005 3.954-.797 4.138-.833.257-.049.378.025.378.294v3.524c0 .14-.001.28-.096.396-.094.115-.211.15-.348.178l-.31.062c-.393.08-.649.133-.88.223a1.4 1.4 0 0 0-.52.334 1.26 1.26 0 0 0-.34.994c.03.297.174.582.404.792a1.2 1.2 0 0 0 .577.294c.237.048.49.03.858-.044.197-.04.381-.098.556-.202a1.4 1.4 0 0 0 .438-.405q.173-.252.233-.549a2.7 2.7 0 0 0 .044-.589V2.865c0-.273-.143-.443-.4-.42-.04.003-.383.064-.424.073"
+    />
+  </svg>
+);
+const SoundCloudIcon = () => (
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+    <path d="M1.175 12.225c-.041 0-.082.01-.124.01a.55.55 0 01-.124-.01C.329 12.151 0 11.76 0 11.267c0-.314.152-.59.39-.767.119-.087.262-.136.41-.136.027 0 .056.003.083.007a3.174 3.174 0 01-.04-.484c0-1.801 1.42-3.26 3.17-3.26.223 0 .44.025.648.07A4.989 4.989 0 019.5 4c2.762 0 5 2.238 5 5 0 .232-.016.46-.047.685H14.5a2.5 2.5 0 010 5h-13a1.33 1.33 0 01-.325-.46z" />
+  </svg>
+);
+const TidalIcon = () => (
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+    <path d="M12.012 3.992L8.008 7.996 4.004 3.992 0 7.996l4.004 4.004 4.004-4.004 4.004 4.004 4.004-4.004L12.012 3.992zM8.008 12l-4.004 4.004L0 12l4.004-4.004L8.008 12zm8.008 0l-4.004 4.004 4.004 4.004L24 12l-4.004-4.004L15.996 12z" />
+  </svg>
+);
+
+const PLATFORMS = [
+  { key: "spotify", Icon: SpotifyIcon, color: "#1DB954", label: "Spotify" },
+  {
+    key: "appleMusic",
+    Icon: AppleMusicIcon,
+    color: "#FC3C44",
+    label: "Apple Music",
+  },
+  {
+    key: "soundcloud",
+    Icon: SoundCloudIcon,
+    color: "#FF5500",
+    label: "SoundCloud",
+  },
+  { key: "tidal", Icon: TidalIcon, color: "#00FFFF", label: "Tidal" },
+] as const;
+
+import { allSongs } from "@/app/scripts/allsongs";
+import { dailySongs } from "@/app/scripts/songs";
+import { Song } from "@/app/scripts/songs";
+import { SearchBar } from "@/app/components/SearchBar";
+import { useSoundEffects } from "@/app/scripts/useSoundEffects";
+
 const normalizePolishChars = (str: string): string => {
-  const polishMap: { [key: string]: string } = {
+  const map: { [k: string]: string } = {
     ą: "a",
     ć: "c",
     ę: "e",
@@ -30,22 +73,39 @@ const normalizePolishChars = (str: string): string => {
     Ź: "Z",
     Ż: "Z",
   };
+  return str.replace(/[ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/g, (c) => map[c] || c);
+};
 
-  return str.replace(
-    /[ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/g,
-    (char) => polishMap[char] || char,
+const hasCommonArtist = (a: string, b: string): boolean => {
+  const norm = (s: string) => normalizePolishChars(s.toLowerCase().trim());
+  const split = (s: string) =>
+    s
+      .split(/[,&(]/)
+      .map(norm)
+      .filter((x) => x.length > 1);
+  return split(a).some((x) =>
+    split(b).some((y) => x.includes(y) || y.includes(x)),
   );
 };
 
 interface NonLimitGameProps {
   volume: number;
+  soundEnabled: boolean;
+  onGameEnd: (won: boolean, attempt: number | null) => void;
 }
 
-export const NonLimitGame = ({ volume }: NonLimitGameProps) => {
+export const NonLimitGame = ({
+  volume,
+  soundEnabled,
+  onGameEnd,
+}: NonLimitGameProps) => {
   const [currentSong, setCurrentSong] = useState<Song | null>(null);
   const [score, setScore] = useState(0);
   const [attempts, setAttempts] = useState<
-    { display: string; status: "correct" | "wrong" | "skipped" | "empty" }[]
+    {
+      display: string;
+      status: "correct" | "wrong" | "skipped" | "empty" | "artist";
+    }[]
   >(Array(5).fill({ display: "", status: "empty" }));
   const [currentAttempt, setCurrentAttempt] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -64,6 +124,8 @@ export const NonLimitGame = ({ volume }: NonLimitGameProps) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
+  const { play } = useSoundEffects(soundEnabled);
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -78,80 +140,57 @@ export const NonLimitGame = ({ volume }: NonLimitGameProps) => {
   }, []);
 
   const loadNewSong = useCallback(() => {
-    const availableSongs = allSongs.filter(
-      (s) => !guessedSongs.includes(s.title),
-    );
-
-    let songTitle: string;
-    if (availableSongs.length === 0) {
+    stopAudio();
+    const available = allSongs.filter((s) => !guessedSongs.includes(s.title));
+    let title: string;
+    if (available.length === 0) {
       setGuessedSongs([]);
-      songTitle = allSongs[Math.floor(Math.random() * allSongs.length)].title;
+      title = allSongs[Math.floor(Math.random() * allSongs.length)].title;
     } else {
-      songTitle =
-        availableSongs[Math.floor(Math.random() * availableSongs.length)].title;
+      title = available[Math.floor(Math.random() * available.length)].title;
     }
-
-    const fullSong =
-      dailySongs.find((s) => s.title === songTitle) || dailySongs[0];
-    setCurrentSong(fullSong);
-
+    const full = dailySongs.find((s) => s.title === title) || dailySongs[0];
+    setCurrentSong(full);
     setAttempts(Array(5).fill({ display: "", status: "empty" }));
     setCurrentAttempt(0);
-    setIsPlaying(false);
     setCurrentTime(0);
     setInputValue("");
     setSuggestions([]);
     setGameStatus(null);
     setIsFinished(false);
     setInputError(false);
-
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-    }
-  }, [guessedSongs]);
+  }, [guessedSongs, stopAudio]);
 
   useEffect(() => {
     loadNewSong();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // ODDZIELONY HOOK TYLKO DLA GŁOŚNOŚCI
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = volume;
-    }
+    if (audioRef.current) audioRef.current.volume = volume;
   }, [volume]);
 
-  // HOOK DO ŁADOWANIA UTWORU
   useEffect(() => {
     if (!currentSong) return;
-
     if (!audioRef.current) {
       audioRef.current = new Audio(currentSong.audioSrc);
-    } else {
+    } else if (audioRef.current.src !== currentSong.audioSrc) {
       audioRef.current.src = currentSong.audioSrc;
       audioRef.current.load();
     }
     audioRef.current.volume = volume;
   }, [currentSong, volume]);
 
-  // HOOK DO SYNCHRONIZACJI TEKSTU I ODTWARZANIA
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio || !currentSong) return;
-
     let frameId: number;
-
     const syncLyrics = () => {
       setCurrentTime(audio.currentTime);
-      const currentLines = currentSong.lyrics[0].words.slice(
-        0,
-        currentAttempt + 1,
-      );
-      const lastVisibleLine = currentLines[currentLines.length - 1];
-
-      if (lastVisibleLine && audio.currentTime >= lastVisibleLine.end) {
+      const last = currentSong.lyrics[0].words
+        .slice(0, currentAttempt + 1)
+        .at(-1);
+      if (last && audio.currentTime >= last.end) {
         audio.pause();
         setIsPlaying(false);
         audio.currentTime = 0;
@@ -160,7 +199,6 @@ export const NonLimitGame = ({ volume }: NonLimitGameProps) => {
         frameId = requestAnimationFrame(syncLyrics);
       }
     };
-
     const onPlay = () => {
       frameId = requestAnimationFrame(syncLyrics);
     };
@@ -170,11 +208,9 @@ export const NonLimitGame = ({ volume }: NonLimitGameProps) => {
     const onEnded = () => {
       stopAudio();
     };
-
     audio.addEventListener("play", onPlay);
     audio.addEventListener("pause", onPause);
     audio.addEventListener("ended", onEnded);
-
     return () => {
       audio.removeEventListener("play", onPlay);
       audio.removeEventListener("pause", onPause);
@@ -183,8 +219,25 @@ export const NonLimitGame = ({ volume }: NonLimitGameProps) => {
     };
   }, [currentSong, currentAttempt, stopAudio]);
 
+  useEffect(() => {
+    if (selectedIndex >= 0 && scrollContainerRef.current) {
+      const c = scrollContainerRef.current;
+      const el = c.children[selectedIndex] as HTMLElement;
+      if (el) {
+        if (el.offsetTop < c.scrollTop)
+          c.scrollTo({ top: el.offsetTop, behavior: "smooth" });
+        else if (el.offsetTop + el.offsetHeight > c.scrollTop + c.offsetHeight)
+          c.scrollTo({
+            top: el.offsetTop + el.offsetHeight - c.offsetHeight,
+            behavior: "smooth",
+          });
+      }
+    }
+  }, [selectedIndex]);
+
   const handlePlayClick = () => {
     if (!currentSong || isFinished) return;
+    play("click");
     setIsPlaying(true);
     audioRef.current?.play();
   };
@@ -192,126 +245,110 @@ export const NonLimitGame = ({ volume }: NonLimitGameProps) => {
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       e.preventDefault();
-
       if (suggestions.length > 0 && selectedIndex >= 0) {
-        const selected = suggestions[selectedIndex];
-        setInputValue(`${selected.artist} - ${selected.title}`);
+        play("select");
+        const s = suggestions[selectedIndex];
+        setInputValue(`${s.artist} - ${s.title}`);
         setSuggestions([]);
         setSelectedIndex(-1);
-      } 
-      // ZMIANA: Enter działa tylko jeśli wpisano tekst
-      else if (inputValue.trim() !== "") {
+      } else if (inputValue.trim() !== "") {
         handleGuess();
       }
     } else if (e.key === "ArrowDown") {
       e.preventDefault();
-      if (suggestions.length > 0) {
-        setSelectedIndex((prev) =>
-          prev < suggestions.length - 1 ? prev + 1 : prev,
-        );
-      }
+      if (suggestions.length > 0)
+        setSelectedIndex((p) => Math.min(p + 1, suggestions.length - 1));
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
-      if (suggestions.length > 0) {
-        setSelectedIndex((prev) => (prev > 0 ? prev - 1 : 0));
-      }
+      if (suggestions.length > 0) setSelectedIndex((p) => Math.max(p - 1, 0));
     } else if (e.key === "Escape") {
       setSuggestions([]);
       setSelectedIndex(-1);
+    } else if (e.key.length === 1) {
+      play("type");
     }
   };
 
   const handleGuess = () => {
     if (!currentSong || isFinished || currentAttempt >= 5) return;
-
+    const norm = (s: string) => normalizePolishChars(s.toUpperCase());
     const isSkip = inputValue.trim() === "";
-
-    // Normalizuj wpisane wartości i wartości w bazie
-    const normalizedInput = normalizePolishChars(
-      inputValue.trim().toUpperCase(),
+    const exactMatch = allSongs.some(
+      (s) => norm(`${s.artist} - ${s.title}`) === norm(inputValue.trim()),
     );
-
-    // Sprawdź czy input pasuje do którejś piosenki w bazie (uwzględniając polskie znaki)
-    const exactMatch = allSongs.some((s) => {
-      const songString = `${s.artist} - ${s.title}`.toUpperCase();
-      const normalizedSong = normalizePolishChars(songString);
-      return normalizedSong === normalizedInput;
-    });
-
-    // Jeśli nie jest pominięciem i nie ma matcha - tylko efekt wizualny
     if (!isSkip && !exactMatch) {
       setInputError(true);
       setTimeout(() => setInputError(false), 300);
-      setSuggestions([]); // Ukrywamy podpowiedzi
-      return; // Zatrzymujemy próbę
+      setSuggestions([]);
+      play("wrong");
+      return;
     }
-
-    // Znajdź piosenkę w bazie (uwzględniając polskie znaki)
-    const songInDatabase = allSongs.find((s) => {
-      const songString = `${s.artist} - ${s.title}`.toUpperCase();
-      const normalizedSong = normalizePolishChars(songString);
-      return normalizedSong === normalizedInput;
-    });
-
+    const songInDb = allSongs.find(
+      (s) => norm(`${s.artist} - ${s.title}`) === norm(inputValue.trim()),
+    );
     const newAttempts = [...attempts];
-    let status: "correct" | "wrong" | "skipped" = "wrong";
+    let status: "correct" | "wrong" | "skipped" | "artist" = "wrong";
     let displayText = "";
-
     if (isSkip) {
       displayText = "POMINIĘTO";
       status = "skipped";
-    } else if (!songInDatabase) {
+      play("skip");
+    } else if (!songInDb) {
       displayText = "PRÓBUJ DALEJ..";
       status = "wrong";
+      play("wrong");
     } else {
       const isCorrect =
-        songInDatabase.title.toLowerCase() === currentSong.title.toLowerCase();
-      displayText =
-        `${songInDatabase.artist} - ${songInDatabase.title}`.toUpperCase();
-      status = isCorrect ? "correct" : "wrong";
+        songInDb.title.toLowerCase() === currentSong.title.toLowerCase();
+      const artistMatch =
+        !isCorrect && hasCommonArtist(songInDb.artist, currentSong.artist);
+      displayText = `${songInDb.artist} - ${songInDb.title}`.toUpperCase();
+      status = isCorrect ? "correct" : artistMatch ? "artist" : "wrong";
+      if (isCorrect) play("correct");
+      else if (artistMatch) play("select");
+      else play("wrong");
     }
-
-    newAttempts[currentAttempt] = { display: displayText, status: status };
+    newAttempts[currentAttempt] = { display: displayText, status };
     setAttempts(newAttempts);
-
     setInputValue("");
     setSuggestions([]);
     setSelectedIndex(-1);
-
     stopAudio();
-
     if (status === "correct") {
       setIsFinished(true);
-      setScore((prev) => prev + 1);
-      setGuessedSongs((prev) => [...prev, currentSong.title]);
-      setTimeout(() => setGameStatus("win"), 600);
+      setScore((p) => p + 1);
+      setGuessedSongs((p) => [...p, currentSong.title]);
+      onGameEnd(true, currentAttempt + 1); // <-- użycie przekazanej funkcji
+      setTimeout(() => {
+        setGameStatus("win");
+        play("win");
+      }, 600);
     } else if (currentAttempt < 4) {
-      setCurrentAttempt((prev) => prev + 1);
+      setCurrentAttempt((p) => p + 1);
     } else {
       setIsFinished(true);
-      setTimeout(() => setGameStatus("lose"), 600);
+      setGuessedSongs((p) => [...p, currentSong.title]);
+      onGameEnd(false, null); // <-- użycie przekazanej funkcji
+      setTimeout(() => {
+        setGameStatus("lose");
+        play("lose");
+      }, 600);
     }
   };
 
   const handleNextSong = () => {
+    play("click");
     loadNewSong();
   };
-
   const handleTryAgain = () => {
-    setGameStatus(null);
-    setAttempts(Array(5).fill({ display: "", status: "empty" }));
-    setCurrentAttempt(0);
-    setIsFinished(false);
-    setInputValue("");
-    setSuggestions([]);
-    setInputError(false);
+    play("click");
     loadNewSong();
   };
 
   if (!currentSong) return null;
 
   const hasLongLines = currentSong.lyrics[0].words.some(
-    (phrase) => phrase.text.length >= 50,
+    (p) => p.text.length >= 50,
   );
   const textSizeClass = hasLongLines
     ? "text-sm md:text-xl"
@@ -319,9 +356,8 @@ export const NonLimitGame = ({ volume }: NonLimitGameProps) => {
 
   return (
     <div className="h-full flex flex-col relative z-10">
-      {/* Główna zawartość */}
       <div className="flex-1 flex flex-col md:flex-row w-full max-w-[1600px] mx-auto overflow-hidden relative z-10">
-        {/* Lewa strona - player */}
+        {/* Player */}
         <div className="flex-1 flex items-center justify-center p-4 border-r border-white/5">
           <div className="bg-zinc-900/10 border-2 border-accent/20 rounded-[30px] p-5 md:p-7 shadow-[0_0_50px_theme(colors.accent-glow/10%)] flex items-center gap-5 md:gap-8 min-h-[120px] w-full max-w-xl backdrop-blur-sm">
             <div className="flex-shrink-0 self-center">
@@ -329,11 +365,7 @@ export const NonLimitGame = ({ volume }: NonLimitGameProps) => {
                 onClick={isPlaying ? stopAudio : handlePlayClick}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
-                  isPlaying
-                    ? "bg-accent text-white hover:bg-white hover:text-black"
-                    : "bg-white text-black hover:bg-accent hover:text-white"
-                } shadow-[0_0_20px_var(--accent-glow)]`}
+                className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-300 ${isPlaying ? "bg-accent text-white hover:bg-white hover:text-black" : "bg-white text-black hover:bg-accent hover:text-white"} shadow-[0_0_20px_var(--accent-glow)]`}
               >
                 {isPlaying ? (
                   <Pause
@@ -350,7 +382,6 @@ export const NonLimitGame = ({ volume }: NonLimitGameProps) => {
                 )}
               </motion.button>
             </div>
-
             <div className="flex-1 flex flex-col gap-3 min-w-0">
               <AnimatePresence mode="popLayout">
                 {currentSong.lyrics[0].words
@@ -365,18 +396,14 @@ export const NonLimitGame = ({ volume }: NonLimitGameProps) => {
                         layout
                         key={i}
                         initial={{ opacity: 0, y: 5 }}
-                        animate={{
-                          opacity: 1,
-                          y: 0,
-                          color: isActive ? "var(--accent-main)" : "#1e1e21",
-                          // textShadow: isActive
-                          //   ? "0 0 15px rgba(188,19,254,0.8)"
-                          //   : "none",
-                        }}
+                        animate={{ opacity: 1, y: 0 }}
                         className="w-full"
                       >
                         <p
                           className={`font-[1000] tracking-wide uppercase italic select-none leading-tight ${textSizeClass}`}
+                          style={{
+                            color: isActive ? "var(--accent-main)" : "#1e1e21",
+                          }}
                         >
                           {phrase.text}
                         </p>
@@ -388,7 +415,7 @@ export const NonLimitGame = ({ volume }: NonLimitGameProps) => {
           </div>
         </div>
 
-        {/* Prawa strona - progres */}
+        {/* Progress */}
         <div className="flex-1 flex items-center justify-center p-6 relative">
           <div className="w-full max-w-sm flex flex-col gap-4">
             <div className="flex justify-between items-center mb-2">
@@ -403,165 +430,59 @@ export const NonLimitGame = ({ volume }: NonLimitGameProps) => {
               <motion.div
                 layout
                 key={i}
-                className={`h-14 w-full rounded-2xl border-2 flex items-center justify-center px-6 transition-all duration-500 text-center backdrop-blur-sm ${
+                className={`h-14 w-full rounded-2xl border-2 flex items-center justify-center px-6 transition-all duration-500 text-center backdrop-blur-sm relative overflow-hidden ${
                   g.status === "correct"
                     ? "border-green-500 bg-green-500/15 text-green-400 shadow-[0_0_20px_rgba(34,197,94,0.4)]"
-                    : g.status === "wrong"
-                      ? "border-red-500 bg-red-500/15 text-red-500 shadow-[0_0_20px_rgba(239,68,68,0.4)]"
-                      : g.status === "skipped"
-                        ? "border-zinc-200 bg-white/15 text-zinc-100 shadow-[0_0_20px_rgba(255,255,255,0.2)]"
-                        : "border-zinc-800/80 bg-zinc-900/30 text-zinc-700"
+                    : g.status === "artist"
+                      ? "border-yellow-400 bg-yellow-400/15 text-yellow-300 shadow-[0_0_20px_rgba(234,179,8,0.4)]"
+                      : g.status === "wrong"
+                        ? "border-red-500 bg-red-500/15 text-red-500 shadow-[0_0_20px_rgba(239,68,68,0.4)]"
+                        : g.status === "skipped"
+                          ? "border-zinc-200 bg-white/15 text-zinc-100 shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+                          : "border-zinc-800/80 bg-zinc-900/30 text-zinc-700"
                 }`}
               >
                 <span className="text-[10px] font-black tracking-widest uppercase truncate">
                   {g.display || `PRÓBA ${i + 1}`}
                 </span>
-                {g.status === "correct" && (
-                  <CheckCircle2 className="ml-2 shrink-0" size={16} />
-                )}
-                {g.status === "wrong" && (
-                  <XCircle className="ml-2 shrink-0" size={16} />
-                )}
+                <div className="absolute right-4 flex items-center">
+                  {g.status === "correct" && (
+                    <CheckCircle2
+                      className="shrink-0 text-green-400"
+                      size={16}
+                    />
+                  )}
+                  {g.status === "wrong" && (
+                    <XCircle className="shrink-0 text-red-500" size={16} />
+                  )}
+                  {g.status === "artist" && (
+                    <span className="shrink-0 text-yellow-400 font-black text-base">
+                      ~
+                    </span>
+                  )}
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Poprawiony Search Bar - z animacją pojawiania się */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent pt-16 pb-16 w-full relative z-30"
-      >
-        <div className="max-w-4xl mx-auto relative px-4">
-          <AnimatePresence>
-            {suggestions.length > 0 && !isFinished && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                className="absolute bottom-full mb-6 w-full bg-zinc-900/95 backdrop-blur-xl border-2 border-accent/40 rounded-[25px] overflow-hidden z-50 shadow-2xl"
-              >
-                <div
-                  ref={scrollContainerRef}
-                  className="max-h-[350px] overflow-y-auto scrollbar-custom"
-                >
-                  {suggestions.map((s, idx) => (
-                    <button
-                      key={idx}
-                      onMouseEnter={() => setSelectedIndex(idx)}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setInputValue(`${s.artist} - ${s.title}`);
-                        setSuggestions([]);
-                        setSelectedIndex(-1);
-                        setTimeout(() => {
-                          const input = document.querySelector(
-                            'input[type="text"]',
-                          ) as HTMLInputElement;
-                          if (input) input.focus();
-                        }, 0);
-                      }}
-                      className={`w-full p-5 flex items-center justify-start border-b border-white/5 last:border-0 transition-all text-left ${
-                        selectedIndex === idx ? "bg-accent/15" : ""
-                      }`}
-                    >
-                      <div className="flex-1">
-                        <p
-                          className={`font-bold text-lg ${
-                            selectedIndex === idx ? "text-accent" : "text-white"
-                          }`}
-                        >
-                          {s.title}
-                        </p>
-                        <p className="text-zinc-500 text-xs uppercase tracking-widest">
-                          {s.artist}
-                        </p>
-                      </div>
-                      <Search
-                        size={18}
-                        className={
-                          selectedIndex === idx
-                            ? "text-accent ml-4"
-                            : "text-zinc-700 ml-4"
-                        }
-                      />
-                    </button>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+      <SearchBar
+        isFinished={isFinished}
+        isStarted={true}
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+        suggestions={suggestions}
+        setSuggestions={setSuggestions}
+        selectedIndex={selectedIndex}
+        setSelectedIndex={setSelectedIndex}
+        onKeyDown={handleKeyDown}
+        onGuess={handleGuess}
+        scrollContainerRef={scrollContainerRef}
+        inputError={inputError}
+        guessedSongs={attempts.map((a) => a.display).filter(Boolean)}
+      />
 
-          <div className="flex gap-5 bg-zinc-900/60 border border-accent/30 p-3 rounded-[30px] backdrop-blur-md">
-            <div className="flex-1 flex items-center pl-6 text-accent">
-              <Search size={26} />
-              <input
-                type="text"
-                disabled={isFinished}
-                onKeyDown={handleKeyDown}
-                autoFocus
-                className="bg-transparent w-full p-4 outline-none text-white text-lg font-bold ml-4 placeholder:text-zinc-700"
-                placeholder="Znasz ten numer? Wpisz tytuł..."
-                value={inputValue}
-                onChange={(e) => {
-                  const val = e.target.value;
-                  setInputValue(val);
-                  if (val.length >= 2) {
-                    const searchTerm = val.toLowerCase();
-                    const normalizedSearchTerm = normalizePolishChars(searchTerm);
-                    
-                    setSuggestions(
-                      allSongs
-                        .filter((s) => {
-                          const fullName = `${s.artist} - ${s.title}`.toLowerCase();
-                          
-                          // FILTR: Nie pokazuj piosenek, które są już w historii prób
-                          const isAlreadyGuessed = attempts.some(
-                            (a) => a.display.toLowerCase() === fullName
-                          );
-                          if (isAlreadyGuessed) return false;
-
-                          const title = s.title.toLowerCase();
-                          const artist = s.artist.toLowerCase();
-                          const normalizedTitle = normalizePolishChars(title);
-                          const normalizedArtist = normalizePolishChars(artist);
-
-                          return (
-                            title.includes(searchTerm) ||
-                            artist.includes(searchTerm) ||
-                            normalizedTitle.includes(normalizedSearchTerm) ||
-                            normalizedArtist.includes(normalizedSearchTerm)
-                          );
-                        })
-                        .slice(0, 15),
-                    );
-                  } else setSuggestions([]);
-                }}
-              />
-            </div>
-            <button
-              onClick={handleGuess}
-              className={`px-12 py-5 rounded-[22px] font-[1000] text-sm tracking-[0.3em] transition-colors duration-300 
-                ${
-                  isFinished
-                    ? "bg-zinc-800 text-zinc-600 cursor-not-allowed"
-                    : inputError
-                      ? "bg-red-500 text-white"
-                      : inputValue.trim() === ""
-                        ? "bg-zinc-800/50 text-zinc-400 hover:bg-accent/50 hover:text-white"
-                        : "bg-accent text-white shadow-[0_0_20px_var(--accent-glow)]"
-                }`}
-            >
-              {inputValue.trim() !== "" ? "ZATWIERDŹ" : "POMIŃ"}
-            </button>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Modal wygranej/przegranej - identyczny jak w daily */}
       {mounted &&
         createPortal(
           <AnimatePresence>
@@ -575,38 +496,31 @@ export const NonLimitGame = ({ volume }: NonLimitGameProps) => {
                 <motion.div
                   initial={{ scale: 0.9, y: 20, opacity: 0 }}
                   animate={{ scale: 1, y: 0, opacity: 1 }}
-                  className="bg-zinc-950 border-2 border-accent/40 p-6 md:p-10 rounded-[40px] max-w-2xl w-full shadow-[0_0_30px_theme(colors.accent-glow/30%)] text-center relative overflow-hidden"
+                  className="bg-zinc-950 border-2 border-accent/40 p-5 md:p-8 rounded-[36px] max-w-2xl w-full shadow-[0_0_30px_theme(colors.accent-glow/30%)] text-center relative overflow-hidden"
                 >
                   <div className="absolute -top-24 -left-24 w-64 h-64 bg-accent/20 blur-[100px] rounded-full" />
-
-                  <div className="flex justify-center mb-6">
+                  <div className="flex justify-center mb-4">
                     {gameStatus === "win" ? (
-                      <div className="bg-green-500/20 p-4 rounded-full border border-green-500/50 shadow-[0_0_30px_rgba(34,197,94,0.3)]">
-                        <CheckCircle2 className="text-green-400" size={48} />
+                      <div className="bg-green-500/20 p-3 rounded-full border border-green-500/50 shadow-[0_0_30px_rgba(34,197,94,0.3)]">
+                        <CheckCircle2 className="text-green-400" size={38} />
                       </div>
                     ) : (
-                      <div className="bg-red-500/20 p-4 rounded-full border border-red-500/50 shadow-[0_0_30px_rgba(239,68,68,0.3)]">
-                        <XCircle className="text-red-400" size={48} />
+                      <div className="bg-red-500/20 p-3 rounded-full border border-red-500/50 shadow-[0_0_30px_rgba(239,68,68,0.3)]">
+                        <XCircle className="text-red-400" size={38} />
                       </div>
                     )}
                   </div>
-
                   <h2
-                    className={`text-4xl md:text-6xl font-[1000] italic uppercase tracking-tighter mb-2 ${
-                      gameStatus === "win" ? "text-green-400" : "text-red-500"
-                    }`}
+                    className={`text-4xl md:text-6xl font-[1000] italic uppercase tracking-tighter mb-2 ${gameStatus === "win" ? "text-green-400" : "text-red-500"}`}
                   >
                     {gameStatus === "win" ? "GRATULACJE!" : "NIESTETY..."}
                   </h2>
-
-                  <p className="text-zinc-500 font-bold tracking-[0.3em] uppercase text-[10px] mb-8">
+                  <p className="text-zinc-500 font-bold tracking-[0.3em] uppercase text-[10px] mb-5">
                     {gameStatus === "win"
                       ? "ZGADŁEŚ TĘ PIOSENKĘ!"
-                      : `NIE TYM RAZEM...`}
+                      : "NIE TYM RAZEM..."}
                   </p>
-
-                  {/* NAJPIERW FILMIK Z YOUTUBE */}
-                  <div className="aspect-video w-full rounded-[25px] overflow-hidden border-2 border-white/5 shadow-2xl mb-8 bg-black">
+                  <div className="aspect-video w-full rounded-[20px] overflow-hidden border-2 border-white/5 shadow-2xl mb-5 bg-black">
                     <iframe
                       width="100%"
                       height="100%"
@@ -618,30 +532,49 @@ export const NonLimitGame = ({ volume }: NonLimitGameProps) => {
                       className="w-full h-full"
                     />
                   </div>
-
-                  {/* POTEM TYTUŁ NA BIAŁO I WYKONAWCA NA FIOLETOWO */}
-                  <div className="mb-10">
-                    <h3 className="text-2xl md:text-3xl font-black uppercase italic leading-none text-white">
+                  <div className="mb-6">
+                    <h3 className="text-xl md:text-2xl font-black uppercase italic leading-none text-white">
                       {currentSong.title}
                     </h3>
-                    <p className="text-accent font-bold tracking-widest uppercase mt-2">
+                    <p className="text-accent font-bold tracking-widest uppercase mt-1.5 text-sm">
                       {currentSong.artist}
                     </p>
+                    {(() => {
+                      const avail = PLATFORMS.filter(
+                        (p) => currentSong.platforms?.[p.key],
+                      );
+                      return avail.length > 0 ? (
+                        <div className="flex items-center justify-center gap-2 mt-2">
+                          {avail.map(({ key, Icon, color, label }) => (
+                            <a
+                              key={key}
+                              href={currentSong.platforms![key]!}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              aria-label={label}
+                              className="w-7 h-7 rounded-full flex items-center justify-center bg-white/5 border border-white/10 hover:bg-white/15 hover:scale-110 active:scale-95 transition-all duration-200"
+                              style={{ color }}
+                            >
+                              <Icon />
+                            </a>
+                          ))}
+                        </div>
+                      ) : null;
+                    })()}
                   </div>
-
                   {gameStatus === "win" ? (
                     <button
                       onClick={handleNextSong}
-                      className="w-full bg-accent text-white py-5 rounded-2xl font-black tracking-widest hover:scale-[1.02] active:scale-95 transition-all uppercase italic shadow-[0_0_30px_var(--accent-glow)]"
+                      className="w-full bg-accent text-white py-4 rounded-2xl font-black tracking-widest hover:scale-[1.02] active:scale-95 transition-all uppercase italic shadow-[0_0_30px_var(--accent-glow)]"
                     >
                       NASTĘPNA PIOSENKA
                     </button>
                   ) : (
                     <button
                       onClick={handleTryAgain}
-                      className="w-full bg-accent text-white py-5 rounded-2xl font-black tracking-widest hover:scale-[1.02] active:scale-95 transition-all uppercase italic shadow-[0_0_30px_var(--accent-glow)]"
+                      className="w-full bg-accent text-white py-4 rounded-2xl font-black tracking-widest hover:scale-[1.02] active:scale-95 transition-all uppercase italic shadow-[0_0_30px_var(--accent-glow)]"
                     >
-                      SPRÓBUJ PONOWNIE
+                      NASTĘPNA PIOSENKA
                     </button>
                   )}
                 </motion.div>
