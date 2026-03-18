@@ -1,4 +1,3 @@
-// app/components/Logo.tsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -21,7 +20,7 @@ export const Logo = ({
   totalDays = 100,
 }: LogoProps) => {
   return (
-    <div className="flex flex-col items-center w-full px-4 max-md:px-2">
+    <div className="flex flex-col items-center">
       <motion.button
         onClick={() => window.location.reload()}
         onHoverStart={() => setIsHovered(true)}
@@ -30,7 +29,7 @@ export const Logo = ({
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.99 }}
       >
-        <h1 className="text-8xl max-md:text-5xl font-[1000] italic tracking-tighter uppercase select-none leading-none">
+        <h1 className="text-8xl max-md:text-6xl font-[1000] italic tracking-tighter uppercase select-none leading-none">
           JAKI
           <span className="text-accent not-italic">TO</span>
           WERS
@@ -86,56 +85,54 @@ export const Logo = ({
       </motion.button>
 
       {onPrevDay && onNextDay && currentDay && totalDays && (
-        <div className="flex items-center justify-center gap-4 max-md:gap-3 mt-4 max-md:mt-2 w-full">
+        <div className="flex items-center gap-2 max-md:gap-1 mt-3 max-md:mt-2">
           <motion.button
-            whileHover={{ x: -3, color: "var(--accent-main)" }}
+            whileHover={{ x: -2, color: "var(--accent-main)" }}
             whileTap={{ scale: 0.95 }}
             onClick={onPrevDay}
             disabled={currentDay === 1}
-            className={`text-zinc-600 transition-colors ${
+            className={`text-zinc-600 transition-colors flex items-center justify-center w-8 h-8 ${
               currentDay === 1 ? "opacity-30 cursor-not-allowed" : "hover:text-accent"
             }`}
           >
             <svg
-              width="24"
-              height="24"
+              width="18"
+              height="18"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="max-md:w-5 max-md:h-5"
             >
               <path d="m15 18-6-6 6-6" />
             </svg>
           </motion.button>
 
-          <div className="bg-zinc-900/50 px-6 max-md:px-4 py-1 rounded-full border border-white/5 shadow-inner">
-            <span className="text-accent font-black tracking-tighter text-lg max-md:text-base drop-shadow-[0_0_8px_rgba(188,19,254,0.5)]">
+          <div className="bg-zinc-900/50 px-4 py-1 rounded-full border border-white/5 shadow-inner">
+            <span className="text-accent font-black tracking-tighter text-base max-md:text-sm drop-shadow-[0_0_8px_rgba(188,19,254,0.5)]">
               #{currentDay}
             </span>
           </div>
 
           <motion.button
-            whileHover={{ x: 3, color: "var(--accent-main)" }}
+            whileHover={{ x: 2, color: "var(--accent-main)" }}
             whileTap={{ scale: 0.95 }}
             onClick={onNextDay}
             disabled={currentDay === totalDays}
-            className={`text-zinc-600 transition-colors ${
+            className={`text-zinc-600 transition-colors flex items-center justify-center w-8 h-8 ${
               currentDay === totalDays ? "opacity-30 cursor-not-allowed" : "hover:text-accent"
             }`}
           >
             <svg
-              width="24"
-              height="24"
+              width="18"
+              height="18"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="max-md:w-5 max-md:h-5"
             >
               <path d="m9 18 6-6-6-6" />
             </svg>
