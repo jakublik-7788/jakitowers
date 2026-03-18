@@ -105,11 +105,50 @@ export const Header = ({
         </div>
       </div>
 
-      {/* Górny pasek na mobile: logo i ikony w jednym rzędzie */}
+      {/* Górny pasek na mobile: logo, numer dnia i ikony w jednym rzędzie */}
       <div className="w-full flex items-center justify-between px-4 max-md:flex md:hidden">
-        {/* Małe logo (litera T fioletowa) */}
-        <div className="text-2xl font-black italic tracking-tighter text-white">
-          J<span className="text-accent">T</span>W
+        {/* Małe logo z nawigacją i numerem dnia */}
+        <div className="flex items-center gap-1">
+          {gameMode === "daily" && onPrevDay && currentDay && (
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={onPrevDay}
+              disabled={currentDay === 1}
+              className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
+                currentDay === 1 ? "opacity-30 cursor-not-allowed" : "text-zinc-400 hover:text-accent"
+              }`}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </motion.button>
+          )}
+          <div className="text-2xl font-black italic tracking-tighter text-white">
+            J<span className="text-accent">T</span>W
+          </div>
+          {gameMode === "daily" && currentDay && (
+            <div className="bg-zinc-900/50 px-2 py-0.5 rounded-full border border-white/5 shadow-inner ml-1">
+              <span className="text-accent font-black tracking-tighter text-sm drop-shadow-[0_0_8px_rgba(188,19,254,0.5)]">
+                #{currentDay}
+              </span>
+            </div>
+          )}
+          {gameMode === "daily" && onNextDay && currentDay && totalDays && (
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={onNextDay}
+              disabled={currentDay === totalDays}
+              className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
+                currentDay === totalDays ? "opacity-30 cursor-not-allowed" : "text-zinc-400 hover:text-accent"
+              }`}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </motion.button>
+          )}
         </div>
 
         {/* Ikony po prawej */}
@@ -157,7 +196,7 @@ export const Header = ({
         />
       </div>
 
-      {/* Przyciski trybów (przesunięte na mobile) */}
+      {/* Przyciski trybów */}
       <div className="absolute top-[35%] left-1/2 transform -translate-x-1/2 w-full max-w-6xl flex justify-between px-6 pointer-events-none max-md:static max-md:transform-none max-md:justify-center max-md:gap-4 max-md:mt-6 max-md:px-4">
         <motion.button
           whileHover={{ scale: 1.1 }}

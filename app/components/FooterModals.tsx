@@ -426,14 +426,14 @@ export const FooterModals = () => {
 
   return (
     <>
-      {/* Linki wyśrodkowane pod paskiem */}
-      <div className="flex items-center justify-center gap-1 pt-3 pb-2 max-md:flex-wrap max-md:gap-x-2 max-md:gap-y-1 max-md:px-2">
+      {/* Linki wyśrodkowane pod paskiem - zmniejszone odstępy na mobile */}
+      <div className="flex items-center justify-center gap-1 pt-2 pb-1 max-md:flex-wrap max-md:gap-x-2 max-md:gap-y-0 max-md:px-2 max-md:pt-1 max-md:pb-0">
         {INFO_LINKS.map((link, i) => (
           <span key={link.key} className="flex items-center gap-1">
             {i > 0 && <span className="text-zinc-800 text-xs select-none max-md:hidden">·</span>}
             <button
               onClick={() => setInfoModal(link.key as InfoModalType)}
-              className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.15em] uppercase text-zinc-600 hover:text-zinc-300 transition-colors duration-200 px-1 py-0.5 max-md:px-2 max-md:py-1 max-md:text-[9px] max-md:whitespace-nowrap"
+              className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.15em] uppercase text-zinc-600 hover:text-zinc-300 transition-colors duration-200 px-1 py-0.5 max-md:px-2 max-md:py-0 max-md:text-[9px] max-md:whitespace-nowrap"
             >
               <span className="opacity-60">{link.icon}</span>
               {link.label}
@@ -442,8 +442,8 @@ export const FooterModals = () => {
         ))}
       </div>
 
-      {/* Przycisk kontaktu — fixed lewy dolny róg */}
-      <div className="fixed bottom-2 left-4 z-[200] pointer-events-auto max-md:bottom-1 max-md:left-2">
+      {/* Przycisk kontaktu — fixed lewy dolny róg - przesunięty wyżej na mobile */}
+      <div className="fixed bottom-2 left-4 z-[200] pointer-events-auto max-md:bottom-4 max-md:left-2">
         <button
           onClick={() => setContactOpen(true)}
           className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.15em] uppercase text-zinc-600 hover:text-zinc-300 transition-colors duration-200 max-md:text-[9px]"

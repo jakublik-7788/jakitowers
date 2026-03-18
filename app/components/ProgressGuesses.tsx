@@ -60,4 +60,4 @@ export const ProgressGuesses = ({ guesses, gameMode = "daily" }: ProgressGuesses
       })}
     </div>
   );
-}
+};
