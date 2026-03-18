@@ -12,7 +12,7 @@ interface PlayerProps {
   song: Song;
   onPlayClick: () => void;
   stopAudio: () => void;
-  isDisabled?: boolean; // DODANE
+  isDisabled?: boolean;
 }
 
 export const Player = ({
@@ -23,7 +23,7 @@ export const Player = ({
   song,
   onPlayClick,
   stopAudio,
-  isDisabled = false, // DODANE
+  isDisabled = false,
 }: PlayerProps) => {
   // Sprawdź czy któryś z wersów ma 50+ znaków
   const hasLongLines = song.lyrics[0].words.some(
@@ -70,13 +70,13 @@ export const Player = ({
 
           <motion.div
             whileHover={isDisabled ? {} : { scale: 1.1 }}
-            className={`relative z-10 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${isDisabled ? "bg-zinc-700 text-zinc-500" : "bg-white text-black group-hover:bg-accent group-hover:text-white group-hover:shadow-[0_0_20px_var(--accent-glow)]"}`}
+            className={`relative z-10 w-12 h-12 max-md:w-14 max-md:h-14 rounded-full flex items-center justify-center transition-all duration-300 ${isDisabled ? "bg-zinc-700 text-zinc-500" : "bg-white text-black group-hover:bg-accent group-hover:text-white group-hover:shadow-[0_0_20px_var(--accent-glow)]"}`} /* mobile fix: większy przycisk */
           >
-            <Play fill="currentColor" size={20} className="ml-1" />
+            <Play fill="currentColor" size={20} className="ml-1 max-md:w-6 max-md:h-6" /> {/* mobile fix */}
           </motion.div>
 
           <div className="relative z-10 ml-6 flex flex-col items-start">
-            <span className="text-white font-black italic tracking-wider text-lg leading-none uppercase">
+            <span className="text-white font-black italic tracking-wider text-lg leading-none uppercase max-md:text-base"> {/* mobile fix */}
               {isDisabled ? "Gra Zakończona" : "ODTWÓRZ"}
             </span>
             <div className="flex items-center gap-2 mt-1">
@@ -123,7 +123,7 @@ export const Player = ({
           disabled={isDisabled}
           whileHover={isDisabled ? {} : { scale: 1.1 }}
           whileTap={isDisabled ? {} : { scale: 0.95 }}
-          className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
+          className={`w-12 h-12 md:w-16 md:h-16 max-md:w-14 max-md:h-14 rounded-full flex items-center justify-center transition-all duration-300 ${ /* mobile fix: większy przycisk */
             isDisabled 
               ? "bg-zinc-800 text-zinc-600 cursor-not-allowed" 
               : isPlaying
@@ -132,12 +132,16 @@ export const Player = ({
           }`}
         >
           {isPlaying ? (
-            <Pause fill="currentColor" size={20} className="md:w-7 md:h-7" />
+            <Pause
+              fill="currentColor"
+              size={20}
+              className="md:w-7 md:h-7 max-md:w-6 max-md:h-6" /* mobile fix */
+            />
           ) : (
             <Play
               fill="currentColor"
               size={20}
-              className="ml-1 md:w-7 md:h-7 md:ml-1.5"
+              className="ml-1 md:w-7 md:h-7 md:ml-1.5 max-md:w-6 max-md:h-6" /* mobile fix */
             />
           )}
         </motion.button>
@@ -147,7 +151,7 @@ export const Player = ({
         <AnimatePresence mode="popLayout">
           {song.lyrics[0].words.slice(0, currentStep + 1).map((phrase, i) => {
             const isActive =
-              !isDisabled && // Tekst nie świeci się, gdy gra skończona
+              !isDisabled &&
               isPlaying &&
               currentTime >= phrase.start &&
               currentTime <= phrase.end;

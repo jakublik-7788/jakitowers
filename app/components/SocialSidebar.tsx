@@ -21,7 +21,7 @@ export const SocialSidebar = ({ variant }: { variant?: string }) => {
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: -40, opacity: 0 }}
       transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
-      className="fixed left-0 top-1/2 -translate-y-1/2 z-[100] flex items-center pr-12 cursor-none"
+      className="fixed left-0 top-1/2 -translate-y-1/2 z-[100] flex items-center pr-12 cursor-none max-md:hidden" // mobile fix: ukryj na małych ekranach
       style={{ height: "300px" }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

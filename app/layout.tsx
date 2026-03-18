@@ -44,7 +44,7 @@ export default function RootLayout({
           antialiased 
           bg-background 
           text-foreground 
-          min-h-screen 
+          min-h-dvh // zmiana z min-h-screen na min-h-dvh
           selection:bg-accent/30
         `}
       >
@@ -53,8 +53,6 @@ export default function RootLayout({
           {children}
         </main>
         <CustomCursor />
-        {/* Nakładka z timerem – pojawia się przed północą */}
-        {/* <PreLaunchOverlay /> */}
       </body>
     </html>
   );

@@ -330,6 +330,8 @@ const ContactModal = ({ onClose }: { onClose: () => void }) => {
 
 // ─── Główny komponent ─────────────────────────────────────────────────────────
 
+// ... (reszta kodu bez zmian)
+
 export const FooterModals = () => {
   const [infoModal, setInfoModal] = useState<InfoModalType>(null);
   const [contactOpen, setContactOpen] = useState(false);
@@ -342,13 +344,13 @@ export const FooterModals = () => {
   return (
     <>
       {/* Linki wyśrodkowane pod paskiem */}
-      <div className="flex items-center justify-center gap-1 pt-3 pb-2">
+      <div className="flex items-center justify-center gap-1 pt-3 pb-2 max-md:flex-wrap max-md:gap-0.5"> {/* mobile fix */}
         {INFO_LINKS.map((link, i) => (
           <span key={link.key} className="flex items-center gap-1">
-            {i > 0 && <span className="text-zinc-800 text-xs select-none">·</span>}
+            {i > 0 && <span className="text-zinc-800 text-xs select-none max-md:hidden">·</span>} {/* mobile fix */}
             <button
               onClick={() => setInfoModal(link.key as InfoModalType)}
-              className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.15em] uppercase text-zinc-600 hover:text-zinc-300 transition-colors duration-200 px-1 py-0.5"
+              className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.15em] uppercase text-zinc-600 hover:text-zinc-300 transition-colors duration-200 px-1 py-0.5 max-md:px-2 max-md:py-1 max-md:text-[9px]" /* mobile fix */
             >
               <span className="opacity-60">{link.icon}</span>
               {link.label}
@@ -361,9 +363,9 @@ export const FooterModals = () => {
       <div className="fixed bottom-2 left-4 z-[200] pointer-events-auto">
         <button
           onClick={() => setContactOpen(true)}
-          className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.15em] uppercase text-zinc-600 hover:text-zinc-300 transition-colors duration-200"
+          className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.15em] uppercase text-zinc-600 hover:text-zinc-300 transition-colors duration-200 max-md:text-[9px]" /* mobile fix */
         >
-          <MessageCircle size={11} className="opacity-60" />
+          <MessageCircle size={11} className="opacity-60 max-md:w-4 max-md:h-4" /> {/* mobile fix */}
           Kontakt
         </button>
       </div>
@@ -393,20 +395,20 @@ export const FooterModals = () => {
                 className="relative w-full max-w-lg max-h-[85vh] flex flex-col rounded-[28px] border border-white/10 shadow-2xl overflow-hidden"
                 style={{ background: "#0d0d0f" }}
               >
-                <div className="flex items-center justify-between px-7 py-5 border-b border-white/5 shrink-0">
-                  <p className="text-[11px] font-black tracking-[0.35em] uppercase" style={{ color: "var(--accent-main)" }}>
+                <div className="flex items-center justify-between px-7 py-5 border-b border-white/5 shrink-0 max-md:px-4 max-md:py-3"> {/* mobile fix */}
+                  <p className="text-[11px] font-black tracking-[0.35em] uppercase max-md:text-[10px]" style={{ color: "var(--accent-main)" }}> {/* mobile fix */}
                     {infoContent.title}
                   </p>
-                  <button onClick={() => setInfoModal(null)} className="w-8 h-8 rounded-full flex items-center justify-center text-zinc-500 hover:text-white hover:bg-white/10 transition-all duration-200">
-                    <X size={15} />
+                  <button onClick={() => setInfoModal(null)} className="w-8 h-8 rounded-full flex items-center justify-center text-zinc-500 hover:text-white hover:bg-white/10 transition-all duration-200 max-md:w-10 max-md:h-10"> {/* mobile fix */}
+                    <X size={15} className="max-md:w-5 max-md:h-5" /> {/* mobile fix */}
                   </button>
                 </div>
-                <div className="overflow-y-auto scrollbar-custom px-7 py-6 flex-1">
+                <div className="overflow-y-auto scrollbar-custom px-7 py-6 flex-1 max-md:px-4 max-md:py-4"> {/* mobile fix */}
                   {infoContent.body}
                 </div>
-                <div className="px-7 py-4 border-t border-white/5 shrink-0 flex items-center justify-between">
-                  <p className="text-[10px] text-zinc-600 tracking-wider">jakitowers.pl</p>
-                  <button onClick={() => setInfoModal(null)} className="text-[11px] font-black tracking-[0.2em] uppercase px-5 py-2 rounded-xl hover:opacity-80 transition-opacity" style={{ background: "var(--accent-main)", color: "#fff" }}>
+                <div className="px-7 py-4 border-t border-white/5 shrink-0 flex items-center justify-between max-md:px-4 max-md:py-3"> {/* mobile fix */}
+                  <p className="text-[10px] text-zinc-600 tracking-wider max-md:text-[9px]">jakitowers.pl</p> {/* mobile fix */}
+                  <button onClick={() => setInfoModal(null)} className="text-[11px] font-black tracking-[0.2em] uppercase px-5 py-2 rounded-xl hover:opacity-80 transition-opacity max-md:text-[10px] max-md:px-4" style={{ background: "var(--accent-main)", color: "#fff" }}> {/* mobile fix */}
                     ZAMKNIJ
                   </button>
                 </div>

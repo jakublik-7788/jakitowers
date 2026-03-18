@@ -318,7 +318,7 @@ export const NonLimitGame = ({
       setIsFinished(true);
       setScore((p) => p + 1);
       setGuessedSongs((p) => [...p, currentSong.title]);
-      onGameEnd(true, currentAttempt + 1); // <-- użycie przekazanej funkcji
+      onGameEnd(true, currentAttempt + 1);
       setTimeout(() => {
         setGameStatus("win");
         play("win");
@@ -328,7 +328,7 @@ export const NonLimitGame = ({
     } else {
       setIsFinished(true);
       setGuessedSongs((p) => [...p, currentSong.title]);
-      onGameEnd(false, null); // <-- użycie przekazanej funkcji
+      onGameEnd(false, null);
       setTimeout(() => {
         setGameStatus("lose");
         play("lose");
@@ -365,19 +365,20 @@ export const NonLimitGame = ({
                 onClick={isPlaying ? stopAudio : handlePlayClick}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className={`w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-300 ${isPlaying ? "bg-accent text-white hover:bg-white hover:text-black" : "bg-white text-black hover:bg-accent hover:text-white"} shadow-[0_0_20px_var(--accent-glow)]`}
+                className={`w-12 h-12 md:w-16 md:h-16 max-md:w-14 max-md:h-14 rounded-full flex items-center justify-center transition-all duration-300 ${ /* mobile fix */
+                  isPlaying ? "bg-accent text-white hover:bg-white hover:text-black" : "bg-white text-black hover:bg-accent hover:text-white"} shadow-[0_0_20px_var(--accent-glow)]`}
               >
                 {isPlaying ? (
                   <Pause
                     fill="currentColor"
                     size={20}
-                    className="md:w-7 md:h-7"
+                    className="md:w-7 md:h-7 max-md:w-6 max-md:h-6" /* mobile fix */
                   />
                 ) : (
                   <Play
                     fill="currentColor"
                     size={20}
-                    className="ml-1 md:w-7 md:h-7 md:ml-1.5"
+                    className="ml-1 md:w-7 md:h-7 md:ml-1.5 max-md:w-6 max-md:h-6" /* mobile fix */
                   />
                 )}
               </motion.button>
@@ -430,7 +431,7 @@ export const NonLimitGame = ({
               <motion.div
                 layout
                 key={i}
-                className={`h-14 w-full rounded-2xl border-2 flex items-center justify-center px-6 transition-all duration-500 text-center backdrop-blur-sm relative overflow-hidden ${
+                className={`h-14 max-md:h-16 w-full rounded-2xl border-2 flex items-center justify-center px-6 transition-all duration-500 text-center backdrop-blur-sm relative overflow-hidden ${ /* mobile fix */
                   g.status === "correct"
                     ? "border-green-500 bg-green-500/15 text-green-400 shadow-[0_0_20px_rgba(34,197,94,0.4)]"
                     : g.status === "artist"
@@ -448,17 +449,15 @@ export const NonLimitGame = ({
                 <div className="absolute right-4 flex items-center">
                   {g.status === "correct" && (
                     <CheckCircle2
-                      className="shrink-0 text-green-400"
+                      className="shrink-0 text-green-400 max-md:w-5 max-md:h-5" /* mobile fix */
                       size={16}
                     />
                   )}
                   {g.status === "wrong" && (
-                    <XCircle className="shrink-0 text-red-500" size={16} />
+                    <XCircle className="shrink-0 text-red-500 max-md:w-5 max-md:h-5" size={16} /> /* mobile fix */
                   )}
                   {g.status === "artist" && (
-                    <span className="shrink-0 text-yellow-400 font-black text-base">
-                      ~
-                    </span>
+                    <span className="shrink-0 text-yellow-400 font-black text-base max-md:text-lg">~</span> /* mobile fix */
                   )}
                 </div>
               </motion.div>

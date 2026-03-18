@@ -22,7 +22,7 @@ export const ProgressGuesses = ({ guesses, gameMode = "daily" }: ProgressGuesses
           <motion.div
             layout
             key={i}
-            className={`h-14 w-full rounded-2xl border-2 flex items-center justify-center px-4 transition-all duration-500 text-center relative overflow-hidden ${
+            className={`h-14 max-md:h-16 w-full rounded-2xl border-2 flex items-center justify-center px-4 transition-all duration-500 text-center relative overflow-hidden ${ /* mobile fix: większa wysokość */
               g.status === "correct"
                 ? "border-green-500 bg-green-500/15 text-green-400 shadow-[0_0_20px_rgba(34,197,94,0.4)]"
                 : g.status === "artist"
@@ -46,13 +46,13 @@ export const ProgressGuesses = ({ guesses, gameMode = "daily" }: ProgressGuesses
 
             <div className="absolute right-4 flex items-center">
               {g.status === "correct" && (
-                <CheckCircle2 className="shrink-0 text-green-400" size={16} />
+                <CheckCircle2 className="shrink-0 text-green-400 max-md:w-5 max-md:h-5" size={16} /> /* mobile fix */
               )}
               {g.status === "wrong" && (
-                <XCircle className="shrink-0 text-red-500" size={16} />
+                <XCircle className="shrink-0 text-red-500 max-md:w-5 max-md:h-5" size={16} /> /* mobile fix */
               )}
               {g.status === "artist" && (
-                <span className="shrink-0 text-yellow-400 font-black text-base">~</span>
+                <span className="shrink-0 text-yellow-400 font-black text-base max-md:text-lg">~</span> /* mobile fix */
               )}
             </div>
           </motion.div>

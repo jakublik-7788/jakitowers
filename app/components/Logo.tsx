@@ -29,7 +29,7 @@ export const Logo = ({
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.99 }}
       >
-        <h1 className="text-8xl md:text- font-[1000] italic tracking-tighter uppercase select-none leading-none">
+        <h1 className="text-8xl max-md:text-6xl font-[1000] italic tracking-tighter uppercase select-none leading-none"> {/* mobile fix: mniejszy tekst na telefonie */}
           JAKI
           <span className="text-accent not-italic ">TO</span>
           WERS
@@ -86,7 +86,7 @@ export const Logo = ({
 
       {/* Strzałki i #1 - pokazuj tylko gdy onPrevDay i onNextDay istnieją (tryb daily) */}
       {onPrevDay && onNextDay && currentDay && totalDays && (
-        <div className="flex items-center gap-6 mt-3">
+        <div className="flex items-center gap-6 max-md:gap-4 mt-3"> {/* mobile fix */}
           <motion.button
             whileHover={{ x: -3, color: "var(--accent-main)" }}
             whileTap={{ scale: 0.95 }}
@@ -110,8 +110,8 @@ export const Logo = ({
             </svg>
           </motion.button>
           
-          <div className="bg-zinc-900/50 px-5 py-0.5 rounded-full border border-white/5 shadow-inner">
-            <span className="text-accent font-black tracking-tighter text-base drop-shadow-[0_0_8px_rgba(188,19,254,0.5)]">
+          <div className="bg-zinc-900/50 px-5 max-md:px-4 py-0.5 rounded-full border border-white/5 shadow-inner"> {/* mobile fix */}
+            <span className="text-accent font-black tracking-tighter text-base max-md:text-sm drop-shadow-[0_0_8px_rgba(188,19,254,0.5)]"> {/* mobile fix */}
               #{currentDay}
             </span>
           </div>

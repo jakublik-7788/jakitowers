@@ -56,16 +56,16 @@ export const ShareCard = ({
     <>
       <button
         onClick={handleDownload}
-        className="flex items-center justify-center gap-3 w-full bg-white/5 border border-white/10 text-white py-4 rounded-2xl font-black tracking-widest hover:bg-white/10 active:scale-95 transition-all uppercase italic relative overflow-hidden"
+        className="flex items-center justify-center gap-3 w-full bg-white/5 border border-white/10 text-white py-4 rounded-2xl font-black tracking-widest hover:bg-white/10 active:scale-95 transition-all uppercase italic relative overflow-hidden max-md:py-3 max-md:gap-2 max-md:text-sm" // mobile fix
       >
         {copied ? (
           <>
-            <Check size={20} className="text-green-400 shrink-0" />
+            <Check size={20} className="text-green-400 shrink-0 max-md:w-5 max-md:h-5" /> {/* mobile fix */}
             <span className="text-green-400">Link skopiowany!</span>
           </>
         ) : (
           <>
-            <Share2 size={20} className="text-accent shrink-0" />
+            <Share2 size={20} className="text-accent shrink-0 max-md:w-5 max-md:h-5" /> {/* mobile fix */}
             Pobierz wynik
           </>
         )}
@@ -73,7 +73,7 @@ export const ShareCard = ({
 
       {/* Drobna informacja że link zostanie skopiowany */}
       {!copied && (
-        <p className="text-zinc-700 text-[10px] text-center -mt-1 tracking-wide">
+        <p className="text-zinc-700 text-[10px] text-center -mt-1 tracking-wide max-md:text-[9px]"> {/* mobile fix */}
           Link do strony zostanie skopiowany do schowka
         </p>
       )}

@@ -48,3 +48,22 @@ body {
   background: var(--accent-main);
   border-radius: 10px;
 }
+
+
+/* Dodaj klasę dla lepszego przewijania dotykowego */
+.touch-pan-y {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+
+/* Zwiększ rozmiar przycisków na małych ekranach */
+@media (max-width: 768px) {
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  input, select, textarea {
+    font-size: 16px; /* zapobiega zoomowaniu na iOS */
+  }
+}

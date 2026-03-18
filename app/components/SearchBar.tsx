@@ -59,7 +59,7 @@ export const SearchBar = ({
             >
               <div
                 ref={scrollContainerRef}
-                className="max-h-[350px] overflow-y-auto scrollbar-custom"
+                className="max-h-[350px] overflow-y-auto scrollbar-custom touch-pan-y" /* mobile fix: lepsze przewijanie dotykowe */
               >
                 {suggestions.map((s, idx) => (
                   <button
@@ -80,10 +80,10 @@ export const SearchBar = ({
                     }`}
                   >
                     <div className="flex-1">
-                      <p className={`font-bold text-lg ${selectedIndex === idx ? "text-accent" : "text-white"}`}>
+                      <p className={`font-bold text-lg max-md:text-base ${selectedIndex === idx ? "text-accent" : "text-white"}`}> {/* mobile fix */}
                         {s.title}
                       </p>
-                      <p className="text-zinc-500 text-xs uppercase tracking-widest">{s.artist}</p>
+                      <p className="text-zinc-500 text-xs uppercase tracking-widest max-md:text-[10px]">{s.artist}</p> {/* mobile fix */}
                     </div>
                     <Search
                       size={18}
@@ -103,13 +103,13 @@ export const SearchBar = ({
           }`}
         >
           <div className="flex-1 flex items-center pl-6 text-accent">
-            <Search size={26} className={isStarted ? "text-accent" : "text-zinc-700"} />
+            <Search size={26} className={isStarted ? "text-accent" : "text-zinc-700 max-md:w-5 max-md:h-5"} /> {/* mobile fix */}
             <input
               type="text"
               disabled={isFinished || !isStarted}
               onKeyDown={onKeyDown}
               autoFocus
-              className="bg-transparent w-full p-4 outline-none text-white text-lg font-bold ml-4 placeholder:text-zinc-700 disabled:cursor-not-allowed"
+              className="bg-transparent w-full p-4 max-md:p-3 outline-none text-white text-lg max-md:text-base font-bold ml-4 placeholder:text-zinc-700 disabled:cursor-not-allowed" /* mobile fix */
               placeholder={
                 isFinished
                   ? "KONIEC GRY"
@@ -152,7 +152,7 @@ export const SearchBar = ({
           <button
             disabled={isFinished || !isStarted}
             onClick={onGuess}
-            className={`px-12 py-5 rounded-[22px] font-[1000] text-sm tracking-[0.3em] transition-all duration-300 ${
+            className={`px-12 max-md:px-8 py-5 rounded-[22px] font-[1000] text-sm tracking-[0.3em] transition-all duration-300 ${ /* mobile fix: mniejszy padding */
               isFinished || !isStarted
                 ? "bg-zinc-800 text-zinc-600 cursor-not-allowed"
                 : inputError

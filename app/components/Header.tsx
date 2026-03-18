@@ -50,10 +50,10 @@ export const Header = ({
   };
 
   return (
-    <div className="relative z-50 pt-12 pb-16 flex flex-col items-center bg-gradient-to-b from-black via-black/90 to-transparent">
+    <div className="relative z-50 pt-12 pb-16 max-md:pt-6 max-md:pb-8 flex flex-col items-center bg-gradient-to-b from-black via-black/90 to-transparent"> {/* mobile fix: mniejsze odstępy */}
 
       {/* LEWY GÓRNY RÓG — głośność */}
-      <div className="absolute top-8 left-8 flex gap-4 text-zinc-700 items-center">
+      <div className="absolute top-8 left-8 max-md:top-4 max-md:left-4 flex gap-4 text-zinc-700 items-center"> {/* mobile fix */}
         <div
           className="relative flex items-center"
           onMouseEnter={() => setIsVolumeHovered(true)}
@@ -61,7 +61,7 @@ export const Header = ({
         >
           <motion.button
             whileHover={{ scale: 1.1, color: "var(--accent-main)" }}
-            className="z-30 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-white/5 bg-black border border-white/5"
+            className="z-30 w-10 h-10 max-md:w-12 max-md:h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-white/5 bg-black border border-white/5" /* mobile fix */
             style={{ boxShadow: isVolumeHovered ? "0 0 15px var(--accent-glow)" : "none" }}
           >
             {getVolumeIcon()}
@@ -78,7 +78,7 @@ export const Header = ({
                 <input
                   type="range" min="0" max="1" step="0.01" value={volume}
                   onChange={(e) => setVolume(parseFloat(e.target.value))}
-                  className="w-24 h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer"
+                  className="w-24 h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer touch-manipulation" /* mobile fix */
                   style={{ accentColor: "var(--accent-main)" }}
                 />
                 <span className="text-[10px] font-black w-8 tabular-nums" style={{ color: "var(--accent-main)" }}>
@@ -100,11 +100,11 @@ export const Header = ({
       />
 
       {/* PRZYCISKI TRYBÓW */}
-      <div className="absolute top-[35%] left-1/2 transform -translate-x-1/2 w-full max-w-6xl flex justify-between px-6 pointer-events-none">
+      <div className="absolute top-[35%] left-1/2 transform -translate-x-1/2 w-full max-w-6xl flex justify-between px-6 pointer-events-none max-md:px-3 max-md:top-[20%]"> {/* mobile fix */}
         <motion.button
           whileHover={{ scale: 1.1 }}
           onClick={() => setGameMode("daily")}
-          className={`pointer-events-auto flex items-center gap-2 px-6 py-3 rounded-full backdrop-blur-sm border font-black italic tracking-wider text-sm uppercase transition-all duration-300 group ${
+          className={`pointer-events-auto flex items-center gap-2 px-6 max-md:px-4 py-3 max-md:py-2.5 rounded-full backdrop-blur-sm border font-black italic tracking-wider text-sm uppercase transition-all duration-300 group ${ /* mobile fix */
             gameMode === "daily"
               ? "bg-accent text-white shadow-[0_0_15px_var(--accent-glow)]"
               : "bg-zinc-800/30 border-white/5 text-zinc-400 hover:text-white hover:bg-accent/20"
@@ -117,7 +117,7 @@ export const Header = ({
         <motion.button
           whileHover={{ scale: 1.1 }}
           onClick={() => setGameMode("nonlimit")}
-          className={`pointer-events-auto flex items-center gap-2 px-6 py-3 rounded-full backdrop-blur-sm border font-black italic tracking-wider text-sm uppercase transition-all duration-300 group ${
+          className={`pointer-events-auto flex items-center gap-2 px-6 max-md:px-4 py-3 max-md:py-2.5 rounded-full backdrop-blur-sm border font-black italic tracking-wider text-sm uppercase transition-all duration-300 group ${ /* mobile fix */
             gameMode === "nonlimit"
               ? "bg-accent text-white shadow-[0_0_15px_var(--accent-glow)]"
               : "bg-zinc-800/30 border-white/5 text-zinc-400 hover:text-white hover:bg-accent/20"
@@ -129,13 +129,13 @@ export const Header = ({
       </div>
 
       {/* PRAWY GÓRNY RÓG — Statystyki, Kalendarz, Ustawienia */}
-      <div className="absolute top-8 right-8 flex gap-2 text-zinc-700 items-center">
+      <div className="absolute top-8 right-8 max-md:top-4 max-md:right-4 flex gap-2 text-zinc-700 items-center"> {/* mobile fix */}
 
         {/* Statystyki — zawsze widoczne */}
         <motion.button
           whileHover={{ scale: 1.1, color: "var(--accent-main)" }}
           onClick={onStatsClick}
-          className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-white/5"
+          className="w-10 h-10 max-md:w-12 max-md:h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-white/5" /* mobile fix */
         >
           <BarChart2 size={24} />
         </motion.button>
@@ -149,7 +149,7 @@ export const Header = ({
               exit={{ opacity: 0, scale: 0.8 }}
               whileHover={{ scale: 1.1, color: "var(--accent-main)" }}
               onClick={onCalendarClick}
-              className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-white/5"
+              className="w-10 h-10 max-md:w-12 max-md:h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-white/5" /* mobile fix */
             >
               <Calendar size={24} />
             </motion.button>
@@ -160,7 +160,7 @@ export const Header = ({
         <motion.button
           whileHover={{ scale: 1.1, color: "var(--accent-main)" }}
           onClick={() => setIsSettingsOpen(true)}
-          className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-white/5"
+          className="w-10 h-10 max-md:w-12 max-md:h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-white/5" /* mobile fix */
         >
           <Settings size={24} />
         </motion.button>
