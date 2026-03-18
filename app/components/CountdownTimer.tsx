@@ -3,21 +3,33 @@
 import { useState, useEffect } from "react";
 
 interface CountdownTimerProps {
+  targetDate?: Date;          // nowy prop
   onMidnight?: () => void;
   className?: string;
   showSeconds?: boolean;
 }
 
-export const CountdownTimer = ({ onMidnight, className = "", showSeconds = true }: CountdownTimerProps) => {
+export const CountdownTimer = ({
+  targetDate,
+  onMidnight,
+  className = "",
+  showSeconds = true,
+}: CountdownTimerProps) => {
   const [timeLeft, setTimeLeft] = useState("");
 
   useEffect(() => {
     const updateTimer = () => {
       const now = new Date();
-      const midnight = new Date();
-      midnight.setHours(24, 0, 0, 0);
+      let target: Date;
 
-      const diff = midnight.getTime() - now.getTime();
+      if (targetDate) {
+        target = new Date(targetDate); // kopia, żeby nie mutować oryginału
+      } else {
+        target = new Date();
+        target.setHours(24, 0, 0, 0); // północ dzisiaj
+      }
+
+      const diff = target.getTime() - now.getTime();
       if (diff <= 0) {
         setTimeLeft("00:00" + (showSeconds ? ":00" : ""));
         onMidnight?.();
@@ -39,7 +51,7 @@ export const CountdownTimer = ({ onMidnight, className = "", showSeconds = true 
     updateTimer();
     const interval = setInterval(updateTimer, 1000);
     return () => clearInterval(interval);
-  }, [onMidnight, showSeconds]);
+  }, [targetDate, onMidnight, showSeconds]);
 
   return <span className={className}>{timeLeft}</span>;
 };
