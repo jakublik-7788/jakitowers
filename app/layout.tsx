@@ -54,7 +54,7 @@ export default function RootLayout({
         </main>
         <CustomCursor />
         {/* Nakładka z timerem – pojawia się przed północą */}
-        <PreLaunchOverlay />
+        {/* <PreLaunchOverlay /> */}
       </body>
     </html>
   );
