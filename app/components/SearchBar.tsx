@@ -61,7 +61,7 @@ export const SearchBar = ({
   guessedSongs,
 }: SearchBarProps) => {
   return (
-    <div className="relative z-20 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent pt-16 max-md:pt-4 pb-2 max-md:pb-1">
+    <div className="relative z-20 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent pt-16 max-md:pt-0 pb-2 max-md:pb-1">
       <div className="max-w-4xl mx-auto relative px-4">
         <AnimatePresence>
           {suggestions.length > 0 && !isFinished && (

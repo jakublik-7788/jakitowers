@@ -34,10 +34,12 @@ const TOPICS = [
 
 type TopicId = typeof TOPICS[number]["id"];
 
-const INFO_LINKS: { key: InfoModalType & string; label: string; icon: React.ReactNode }[] = [
+// Nowa lista linków – 4 elementy (dodajemy "Kontakt")
+const INFO_LINKS: { key: InfoModalType | "contact"; label: string; icon: React.ReactNode }[] = [
   { key: "rules", label: "Zasady gry", icon: <BookOpen size={11} /> },
   { key: "privacy", label: "Prywatność", icon: <Shield size={11} /> },
   { key: "cookies", label: "Cookies", icon: <Cookie size={11} /> },
+  { key: "contact", label: "Kontakt", icon: <MessageCircle size={11} /> },
 ];
 
 // ─── Treści modali info ───────────────────────────────────────────────────────
@@ -424,33 +426,29 @@ export const FooterModals = () => {
 
   const infoContent = infoModal ? INFO_CONTENT[infoModal] : null;
 
+  // Funkcja do otwierania modala kontaktowego
+  const handleContactClick = () => setContactOpen(true);
+
   return (
     <>
-      {/* Linki wyśrodkowane pod paskiem - zmniejszone odstępy na mobile */}
-      <div className="flex items-center justify-center gap-1 pt-2 pb-1 max-md:flex-wrap max-md:gap-x-2 max-md:gap-y-0 max-md:px-2 max-md:pt-1 max-md:pb-0">
-        {INFO_LINKS.map((link, i) => (
-          <span key={link.key} className="flex items-center gap-1">
-            {i > 0 && <span className="text-zinc-800 text-xs select-none max-md:hidden">·</span>}
-            <button
-              onClick={() => setInfoModal(link.key as InfoModalType)}
-              className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.15em] uppercase text-zinc-600 hover:text-zinc-300 transition-colors duration-200 px-1 py-0.5 max-md:px-2 max-md:py-0 max-md:text-[9px] max-md:whitespace-nowrap"
-            >
-              <span className="opacity-60">{link.icon}</span>
-              {link.label}
-            </button>
-          </span>
+      {/* Linki w jednym rzędzie na dole */}
+      <div className="flex items-center justify-center gap-2 pt-2 pb-1 max-md:flex-nowrap max-md:gap-1 max-md:px-1 max-md:pt-0 max-md:pb-0">
+        {INFO_LINKS.map((link) => (
+          <button
+            key={link.key}
+            onClick={() => {
+              if (link.key === "contact") {
+                handleContactClick();
+              } else {
+                setInfoModal(link.key as InfoModalType);
+              }
+            }}
+            className="flex items-center gap-1 text-[10px] font-bold tracking-[0.15em] uppercase text-zinc-600 hover:text-zinc-300 transition-colors duration-200 px-1 py-0.5 max-md:px-1 max-md:py-0 max-md:text-[8px] max-md:whitespace-nowrap"
+          >
+            <span className="opacity-60">{link.icon}</span>
+            {link.label}
+          </button>
         ))}
-      </div>
-
-      {/* Przycisk kontaktu — fixed lewy dolny róg - przesunięty wyżej na mobile */}
-      <div className="fixed bottom-2 left-4 z-[200] pointer-events-auto max-md:bottom-4 max-md:left-2">
-        <button
-          onClick={() => setContactOpen(true)}
-          className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.15em] uppercase text-zinc-600 hover:text-zinc-300 transition-colors duration-200 max-md:text-[9px]"
-        >
-          <MessageCircle size={11} className="opacity-60 max-md:w-4 max-md:h-4" />
-          Kontakt
-        </button>
       </div>
 
       {/* Portale */}

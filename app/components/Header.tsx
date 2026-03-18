@@ -59,7 +59,7 @@ export const Header = ({
   };
 
   return (
-    <div className="relative z-50 pt-12 pb-16 max-md:pt-4 max-md:pb-8 flex flex-col items-center bg-gradient-to-b from-black via-black/90 to-transparent">
+    <div className="relative z-50 pt-12 pb-16 max-md:pt-1 max-md:pb-2 flex flex-col items-center bg-gradient-to-b from-black via-black/90 to-transparent">
       {/* Lewy górny róg - głośność (ukryta na mobile) */}
       <div className="absolute top-8 left-8 max-md:hidden flex gap-4 text-zinc-700 items-center">
         <div
@@ -105,61 +105,94 @@ export const Header = ({
         </div>
       </div>
 
-      {/* Górny pasek na mobile: logo, numer dnia i ikony w jednym rzędzie */}
-      <div className="w-full flex items-center justify-between px-4 max-md:flex md:hidden">
-        {/* Małe logo z nawigacją i numerem dnia */}
-        <div className="flex items-center gap-1">
+      {/* Górny pasek na mobile – wszystkie elementy w jednym wierszu */}
+      <div className="w-full flex items-center justify-between px-2 max-md:flex md:hidden">
+        {/* Lewa część: strzałki, logo i numer dnia – z minimalnymi odstępami (gap-0 i ujemne marginesy) */}
+        <div className="flex items-center gap-0">
           {gameMode === "daily" && onPrevDay && currentDay && (
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={onPrevDay}
               disabled={currentDay === 1}
-              className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
+              className={`w-6 h-6 -mr-1 rounded-full flex items-center justify-center transition-colors ${
                 currentDay === 1 ? "opacity-30 cursor-not-allowed" : "text-zinc-400 hover:text-accent"
               }`}
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
                 <path d="M15 18l-6-6 6-6" />
               </svg>
             </motion.button>
           )}
-          <div className="text-2xl font-black italic tracking-tighter text-white">
+          <div className="text-xl font-black italic tracking-tighter text-white">
             J<span className="text-accent">T</span>W
           </div>
           {gameMode === "daily" && currentDay && (
-            <div className="bg-zinc-900/50 px-2 py-0.5 rounded-full border border-white/5 shadow-inner ml-1">
-              <span className="text-accent font-black tracking-tighter text-sm drop-shadow-[0_0_8px_rgba(188,19,254,0.5)]">
-                #{currentDay}
-              </span>
-            </div>
-          )}
-          {gameMode === "daily" && onNextDay && currentDay && totalDays && (
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={onNextDay}
-              disabled={currentDay === totalDays}
-              className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
-                currentDay === totalDays ? "opacity-30 cursor-not-allowed" : "text-zinc-400 hover:text-accent"
-              }`}
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
-            </motion.button>
+            <>
+              <div className="bg-zinc-900/50 px-1 py-0.5 rounded-full border border-white/5 shadow-inner -ml-1">
+                <span className="text-accent font-black tracking-tighter text-[10px] drop-shadow-[0_0_5px_rgba(188,19,254,0.5)]">
+                  #{currentDay}
+                </span>
+              </div>
+              {onNextDay && totalDays && (
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={onNextDay}
+                  disabled={currentDay === totalDays}
+                  className={`w-6 h-6 -ml-1 rounded-full flex items-center justify-center transition-colors ${
+                    currentDay === totalDays ? "opacity-30 cursor-not-allowed" : "text-zinc-400 hover:text-accent"
+                  }`}
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </motion.button>
+              )}
+            </>
           )}
         </div>
 
-        {/* Ikony po prawej */}
+        {/* Środkowa część: przyciski trybów */}
         <div className="flex items-center gap-2">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setGameMode("daily")}
+            className={`flex items-center gap-0.5 px-2.5 py-1.5 rounded-full backdrop-blur-sm border font-black italic tracking-wider text-[10px] uppercase transition-all duration-300 ${
+              gameMode === "daily"
+                ? "bg-accent text-white shadow-[0_0_10px_var(--accent-glow)]"
+                : "bg-zinc-800/30 border-white/5 text-zinc-400 hover:text-white hover:bg-accent/20"
+            }`}
+          >
+            <Sun size={13} className={gameMode === "daily" ? "text-white" : "text-zinc-500"} />
+            <span>DAILY</span>
+          </motion.button>
+
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setGameMode("nonlimit")}
+            className={`flex items-center gap-0.5 px-2.5 py-1.5 rounded-full backdrop-blur-sm border font-black italic tracking-wider text-[10px] uppercase transition-all duration-300 ${
+              gameMode === "nonlimit"
+                ? "bg-accent text-white shadow-[0_0_10px_var(--accent-glow)]"
+                : "bg-zinc-800/30 border-white/5 text-zinc-400 hover:text-white hover:bg-accent/20"
+            }`}
+          >
+            <Infinity size={13} className={gameMode === "nonlimit" ? "text-white" : "text-zinc-500"} />
+            <span>NON LIMIT</span>
+          </motion.button>
+        </div>
+
+        {/* Prawa część: ikony */}
+        <div className="flex items-center gap-1">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={onStatsClick}
-            className="w-10 h-10 rounded-full flex items-center justify-center bg-zinc-800/50 border border-white/10 active:bg-accent/20 transition-colors"
+            className="w-8 h-8 rounded-full flex items-center justify-center bg-zinc-800/50 border border-white/10 active:bg-accent/20 transition-colors"
           >
-            <BarChart2 size={20} className="text-zinc-300" />
+            <BarChart2 size={16} className="text-zinc-300" />
           </motion.button>
 
           {gameMode === "daily" && (
@@ -167,9 +200,9 @@ export const Header = ({
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={onCalendarClick}
-              className="w-10 h-10 rounded-full flex items-center justify-center bg-zinc-800/50 border border-white/10 active:bg-accent/20 transition-colors"
+              className="w-8 h-8 rounded-full flex items-center justify-center bg-zinc-800/50 border border-white/10 active:bg-accent/20 transition-colors"
             >
-              <Calendar size={20} className="text-zinc-300" />
+              <Calendar size={16} className="text-zinc-300" />
             </motion.button>
           )}
 
@@ -177,9 +210,9 @@ export const Header = ({
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsSettingsOpen(true)}
-            className="w-10 h-10 rounded-full flex items-center justify-center bg-zinc-800/50 border border-white/10 active:bg-accent/20 transition-colors"
+            className="w-8 h-8 rounded-full flex items-center justify-center bg-zinc-800/50 border border-white/10 active:bg-accent/20 transition-colors"
           >
-            <Settings size={20} className="text-zinc-300" />
+            <Settings size={16} className="text-zinc-300" />
           </motion.button>
         </div>
       </div>
@@ -196,12 +229,12 @@ export const Header = ({
         />
       </div>
 
-      {/* Przyciski trybów */}
-      <div className="absolute top-[35%] left-1/2 transform -translate-x-1/2 w-full max-w-6xl flex justify-between px-6 pointer-events-none max-md:static max-md:transform-none max-md:justify-center max-md:gap-4 max-md:mt-6 max-md:px-4">
+      {/* Przyciski trybów – tylko na desktopie (ukryte na mobile) */}
+      <div className="absolute top-[35%] left-1/2 transform -translate-x-1/2 w-full max-w-6xl flex justify-between px-6 pointer-events-none max-md:hidden">
         <motion.button
           whileHover={{ scale: 1.1 }}
           onClick={() => setGameMode("daily")}
-          className={`pointer-events-auto flex items-center gap-2 px-6 max-md:px-4 py-3 max-md:py-2.5 rounded-full backdrop-blur-sm border font-black italic tracking-wider text-sm uppercase transition-all duration-300 group ${
+          className={`pointer-events-auto flex items-center gap-2 px-6 py-3 rounded-full backdrop-blur-sm border font-black italic tracking-wider text-sm uppercase transition-all duration-300 group ${
             gameMode === "daily"
               ? "bg-accent text-white shadow-[0_0_15px_var(--accent-glow)]"
               : "bg-zinc-800/30 border-white/5 text-zinc-400 hover:text-white hover:bg-accent/20"
@@ -217,7 +250,7 @@ export const Header = ({
         <motion.button
           whileHover={{ scale: 1.1 }}
           onClick={() => setGameMode("nonlimit")}
-          className={`pointer-events-auto flex items-center gap-2 px-6 max-md:px-4 py-3 max-md:py-2.5 rounded-full backdrop-blur-sm border font-black italic tracking-wider text-sm uppercase transition-all duration-300 group ${
+          className={`pointer-events-auto flex items-center gap-2 px-6 py-3 rounded-full backdrop-blur-sm border font-black italic tracking-wider text-sm uppercase transition-all duration-300 group ${
             gameMode === "nonlimit"
               ? "bg-accent text-white shadow-[0_0_15px_var(--accent-glow)]"
               : "bg-zinc-800/30 border-white/5 text-zinc-400 hover:text-white hover:bg-accent/20"

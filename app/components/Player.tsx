@@ -43,7 +43,7 @@ export const Player = ({
         key="audio-deck-start"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className={`relative flex items-center justify-center py-20 max-md:py-12 transition-opacity duration-500 ${
+        className={`relative flex items-center justify-center py-20 max-md:py-8 transition-opacity duration-500 ${
           isDisabled ? "opacity-40 pointer-events-none" : "opacity-100"
         }`}
       >
@@ -174,4 +174,4 @@ export const Player = ({
       </div>
     </motion.div>
   );
-}
+};
