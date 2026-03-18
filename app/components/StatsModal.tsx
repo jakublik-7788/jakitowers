@@ -55,7 +55,7 @@ export const StatsModal = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
-          className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm will-change-transform"
+          className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/80"
         >
           <motion.div
             initial={{ scale: 0.9, y: 20 }}

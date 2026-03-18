@@ -172,7 +172,7 @@ const ContactModal = ({ onClose }: { onClose: () => void }) => {
       className="fixed inset-0 flex items-end sm:items-center justify-center p-4 sm:p-6"
       style={{ zIndex: 99999 }}
     >
-      <div className="absolute inset-0 bg-black/80 backdrop-blur-sm will-change-transform" />
+      <div className="absolute inset-0 bg-black/80" />
       <motion.div
         initial={{ opacity: 0, y: 32, scale: 0.97 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -383,7 +383,7 @@ export const FooterModals = () => {
               className="fixed inset-0 flex items-end sm:items-center justify-center p-4 sm:p-6"
               style={{ zIndex: 99999 }}
             >
-              <div className="absolute inset-0 bg-black/80 backdrop-blur-sm will-change-transform" />
+              <div className="absolute inset-0 bg-black/80" />
               <motion.div
                 initial={{ opacity: 0, y: 32, scale: 0.97 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
