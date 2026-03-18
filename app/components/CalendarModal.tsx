@@ -83,7 +83,7 @@ export const CalendarModal = ({
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/60 z-50"
+            className="fixed inset-0 bg-black/97 z-50"
           />
           <motion.div
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
