@@ -138,7 +138,7 @@ export const SearchBar = ({
               type="text"
               disabled={isFinished || !isStarted}
               onKeyDown={onKeyDown}
-              autoFocus
+              // autoFocus usunięty, aby nie otwierać klawiatury na mobile
               className="bg-transparent w-full p-4 max-md:p-2 outline-none text-white text-lg max-md:text-base font-bold ml-4 max-md:ml-2 placeholder:text-zinc-700 disabled:cursor-not-allowed"
               placeholder={
                 isFinished
@@ -182,7 +182,7 @@ export const SearchBar = ({
           <button
             disabled={isFinished || !isStarted}
             onClick={onGuess}
-            className={`px-12 max-md:px-4 py-5 max-md:py-3 rounded-[22px] font-[1000] text-sm tracking-[0.3em] transition-all duration-300 ${
+            className={`px-12 max-md:px-5 py-5 max-md:py-3 rounded-[22px] font-[1000] text-sm tracking-[0.3em] transition-all duration-300 ${
               isFinished || !isStarted
                 ? "bg-zinc-800 text-zinc-600 cursor-not-allowed"
                 : inputError
