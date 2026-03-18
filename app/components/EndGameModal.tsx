@@ -80,7 +80,7 @@ export const EndGameModal = ({
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={(e) => e.target === e.currentTarget && onClose()}
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 cursor-pointer"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 cursor-pointer"
     >
       <motion.div
         initial={{ scale: 0.9, y: 20, opacity: 0 }}

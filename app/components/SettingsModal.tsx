@@ -57,7 +57,7 @@ export const SettingsModal = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="absolute inset-0 bg-black/90"
+            className="absolute inset-0 bg-black/95"
           />
 
           <motion.div
