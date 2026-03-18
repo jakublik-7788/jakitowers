@@ -19,6 +19,8 @@ import {
 } from "lucide-react";
 import { createPortal } from "react-dom";
 
+// ─── Typy ─────────────────────────────────────────────────────────────────────
+
 type InfoModalType = "rules" | "privacy" | "cookies" | null;
 type ContactStep = "topic" | "form" | "sent";
 
@@ -37,6 +39,8 @@ const INFO_LINKS: { key: InfoModalType & string; label: string; icon: React.Reac
   { key: "privacy", label: "Prywatność", icon: <Shield size={11} /> },
   { key: "cookies", label: "Cookies", icon: <Cookie size={11} /> },
 ];
+
+// ─── Treści modali info ───────────────────────────────────────────────────────
 
 const RulesContent = () => (
   <div className="flex flex-col gap-6 text-zinc-300 text-sm leading-relaxed">
@@ -169,6 +173,8 @@ const INFO_CONTENT: Record<string, { title: string; body: React.ReactNode }> = {
   privacy: { title: "POLITYKA PRYWATNOŚCI", body: <PrivacyContent /> },
   cookies: { title: "COOKIES I LOCALSTORAGE", body: <CookiesContent /> },
 };
+
+// ─── Modal kontaktowy ─────────────────────────────────────────────────────────
 
 const ContactModal = ({ onClose }: { onClose: () => void }) => {
   const [step, setStep] = useState<ContactStep>("topic");
@@ -405,6 +411,8 @@ const ContactModal = ({ onClose }: { onClose: () => void }) => {
   );
 };
 
+// ─── Główny komponent ─────────────────────────────────────────────────────────
+
 export const FooterModals = () => {
   const [infoModal, setInfoModal] = useState<InfoModalType>(null);
   const [contactOpen, setContactOpen] = useState(false);
@@ -418,13 +426,14 @@ export const FooterModals = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center gap-1 pt-3 pb-2 max-md:flex-wrap max-md:gap-0.5">
+      {/* Linki wyśrodkowane pod paskiem */}
+      <div className="flex items-center justify-center gap-1 pt-3 pb-2 max-md:flex-wrap max-md:gap-x-2 max-md:gap-y-1 max-md:px-2">
         {INFO_LINKS.map((link, i) => (
           <span key={link.key} className="flex items-center gap-1">
             {i > 0 && <span className="text-zinc-800 text-xs select-none max-md:hidden">·</span>}
             <button
               onClick={() => setInfoModal(link.key as InfoModalType)}
-              className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.15em] uppercase text-zinc-600 hover:text-zinc-300 transition-colors duration-200 px-1 py-0.5 max-md:px-2 max-md:py-1 max-md:text-[9px]"
+              className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.15em] uppercase text-zinc-600 hover:text-zinc-300 transition-colors duration-200 px-1 py-0.5 max-md:px-2 max-md:py-1 max-md:text-[9px] max-md:whitespace-nowrap"
             >
               <span className="opacity-60">{link.icon}</span>
               {link.label}
@@ -433,7 +442,8 @@ export const FooterModals = () => {
         ))}
       </div>
 
-      <div className="fixed bottom-2 left-4 z-[200] pointer-events-auto">
+      {/* Przycisk kontaktu — fixed lewy dolny róg */}
+      <div className="fixed bottom-2 left-4 z-[200] pointer-events-auto max-md:bottom-1 max-md:left-2">
         <button
           onClick={() => setContactOpen(true)}
           className="flex items-center gap-1.5 text-[10px] font-bold tracking-[0.15em] uppercase text-zinc-600 hover:text-zinc-300 transition-colors duration-200 max-md:text-[9px]"
@@ -443,6 +453,7 @@ export const FooterModals = () => {
         </button>
       </div>
 
+      {/* Portale */}
       {mounted &&
         createPortal(
           <AnimatePresence>

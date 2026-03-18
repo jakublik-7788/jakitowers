@@ -1,3 +1,4 @@
+// app/components/Header.tsx
 "use client";
 
 import React from "react";
@@ -59,7 +60,8 @@ export const Header = ({
   };
 
   return (
-    <div className="relative z-50 pt-12 pb-16 max-md:pt-6 max-md:pb-8 flex flex-col items-center bg-gradient-to-b from-black via-black/90 to-transparent">
+    <div className="relative z-50 pt-12 pb-16 max-md:pt-4 max-md:pb-8 flex flex-col items-center bg-gradient-to-b from-black via-black/90 to-transparent">
+      {/* LEWY GÓRNY RÓG — głośność */}
       <div className="absolute top-8 left-8 max-md:top-4 max-md:left-4 flex gap-4 text-zinc-700 items-center">
         <div
           className="relative flex items-center"
@@ -113,6 +115,7 @@ export const Header = ({
         totalDays={gameMode === "daily" ? totalDays : undefined}
       />
 
+      {/* PRZYCISKI TRYBÓW */}
       <div className="absolute top-[35%] left-1/2 transform -translate-x-1/2 w-full max-w-6xl flex justify-between px-6 pointer-events-none max-md:px-3 max-md:top-[20%]">
         <motion.button
           whileHover={{ scale: 1.1 }}
@@ -147,6 +150,7 @@ export const Header = ({
         </motion.button>
       </div>
 
+      {/* PRAWY GÓRNY RÓG — Statystyki, Kalendarz, Ustawienia */}
       <div className="absolute top-8 right-8 max-md:top-4 max-md:right-4 flex gap-2 text-zinc-700 items-center">
         <motion.button
           whileHover={{ scale: 1.1, color: "var(--accent-main)" }}
@@ -181,4 +185,4 @@ export const Header = ({
       </div>
     </div>
   );
-}
+};
