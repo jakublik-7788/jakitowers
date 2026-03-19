@@ -1963,7 +1963,7 @@ export const dailySongs: Song[] = [
     title: "Trójkąt Bermudzki",
     artist: "Sentino, Nitro, MASNY BEN, mgng",
     audioSrc: "/55_Trójkąt.mp3",
-    youtubeId: "",
+    youtubeId: "pjDxVMlz4B0",
     lyrics: [
       {
         lineIndex: 0,
@@ -4792,7 +4792,7 @@ export const dailySongs: Song[] = [
     title: "Abu Dhabi",
     artist: "Baba Hassan, Oska030, Pusher, Oil Beatz",
     audioSrc: "/135_AbuDhabi.mp3",
-    youtubeId: "",
+    youtubeId: "SGHNzsh9GXw",
     lyrics: [
       {
         lineIndex: 0,
@@ -4896,7 +4896,7 @@ export const dailySongs: Song[] = [
     title: "100 BPM",
     artist: "Kizo, @bletka",
     audioSrc: "/138_Every.mp3",
-    youtubeId: "",
+    youtubeId: "w4k_6tUw2mQ",
     lyrics: [
       {
         lineIndex: 0,
@@ -6489,7 +6489,7 @@ export const dailySongs: Song[] = [
     title: "Jeżyk!",
     artist: "OKI, Nolyrics Beats",
     audioSrc: "/183_Jeżyk!.mp3",
-    youtubeId: "",
+    youtubeId: "wlOdTniCvt0",
     lyrics: [
       {
         lineIndex: 0,
