@@ -2432,7 +2432,7 @@ export const dailySongs: Song[] = [
   {
     id: 68,
     day: 68,
-    title: "Rundki (feat. Diho, Alberto & Bibič)",
+    title: "Rundki",
     artist: "Malik Montana, Diho, Alberto, Bibič",
     audioSrc: "/68_Rundki.mp3",
     youtubeId: "bo2kIBNKqrM",
@@ -2753,7 +2753,7 @@ export const dailySongs: Song[] = [
     id: 77,
     day: 77,
     title: "Wschód (lubię zapierdalać)",
-    artist: "Bedoes, Lanek feat. Kosa, White 2115",
+    artist: "Bedoes, Lanek, Kosa, White 2115",
     audioSrc: "/77_Bedoes.mp3",
     youtubeId: "YShJHtEP82U",
     lyrics: [
@@ -4100,7 +4100,7 @@ export const dailySongs: Song[] = [
   {
     id: 115,
     day: 115,
-    title: "KING (feat. Lanberry)",
+    title: "KING",
     artist: "Malik Montana, Lanberry",
     audioSrc: "/115_KINGfeatLa.mp3",
     youtubeId: "CZKC3RKaV1s",
@@ -7693,7 +7693,7 @@ export const dailySongs: Song[] = [
     id: 216,
     day: 216,
     title: "Gozier",
-    artist: "PLK (feat. Paluch)",
+    artist: "PLK, Paluch",
     audioSrc: "/216_Gozier.mp3",
     youtubeId: "RAHXECrCC6E",
     lyrics: [
@@ -7912,9 +7912,9 @@ export const dailySongs: Song[] = [
   {
     id: 222,
     day: 222,
-    title: "Parapetówa (feat. Kacperczyk)",
+    title: "Parapetówa",
     artist:
-      "SB Maffija, White 2115, Adi Nowak, Janusz Walczuk, Białas, Fukaj, SKUTE BOBO, Beteo, Kinny Zimmer, Solar",
+      "SB Maffija, White 2115, Adi Nowak, Kacperczyk, Janusz Walczuk, Białas, Fukaj, SKUTE BOBO, Beteo, Kinny Zimmer, Solar",
     audioSrc: "/222_Parapetwaf.mp3",
     youtubeId: "tm5Z88WFiqs",
     lyrics: [

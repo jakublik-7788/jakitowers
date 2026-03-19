@@ -76,7 +76,7 @@ export const allSongs: SongSuggestion[] = [
   { title: "Belly Dance", artist: "Malik Montana" },
   { title: "LET IT B", artist: "bambi" },
   {
-    title: "Rundki (feat. Diho, Alberto & Bibič)",
+    title: "Rundki",
     artist: "Malik Montana, Diho, Alberto, Bibič",
   },
   { title: "Łyk i buch", artist: "SB Maffija, GOMBAO 33, Pedro, francis" },
@@ -92,7 +92,7 @@ export const allSongs: SongSuggestion[] = [
   { title: "Plain Jane", artist: "Malik Montana" },
   {
     title: "Wschód (lubię zapierdalać)",
-    artist: "Bedoes, Lanek feat. Kosa, White 2115",
+    artist: "Bedoes, Lanek, Kosa, White 2115",
   },
   { title: "Ground Zero", artist: "PRO8L3M" },
   { title: "Jungle Girl", artist: "Young Leosia (Ft. Żabson)" },
@@ -139,7 +139,7 @@ export const allSongs: SongSuggestion[] = [
   { title: "NASCAR", artist: "PRO8L3M (Ft. CatchUp, Pezet)" },
   { title: "La Vida Loca", artist: "White 2115" },
   { title: "Pogo", artist: "Kizo (Ft. OKI)" },
-  { title: "KING (feat. Lanberry)", artist: "Malik Montana, Lanberry" },
+  { title: "KING", artist: "Malik Montana, Lanberry" },
   { title: "up! up! up!", artist: "Mata" },
   { title: "Hinata", artist: "Szpaku" },
   { title: "HIPNOZA", artist: "NIKOŚ (POL)" },
@@ -284,7 +284,7 @@ export const allSongs: SongSuggestion[] = [
     title: "KIEDYŚ CIĘ ZNAJDĘ (REMIX)",
     artist: "Otsochodzi, Reni Jusis, lohleq, Kusha (Ft. OKI, Young Multi)",
   },
-  { title: "Gozier", artist: "PLK (feat. Paluch)" },
+  { title: "Gozier", artist: "PLK, Paluch" },
   { title: "MY KONTRA ONI", artist: "vkie" },
   { title: "Patointeligencja", artist: "Mata" },
   { title: "Disney", artist: "Kizo" },
@@ -315,9 +315,9 @@ export const allSongs: SongSuggestion[] = [
   { title: "05:05", artist: "Bedoes 2115, Kubi Producent" },
   { title: "Kapitan", artist: "Wac Toja" },
   {
-    title: "Parapetówa (feat. Kacperczyk)",
+    title: "Parapetówa",
     artist:
-      "SB Maffija, White 2115, Adi Nowak, Janusz Walczuk, Białas, Fukaj, SKUTE BOBO, Beteo, Kinny Zimmer, Solar",
+      "SB Maffija, White 2115, Adi Nowak, Kacperczyk, Janusz Walczuk, Białas, Fukaj, SKUTE BOBO, Beteo, Kinny Zimmer, Solar",
   },
   { title: "Alcantara", artist: "Avi, Kukon, @atutowy" },
   { title: "Trendsetter", artist: "Kaz Bałagane" },

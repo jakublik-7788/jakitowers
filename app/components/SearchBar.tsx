@@ -42,7 +42,10 @@ const normalizePolishChars = (str: string): string => {
     Ź: "Z",
     Ż: "Z",
   };
-  return str.replace(/[ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/g, (char) => polishMap[char] || char);
+  return str.replace(
+    /[ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/g,
+    (char) => polishMap[char] || char,
+  );
 };
 
 export const SearchBar = ({
@@ -85,7 +88,9 @@ export const SearchBar = ({
                       setSuggestions([]);
                       setSelectedIndex(-1);
                       setTimeout(() => {
-                        const input = document.querySelector('input[type="text"]') as HTMLInputElement;
+                        const input = document.querySelector(
+                          'input[type="text"]',
+                        ) as HTMLInputElement;
                         if (input) input.focus();
                       }, 0);
                     }}
@@ -144,20 +149,26 @@ export const SearchBar = ({
                 isFinished
                   ? "KONIEC GRY"
                   : !isStarted
-                  ? "ODTWÓRZ BY ROZPOCZĄĆ.."
-                  : "Znasz ten numer? Wpisz tytuł..."
+                    ? "ODTWÓRZ BY ROZPOCZĄĆ.."
+                    : "Znasz ten numer? Wpisz tytuł..."
               }
               value={inputValue}
               onChange={(e) => {
                 const val = e.target.value;
                 setInputValue(val);
-                if (val.length >= 2) {
-                  const searchTerm = val.toLowerCase();
+
+                // 👇 NOWE: przycinamy białe znaki przed wyszukiwaniem
+                const trimmed = val.trim();
+
+                if (trimmed.length >= 2) {
+                  // 👈 używamy trimmed zamiast val
+                  const searchTerm = trimmed.toLowerCase(); // 👈 i tutaj też
                   const normalizedSearchTerm = normalizePolishChars(searchTerm);
                   setSuggestions(
                     allSongs
                       .filter((s) => {
-                        const fullName = `${s.artist} - ${s.title}`.toLowerCase();
+                        const fullName =
+                          `${s.artist} - ${s.title}`.toLowerCase();
                         const isAlreadyGuessed = guessedSongs.some(
                           (guess) => guess.toLowerCase() === fullName,
                         );
@@ -167,8 +178,12 @@ export const SearchBar = ({
                         return (
                           title.includes(searchTerm) ||
                           artist.includes(searchTerm) ||
-                          normalizePolishChars(title).includes(normalizedSearchTerm) ||
-                          normalizePolishChars(artist).includes(normalizedSearchTerm)
+                          normalizePolishChars(title).includes(
+                            normalizedSearchTerm,
+                          ) ||
+                          normalizePolishChars(artist).includes(
+                            normalizedSearchTerm,
+                          )
                         );
                       })
                       .slice(0, 15),
@@ -186,13 +201,17 @@ export const SearchBar = ({
               isFinished || !isStarted
                 ? "bg-zinc-800 text-zinc-600 cursor-not-allowed"
                 : inputError
-                ? "bg-red-500 text-white"
-                : inputValue.trim() === ""
-                ? "bg-zinc-800/30 text-zinc-600 hover:bg-accent/50 hover:text-white"
-                : "bg-accent text-white shadow-[0_0_20px_var(--accent-glow)]"
+                  ? "bg-red-500 text-white"
+                  : inputValue.trim() === ""
+                    ? "bg-zinc-800/30 text-zinc-600 hover:bg-accent/50 hover:text-white"
+                    : "bg-accent text-white shadow-[0_0_20px_var(--accent-glow)]"
             }`}
           >
-            {isFinished ? "KONIEC" : inputValue.trim() !== "" ? "ZATWIERDŹ" : "POMIŃ"}
+            {isFinished
+              ? "KONIEC"
+              : inputValue.trim() !== ""
+                ? "ZATWIERDŹ"
+                : "POMIŃ"}
           </button>
         </div>
 
