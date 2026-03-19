@@ -4378,7 +4378,7 @@ export const dailySongs: Song[] = [
     id: 123,
     day: 123,
     title: "Fluid",
-    artist: "Reto",
+    artist: "ReTo",
     audioSrc: "/123_Największe.mp3",
     youtubeId: "MOOvQvA7sRw",
     lyrics: [

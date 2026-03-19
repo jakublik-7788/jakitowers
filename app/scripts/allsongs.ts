@@ -154,7 +154,7 @@ export const allSongs: SongSuggestion[] = [
   },
   { title: "Alicja", artist: "Szpaku" },
   { title: "Pistolet", artist: "Sentino" },
-  { title: "Fluid", artist: "Reto" },
+  { title: "Fluid", artist: "ReTo" },
   { title: "Cichosza", artist: "Taco Hemingway, Otsochodzi, Zeppy Zep" },
   { title: "Dr. Traphouse", artist: "Kaz Bałagane (Ft. Belmondo)" },
   {
