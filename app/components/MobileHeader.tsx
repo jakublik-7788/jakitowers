@@ -34,7 +34,7 @@ export const MobileHeader = ({
           <h1 className="text-xl font-black italic tracking-tight">
             JAKI<span className="text-accent not-italic">TO</span>WERS
           </h1>
-          {/* Strzałki tylko w daily */}
+          Strzałki tylko w daily
           {gameMode === "daily" && onPrevDay && onNextDay && currentDay && totalDays && (
             <div className="flex items-center gap-2 ml-2">
               <button
