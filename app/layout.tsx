@@ -58,7 +58,7 @@ export default function RootLayout({
         <AmbientGlow />
         <main className="relative z-10">{children}</main>
         <ClientCursorWrapper /> {/* tutaj używamy wrappera */}
-        {/* <PreLaunchOverlay /> */}
+        <PreLaunchOverlay />
       </body>
     </html>
   );
