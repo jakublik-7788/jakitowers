@@ -1,6 +1,12 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+  useMemo,
+} from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Trophy } from "lucide-react";
 import { dailySongs } from "./scripts/songs";
@@ -16,13 +22,24 @@ import { NonLimitGame } from "./components/NonLimitGame";
 import { SocialSidebar } from "./components/SocialSidebar";
 import { SettingsModal } from "./components/SettingsModal";
 import { useSoundEffects } from "./scripts/useSoundEffects";
-import { useGameStats, useNonLimitStats, GlobalStats } from "./scripts/Usegamestats";
-import { useCalendarHistory, todayDayNumber, maxUnlockedDay } from "./scripts/Usecalendar";
+import {
+  useGameStats,
+  useNonLimitStats,
+  GlobalStats,
+} from "./scripts/Usegamestats";
+import {
+  useCalendarHistory,
+  todayDayNumber,
+  maxUnlockedDay,
+} from "./scripts/Usecalendar";
 
 // ─── Typy ─────────────────────────────────────────────────────────────────────
 
 type GuessStatus = "correct" | "wrong" | "skipped" | "empty" | "artist";
-interface Guess { display: string; status: GuessStatus; }
+interface Guess {
+  display: string;
+  status: GuessStatus;
+}
 
 interface SavedDayState {
   guesses: Guess[];
@@ -34,9 +51,9 @@ interface SavedDayState {
 
 // ─── localStorage keys ────────────────────────────────────────────────────────
 
-const LS_ACCENT_KEY  = "jakitowers_accent_color";
-const LS_SOUND_KEY   = "jakitowers_sound_enabled";
-const LS_DAY_PREFIX  = "jakitowers_day_";       // + dayNumber → SavedDayState
+const LS_ACCENT_KEY = "jakitowers_accent_color";
+const LS_SOUND_KEY = "jakitowers_sound_enabled";
+const LS_DAY_PREFIX = "jakitowers_day_"; // + dayNumber → SavedDayState
 const LS_RESULTS_KEY = "jakitowers_day_results"; // Record<number, "win"|"lose">
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -45,8 +62,24 @@ const EMPTY_GUESSES: Guess[] = Array(5).fill({ display: "", status: "empty" });
 
 const normalizePolishChars = (str: string): string => {
   const map: Record<string, string> = {
-    ą: "a", ć: "c", ę: "e", ł: "l", ń: "n", ó: "o", ś: "s", ź: "z", ż: "z",
-    Ą: "A", Ć: "C", Ę: "E", Ł: "L", Ń: "N", Ó: "O", Ś: "S", Ź: "Z", Ż: "Z",
+    ą: "a",
+    ć: "c",
+    ę: "e",
+    ł: "l",
+    ń: "n",
+    ó: "o",
+    ś: "s",
+    ź: "z",
+    ż: "z",
+    Ą: "A",
+    Ć: "C",
+    Ę: "E",
+    Ł: "L",
+    Ń: "N",
+    Ó: "O",
+    Ś: "S",
+    Ź: "Z",
+    Ż: "Z",
   };
   return str.replace(/[ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/g, (c) => map[c] || c);
 };
@@ -54,8 +87,13 @@ const normalizePolishChars = (str: string): string => {
 const hasCommonArtist = (a: string, b: string) => {
   const norm = (s: string) => normalizePolishChars(s.toLowerCase().trim());
   const split = (s: string) =>
-    s.split(/[,&(]/).map(norm).filter((x) => x.length > 1);
-  return split(a).some((x) => split(b).some((y) => x.includes(y) || y.includes(x)));
+    s
+      .split(/[,&(]/)
+      .map(norm)
+      .filter((x) => x.length > 1);
+  return split(a).some((x) =>
+    split(b).some((y) => x.includes(y) || y.includes(x)),
+  );
 };
 
 const hexToRgba = (hex: string, alpha: number) => {
@@ -67,25 +105,47 @@ const hexToRgba = (hex: string, alpha: number) => {
 
 export const applyAccentColor = (hex: string) => {
   document.documentElement.style.setProperty("--accent-main", hex);
-  document.documentElement.style.setProperty("--accent-glow", hexToRgba(hex, 0.4));
-  document.documentElement.style.setProperty("--accent-glow-strong", hexToRgba(hex, 0.2));
+  document.documentElement.style.setProperty(
+    "--accent-glow",
+    hexToRgba(hex, 0.4),
+  );
+  document.documentElement.style.setProperty(
+    "--accent-glow-strong",
+    hexToRgba(hex, 0.2),
+  );
 };
 
 // ─── Persist helpers ──────────────────────────────────────────────────────────
 
 function saveDayState(day: number, state: SavedDayState) {
-  try { localStorage.setItem(LS_DAY_PREFIX + day, JSON.stringify(state)); } catch { /* ignore */ }
+  try {
+    localStorage.setItem(LS_DAY_PREFIX + day, JSON.stringify(state));
+  } catch {
+    /* ignore */
+  }
 }
 function loadDayState(day: number): SavedDayState | null {
-  try { const r = localStorage.getItem(LS_DAY_PREFIX + day); return r ? JSON.parse(r) : null; }
-  catch { return null; }
+  try {
+    const r = localStorage.getItem(LS_DAY_PREFIX + day);
+    return r ? JSON.parse(r) : null;
+  } catch {
+    return null;
+  }
 }
 function saveDayResults(results: Record<number, "win" | "lose">) {
-  try { localStorage.setItem(LS_RESULTS_KEY, JSON.stringify(results)); } catch { /* ignore */ }
+  try {
+    localStorage.setItem(LS_RESULTS_KEY, JSON.stringify(results));
+  } catch {
+    /* ignore */
+  }
 }
 function loadDayResults(): Record<number, "win" | "lose"> {
-  try { const r = localStorage.getItem(LS_RESULTS_KEY); return r ? JSON.parse(r) : {}; }
-  catch { return {}; }
+  try {
+    const r = localStorage.getItem(LS_RESULTS_KEY);
+    return r ? JSON.parse(r) : {};
+  } catch {
+    return {};
+  }
 }
 
 // ─── Testowe dane globalne ────────────────────────────────────────────────────
@@ -98,7 +158,13 @@ const testGlobalStats: GlobalStats = {
 
 // ─── Mini panel globalnych statystyk ──────────────────────────────────────────
 
-const GlobalStatsMini = ({ globalStats, globalLoading }: { globalStats: GlobalStats | null; globalLoading: boolean }) => {
+const GlobalStatsMini = ({
+  globalStats,
+  globalLoading,
+}: {
+  globalStats: GlobalStats | null;
+  globalLoading: boolean;
+}) => {
   const displayStats = globalStats || testGlobalStats;
 
   if (globalLoading) {
@@ -143,7 +209,9 @@ const GlobalStatsMini = ({ globalStats, globalLoading }: { globalStats: GlobalSt
           <div className="flex-1 h-5 bg-white/5 rounded-full overflow-hidden">
             <motion.div
               initial={{ width: 0 }}
-              animate={{ width: `${((displayStats.attempts.X || 0) / maxCount) * 100}%` }}
+              animate={{
+                width: `${((displayStats.attempts.X || 0) / maxCount) * 100}%`,
+              }}
               transition={{ duration: 0.5 }}
               className="h-full bg-red-500/50 flex items-center justify-end px-2 text-[10px] font-bold text-white"
             >
@@ -175,7 +243,9 @@ export default function Home() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [inputValue, setInputValue] = useState("");
-  const [suggestions, setSuggestions] = useState<{ title: string; artist: string }[]>([]);
+  const [suggestions, setSuggestions] = useState<
+    { title: string; artist: string }[]
+  >([]);
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   // Stan gry — ładowany z localStorage
@@ -186,7 +256,9 @@ export default function Home() {
   const [gameStatus, setGameStatus] = useState<"win" | "lose" | null>(null);
 
   // Wyniki dni (dla kalendarza) — ładowane z localStorage
-  const [dayResults, setDayResults] = useState<Record<number, "win" | "lose">>({});
+  const [dayResults, setDayResults] = useState<Record<number, "win" | "lose">>(
+    {},
+  );
 
   const stateLoadedRef = useRef(false);
   const [showGlobalStatsMini, setShowGlobalStatsMini] = useState(false);
@@ -196,18 +268,40 @@ export default function Home() {
   const song = dailySongs.find((s) => s.day === currentDay) || dailySongs[0];
 
   const { play } = useSoundEffects(soundEnabled);
-  const { localStats, globalStats, globalLoading, recordResult, refetchGlobalStats } = useGameStats(currentDay);
-  const { stats: nonLimitStats, recordResult: recordNonLimitResult } = useNonLimitStats();
+  const {
+    localStats,
+    globalStats,
+    globalLoading,
+    recordResult,
+    refetchGlobalStats,
+  } = useGameStats(currentDay);
+  const { stats: nonLimitStats, recordResult: recordNonLimitResult } =
+    useNonLimitStats();
   const gameHistory = useCalendarHistory(dayResults);
+
+  const nextMidnight = useMemo(() => {
+    const now = new Date();
+    const midnight = new Date();
+    midnight.setHours(24, 0, 0, 0); // północ dzisiejszego dnia
+    if (midnight <= now) {
+      midnight.setDate(midnight.getDate() + 1); // jeśli minęła, bierzemy następną
+    }
+    return midnight;
+  }, []);
 
   // ── 1. Wczytaj ustawienia + wyniki dni ─────────────────────────────────────
   useEffect(() => {
     try {
-      const savedColor = localStorage.getItem(LS_ACCENT_KEY) || localStorage.getItem("selected-accent");
-      if (savedColor && /^#[0-9a-fA-F]{6}$/.test(savedColor)) applyAccentColor(savedColor);
+      const savedColor =
+        localStorage.getItem(LS_ACCENT_KEY) ||
+        localStorage.getItem("selected-accent");
+      if (savedColor && /^#[0-9a-fA-F]{6}$/.test(savedColor))
+        applyAccentColor(savedColor);
       const savedSound = localStorage.getItem(LS_SOUND_KEY);
       if (savedSound !== null) setSoundEnabled(savedSound === "true");
-    } catch { /* ignore */ }
+    } catch {
+      /* ignore */
+    }
 
     const results = loadDayResults();
     setDayResults(results);
@@ -241,14 +335,22 @@ export default function Home() {
     setSelectedIndex(-1);
     stopAudio();
 
-    requestAnimationFrame(() => { stateLoadedRef.current = true; });
+    requestAnimationFrame(() => {
+      stateLoadedRef.current = true;
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentDay]);
 
   // ── 3. Zapisuj stan gry gdy coś się zmieni ─────────────────────────────────
   useEffect(() => {
     if (!stateLoadedRef.current) return;
-    saveDayState(currentDay, { guesses, currentStep, isFinished, gameStatus, isStarted });
+    saveDayState(currentDay, {
+      guesses,
+      currentStep,
+      isFinished,
+      gameStatus,
+      isStarted,
+    });
   }, [guesses, currentStep, isFinished, gameStatus, isStarted, currentDay]);
 
   // ── Scroll podpowiedzi ─────────────────────────────────────────────────────
@@ -260,13 +362,19 @@ export default function Home() {
         if (el.offsetTop < c.scrollTop)
           c.scrollTo({ top: el.offsetTop, behavior: "smooth" });
         else if (el.offsetTop + el.offsetHeight > c.scrollTop + c.offsetHeight)
-          c.scrollTo({ top: el.offsetTop + el.offsetHeight - c.offsetHeight, behavior: "smooth" });
+          c.scrollTo({
+            top: el.offsetTop + el.offsetHeight - c.offsetHeight,
+            behavior: "smooth",
+          });
       }
     }
   }, [selectedIndex]);
 
   const stopAudio = useCallback(() => {
-    if (audioRef.current) { audioRef.current.pause(); audioRef.current.currentTime = 0; }
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
     setIsPlaying(false);
     setCurrentTime(0);
   }, []);
@@ -297,8 +405,12 @@ export default function Home() {
       if (lastLine && audio.currentTime >= lastLine.end) stopAudio();
       else if (!audio.paused) frameId = requestAnimationFrame(syncLyrics);
     };
-    const onPlay = () => { frameId = requestAnimationFrame(syncLyrics); };
-    const onPause = () => { cancelAnimationFrame(frameId); };
+    const onPlay = () => {
+      frameId = requestAnimationFrame(syncLyrics);
+    };
+    const onPause = () => {
+      cancelAnimationFrame(frameId);
+    };
     audio.addEventListener("play", onPlay);
     audio.addEventListener("pause", onPause);
     audio.addEventListener("ended", stopAudio);
@@ -326,7 +438,8 @@ export default function Home() {
       }
     } else if (e.key === "ArrowDown") {
       e.preventDefault();
-      if (suggestions.length > 0) setSelectedIndex((p) => Math.min(p + 1, suggestions.length - 1));
+      if (suggestions.length > 0)
+        setSelectedIndex((p) => Math.min(p + 1, suggestions.length - 1));
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
       if (suggestions.length > 0) setSelectedIndex((p) => Math.max(p - 1, 0));
@@ -342,7 +455,9 @@ export default function Home() {
     if (!isStarted || isFinished || currentStep >= 5) return;
     const norm = (s: string) => normalizePolishChars(s.toUpperCase());
     const isSkip = inputValue.trim() === "";
-    const exactMatch = allSongs.some((s) => norm(`${s.artist} - ${s.title}`) === norm(inputValue.trim()));
+    const exactMatch = allSongs.some(
+      (s) => norm(`${s.artist} - ${s.title}`) === norm(inputValue.trim()),
+    );
 
     if (!isSkip && !exactMatch) {
       setInputError(true);
@@ -352,7 +467,9 @@ export default function Home() {
       return;
     }
 
-    const songInDb = allSongs.find((s) => norm(`${s.artist} - ${s.title}`) === norm(inputValue.trim()));
+    const songInDb = allSongs.find(
+      (s) => norm(`${s.artist} - ${s.title}`) === norm(inputValue.trim()),
+    );
     const newGuesses = [...guesses];
     let status: "correct" | "wrong" | "skipped" | "artist" = "wrong";
     let displayText = "";
@@ -366,8 +483,10 @@ export default function Home() {
       status = "wrong";
       play("wrong");
     } else {
-      const isCorrect = songInDb.title.toLowerCase() === song.title.toLowerCase();
-      const artistMatch = !isCorrect && hasCommonArtist(songInDb.artist, song.artist);
+      const isCorrect =
+        songInDb.title.toLowerCase() === song.title.toLowerCase();
+      const artistMatch =
+        !isCorrect && hasCommonArtist(songInDb.artist, song.artist);
       displayText = `${songInDb.artist} - ${songInDb.title}`.toUpperCase();
       status = isCorrect ? "correct" : artistMatch ? "artist" : "wrong";
       if (isCorrect) play("correct");
@@ -415,16 +534,34 @@ export default function Home() {
   };
 
   const goToNextDay = () => {
-    if (currentDay < maxUnlockedDay()) { play("click"); setCurrentDay((p) => p + 1); }
+    if (currentDay < maxUnlockedDay()) {
+      play("click");
+      setCurrentDay((p) => p + 1);
+    }
   };
   const goToPreviousDay = () => {
-    if (currentDay > 1) { play("click"); setCurrentDay((p) => p - 1); }
+    if (currentDay > 1) {
+      play("click");
+      setCurrentDay((p) => p - 1);
+    }
   };
 
-  const handleSettingsOpen = () => { play("modalOpen"); setIsSettingsOpen(true); };
-  const handleSettingsClose = () => { play("modalClose"); setIsSettingsOpen(false); };
-  const handleCalendarOpen = () => { play("modalOpen"); setIsCalendarOpen(true); };
-  const handleCalendarClose = () => { play("modalClose"); setIsCalendarOpen(false); };
+  const handleSettingsOpen = () => {
+    play("modalOpen");
+    setIsSettingsOpen(true);
+  };
+  const handleSettingsClose = () => {
+    play("modalClose");
+    setIsSettingsOpen(false);
+  };
+  const handleCalendarOpen = () => {
+    play("modalOpen");
+    setIsCalendarOpen(true);
+  };
+  const handleCalendarClose = () => {
+    play("modalClose");
+    setIsCalendarOpen(false);
+  };
   const handleStatsOpen = () => {
     play("modalOpen");
     if (gameMode === "daily") {
@@ -432,7 +569,10 @@ export default function Home() {
     }
     setIsStatsOpen(true);
   };
-  const handleStatsClose = () => { play("modalClose"); setIsStatsOpen(false); };
+  const handleStatsClose = () => {
+    play("modalClose");
+    setIsStatsOpen(false);
+  };
 
   const handleEndGameModalClose = useCallback(() => {
     play("modalClose");
@@ -460,7 +600,10 @@ export default function Home() {
     currentDay,
     totalDays,
     gameMode,
-    setGameMode: (m: "daily" | "nonlimit") => { play("click"); setGameMode(m); },
+    setGameMode: (m: "daily" | "nonlimit") => {
+      play("click");
+      setGameMode(m);
+    },
     isSettingsOpen,
     setIsSettingsOpen: handleSettingsOpen,
   };
@@ -473,10 +616,21 @@ export default function Home() {
       className="h-dvh bg-zinc-950 text-white flex flex-col overflow-hidden font-sans relative"
     >
       <style jsx global>{`
-        .scrollbar-custom::-webkit-scrollbar { width: 6px; }
-        .scrollbar-custom::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 0 25px 25px 0; }
-        .scrollbar-custom::-webkit-scrollbar-thumb { background: var(--accent-main); border-radius: 10px; border: 2px solid #09090b; }
-        .scrollbar-custom::-webkit-scrollbar-thumb:hover { opacity: 0.8; }
+        .scrollbar-custom::-webkit-scrollbar {
+          width: 6px;
+        }
+        .scrollbar-custom::-webkit-scrollbar-track {
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 0 25px 25px 0;
+        }
+        .scrollbar-custom::-webkit-scrollbar-thumb {
+          background: var(--accent-main);
+          border-radius: 10px;
+          border: 2px solid #09090b;
+        }
+        .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+          opacity: 0.8;
+        }
       `}</style>
 
       <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-zinc-950 to-[#0a0a0a] z-0" />
@@ -557,6 +711,8 @@ export default function Home() {
                   scrollContainerRef={scrollContainerRef}
                   inputError={inputError}
                   guessedSongs={guesses.map((g) => g.display).filter(Boolean)}
+                  gameMode={gameMode}
+                  nextSongTime={gameMode === "daily" ? nextMidnight : undefined}
                 />
               </motion.div>
             </motion.div>
@@ -627,7 +783,10 @@ export default function Home() {
               className="fixed bottom-8 right-8 z-[80001] max-md:hidden"
               style={{ transform: "translateX(-120%)" }}
             >
-              <GlobalStatsMini globalStats={globalStats} globalLoading={globalLoading} />
+              <GlobalStatsMini
+                globalStats={globalStats}
+                globalLoading={globalLoading}
+              />
             </motion.div>
           )}
         </AnimatePresence>
@@ -646,7 +805,10 @@ export default function Home() {
             >
               <div className="flex flex-row-reverse items-center h-full bg-accent rounded-2xl shadow-[0_0_30px_var(--accent-glow)] overflow-hidden">
                 <div className="w-16 h-16 max-md:w-12 max-md:h-12 flex items-center justify-center shrink-0 bg-accent relative z-20">
-                  <Trophy className="text-white group-hover:rotate-12 transition-transform duration-300 max-md:w-5 max-md:h-5" size={28} />
+                  <Trophy
+                    className="text-white group-hover:rotate-12 transition-transform duration-300 max-md:w-5 max-md:h-5"
+                    size={28}
+                  />
                 </div>
                 <div className="w-0 group-hover:w-28 max-md:group-hover:w-20 transition-all duration-300 ease-in-out h-full flex items-center bg-accent relative z-10">
                   <span className="text-white font-[1000] uppercase italic text-l tracking-widest pl-6 max-md:pl-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap max-md:text-sm">

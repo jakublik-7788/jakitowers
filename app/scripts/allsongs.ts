@@ -136,7 +136,7 @@ export const allSongs: SongSuggestion[] = [
   },
   { title: "Polski Karnawał", artist: "Żabson, Young Igi" },
   { title: "Czarne BMW", artist: "Kukon, Magiera (Ft. Avi (POL))" },
-  { title: "NASCAR", artist: "PRO8L3M (Ft. CatchUp, Pezet)" },
+  { title: "Dom Nad Wodą", artist: "Pezet" },
   { title: "La Vida Loca", artist: "White 2115" },
   { title: "Pogo", artist: "Kizo (Ft. OKI)" },
   { title: "KING", artist: "Malik Montana, Lanberry" },

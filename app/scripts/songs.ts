@@ -2335,27 +2335,27 @@ export const dailySongs: Song[] = [
           {
             text: "Sam dla siebie byłem wrogiem, pasja pogodziła",
             start: 0.0,
-            end: 1.58,
+            end: 1.75,
           },
           {
             text: "Chory łeb, Johnny Blash, czaszka się nie ostudziła",
-            start: 1.58,
-            end: 3.12,
+            start: 1.75,
+            end: 3.35,
           },
           {
             text: "Palę tony, wiesz, zawieszony gdzieś",
-            start: 3.12,
-            end: 4.92,
+            start: 3.35,
+            end: 5.20,
           },
           {
             text: "Wrotas klepie bit, piszę nowy tekst",
-            start: 4.92,
-            end: 6.3,
+            start: 5.20,
+            end: 6.55,
           },
           {
             text: "Trzeba robić flex, trzeba robić kwit, nie stać mnie na wolny dzień",
-            start: 6.3,
-            end: 9.8,
+            start: 6.55,
+            end: 10.15,
           },
         ],
       },
@@ -4000,9 +4000,9 @@ export const dailySongs: Song[] = [
   {
     id: 112,
     day: 112,
-    title: "NASCAR",
-    artist: "PRO8L3M (Ft. CatchUp, Pezet)",
-    audioSrc: "/112_NASCAR.mp3",
+    title: "Dom Nad Wodą",
+    artist: "Pezet",
+    audioSrc: "/112_DomNadWodą.mp3",
     youtubeId: "FH_S35AIVX0",
     lyrics: [
       {

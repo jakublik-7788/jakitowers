@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search } from "lucide-react";
 import { allSongs } from "@/app/scripts/allsongs";
 import { FooterModals } from "@/app/components/FooterModals";
+import { CountdownTimer } from "./CountdownTimer";
 
 interface SearchBarProps {
   isFinished: boolean;
@@ -19,6 +20,8 @@ interface SearchBarProps {
   scrollContainerRef: React.RefObject<HTMLDivElement | null>;
   inputError?: boolean;
   guessedSongs: string[];
+  gameMode?: "daily" | "nonlimit";        // nowy prop
+  nextSongTime?: Date;                    // czas rozpoczęcia nowej piosenki (dla daily)
 }
 
 const normalizePolishChars = (str: string): string => {
@@ -62,7 +65,24 @@ export const SearchBar = ({
   scrollContainerRef,
   inputError,
   guessedSongs,
+  gameMode = "daily",
+  nextSongTime,
 }: SearchBarProps) => {
+  // Czy pokazujemy timer zamiast przycisku?
+  const showTimer = gameMode === "daily" && isFinished && nextSongTime;
+
+  // Placeholder w polu tekstowym
+  let placeholder = "";
+  if (showTimer) {
+    placeholder = "Nowa piosenka pojawi się za..";
+  } else if (isFinished) {
+    placeholder = "KONIEC GRY";
+  } else if (!isStarted) {
+    placeholder = "ODTWÓRZ BY ROZPOCZĄĆ..";
+  } else {
+    placeholder = "Znasz ten numer? Wpisz tytuł...";
+  }
+
   return (
     <div className="relative z-20 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent pt-16 max-md:pt-0 pb-2 max-md:pb-1">
       <div className="max-w-4xl mx-auto relative px-4">
@@ -143,26 +163,16 @@ export const SearchBar = ({
               type="text"
               disabled={isFinished || !isStarted}
               onKeyDown={onKeyDown}
-              // autoFocus usunięty, aby nie otwierać klawiatury na mobile
               className="bg-transparent w-full p-4 max-md:p-2 outline-none text-white text-lg max-md:text-base font-bold ml-4 max-md:ml-2 placeholder:text-zinc-700 disabled:cursor-not-allowed"
-              placeholder={
-                isFinished
-                  ? "KONIEC GRY"
-                  : !isStarted
-                    ? "ODTWÓRZ BY ROZPOCZĄĆ.."
-                    : "Znasz ten numer? Wpisz tytuł..."
-              }
+              placeholder={placeholder}
               value={inputValue}
               onChange={(e) => {
                 const val = e.target.value;
                 setInputValue(val);
 
-                // 👇 NOWE: przycinamy białe znaki przed wyszukiwaniem
                 const trimmed = val.trim();
-
                 if (trimmed.length >= 2) {
-                  // 👈 używamy trimmed zamiast val
-                  const searchTerm = trimmed.toLowerCase(); // 👈 i tutaj też
+                  const searchTerm = trimmed.toLowerCase();
                   const normalizedSearchTerm = normalizePolishChars(searchTerm);
                   setSuggestions(
                     allSongs
@@ -186,7 +196,7 @@ export const SearchBar = ({
                           )
                         );
                       })
-                      .slice(0, 15),
+                      .slice(0, 30), // zwiększony limit dla lepszego wyszukiwania
                   );
                 } else {
                   setSuggestions([]);
@@ -194,25 +204,37 @@ export const SearchBar = ({
               }}
             />
           </div>
-          <button
-            disabled={isFinished || !isStarted}
-            onClick={onGuess}
-            className={`px-12 max-md:px-5 py-5 max-md:py-3 rounded-[22px] font-[1000] text-sm tracking-[0.3em] transition-all duration-300 ${
-              isFinished || !isStarted
-                ? "bg-zinc-800 text-zinc-600 cursor-not-allowed"
-                : inputError
+          {showTimer ? (
+            <div className="px-4 max-md:px-2 py-2 max-md:py-1 rounded-[22px] bg-zinc-800/50 text-white flex items-center gap-2 font-bold text-xl max-md:text-xl whitespace-nowrap">
+              <span className="tracking-wider uppercase text-zinc-400">
+              </span>
+              <CountdownTimer
+                targetDate={nextSongTime}
+                className="text-accent font-mono"
+                showSeconds
+              />
+            </div>
+          ) : (
+            <button
+              disabled={isFinished || !isStarted}
+              onClick={onGuess}
+              className={`px-12 max-md:px-5 py-5 max-md:py-3 rounded-[22px] font-[1000] text-sm tracking-[0.3em] transition-all duration-300 ${
+                isFinished || !isStarted
+                  ? "bg-zinc-800 text-zinc-600 cursor-not-allowed"
+                  : inputError
                   ? "bg-red-500 text-white"
                   : inputValue.trim() === ""
-                    ? "bg-zinc-800/30 text-zinc-600 hover:bg-accent/50 hover:text-white"
-                    : "bg-accent text-white shadow-[0_0_20px_var(--accent-glow)]"
-            }`}
-          >
-            {isFinished
-              ? "KONIEC"
-              : inputValue.trim() !== ""
+                  ? "bg-zinc-800/30 text-zinc-600 hover:bg-accent/50 hover:text-white"
+                  : "bg-accent text-white shadow-[0_0_20px_var(--accent-glow)]"
+              }`}
+            >
+              {isFinished
+                ? "KONIEC"
+                : inputValue.trim() !== ""
                 ? "ZATWIERDŹ"
                 : "POMIŃ"}
-          </button>
+            </button>
+          )}
         </div>
 
         <FooterModals />

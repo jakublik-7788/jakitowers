@@ -118,6 +118,7 @@ export const NonLimitGame = ({
   const [gameStatus, setGameStatus] = useState<"win" | "lose" | null>(null);
   const [isFinished, setIsFinished] = useState(false);
   const [guessedSongs, setGuessedSongs] = useState<string[]>([]);
+  const [playedTitles, setPlayedTitles] = useState<string[]>([]); // tytuły piosenek już rozegranych (wygrane lub przegrane)
   const [mounted, setMounted] = useState(false);
   const [inputError, setInputError] = useState(false);
 
@@ -140,16 +141,19 @@ export const NonLimitGame = ({
 
   const loadNewSong = useCallback(() => {
     stopAudio();
-    const available = allSongs.filter((s) => !guessedSongs.includes(s.title));
-    let title: string;
+    // Wybieramy piosenki, które nie były jeszcze rozegrane (na podstawie tytułu)
+    const available = dailySongs.filter(
+      (s) => !playedTitles.includes(s.title)
+    );
+    let selectedSong: Song;
     if (available.length === 0) {
-      setGuessedSongs([]);
-      title = allSongs[Math.floor(Math.random() * allSongs.length)].title;
+      // Wszystkie piosenki zostały rozegrane – resetujemy listę i zaczynamy od nowa
+      setPlayedTitles([]);
+      selectedSong = dailySongs[Math.floor(Math.random() * dailySongs.length)];
     } else {
-      title = available[Math.floor(Math.random() * available.length)].title;
+      selectedSong = available[Math.floor(Math.random() * available.length)];
     }
-    const full = dailySongs.find((s) => s.title === title) || dailySongs[0];
-    setCurrentSong(full);
+    setCurrentSong(selectedSong);
     setAttempts(Array(5).fill({ display: "", status: "empty" }));
     setCurrentAttempt(0);
     setCurrentTime(0);
@@ -158,21 +162,22 @@ export const NonLimitGame = ({
     setGameStatus(null);
     setIsFinished(false);
     setInputError(false);
-  }, [guessedSongs, stopAudio]);
+    setGuessedSongs([]); // czyścimy listę odgadniętych piosenek dla wyszukiwarki
+  }, [playedTitles, stopAudio]);
 
   useEffect(() => {
     loadNewSong();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // ── Efekt ustawiania głośności (nie dotyka źródła) ─────────────────────────
+  // Ustawianie głośności (nie przerywa odtwarzania)
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = volume;
     }
   }, [volume]);
 
-  // ── Efekt ładowania źródła dźwięku (tylko gdy zmienia się piosenka) ────────
+  // Ładowanie źródła dźwięku (tylko gdy zmienia się piosenka)
   useEffect(() => {
     if (!currentSong) return;
     if (!audioRef.current) {
@@ -181,9 +186,10 @@ export const NonLimitGame = ({
       audioRef.current.src = currentSong.audioSrc;
       audioRef.current.load();
     }
-    audioRef.current.volume = volume; // ustawiamy głośność przy pierwszym załadowaniu
-  }, [currentSong]); // volume usunięte z zależności
+    // Głośność ustawiana jest w osobnym efekcie
+  }, [currentSong]);
 
+  // Synchronizacja tekstu
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio || !currentSong) return;
@@ -222,6 +228,7 @@ export const NonLimitGame = ({
     };
   }, [currentSong, currentAttempt, stopAudio]);
 
+  // Przewijanie podpowiedzi
   useEffect(() => {
     if (selectedIndex >= 0 && scrollContainerRef.current) {
       const c = scrollContainerRef.current;
@@ -317,10 +324,14 @@ export const NonLimitGame = ({
     setSuggestions([]);
     setSelectedIndex(-1);
     stopAudio();
+
+    // Aktualizacja listy odgadniętych piosenek dla wyszukiwarki
+    setGuessedSongs((prev) => [...prev, displayText]);
+
     if (status === "correct") {
       setIsFinished(true);
       setScore((p) => p + 1);
-      setGuessedSongs((p) => [...p, currentSong.title]);
+      setPlayedTitles((p) => [...p, currentSong.title]);
       onGameEnd(true, currentAttempt + 1);
       setTimeout(() => {
         setGameStatus("win");
@@ -329,8 +340,9 @@ export const NonLimitGame = ({
     } else if (currentAttempt < 4) {
       setCurrentAttempt((p) => p + 1);
     } else {
+      // Ostatnia próba – przegrana
       setIsFinished(true);
-      setGuessedSongs((p) => [...p, currentSong.title]);
+      setPlayedTitles((p) => [...p, currentSong.title]);
       onGameEnd(false, null);
       setTimeout(() => {
         setGameStatus("lose");
@@ -485,7 +497,7 @@ export const NonLimitGame = ({
         onGuess={handleGuess}
         scrollContainerRef={scrollContainerRef}
         inputError={inputError}
-        guessedSongs={attempts.map((a) => a.display).filter(Boolean)}
+        guessedSongs={guessedSongs}
       />
 
       {mounted &&
@@ -598,4 +610,4 @@ export const NonLimitGame = ({
         )}
     </div>
   );
-}
+};
