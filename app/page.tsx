@@ -271,10 +271,14 @@ export default function Home() {
     setCurrentTime(0);
   }, []);
 
+  // ── Efekt ustawiania głośności (nie dotyka źródła) ─────────────────────────
   useEffect(() => {
-    if (audioRef.current) audioRef.current.volume = volume;
+    if (audioRef.current) {
+      audioRef.current.volume = volume;
+    }
   }, [volume]);
 
+  // ── Efekt ładowania źródła dźwięku (tylko gdy zmienia się piosenka) ────────
   useEffect(() => {
     if (!song) return;
     if (!audioRef.current) {
@@ -283,9 +287,10 @@ export default function Home() {
       audioRef.current.src = song.audioSrc;
       audioRef.current.load();
     }
-    const audio = audioRef.current;
-    audio.volume = volume;
+    audioRef.current.volume = volume; // ustawiamy głośność przy pierwszym załadowaniu
+
     let frameId: number;
+    const audio = audioRef.current;
     const syncLyrics = () => {
       setCurrentTime(audio.currentTime);
       const lastLine = song.lyrics[0].words.slice(0, currentStep + 1).at(-1);
@@ -304,7 +309,7 @@ export default function Home() {
       cancelAnimationFrame(frameId);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [song, currentStep, stopAudio]);
+  }, [song, currentStep, stopAudio]); // volume usunięte z zależności
 
   // ── Logika gry ─────────────────────────────────────────────────────────────
   const handleKeyDown = (e: React.KeyboardEvent) => {

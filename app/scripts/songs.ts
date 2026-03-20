@@ -7591,11 +7591,11 @@ export const dailySongs: Song[] = [
           {
             text: "Znowu mordo żałuję, że wybiłem sam z domu",
             start: 0.0,
-            end: 1.59,
+            end: 1.75,
           },
           {
             text: "Kiedyś bym pizgał z buta na M01",
-            start: 1.59,
+            start: 1.75,
             end: 4.57,
           },
           {

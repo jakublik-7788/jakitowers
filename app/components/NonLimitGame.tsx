@@ -165,10 +165,14 @@ export const NonLimitGame = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // ── Efekt ustawiania głośności (nie dotyka źródła) ─────────────────────────
   useEffect(() => {
-    if (audioRef.current) audioRef.current.volume = volume;
+    if (audioRef.current) {
+      audioRef.current.volume = volume;
+    }
   }, [volume]);
 
+  // ── Efekt ładowania źródła dźwięku (tylko gdy zmienia się piosenka) ────────
   useEffect(() => {
     if (!currentSong) return;
     if (!audioRef.current) {
@@ -177,8 +181,8 @@ export const NonLimitGame = ({
       audioRef.current.src = currentSong.audioSrc;
       audioRef.current.load();
     }
-    audioRef.current.volume = volume;
-  }, [currentSong, volume]);
+    audioRef.current.volume = volume; // ustawiamy głośność przy pierwszym załadowaniu
+  }, [currentSong]); // volume usunięte z zależności
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -420,8 +424,6 @@ export const NonLimitGame = ({
         <div className="flex-1 flex items-center justify-center p-6 max-md:p-3 relative">
           <div className="w-full max-w-sm flex flex-col gap-4 max-md:gap-2">
             <div className="flex justify-center items-center mb-2">
-              {" "}
-              {/* Zmienione z justify-between na justify-center */}
               <p className="text-[12px] max-md:text-[10px] font-black text-accent tracking-[0.7em] uppercase text-center mr-[-0.7em]">
                 HISTORIA PRÓB
               </p>
@@ -596,4 +598,4 @@ export const NonLimitGame = ({
         )}
     </div>
   );
-};
+}
