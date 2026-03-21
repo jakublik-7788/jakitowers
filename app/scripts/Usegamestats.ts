@@ -143,7 +143,8 @@ export function useGameStats(currentDay: number) {
 // ─── Hook dla trybu NON LIMIT (tylko w pamięci, reset przy odświeżeniu) ─────
 
 export function useNonLimitStats() {
-  const [stats, setStats] = useState<LocalStats>(defaultStats());
+  // Ładujemy zapisane statystyki przy starcie
+  const [stats, setStats] = useState<LocalStats>(() => loadStats(LS_STATS_NONLIMIT));
 
   const recordResult = useCallback((won: boolean, attempt: number | null) => {
     setStats((prev) => {
@@ -157,10 +158,13 @@ export function useNonLimitStats() {
       if (won) {
         next.gamesWon += 1;
         next.currentStreak += 1;
+        // Aktualizacja najlepszej serii – tylko gdy obecna seria jest większa
         next.maxStreak = Math.max(next.currentStreak, prev.maxStreak);
       } else {
         next.currentStreak = 0;
       }
+      // Zapisujemy zaktualizowany stan
+      saveStats(LS_STATS_NONLIMIT, next);
       return next;
     });
   }, []);
