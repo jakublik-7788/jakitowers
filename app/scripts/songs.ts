@@ -20,7 +20,6 @@ export interface Song {
   platforms?: {
     spotify?: string;
     appleMusic?: string;
-    soundcloud?: string;
     tidal?: string;
   };
 }
@@ -35,7 +34,7 @@ export const dailySongs: Song[] = [
     youtubeId: "AMYruSwj3Eg",
     platforms: {
       spotify:
-        "https://open.spotify.com/track/5kg7VRIOn6ZnqRlRD4XWbk?si=a8fcfa6ceff1446c",
+        "https://open.spotify.com/track/5kg7VRIOn6ZnqRlRD4XWbk?si=fb86488acd404283",
       appleMusic:
         "https://music.apple.com/pl/album/pompa-single/1755710040?l=pl",
       tidal: "https://tidal.com/album/373401918/u",

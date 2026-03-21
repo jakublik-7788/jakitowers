@@ -15,8 +15,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "JAKI TO WERS",
-  description: "Zgaduj wersy najpopularniejszych rapowych hitów!",
+  title: "JAKI TO WERS – zgadnij hit w 5 próbach",
+  description: "Codziennie nowy utwór z polskiego rapu – zgadnij tytuł i artystę po fragmentach tekstu. Graj online za darmo! Tryb codzienny oraz tryb bez limitu!",
+  openGraph: {
+    title: "JAKI TO WERS – codzienna gra muzyczna",
+    description: "Zgadnij piosenkę po fragmentach tekstu – codziennie nowy utwór!",
+    images: "/jakitowers.png",
+  },
+  robots: "index, follow",
+  keywords: "jaki to wers, jakitowers, cotozahit, co to za hit, rapdle, muzyczna gra, polski rap, zgadnij piosenkę, daily challenge, rap, hiphop, hip hop, music game",
 };
 
 export const viewport: Viewport = {
