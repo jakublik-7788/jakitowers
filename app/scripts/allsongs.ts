@@ -331,4 +331,7 @@ export const allSongs: SongSuggestion[] = [
   { title: "Midas", artist: "Sentino" },
   { title: "Turkus", artist: "Kaz Bałagane" },
   { title: "Worki W Tłum", artist: "OKI, Young Igi, Otsochodzi, OIO" },
+  { title: "P.S.W.I.S. (DJ Eprom Remix)", artist: "Belmondawg, Expo 2000, DJ Eprom" },
+  { title: "Te Tereny", artist: "Belmondawg, Expo 2000" },
+  { title: "Followup", artist: "Belmondawg, Expo 2000, Dizkret" },
 ];
