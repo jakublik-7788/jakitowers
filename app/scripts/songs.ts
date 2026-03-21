@@ -20,6 +20,7 @@ export interface Song {
   platforms?: {
     spotify?: string;
     appleMusic?: string;
+    soundcloud?: string;
     tidal?: string;
   };
 }
