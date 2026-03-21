@@ -330,4 +330,5 @@ export const allSongs: SongSuggestion[] = [
   { title: "Numer o spodenkach krótkich", artist: "Kaz Bałagane" },
   { title: "Midas", artist: "Sentino" },
   { title: "Turkus", artist: "Kaz Bałagane" },
+  { title: "Worki W Tłum", artist: "OKI, Young Igi, Otsochodzi, OIO" },
 ];

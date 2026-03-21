@@ -1128,7 +1128,7 @@ export const dailySongs: Song[] = [
   {
     id: 32,
     day: 32,
-    title: "AMG ",
+    title: "AMG",
     artist: "Avi, Louis Villain",
     audioSrc: "/32_Avi.mp3",
     youtubeId: "cipFTmN1LTI",
