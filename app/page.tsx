@@ -1,5 +1,5 @@
 "use client";
-
+<link rel="icon" href="/favicon.ico" />
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Trophy } from "lucide-react";
