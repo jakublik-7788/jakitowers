@@ -8695,8 +8695,8 @@ export const dailySongs: Song[] = [
     ]
   },
   {
-    id: 1,
-    day: 1,
+    id: 238,
+    day: 283,
     title: "Followup",
     artist: "Belmondawg, Expo 2000, Dizkret",
     audioSrc: "Belmondo/283_Followup.mp3",
