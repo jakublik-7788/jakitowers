@@ -142,9 +142,28 @@ export function useGameStats(currentDay: number) {
 
 // ─── Hook dla trybu NON LIMIT (tylko w pamięci, reset przy odświeżeniu) ─────
 
+const LS_NONLIMIT_BEST_STREAK = "jakitowers_nonlimit_best_streak";
+
 export function useNonLimitStats() {
-  // Ładujemy zapisane statystyki przy starcie
-  const [stats, setStats] = useState<LocalStats>(() => loadStats(LS_STATS_NONLIMIT));
+  // Wczytujemy tylko najlepszą serię z localStorage
+  const [bestStreak, setBestStreak] = useState<number>(() => {
+    try {
+      const saved = localStorage.getItem(LS_NONLIMIT_BEST_STREAK);
+      return saved ? parseInt(saved, 10) : 0;
+    } catch {
+      return 0;
+    }
+  });
+
+  // Stan bieżących statystyk – wszystko poza maxStreak jest zerowane przy każdym uruchomieniu
+  const [stats, setStats] = useState<LocalStats>(() => ({
+    gamesPlayed: 0,
+    gamesWon: 0,
+    currentStreak: 0,
+    maxStreak: bestStreak,          // pobieramy zapisaną najlepszą serię
+    attemptDistribution: { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, X: 0 },
+    lastPlayedDay: null,
+  }));
 
   const recordResult = useCallback((won: boolean, attempt: number | null) => {
     setStats((prev) => {
@@ -158,13 +177,17 @@ export function useNonLimitStats() {
       if (won) {
         next.gamesWon += 1;
         next.currentStreak += 1;
-        // Aktualizacja najlepszej serii – tylko gdy obecna seria jest większa
-        next.maxStreak = Math.max(next.currentStreak, prev.maxStreak);
+        // Sprawdzamy, czy obecna seria jest lepsza od dotychczasowej najlepszej
+        if (next.currentStreak > next.maxStreak) {
+          next.maxStreak = next.currentStreak;
+          // Zapamiętujemy nowy rekord
+          try {
+            localStorage.setItem(LS_NONLIMIT_BEST_STREAK, next.maxStreak.toString());
+          } catch { /* ignore */ }
+        }
       } else {
         next.currentStreak = 0;
       }
-      // Zapisujemy zaktualizowany stan
-      saveStats(LS_STATS_NONLIMIT, next);
       return next;
     });
   }, []);
