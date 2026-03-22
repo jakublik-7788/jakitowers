@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "JAKI TO WERS – zgadnij hit w 5 próbach",
+  title: "JAKI TO WERS – zgadnij hit po wersach!",
   description: "Codziennie nowy utwór z polskiego rapu – zgadnij tytuł i artystę po fragmentach tekstu. Graj online za darmo! Tryb codzienny oraz tryb bez limitu!",
   openGraph: {
     title: "JAKI TO WERS – codzienna gra muzyczna",
