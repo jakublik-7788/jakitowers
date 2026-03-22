@@ -1201,7 +1201,7 @@ export const dailySongs: Song[] = [
     id: 34,
     day: 34,
     title: "Jetlag",
-    artist: "Malik Montana, DaChoyce, SRNO (Ft. The Plug)",
+    artist: "Malik Montana, DaChoyce, SRNO, The Plug",
     audioSrc: "/34_Jetlag.mp3",
     youtubeId: "xCBRhR11sJA",
     lyrics: [
@@ -1237,7 +1237,7 @@ export const dailySongs: Song[] = [
     id: 35,
     day: 35,
     title: "KAMIKAZE",
-    artist: "Mata (Ft. Khaid, Skolim)",
+    artist: "Mata, Khaid, Skolim",
     audioSrc: "/35_KAMIKAZE.mp3",
     youtubeId: "gBtbTl8r18U",
     lyrics: [
@@ -1433,7 +1433,7 @@ export const dailySongs: Song[] = [
     id: 40,
     day: 40,
     title: "Lucky Punch",
-    artist: "Kizo (Ft. Wac Toja)",
+    artist: "Kizo, Wac Toja",
     audioSrc: "/40_Lucky.mp3",
     youtubeId: "7YphHO9T9As",
     lyrics: [
@@ -1629,7 +1629,7 @@ export const dailySongs: Song[] = [
     id: 46,
     day: 46,
     title: "Kulig",
-    artist: "Kaz Bałagane (Ft. DMN (POL))",
+    artist: "Kaz Bałagane, DMN",
     audioSrc: "/46_Kulig.mp3",
     youtubeId: "BM0EqIbkvek",
     lyrics: [
@@ -2185,7 +2185,7 @@ export const dailySongs: Song[] = [
     id: 61,
     day: 61,
     title: "Kawałek nieba",
-    artist: "Kaz Bałagane (Ft. Kukon)",
+    artist: "Kaz Bałagane, Kukon",
     audioSrc: "/61_Kawałek.mp3",
     youtubeId: "6ajMUVPdF-U",
     lyrics: [
@@ -2225,7 +2225,7 @@ export const dailySongs: Song[] = [
     id: 62,
     day: 62,
     title: "PALMA DE MALLORCA",
-    artist: "Mata (Ft. Żabson)",
+    artist: "Mata, Żabson",
     audioSrc: "/62_PALMA.mp3",
     youtubeId: "aD0hAJKWv88",
     lyrics: [
@@ -2709,7 +2709,7 @@ export const dailySongs: Song[] = [
     id: 75,
     day: 75,
     title: "NICKI",
-    artist: "Trill Pem (Ft. Wac Toja)",
+    artist: "Trill Pem, Wac Toja",
     audioSrc: "/75_NICKI.mp3",
     youtubeId: "RwY-sKsuCpY",
     lyrics: [
@@ -2817,7 +2817,7 @@ export const dailySongs: Song[] = [
     id: 79,
     day: 79,
     title: "Jungle Girl",
-    artist: "Young Leosia (Ft. Żabson)",
+    artist: "Young Leosia, Żabson",
     audioSrc: "/79_Jungle.mp3",
     youtubeId: "lbaFm6USBZA",
     lyrics: [
@@ -2853,7 +2853,7 @@ export const dailySongs: Song[] = [
     id: 80,
     day: 80,
     title: "MOLO",
-    artist: "favst (Ft. KBLEAX, Kizo, Mr. Polska)",
+    artist: "favst, KBLEAX, Kizo, Mr. Polska",
     audioSrc: "/80_MOLO.mp3",
     youtubeId: "_libnrgXdmE",
     lyrics: [
@@ -2893,7 +2893,7 @@ export const dailySongs: Song[] = [
     id: 81,
     day: 81,
     title: "Ona Mówi",
-    artist: "730 Huncho (Ft. Kazior, Malik Montana)",
+    artist: "730 Huncho, Kazior, Malik Montana",
     audioSrc: "/81_Ona.mp3",
     youtubeId: "p6ppQzS2caM",
     lyrics: [
@@ -2949,7 +2949,7 @@ export const dailySongs: Song[] = [
     id: 83,
     day: 83,
     title: "BBS",
-    artist: "Wiatr (Ft. Sitek)",
+    artist: "Wiatr, Sitek",
     audioSrc: "/83_BBS.mp3",
     youtubeId: "qFHDmC5eJlk",
     lyrics: [
@@ -3045,7 +3045,7 @@ export const dailySongs: Song[] = [
     id: 86,
     day: 86,
     title: "GOMBAO 33",
-    artist: "Mata (Ft. Adam33, Gombao 33, Szczepan, Wyguś)",
+    artist: "Mata, Adam33, Gombao 33, Szczepan, Wyguś",
     audioSrc: "/86_GOMBAO.mp3",
     youtubeId: "NXnIdVUMsWo",
     lyrics: [
@@ -3245,7 +3245,7 @@ export const dailySongs: Song[] = [
     id: 91,
     day: 91,
     title: "Ritz Carlton (Remix)",
-    artist: "PRO8L3M (Ft. Vito Bambino)",
+    artist: "PRO8L3M, Vito Bambino",
     audioSrc: "/91_Ritz.mp3",
     youtubeId: "9TUJ0_dMQDU",
     lyrics: [
@@ -3265,7 +3265,7 @@ export const dailySongs: Song[] = [
     id: 92,
     day: 92,
     title: "Brunetki",
-    artist: "Kaz Bałagane (Ft. Smolasty)",
+    artist: "Kaz Bałagane, Smolasty",
     audioSrc: "/92_Brunetki.mp3",
     youtubeId: "8_sNdAlXXgc",
     lyrics: [
@@ -3345,7 +3345,7 @@ export const dailySongs: Song[] = [
     id: 94,
     day: 94,
     title: "Generał",
-    artist: "Malik Montana (Ft. Gzuz)",
+    artist: "Malik Montana, Gzuz",
     audioSrc: "/94_Generał.mp3",
     youtubeId: "J_8B5Wtjdfg",
     lyrics: [
@@ -3517,7 +3517,7 @@ export const dailySongs: Song[] = [
     id: 99,
     day: 99,
     title: "NIE CHCĘ WRACAĆ",
-    artist: "Fukaj, charlie moncler (Ft. Hubert.)",
+    artist: "Fukaj, charlie moncler, Hubert.",
     audioSrc: "/99_NIE.mp3",
     youtubeId: "zDIPIqWF6LY",
     lyrics: [
@@ -3965,7 +3965,7 @@ export const dailySongs: Song[] = [
     id: 111,
     day: 111,
     title: "Czarne BMW",
-    artist: "Kukon, Magiera (Ft. Avi (POL))",
+    artist: "Kukon, Magiera, Avi",
     audioSrc: "/111_Czarne.mp3",
     youtubeId: "gqaLQekhkuc",
     lyrics: [
@@ -4077,7 +4077,7 @@ export const dailySongs: Song[] = [
     id: 114,
     day: 114,
     title: "Pogo",
-    artist: "Kizo (Ft. OKI)",
+    artist: "Kizo, OKI",
     audioSrc: "/114_Pogo.mp3",
     youtubeId: "BjMcH1BF2hw",
     lyrics: [
@@ -4446,7 +4446,7 @@ export const dailySongs: Song[] = [
     id: 125,
     day: 125,
     title: "Dr. Traphouse",
-    artist: "Kaz Bałagane (Ft. Belmondo)",
+    artist: "Kaz Bałagane, Belmondo",
     audioSrc: "/125_Dr..mp3",
     youtubeId: "DpUtcNiMe40",
     lyrics: [
@@ -4726,7 +4726,7 @@ export const dailySongs: Song[] = [
     id: 133,
     day: 133,
     title: "Fresh Prince (trill 4ever)",
-    artist: "Bedoes 2115, Lanek (Ft. Malik Montana)",
+    artist: "Bedoes 2115, Lanek, Malik Montana",
     audioSrc: "/133_Fresh.mp3",
     youtubeId: "4Wjw0MlibFo",
     lyrics: [
@@ -4870,7 +4870,7 @@ export const dailySongs: Song[] = [
     id: 137,
     day: 137,
     title: "Skrrrt",
-    artist: "Young Multi (Ft. Beteo)",
+    artist: "Young Multi, Beteo",
     audioSrc: "/137_Skrrrt.mp3",
     youtubeId: "LumG7jxeOGk",
     lyrics: [
@@ -5471,7 +5471,7 @@ export const dailySongs: Song[] = [
     id: 154,
     day: 154,
     title: "Stonerki",
-    artist: "Young Leosia (Ft. Oliwka Brazil)",
+    artist: "Young Leosia, Oliwka Brazil",
     audioSrc: "/154_Stonerki.mp3",
     youtubeId: "DSk1w9_VTk4",
     lyrics: [
@@ -5791,7 +5791,7 @@ export const dailySongs: Song[] = [
     id: 163,
     day: 163,
     title: "Tenten",
-    artist: "Wenext (Ft. Młody West, Okekel, wane)",
+    artist: "Wenext, Młody West, Okekel, wane",
     audioSrc: "/163_Tenten.mp3",
     youtubeId: "OF9MeyErYyM",
     lyrics: [
@@ -6107,7 +6107,7 @@ export const dailySongs: Song[] = [
     id: 172,
     day: 172,
     title: "WWA Melanż",
-    artist: "Otsochodzi (Ft. Oskar83)",
+    artist: "Otsochodzi, Oskar83",
     audioSrc: "/172_WWA.mp3",
     youtubeId: "GP_HWyS9JWw",
     lyrics: [
@@ -6763,7 +6763,7 @@ export const dailySongs: Song[] = [
     id: 191,
     day: 191,
     title: "Apollo",
-    artist: "Avi, Louis Villain (Ft. Sarius)",
+    artist: "Avi, Louis Villain, Sarius",
     audioSrc: "/191_Apollo.mp3",
     youtubeId: "xIfCyGNn-nA",
     lyrics: [
@@ -6792,7 +6792,7 @@ export const dailySongs: Song[] = [
     day: 192,
     title: "Mercedes GLE Coupé",
     artist:
-      "Bedoes 2115, Kubi Producent (Ft. Blacha 2115, FLEXXY2115, kuqe 2115)",
+      "Bedoes 2115, Kubi Producent, Blacha 2115, FLEXXY2115, kuqe 2115",
     audioSrc: "/192_Mercedes.mp3",
     youtubeId: "7wRKrdQ4nvg",
     lyrics: [
@@ -7157,7 +7157,7 @@ export const dailySongs: Song[] = [
     id: 202,
     day: 202,
     title: "Zdrowie",
-    artist: "Kizo (Ft. Janusz Walczuk)",
+    artist: "Kizo, Janusz Walczuk",
     audioSrc: "/202_Zdrowie.mp3",
     youtubeId: "rAiIrtEmsxg",
     lyrics: [
@@ -7661,7 +7661,7 @@ export const dailySongs: Song[] = [
     id: 215,
     day: 215,
     title: "KIEDYŚ CIĘ ZNAJDĘ (REMIX)",
-    artist: "Otsochodzi, Reni Jusis, lohleq, Kusha (Ft. OKI, Young Multi)",
+    artist: "Otsochodzi, Reni Jusis, lohleq, Kusha, OKI, Young Multi",
     audioSrc: "/215_KIEDYŚ.mp3",
     youtubeId: "IEDMq5VI3jE",
     lyrics: [
@@ -7853,7 +7853,7 @@ export const dailySongs: Song[] = [
     id: 220,
     day: 220,
     title: "La la la (oh oh)",
-    artist: "Mata (Ft. White 2115)",
+    artist: "Mata, White 2115",
     audioSrc: "/220_La.mp3",
     youtubeId: "qw3fiKty6l4",
     lyrics: [
@@ -8302,7 +8302,7 @@ export const dailySongs: Song[] = [
     id: 232,
     day: 232,
     title: "BMW",
-    artist: "ReTo (Ft. Avi (POL))",
+    artist: "ReTo, Avi",
     audioSrc: "/232_BMW.mp3",
     youtubeId: "N_o-rwIV7pg",
     lyrics: [
@@ -8442,7 +8442,7 @@ export const dailySongs: Song[] = [
     id: 236,
     day: 236,
     title: "ADHD",
-    artist: "OKI (Ft. Taco Hemingway)",
+    artist: "OKI, Taco Hemingway",
     audioSrc: "/236_ADHD.mp3",
     youtubeId: "mQ7h1ujKiG4",
     lyrics: [
