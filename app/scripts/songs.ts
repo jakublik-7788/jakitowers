@@ -2151,7 +2151,7 @@ export const dailySongs: Song[] = [
     title: "#hot16challenge2 20CALI",
     artist: "Kizo",
     audioSrc: "/60_August.mp3",
-    youtubeId: "J1VQhU6Dlc",
+    youtubeId: "aJ1VQhU6Dlc",
     lyrics: [
       {
         lineIndex: 0,
