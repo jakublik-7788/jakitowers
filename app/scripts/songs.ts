@@ -8268,7 +8268,7 @@ export const dailySongs: Song[] = [
     title: "OBOK",
     artist: "Żabson",
     audioSrc: "/231_OBOK.mp3",
-    youtubeId: "Qdqb3sWive4",
+    youtubeId: "BjtzLtxr7OU",
     lyrics: [
       {
         lineIndex: 0,
