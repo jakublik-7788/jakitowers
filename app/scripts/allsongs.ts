@@ -299,7 +299,7 @@ export const allSongs: SongSuggestion[] = [
   },
   { title: "Buzi", artist: "Young Igi" },
   { title: "WMTB", artist: "OKI, Young Igi, Otsochodzi, OIO, @atutowy" },
-  { title: "Prawda", artist: "Dedis" },
+  { title: "Nie ma", artist: "Dedis" },
   { title: "Bossman", artist: "ReTo" },
   { title: "OBOK", artist: "Żabson" },
   { title: "BMW", artist: "ReTo (Ft. Avi (POL))" },

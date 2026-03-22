@@ -8185,9 +8185,9 @@ export const dailySongs: Song[] = [
   {
     id: 229,
     day: 229,
-    title: "Prawda",
+    title: "Nie ma",
     artist: "Dedis",
-    audioSrc: "/229_Prawda.mp3",
+    audioSrc: "/229_Nie_ma.mp3",
     youtubeId: "O2b-3kV-akM",
     lyrics: [
       {
