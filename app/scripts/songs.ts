@@ -8194,7 +8194,7 @@ export const dailySongs: Song[] = [
         lineIndex: 0,
         words: [
           {
-            text: "W oczach widzę opęt, jakby znała Lucyfera",
+            text: "W oczach widzę obłęd, jakby znała Lucyfera",
             start: 0.0,
             end: 2.45,
           },
@@ -8214,7 +8214,7 @@ export const dailySongs: Song[] = [
             end: 9.32,
           },
           {
-            text: "W oczach widzę opęt, jakby znała Lucyfera",
+            text: "W oczach widzę obłęd, jakby znała Lucyfera",
             start: 9.32,
             end: 11.41,
           },
