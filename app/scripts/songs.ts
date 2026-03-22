@@ -4003,7 +4003,7 @@ export const dailySongs: Song[] = [
     title: "Dom Nad Wodą",
     artist: "Pezet",
     audioSrc: "/112_DomNadWodą.mp3",
-    youtubeId: "FH_S35AIVX0",
+    youtubeId: "vAxJ6J-bk0U",
     lyrics: [
       {
         lineIndex: 0,
