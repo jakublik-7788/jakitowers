@@ -1,5 +1,3 @@
-// app/components/NonLimitGame.tsx (pełna, gotowa wersja)
-
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
@@ -33,18 +31,8 @@ const TidalIcon = () => (
 
 const PLATFORMS = [
   { key: "spotify", Icon: SpotifyIcon, color: "#1DB954", label: "Spotify" },
-  {
-    key: "appleMusic",
-    Icon: AppleMusicIcon,
-    color: "#FC3C44",
-    label: "Apple Music",
-  },
-  {
-    key: "soundcloud",
-    Icon: SoundCloudIcon,
-    color: "#FF5500",
-    label: "SoundCloud",
-  },
+  { key: "appleMusic", Icon: AppleMusicIcon, color: "#FC3C44", label: "Apple Music" },
+  { key: "soundcloud", Icon: SoundCloudIcon, color: "#FF5500", label: "SoundCloud" },
   { key: "tidal", Icon: TidalIcon, color: "#00FFFF", label: "Tidal" },
 ] as const;
 
@@ -56,38 +44,16 @@ import { useSoundEffects } from "@/app/scripts/useSoundEffects";
 
 const normalizePolishChars = (str: string): string => {
   const map: { [k: string]: string } = {
-    ą: "a",
-    ć: "c",
-    ę: "e",
-    ł: "l",
-    ń: "n",
-    ó: "o",
-    ś: "s",
-    ź: "z",
-    ż: "z",
-    Ą: "A",
-    Ć: "C",
-    Ę: "E",
-    Ł: "L",
-    Ń: "N",
-    Ó: "O",
-    Ś: "S",
-    Ź: "Z",
-    Ż: "Z",
+    ą: "a", ć: "c", ę: "e", ł: "l", ń: "n", ó: "o", ś: "s", ź: "z", ż: "z",
+    Ą: "A", Ć: "C", Ę: "E", Ł: "L", Ń: "N", Ó: "O", Ś: "S", Ź: "Z", Ż: "Z",
   };
   return str.replace(/[ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/g, (c) => map[c] || c);
 };
 
 const hasCommonArtist = (a: string, b: string): boolean => {
   const norm = (s: string) => normalizePolishChars(s.toLowerCase().trim());
-  const split = (s: string) =>
-    s
-      .split(/[,&(]/)
-      .map(norm)
-      .filter((x) => x.length > 1);
-  return split(a).some((x) =>
-    split(b).some((y) => x.includes(y) || y.includes(x)),
-  );
+  const split = (s: string) => s.split(/[,&(]/).map(norm).filter((x) => x.length > 1);
+  return split(a).some((x) => split(b).some((y) => x.includes(y) || y.includes(x)));
 };
 
 interface NonLimitGameProps {
@@ -104,33 +70,34 @@ export const NonLimitGame = ({
   const [currentSong, setCurrentSong] = useState<Song | null>(null);
   const [score, setScore] = useState(0);
   const [attempts, setAttempts] = useState<
-    {
-      display: string;
-      status: "correct" | "wrong" | "skipped" | "empty" | "artist";
-    }[]
+    { display: string; status: "correct" | "wrong" | "skipped" | "empty" | "artist" }[]
   >(Array(5).fill({ display: "", status: "empty" }));
   const [currentAttempt, setCurrentAttempt] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [inputValue, setInputValue] = useState("");
-  const [suggestions, setSuggestions] = useState<
-    { title: string; artist: string }[]
-  >([]);
+  const [suggestions, setSuggestions] = useState<{ title: string; artist: string }[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [gameStatus, setGameStatus] = useState<"win" | "lose" | null>(null);
   const [isFinished, setIsFinished] = useState(false);
   const [guessedSongs, setGuessedSongs] = useState<string[]>([]);
-  const [playedTitles, setPlayedTitles] = useState<string[]>([]); // tytuły piosenek już rozegranych
+  const [playedTitles, setPlayedTitles] = useState<string[]>([]);
   const [mounted, setMounted] = useState(false);
   const [inputError, setInputError] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const isPlayingRef = useRef(isPlaying);
   const { play } = useSoundEffects(soundEnabled);
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Synchronizacja ref z isPlaying
+  useEffect(() => {
+    isPlayingRef.current = isPlaying;
+  }, [isPlaying]);
 
   const stopAudio = useCallback(() => {
     if (audioRef.current) {
@@ -175,7 +142,7 @@ export const NonLimitGame = ({
     }
   }, [volume]);
 
-  // ── Ładowanie źródła dźwięku (tylko gdy zmienia się piosenka) ───────────
+  // ── Ładowanie źródła dźwięku i synchronizacji (requestAnimationFrame) ────────
   useEffect(() => {
     if (!currentSong) return;
     if (!audioRef.current) {
@@ -184,20 +151,13 @@ export const NonLimitGame = ({
       audioRef.current.src = currentSong.audioSrc;
       audioRef.current.load();
     }
-    // Po załadowaniu nowego źródła natychmiast ustawiamy zapisaną głośność
     audioRef.current.volume = volume;
-  }, [currentSong]);
 
-  // Synchronizacja tekstu
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio || !currentSong) return;
     let frameId: number;
+    const audio = audioRef.current;
     const syncLyrics = () => {
       setCurrentTime(audio.currentTime);
-      const last = currentSong.lyrics[0].words
-        .slice(0, currentAttempt + 1)
-        .at(-1);
+      const last = currentSong.lyrics[0].words.slice(0, currentAttempt + 1).at(-1);
       if (last && audio.currentTime >= last.end) {
         audio.pause();
         setIsPlaying(false);
@@ -207,15 +167,9 @@ export const NonLimitGame = ({
         frameId = requestAnimationFrame(syncLyrics);
       }
     };
-    const onPlay = () => {
-      frameId = requestAnimationFrame(syncLyrics);
-    };
-    const onPause = () => {
-      cancelAnimationFrame(frameId);
-    };
-    const onEnded = () => {
-      stopAudio();
-    };
+    const onPlay = () => { frameId = requestAnimationFrame(syncLyrics); };
+    const onPause = () => { cancelAnimationFrame(frameId); };
+    const onEnded = () => { stopAudio(); };
     audio.addEventListener("play", onPlay);
     audio.addEventListener("pause", onPause);
     audio.addEventListener("ended", onEnded);
@@ -226,6 +180,19 @@ export const NonLimitGame = ({
       cancelAnimationFrame(frameId);
     };
   }, [currentSong, currentAttempt, stopAudio]);
+
+  // ── Zatrzymaj odtwarzanie, gdy użytkownik przejdzie na inną kartę ──────────
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden && isPlayingRef.current) {
+        stopAudio();
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [stopAudio]);
 
   // Przewijanie podpowiedzi
   useEffect(() => {
@@ -307,10 +274,8 @@ export const NonLimitGame = ({
       status = "wrong";
       play("wrong");
     } else {
-      const isCorrect =
-        songInDb.title.toLowerCase() === currentSong.title.toLowerCase();
-      const artistMatch =
-        !isCorrect && hasCommonArtist(songInDb.artist, currentSong.artist);
+      const isCorrect = songInDb.title.toLowerCase() === currentSong.title.toLowerCase();
+      const artistMatch = !isCorrect && hasCommonArtist(songInDb.artist, currentSong.artist);
       displayText = `${songInDb.artist} - ${songInDb.title}`.toUpperCase();
       status = isCorrect ? "correct" : artistMatch ? "artist" : "wrong";
       if (isCorrect) play("correct");
@@ -359,12 +324,8 @@ export const NonLimitGame = ({
 
   if (!currentSong) return null;
 
-  const hasLongLines = currentSong.lyrics[0].words.some(
-    (p) => p.text.length >= 50,
-  );
-  const textSizeClass = hasLongLines
-    ? "text-sm md:text-xl"
-    : "text-base md:text-2xl";
+  const hasLongLines = currentSong.lyrics[0].words.some((p) => p.text.length >= 50);
+  const textSizeClass = hasLongLines ? "text-sm md:text-xl" : "text-base md:text-2xl";
 
   return (
     <div className="h-full flex flex-col relative z-10">
@@ -383,48 +344,27 @@ export const NonLimitGame = ({
                 } shadow-[0_0_20px_var(--accent-glow)]`}
               >
                 {isPlaying ? (
-                  <Pause
-                    fill="currentColor"
-                    size={20}
-                    className="md:w-7 md:h-7 max-md:w-6 max-md:h-6"
-                  />
+                  <Pause fill="currentColor" size={20} className="md:w-7 md:h-7 max-md:w-6 max-md:h-6" />
                 ) : (
-                  <Play
-                    fill="currentColor"
-                    size={20}
-                    className="ml-1 md:w-7 md:h-7 md:ml-1.5 max-md:w-6 max-md:h-6"
-                  />
+                  <Play fill="currentColor" size={20} className="ml-1 md:w-7 md:h-7 md:ml-1.5 max-md:w-6 max-md:h-6" />
                 )}
               </motion.button>
             </div>
             <div className="flex-1 flex flex-col gap-3 max-md:gap-2 min-w-0">
               <AnimatePresence mode="popLayout">
-                {currentSong.lyrics[0].words
-                  .slice(0, currentAttempt + 1)
-                  .map((phrase, i) => {
-                    const isActive =
-                      isPlaying &&
-                      currentTime >= phrase.start &&
-                      currentTime <= phrase.end;
-                    return (
-                      <motion.div
-                        layout
-                        key={i}
-                        initial={{ opacity: 0, y: 5 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="w-full"
+                {currentSong.lyrics[0].words.slice(0, currentAttempt + 1).map((phrase, i) => {
+                  const isActive = isPlaying && currentTime >= phrase.start && currentTime <= phrase.end;
+                  return (
+                    <motion.div layout key={i} initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} className="w-full">
+                      <p
+                        className={`font-[1000] tracking-wide uppercase italic select-none leading-tight ${textSizeClass} max-md:text-xs`}
+                        style={{ color: isActive ? "var(--accent-main)" : "#1e1e21" }}
                       >
-                        <p
-                          className={`font-[1000] tracking-wide uppercase italic select-none leading-tight ${textSizeClass} max-md:text-xs`}
-                          style={{
-                            color: isActive ? "var(--accent-main)" : "#1e1e21",
-                          }}
-                        >
-                          {phrase.text}
-                        </p>
-                      </motion.div>
-                    );
-                  })}
+                        {phrase.text}
+                      </p>
+                    </motion.div>
+                  );
+                })}
               </AnimatePresence>
             </div>
           </div>
@@ -445,12 +385,12 @@ export const NonLimitGame = ({
                   g.status === "correct"
                     ? "border-green-500 bg-green-500/15 text-green-400 shadow-[0_0_20px_rgba(34,197,94,0.4)]"
                     : g.status === "artist"
-                      ? "border-yellow-400 bg-yellow-400/15 text-yellow-300 shadow-[0_0_20px_rgba(234,179,8,0.4)]"
-                      : g.status === "wrong"
-                        ? "border-red-500 bg-red-500/15 text-red-500 shadow-[0_0_20px_rgba(239,68,68,0.4)]"
-                        : g.status === "skipped"
-                          ? "border-zinc-200 bg-white/15 text-zinc-100 shadow-[0_0_20px_rgba(255,255,255,0.2)]"
-                          : "border-zinc-800/80 bg-zinc-900/30 text-zinc-700"
+                    ? "border-yellow-400 bg-yellow-400/15 text-yellow-300 shadow-[0_0_20px_rgba(234,179,8,0.4)]"
+                    : g.status === "wrong"
+                    ? "border-red-500 bg-red-500/15 text-red-500 shadow-[0_0_20px_rgba(239,68,68,0.4)]"
+                    : g.status === "skipped"
+                    ? "border-zinc-200 bg-white/15 text-zinc-100 shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+                    : "border-zinc-800/80 bg-zinc-900/30 text-zinc-700"
                 }`}
               >
                 <span className="text-[10px] max-md:text-[9px] font-black tracking-widest uppercase truncate">
@@ -458,21 +398,13 @@ export const NonLimitGame = ({
                 </span>
                 <div className="absolute right-4 max-md:right-2 flex items-center">
                   {g.status === "correct" && (
-                    <CheckCircle2
-                      className="shrink-0 text-green-400 max-md:w-4 max-md:h-4"
-                      size={16}
-                    />
+                    <CheckCircle2 className="shrink-0 text-green-400 max-md:w-4 max-md:h-4" size={16} />
                   )}
                   {g.status === "wrong" && (
-                    <XCircle
-                      className="shrink-0 text-red-500 max-md:w-4 max-md:h-4"
-                      size={16}
-                    />
+                    <XCircle className="shrink-0 text-red-500 max-md:w-4 max-md:h-4" size={16} />
                   )}
                   {g.status === "artist" && (
-                    <span className="shrink-0 text-yellow-400 font-black text-base max-md:text-sm">
-                      ~
-                    </span>
+                    <span className="shrink-0 text-yellow-400 font-black text-base max-md:text-sm">~</span>
                   )}
                 </div>
               </motion.div>
@@ -516,17 +448,11 @@ export const NonLimitGame = ({
                   <div className="flex justify-center mb-4">
                     {gameStatus === "win" ? (
                       <div className="bg-green-500/20 p-3 rounded-full border border-green-500/50 shadow-[0_0_30px_rgba(34,197,94,0.3)]">
-                        <CheckCircle2
-                          className="text-green-400 max-md:w-8 max-md:h-8"
-                          size={38}
-                        />
+                        <CheckCircle2 className="text-green-400 max-md:w-8 max-md:h-8" size={38} />
                       </div>
                     ) : (
                       <div className="bg-red-500/20 p-3 rounded-full border border-red-500/50 shadow-[0_0_30px_rgba(239,68,68,0.3)]">
-                        <XCircle
-                          className="text-red-400 max-md:w-8 max-md:h-8"
-                          size={38}
-                        />
+                        <XCircle className="text-red-400 max-md:w-8 max-md:h-8" size={38} />
                       </div>
                     )}
                   </div>
@@ -538,9 +464,7 @@ export const NonLimitGame = ({
                     {gameStatus === "win" ? "GRATULACJE!" : "NIESTETY..."}
                   </h2>
                   <p className="text-zinc-500 font-bold tracking-[0.3em] uppercase text-[10px] max-md:text-[8px] mb-5">
-                    {gameStatus === "win"
-                      ? "ZGADŁEŚ TĘ PIOSENKĘ!"
-                      : "NIE TYM RAZEM..."}
+                    {gameStatus === "win" ? "ZGADŁEŚ TĘ PIOSENKĘ!" : "NIE TYM RAZEM..."}
                   </p>
                   <div className="aspect-video w-full rounded-[20px] overflow-hidden border-2 border-white/5 shadow-2xl mb-5 bg-black">
                     <iframe
@@ -562,9 +486,7 @@ export const NonLimitGame = ({
                       {currentSong.artist}
                     </p>
                     {(() => {
-                      const avail = PLATFORMS.filter(
-                        (p) => currentSong.platforms?.[p.key],
-                      );
+                      const avail = PLATFORMS.filter((p) => currentSong.platforms?.[p.key]);
                       return avail.length > 0 ? (
                         <div className="flex items-center justify-center gap-2 mt-2">
                           {avail.map(({ key, Icon, color, label }) => (

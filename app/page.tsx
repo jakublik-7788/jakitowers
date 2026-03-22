@@ -1,5 +1,5 @@
 "use client";
-<link rel="icon" href="/favicon.ico" />
+
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Trophy } from "lucide-react";
@@ -36,7 +36,7 @@ interface SavedDayState {
 
 const LS_ACCENT_KEY  = "jakitowers_accent_color";
 const LS_SOUND_KEY   = "jakitowers_sound_enabled";
-const LS_VOLUME_KEY  = "jakitowers_volume";           // nowy klucz dla głośności
+const LS_VOLUME_KEY  = "jakitowers_volume";
 const LS_DAY_PREFIX  = "jakitowers_day_";
 const LS_RESULTS_KEY = "jakitowers_day_results";
 
@@ -54,8 +54,7 @@ const normalizePolishChars = (str: string): string => {
 
 const hasCommonArtist = (a: string, b: string) => {
   const norm = (s: string) => normalizePolishChars(s.toLowerCase().trim());
-  const split = (s: string) =>
-    s.split(/[,&(]/).map(norm).filter((x) => x.length > 1);
+  const split = (s: string) => s.split(/[,&(]/).map(norm).filter((x) => x.length > 1);
   return split(a).some((x) => split(b).some((y) => x.includes(y) || y.includes(x)));
 };
 
@@ -195,11 +194,17 @@ export default function Home() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const song = dailySongs.find((s) => s.day === currentDay) || dailySongs[0];
+  const isPlayingRef = useRef(isPlaying); // <- ref dla stanu odtwarzania
 
   const { play } = useSoundEffects(soundEnabled);
   const { localStats, globalStats, globalLoading, recordResult, refetchGlobalStats } = useGameStats(currentDay);
   const { stats: nonLimitStats, recordResult: recordNonLimitResult } = useNonLimitStats();
   const gameHistory = useCalendarHistory(dayResults);
+
+  // Synchronizacja ref z isPlaying
+  useEffect(() => {
+    isPlayingRef.current = isPlaying;
+  }, [isPlaying]);
 
   // ── 1. Wczytaj ustawienia + wyniki dni ─────────────────────────────────────
   useEffect(() => {
@@ -208,7 +213,6 @@ export default function Home() {
       if (savedColor && /^#[0-9a-fA-F]{6}$/.test(savedColor)) applyAccentColor(savedColor);
       const savedSound = localStorage.getItem(LS_SOUND_KEY);
       if (savedSound !== null) setSoundEnabled(savedSound === "true");
-      // Odczyt głośności
       const savedVolume = localStorage.getItem(LS_VOLUME_KEY);
       if (savedVolume !== null) {
         const vol = parseFloat(savedVolume);
@@ -280,7 +284,10 @@ export default function Home() {
   }, [selectedIndex]);
 
   const stopAudio = useCallback(() => {
-    if (audioRef.current) { audioRef.current.pause(); audioRef.current.currentTime = 0; }
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
     setIsPlaying(false);
     setCurrentTime(0);
   }, []);
@@ -292,7 +299,7 @@ export default function Home() {
     }
   }, [volume]);
 
-  // ── Efekt ładowania źródła dźwięku (tylko gdy zmienia się piosenka) ────────
+  // ── Efekt ładowania źródła dźwięku i synchronizacji (requestAnimationFrame) ────────
   useEffect(() => {
     if (!song) return;
     if (!audioRef.current) {
@@ -301,7 +308,7 @@ export default function Home() {
       audioRef.current.src = song.audioSrc;
       audioRef.current.load();
     }
-    audioRef.current.volume = volume; // ustawiamy głośność przy pierwszym załadowaniu
+    audioRef.current.volume = volume;
 
     let frameId: number;
     const audio = audioRef.current;
@@ -323,7 +330,20 @@ export default function Home() {
       cancelAnimationFrame(frameId);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [song, currentStep, stopAudio]); // volume usunięte z zależności
+  }, [song, currentStep, stopAudio]);
+
+  // ── Zatrzymaj odtwarzanie, gdy użytkownik przejdzie na inną kartę ──────────
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden && isPlayingRef.current) {
+        stopAudio();
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [stopAudio]);
 
   // ── Logika gry ─────────────────────────────────────────────────────────────
   const handleKeyDown = (e: React.KeyboardEvent) => {
