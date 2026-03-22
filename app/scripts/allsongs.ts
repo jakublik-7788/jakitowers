@@ -247,4 +247,5 @@ export const allSongs: SongSuggestion[] = [
   { title: "Followup", artist: "Belmondawg, Expo 2000, Dizkret" },
   { title: "Przester", artist: "Young Leosia, bambi, PG$, francis" },
   { title: "Jungle Boyz", artist: "Malik Montana" },
+  { title: "#hot16challenge2 20CALI", artist: "Kizo" },
 ];
