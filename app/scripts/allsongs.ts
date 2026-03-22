@@ -14,7 +14,7 @@ export const allSongs: SongSuggestion[] = [
   { title: "W GORĄCEJ WODZIE COMPANY", artist: "Bardal" },
   { title: "Luty", artist: "Otsochodzi" },
   { title: "Mini Man", artist: "Okekel" },
-  { title: "Hit 'Em Up", artist: "Bedoes 2115" },
+  { title: "Hit ’Em Up", artist: "Bedoes 2115" },
   { title: "CASABLANCA", artist: "Sentino, BNP" },
   { title: "Papierosy_rmx", artist: "ReTo" },
   { title: "Puerto Bounce", artist: "Żabson, ZetHa, Kizo" },
