@@ -322,7 +322,7 @@ export const allSongs: SongSuggestion[] = [
   { title: "Alcantara", artist: "Avi, Kukon, @atutowy" },
   { title: "Trendsetter", artist: "Kaz Bałagane" },
   {
-    title: "Zapłakane matki",
+    title: "Zapłakane Matki (Def Jam World Tour)",
     artist: "Yung Adisz, Rusina, Def Jam World Tour",
   },
   { title: "Multisport", artist: "Kaz Bałagane, Oskar83" },

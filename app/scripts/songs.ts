@@ -3556,7 +3556,7 @@ export const dailySongs: Song[] = [
   {
     id: 100,
     day: 100,
-    title: "Zapłakane matki - Def Jam World Tour",
+    title: "Zapłakane Matki (Def Jam World Tour)",
     artist: "Yung Adisz, Rusina, Def Jam World Tour",
     audioSrc: "/100_Zapakanema.mp3",
     youtubeId: "DaOOjDafAhM",
