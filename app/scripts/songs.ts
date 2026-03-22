@@ -3705,7 +3705,7 @@ export const dailySongs: Song[] = [
     id: 104,
     day: 104,
     title: "SIE KLEI",
-    artist: "javier (POL)",
+    artist: "javier",
     audioSrc: "/104_SIE.mp3",
     youtubeId: "R1asZhTWAQc",
     lyrics: [
@@ -4197,7 +4197,7 @@ export const dailySongs: Song[] = [
     id: 118,
     day: 118,
     title: "HIPNOZA",
-    artist: "NIKOŚ (POL)",
+    artist: "NIKOŚ",
     audioSrc: "/118_HIPNOZA.mp3",
     youtubeId: "Xkob5a_oIEY",
     lyrics: [
@@ -4694,7 +4694,7 @@ export const dailySongs: Song[] = [
     id: 132,
     day: 132,
     title: "Błoto",
-    artist: "wane (POL)",
+    artist: "wane",
     audioSrc: "/132_Błoto.mp3",
     youtubeId: "TjYh71x4CtQ",
     lyrics: [
