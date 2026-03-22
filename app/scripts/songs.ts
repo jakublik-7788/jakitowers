@@ -160,9 +160,9 @@ export const dailySongs: Song[] = [
   {
     id: 5,
     day: 5,
-    title: "5_1 na 100",
+    title: "1 na 100",
     artist: "White 2115, Mata, Pedro, BroJustChill",
-    audioSrc: "/1na100.mp3",
+    audioSrc: "/5_1na100.mp3",
     youtubeId: "6-UVT5r8Ml0",
     lyrics: [
       {
