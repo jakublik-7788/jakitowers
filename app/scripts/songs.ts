@@ -5989,7 +5989,7 @@ export const dailySongs: Song[] = [
     title: "Miniówa",
     artist: "Kukon",
     audioSrc: "/169_Miniówa.mp3",
-    youtubeId: "oDfM7YRFITE",
+    youtubeId: "ESj1fxCv_gs",
     lyrics: [
       {
         lineIndex: 0,
