@@ -559,7 +559,7 @@ export const dailySongs: Song[] = [
     title: "Rura musi yeah",
     artist: "Malik Montana, Kazior",
     audioSrc: "/16_Rura musi yeah.mp3",
-    youtubeId: "T0z4Sx2jpEk",
+    youtubeId: "tEy7kNvYYFw",
     lyrics: [
       {
         lineIndex: 0,
