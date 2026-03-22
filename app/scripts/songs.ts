@@ -4624,11 +4624,11 @@ export const dailySongs: Song[] = [
           {
             text: "Ale już tutaj nie mieszkam",
             start: 0.0,
-            end: 3.16,
+            end: 3.65,
           },
           {
             text: "Rap czy jebane worki, Ciągle się pyta koleżka",
-            start: 3.16,
+            start: 3.65,
             end: 5.0,
           },
           {
