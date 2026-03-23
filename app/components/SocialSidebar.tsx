@@ -9,8 +9,8 @@ export const SocialSidebar = ({ variant }: { variant?: string }) => {
   const accentColor = "var(--accent-main)";
 
   const socials = [
-    { name: "Instagram", icon: Instagram, href: "https://jakitowers.pl" },
-    { name: "TikTok", icon: Music2, href: "https://jakitowers.pl" },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/jakitowers_/" },
+    { name: "TikTok", icon: Music2, href: "https://www.tiktok.com/@jakitowers_" },
     { name: "ExternalLink", icon: ExternalLink, href: "https://jakitowers.pl" },
   ];
 
