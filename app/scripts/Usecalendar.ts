@@ -6,15 +6,20 @@ import { dailySongs } from "./songs";
 
 // ─── Data startu gry ──────────────────────────────────────────────────────────
 // Day #1 = 19 marca 2026
-export const GAME_START_DATE = new Date("2026-03-20T00:00:00");
+export const GAME_START_DATE = new Date(Date.UTC(2026, 2, 20));
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
 /** Dzisiejsza data bez godziny */
 function today(): Date {
-  const d = new Date();
-  d.setHours(0, 0, 0, 0);
-  return d;
+  const now = new Date();
+  const utcToday = new Date(Date.UTC(
+    now.getUTCFullYear(),
+    now.getUTCMonth(),
+    now.getUTCDate()
+  ));
+  utcToday.setHours(0, 0, 0, 0);
+  return utcToday;
 }
 
 /**
