@@ -13,27 +13,15 @@ export const GAME_START_DATE = new Date(Date.UTC(2026, 2, 20));
 /** Dzisiejsza data bez godziny */
 function today(): Date {
   const now = new Date();
-  const utcToday = new Date(Date.UTC(
-    now.getUTCFullYear(),
-    now.getUTCMonth(),
-    now.getUTCDate()
-  ));
-  utcToday.setHours(0, 0, 0, 0);
-  return utcToday;
+  return new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
 }
 
-/**
- * Który numer dnia jest dostępny dzisiaj.
- * Jeśli jest przed startem gry → zwraca 1 (żeby nie crashowało).
- * Jeśli przekracza liczbę piosenek → zwraca ostatnią piosenkę.
- */
-export function todayDayNumber(): number {
-  const start = new Date(GAME_START_DATE);
-  start.setHours(0, 0, 0, 0);
-  const diff = Math.floor((today().getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
-  const dayNum = diff + 1; // diff=0 → day 1, diff=1 → day 2, itd.
-  if (dayNum < 1) return 1;
-  if (dayNum > dailySongs.length) return dailySongs.length;
+export function dateKeyToDayNumber(dateKey: string): number | null {
+  const [year, month, day] = dateKey.split("-").map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  const diff = Math.floor((date.getTime() - GAME_START_DATE.getTime()) / (1000 * 60 * 60 * 24));
+  const dayNum = diff + 1;
+  if (dayNum < 1 || dayNum > dailySongs.length) return null;
   return dayNum;
 }
 
