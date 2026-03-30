@@ -1,13 +1,29 @@
 "use client";
+
 import { useMemo } from "react";
 import { dailySongs } from "./songs";
 
-export const GAME_START_DATE = new Date(Date.UTC(2026, 2, 20));
+export const GAME_START_DATE = new Date(Date.UTC(2026, 2, 19, 23, 0, 0)); // 19 marca 23:00 UTC = 20 marca 00:00 UTC+1 (zima)
+
+function getPolandOffset(): number {
+  // Sprawdza aktualny offset Polski (UTC+1 zima, UTC+2 lato)
+  const now = new Date();
+  const jan = new Date(Date.UTC(now.getUTCFullYear(), 0, 1));
+  const jul = new Date(Date.UTC(now.getUTCFullYear(), 6, 1));
+  const stdOffset = Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+  const isDST = now.getTimezoneOffset() < stdOffset;
+  return isDST ? 2 : 1; // UTC+2 lato, UTC+1 zima
+}
+
+function todayPoland(): Date {
+  const now = new Date();
+  const polandOffset = getPolandOffset() * 60 * 60 * 1000;
+  const polandNow = new Date(now.getTime() + polandOffset);
+  return new Date(Date.UTC(polandNow.getUTCFullYear(), polandNow.getUTCMonth(), polandNow.getUTCDate()));
+}
 
 export function todayDayNumber(): number {
-  const now = new Date();
-  const utcToday = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
-  const diff = Math.floor((utcToday.getTime() - GAME_START_DATE.getTime()) / (1000 * 60 * 60 * 24));
+  const diff = Math.floor((todayPoland().getTime() - GAME_START_DATE.getTime()) / (1000 * 60 * 60 * 24));
   const dayNum = diff + 1;
   if (dayNum < 1) return 1;
   if (dayNum > dailySongs.length) return dailySongs.length;
@@ -25,7 +41,9 @@ export function isDayUnlocked(dayNumber: number): boolean {
 export function dayNumberToDateKey(dayNumber: number): string {
   const date = new Date(GAME_START_DATE);
   date.setUTCDate(date.getUTCDate() + dayNumber - 1);
-  return `${date.getUTCFullYear()}-${date.getUTCMonth() + 1}-${date.getUTCDate()}`;
+  const polandOffset = getPolandOffset() * 60 * 60 * 1000;
+  const polandDate = new Date(date.getTime() + polandOffset);
+  return `${polandDate.getUTCFullYear()}-${polandDate.getUTCMonth() + 1}-${polandDate.getUTCDate()}`;
 }
 
 export function dateKeyToDayNumber(dateKey: string): number | null {
