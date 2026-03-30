@@ -382,7 +382,7 @@ export const dailySongs: Song[] = [
     day: 11,
     title: "Hit ’Em Up",
     artist: "Bedoes 2115",
-    audioSrc: "/11_Hit 'Em Up.mp3",
+    audioSrc: "/11_HitEm Up.mp3",
     youtubeId: "EMAZETA-bXU",
     lyrics: [
       {
