@@ -3,7 +3,7 @@
 import { useRef, useCallback, useState } from "react";
 import { motion } from "framer-motion";
 import { Trophy, X, Share2, Check, Clock } from "lucide-react";
-import { Song } from "@/app/scripts/songs";
+import { Song } from "@/app/types/song";
 import { CountdownTimer } from "./CountdownTimer";
 import { domToPng } from "modern-screenshot";
 
