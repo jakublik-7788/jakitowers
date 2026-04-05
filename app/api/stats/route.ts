@@ -7,18 +7,42 @@ const redis = Redis.fromEnv();
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const day = searchParams.get("day");
-  const mode = searchParams.get("mode") || "rap"; // domyślnie rap
+  const mode = searchParams.get("mode") || "rap";
 
   if (!day) {
     return NextResponse.json({ error: "Missing day param" }, { status: 400 });
   }
 
   try {
+    const dayNum = parseInt(day);
+    const useNewFormat = dayNum >= 17 || mode !== "rap";
+
+    // Nowy format z trybem
+    const newKey = `stats:day:${day}:${mode}`;
+    // Stary format bez trybu (dni 1-16 rap)
+    const oldKey = `stats:day:${day}`;
+
+    const key = useNewFormat ? newKey : oldKey;
+
     const [attempts, total, wins] = await Promise.all([
-      redis.hgetall(`stats:day:${day}:${mode}:attempts`),
-      redis.get<number>(`stats:day:${day}:${mode}:total`),
-      redis.get<number>(`stats:day:${day}:${mode}:wins`),
+      redis.hgetall(`${key}:attempts`),
+      redis.get<number>(`${key}:total`),
+      redis.get<number>(`${key}:wins`),
     ]);
+
+    // Jeśli nowy format pusty a to rap, spróbuj stary
+    if ((!attempts || Object.keys(attempts).length === 0) && mode === "rap" && useNewFormat) {
+      const [oldAttempts, oldTotal, oldWins] = await Promise.all([
+        redis.hgetall(`${oldKey}:attempts`),
+        redis.get<number>(`${oldKey}:total`),
+        redis.get<number>(`${oldKey}:wins`),
+      ]);
+      return NextResponse.json({
+        attempts: oldAttempts ?? {},
+        total: oldTotal ?? 0,
+        wins: oldWins ?? 0,
+      });
+    }
 
     return NextResponse.json({
       attempts: attempts ?? {},
@@ -28,40 +52,5 @@ export async function GET(req: NextRequest) {
   } catch (err) {
     console.error("Redis GET error:", err);
     return NextResponse.json({ error: "Failed to fetch stats" }, { status: 500 });
-  }
-}
-
-export async function POST(req: NextRequest) {
-  try {
-    const body = await req.json();
-    const { day, attempt, won, mode } = body as {
-      day: number;
-      attempt: number | null;
-      won: boolean;
-      mode?: string;
-    };
-
-    if (!day) {
-      return NextResponse.json({ error: "Missing day" }, { status: 400 });
-    }
-
-    const modeKey = mode || "rap";
-
-    const pipeline = redis.pipeline();
-    pipeline.incr(`stats:day:${day}:${modeKey}:total`);
-
-    if (won && attempt !== null) {
-      pipeline.incr(`stats:day:${day}:${modeKey}:wins`);
-      pipeline.hincrby(`stats:day:${day}:${modeKey}:attempts`, String(attempt), 1);
-    } else {
-      pipeline.hincrby(`stats:day:${day}:${modeKey}:attempts`, "X", 1);
-    }
-
-    await pipeline.exec();
-
-    return NextResponse.json({ ok: true });
-  } catch (err) {
-    console.error("Redis POST error:", err);
-    return NextResponse.json({ error: "Failed to save stats" }, { status: 500 });
   }
 }
