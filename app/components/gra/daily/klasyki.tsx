@@ -708,7 +708,7 @@ export default function KlasykiPage() {
     } else if (isNewSong) {
       const wasPlaying = isPlayingRef.current;
       audioRef.current.pause();
-      audioRef.current.src = song.audioSrc;
+      audioRef.current.src = song.audioSrc ?? "";
       audioRef.current.load();
       currentSongIdRef.current = newSongId;
       if (wasPlaying && !isFinished) {
