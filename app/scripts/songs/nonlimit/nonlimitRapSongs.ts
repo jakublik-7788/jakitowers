@@ -11007,7 +11007,7 @@ export const nonlimitRapSongs: Song[] = [
     day: 306,
     title: "Safari",
     artist: "KęKę, Dj.Frodo",
-    audioSrc: "/Rap/KęKę/328_Safari.mp3",
+    audioSrc: "/Rap/Kękę/328_Safari.mp3",
     youtubeId: "jYwhoUh1z54",
     lyrics: [
       {
