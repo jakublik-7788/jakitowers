@@ -322,7 +322,7 @@ export const rapSongs: Song[] = [
     day: 10,
     title: "Mini Man",
     artist: "Okekel",
-    audioSrc: "/Rap/Okekel/10_Mini Man.mp3",
+    audioSrc: "/Rap/Okekel/52_Mini Man.mp3",
     youtubeId: "kiL_C0XjMD4",
     lyrics: [
       {
