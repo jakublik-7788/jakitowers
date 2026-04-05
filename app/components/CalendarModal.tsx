@@ -201,7 +201,7 @@ export const CalendarModal = ({
                   <button
                     key={day}
                     onClick={() => clickable && !isFuture && handleDayClick(day)}
-                    disabled={!clickable || isFuture}
+                    disabled={!clickable || !!isFuture}
                     className={`aspect-square flex flex-col items-center justify-center rounded-xl transition-all duration-200 border ${
                       clickable && !isFuture ? "cursor-pointer" : "cursor-not-allowed"
                     } ${bgClass} ${borderClass} hover:scale-105 active:scale-95`}
