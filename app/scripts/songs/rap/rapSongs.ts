@@ -606,7 +606,7 @@ export const rapSongs: Song[] = [
     day: 18,
     title: "Znachor",
     artist: "KęKę, Nody Beats",
-    audioSrc: "/Rap/KęKę/287_Znachor.mp3",
+    audioSrc: "/Rap/Kękę/287_Znachor.mp3",
     youtubeId: "mzgJxnllHDE",
     lyrics: [
       {
