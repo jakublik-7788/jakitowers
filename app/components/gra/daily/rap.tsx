@@ -714,7 +714,7 @@ export default function RapPage() {
     } else if (isNewSong) {
       const wasPlaying = isPlayingRef.current;
       audioRef.current.pause();
-      audioRef.current.src = song.audioSrc;
+      audioRef.current.src = song.audioSrc ?? "";
       audioRef.current.load();
       currentSongIdRef.current = newSongId;
       if (wasPlaying && !isFinished) {
@@ -847,7 +847,7 @@ export default function RapPage() {
       const isCorrect =
         songInDb.title.toLowerCase() === song.title.toLowerCase();
       const artistMatch =
-        !isCorrect && hasCommonArtist(songInDb.artist, song.artist);
+        !isCorrect && hasCommonArtist(songInDb.artist, song.artist ?? "");
       displayText = (songInDb.artist + " - " + songInDb.title).toUpperCase();
       status = isCorrect ? "correct" : artistMatch ? "artist" : "wrong";
       if (isCorrect) play("correct");

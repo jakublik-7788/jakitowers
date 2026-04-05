@@ -1005,7 +1005,7 @@ export default function Home() {
           <RulesModal
             modeKey={rulesKey}
             onClose={() => setRulesKey(null)}
-            playSound={play}
+            playSound={play as (type: string) => void}
           />
         )}
       </AnimatePresence>

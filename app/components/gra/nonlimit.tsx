@@ -902,7 +902,7 @@ export default function NonLimitGame() {
         if (!audioRef.current) {
           audioRef.current = new Audio(next.audioSrc);
         } else {
-          audioRef.current.src = next.audioSrc;
+          audioRef.current.src = next.audioSrc ?? "";
           audioRef.current.load();
         }
         audioRef.current.volume = volumeRef.current;
@@ -1104,7 +1104,7 @@ export default function NonLimitGame() {
       const artistMatch =
         !isCorrect &&
         !isSoundtracki &&
-        hasCommonArtist(songInDb.artist, currentSong.artist);
+        hasCommonArtist(songInDb.artist, currentSong.artist ?? "");
       displayText = isSoundtracki
         ? songInDb.title.toUpperCase()
         : (songInDb.artist + " - " + songInDb.title).toUpperCase();

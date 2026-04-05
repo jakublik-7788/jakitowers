@@ -82,7 +82,7 @@ export const SearchBar = ({
   const [showHiddenPanel, setShowHiddenPanel] = useState(false);
 
   // Wybór odpowiedniej bazy piosenek
-  let songs;
+  let songs: { title: string; artist: string }[] = [];
   if (gameMode === "nonlimit") {
     if (songSource === "rap") songs = nonlimitRapAllSongs;
     else if (songSource === "klasyki") songs = nonlimitKlasykiAllSongs;
