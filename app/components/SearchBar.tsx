@@ -1,10 +1,16 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { Search } from "lucide-react";
-import { allSongs } from "@/app/scripts/allsongs";
+import { Search, X, Eye, EyeOff, Trash2 } from "lucide-react";
+import { useState, useMemo } from "react";
+import { rapAllSongs } from "@/app/scripts/songs/rap/rapAllSongs";
+import { klasykiAllSongs } from "@/app/scripts/songs/klasyki/klasykiAllSongs";
+import { soundtrackiAllSongs } from "@/app/scripts/songs/soundtracki/soundtrackiAllSongs";
 import { FooterModals } from "@/app/components/FooterModals";
 import { CountdownTimer } from "./CountdownTimer";
+import { nonlimitRapAllSongs } from "@/app/scripts/songs/nonlimit/nonlimitRapAllSongs";
+import { nonlimitKlasykiAllSongs } from "@/app/scripts/songs/nonlimit/nonlimitKlasykiAllSongs";
+import { nonlimitSoundtrackiAllSongs } from "@/app/scripts/songs/nonlimit/nonlimitsoundtrackiAllSongs";
 
 interface SearchBarProps {
   isFinished: boolean;
@@ -20,8 +26,10 @@ interface SearchBarProps {
   scrollContainerRef: React.RefObject<HTMLDivElement | null>;
   inputError?: boolean;
   guessedSongs: string[];
-  gameMode?: "daily" | "nonlimit";        // nowy prop
-  nextSongTime?: Date;                    // czas rozpoczęcia nowej piosenki (dla daily)
+  gameMode?: "daily" | "nonlimit" | "soundtracki";
+  nextSongTime?: Date;
+  songSource?: "rap" | "klasyki" | "soundtracki";
+  allSongs?: { title: string; artist: string }[];
 }
 
 const normalizePolishChars = (str: string): string => {
@@ -67,11 +75,30 @@ export const SearchBar = ({
   guessedSongs,
   gameMode = "daily",
   nextSongTime,
+  songSource = "rap",
+  allSongs: allSongsProp,
 }: SearchBarProps) => {
-  // Czy pokazujemy timer zamiast przycisku?
+  const [hiddenSuggestions, setHiddenSuggestions] = useState<Set<string>>(new Set());
+  const [showHiddenPanel, setShowHiddenPanel] = useState(false);
+
+  // Wybór odpowiedniej bazy piosenek
+  let songs;
+  if (gameMode === "nonlimit") {
+    if (songSource === "rap") songs = nonlimitRapAllSongs;
+    else if (songSource === "klasyki") songs = nonlimitKlasykiAllSongs;
+    else if (songSource === "soundtracki") songs = nonlimitSoundtrackiAllSongs;
+    else songs = [];
+  } else {
+    if (songSource === "rap") songs = rapAllSongs;
+    else if (songSource === "klasyki") songs = klasykiAllSongs;
+    else if (songSource === "soundtracki") songs = soundtrackiAllSongs;
+    else songs = [];
+  }
+
+  const allSongs = allSongsProp || songs;
+
   const showTimer = gameMode === "daily" && isFinished && nextSongTime;
 
-  // Placeholder w polu tekstowym
   let placeholder = "";
   if (showTimer) {
     placeholder = "Nowa piosenka pojawi się za..";
@@ -80,8 +107,114 @@ export const SearchBar = ({
   } else if (!isStarted) {
     placeholder = "ODTWÓRZ BY ROZPOCZĄĆ..";
   } else {
-    placeholder = "Znasz ten numer? Wpisz tytuł...";
+    placeholder = "Wpisz tytuł...";
   }
+
+  const getSuggestionKey = (s: { title: string; artist: string }) => {
+    if (songSource === "soundtracki" || !s.artist) {
+      return s.title.toLowerCase();
+    }
+    return (s.artist + " - " + s.title).toLowerCase();
+  };
+
+  const hideSuggestion = (s: { title: string; artist: string }) => {
+    const key = getSuggestionKey(s);
+    setHiddenSuggestions((prev) => new Set(prev).add(key));
+    // Odroczenie aktualizacji listy podpowiedzi, aby uniknąć błędów podczas renderowania
+    setTimeout(() => {
+      setSuggestions(suggestions.filter((item) => getSuggestionKey(item) !== key));
+    }, 0);
+  };
+
+  const unhideSuggestion = (key: string) => {
+    setHiddenSuggestions((prev) => {
+      const next = new Set(prev);
+      next.delete(key);
+      // Odroczenie odświeżenia listy podpowiedzi po przywróceniu
+      setTimeout(() => {
+        const trimmed = inputValue.trim();
+        if (trimmed.length >= 2) {
+          const searchTerm = trimmed.toLowerCase();
+          const normalizedSearchTerm = normalizePolishChars(searchTerm);
+          const filtered = allSongs
+            .filter((s) => {
+              if (next.has(getSuggestionKey(s))) return false;
+              const fullName = `${s.artist} - ${s.title}`.toLowerCase();
+              const isAlreadyGuessed = guessedSongs.some(
+                (guess) => guess.toLowerCase() === fullName,
+              );
+              if (isAlreadyGuessed) return false;
+              const title = s.title.toLowerCase();
+              const artist = s.artist.toLowerCase();
+              return (
+                title.includes(searchTerm) ||
+                artist.includes(searchTerm) ||
+                normalizePolishChars(title).includes(normalizedSearchTerm) ||
+                normalizePolishChars(artist).includes(normalizedSearchTerm)
+              );
+            })
+            .slice(0, 30);
+          setSuggestions(filtered);
+        } else {
+          setSuggestions([]);
+        }
+      }, 0);
+      return next;
+    });
+  };
+
+  const hiddenItems = useMemo(() => {
+    if (!allSongs) return [];
+    return allSongs.filter((s) => hiddenSuggestions.has(getSuggestionKey(s)));
+  }, [allSongs, hiddenSuggestions]);
+
+  const handleInputChange = (val: string) => {
+    setInputValue(val);
+    const trimmed = val.trim();
+    if (trimmed.length >= 2) {
+      const searchTerm = trimmed.toLowerCase();
+      const normalizedSearchTerm = normalizePolishChars(searchTerm);
+      const filtered = allSongs
+        .filter((s) => {
+          if (hiddenSuggestions.has(getSuggestionKey(s))) return false;
+          const fullName = `${s.artist} - ${s.title}`.toLowerCase();
+          const isAlreadyGuessed = guessedSongs.some(
+            (guess) => guess.toLowerCase() === fullName,
+          );
+          if (isAlreadyGuessed) return false;
+          const title = s.title.toLowerCase();
+          const artist = s.artist.toLowerCase();
+          return (
+            title.includes(searchTerm) ||
+            artist.includes(searchTerm) ||
+            normalizePolishChars(title).includes(normalizedSearchTerm) ||
+            normalizePolishChars(artist).includes(normalizedSearchTerm)
+          );
+        })
+        .slice(0, 30);
+      setSuggestions(filtered);
+    } else {
+      setSuggestions([]);
+    }
+  };
+
+  const handleSelectSuggestion = (s: { title: string; artist: string }) => {
+    const valueToSet = s.artist ? `${s.artist} - ${s.title}` : s.title;
+    setInputValue(valueToSet);
+    setSuggestions([]);
+    setSelectedIndex(-1);
+    setTimeout(() => {
+      const input = document.querySelector('input[type="text"]') as HTMLInputElement;
+      if (input) input.focus();
+    }, 0);
+  };
+
+  const handleSuggestionKeyDown = (e: React.KeyboardEvent, s: { title: string; artist: string }) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleSelectSuggestion(s);
+    }
+  };
 
   return (
     <div className="relative z-20 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent pt-16 max-md:pt-0 pb-2 max-md:pb-1">
@@ -99,22 +232,14 @@ export const SearchBar = ({
                 className="max-h-[350px] overflow-y-auto scrollbar-custom touch-pan-y"
               >
                 {suggestions.map((s, idx) => (
-                  <button
+                  <div
                     key={idx}
+                    role="button"
+                    tabIndex={0}
                     onMouseEnter={() => setSelectedIndex(idx)}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setInputValue(`${s.artist} - ${s.title}`);
-                      setSuggestions([]);
-                      setSelectedIndex(-1);
-                      setTimeout(() => {
-                        const input = document.querySelector(
-                          'input[type="text"]',
-                        ) as HTMLInputElement;
-                        if (input) input.focus();
-                      }, 0);
-                    }}
-                    className={`w-full p-5 max-md:p-3 flex items-center justify-start border-b border-white/5 last:border-0 transition-all text-left ${
+                    onClick={() => handleSelectSuggestion(s)}
+                    onKeyDown={(e) => handleSuggestionKeyDown(e, s)}
+                    className={`w-full p-5 max-md:p-3 flex items-center justify-start border-b border-white/5 last:border-0 transition-all text-left cursor-pointer group ${
                       selectedIndex === idx ? "bg-accent/15" : ""
                     }`}
                   >
@@ -126,21 +251,84 @@ export const SearchBar = ({
                       >
                         {s.title}
                       </p>
-                      <p className="text-zinc-500 text-xs uppercase tracking-widest max-md:text-[10px]">
-                        {s.artist}
-                      </p>
+                      {s.artist && (
+                        <p className="text-zinc-500 text-xs uppercase tracking-widest max-md:text-[10px]">
+                          {s.artist}
+                        </p>
+                      )}
                     </div>
-                    <Search
-                      size={18}
-                      className={
-                        selectedIndex === idx
-                          ? "text-accent ml-4"
-                          : "text-zinc-700 ml-4 max-md:w-4 max-md:h-4"
-                      }
-                    />
-                  </button>
+                    <div className="flex items-center gap-2">
+                      <Search
+                        size={18}
+                        className={
+                          selectedIndex === idx
+                            ? "text-accent"
+                            : "text-zinc-700 max-md:w-4 max-md:h-4"
+                        }
+                      />
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          hideSuggestion(s);
+                        }}
+                        className="opacity-0 group-hover:opacity-100 transition-opacity p-1 hover:bg-white/10 rounded-full"
+                        title="Odrzuć tę podpowiedź"
+                      >
+                        <X size={14} className="text-zinc-500 hover:text-red-400" />
+                      </button>
+                    </div>
+                  </div>
                 ))}
               </div>
+              {hiddenItems.length > 0 && (
+                <div className="border-t border-white/10 bg-black/80 p-2 flex items-center justify-between">
+                  <button
+                    onClick={() => setShowHiddenPanel(!showHiddenPanel)}
+                    className="text-[10px] font-bold text-zinc-500 hover:text-accent flex items-center gap-1"
+                  >
+                    {showHiddenPanel ? <EyeOff size={12} /> : <Eye size={12} />}
+                    <span>
+                      {showHiddenPanel ? "Ukryj odrzucone" : `Pokaż odrzucone (${hiddenItems.length})`}
+                    </span>
+                  </button>
+                </div>
+              )}
+              <AnimatePresence>
+                {showHiddenPanel && hiddenItems.length > 0 && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="border-t border-white/10 bg-zinc-900/90 overflow-hidden"
+                  >
+                    <div className="p-3 max-h-[200px] overflow-y-auto space-y-2">
+                      <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">
+                        Odrzucone podpowiedzi (kliknij, aby przywrócić)
+                      </p>
+                      {hiddenItems.map((item, idx) => {
+                        const key = getSuggestionKey(item);
+                        return (
+                          <button
+                            key={idx}
+                            onClick={() => unhideSuggestion(key)}
+                            className="flex items-center justify-between w-full text-left p-2 rounded-lg hover:bg-white/5 transition-colors"
+                          >
+                            <div>
+                              <p className="text-white text-sm font-bold line-through opacity-60">
+                                {item.title}
+                              </p>
+                              {item.artist && (
+                                <p className="text-zinc-500 text-[10px]">{item.artist}</p>
+                              )}
+                            </div>
+                            <Trash2 size={12} className="text-red-400 rotate-90" />
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           )}
         </AnimatePresence>
@@ -166,48 +354,12 @@ export const SearchBar = ({
               className="bg-transparent w-full p-4 max-md:p-2 outline-none text-white text-lg max-md:text-base font-bold ml-4 max-md:ml-2 placeholder:text-zinc-700 disabled:cursor-not-allowed"
               placeholder={placeholder}
               value={inputValue}
-              onChange={(e) => {
-                const val = e.target.value;
-                setInputValue(val);
-
-                const trimmed = val.trim();
-                if (trimmed.length >= 2) {
-                  const searchTerm = trimmed.toLowerCase();
-                  const normalizedSearchTerm = normalizePolishChars(searchTerm);
-                  setSuggestions(
-                    allSongs
-                      .filter((s) => {
-                        const fullName =
-                          `${s.artist} - ${s.title}`.toLowerCase();
-                        const isAlreadyGuessed = guessedSongs.some(
-                          (guess) => guess.toLowerCase() === fullName,
-                        );
-                        if (isAlreadyGuessed) return false;
-                        const title = s.title.toLowerCase();
-                        const artist = s.artist.toLowerCase();
-                        return (
-                          title.includes(searchTerm) ||
-                          artist.includes(searchTerm) ||
-                          normalizePolishChars(title).includes(
-                            normalizedSearchTerm,
-                          ) ||
-                          normalizePolishChars(artist).includes(
-                            normalizedSearchTerm,
-                          )
-                        );
-                      })
-                      .slice(0, 30), // zwiększony limit dla lepszego wyszukiwania
-                  );
-                } else {
-                  setSuggestions([]);
-                }
-              }}
+              onChange={(e) => handleInputChange(e.target.value)}
             />
           </div>
           {showTimer ? (
             <div className="px-4 max-md:px-2 py-2 max-md:py-1 rounded-[22px] bg-zinc-800/50 text-white flex items-center gap-2 font-bold text-xl max-md:text-xl whitespace-nowrap">
-              <span className="tracking-wider uppercase text-zinc-400">
-              </span>
+              <span className="tracking-wider uppercase text-zinc-400"></span>
               <CountdownTimer
                 targetDate={nextSongTime}
                 className="text-accent font-mono"
@@ -236,8 +388,6 @@ export const SearchBar = ({
             </button>
           )}
         </div>
-
-        <FooterModals />
       </div>
     </div>
   );

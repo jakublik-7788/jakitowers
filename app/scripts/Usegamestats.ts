@@ -17,9 +17,17 @@ export interface GlobalStats {
   wins: number;
 }
 
-const LS_STATS_DAILY    = "jakitowers_stats_daily";
-const LS_STATS_NONLIMIT = "jakitowers_stats_nonlimit";
-const LS_SUBMITTED_KEY  = "jakitowers_submitted";
+// ─── Klucze dla trybów dziennych ───────────────────────────────────────────
+const LS_STATS_DAILY_RAP = "jakitowers_stats_daily_rap";
+const LS_STATS_DAILY_KLASYKI = "jakitowers_stats_daily_klasyki";
+const LS_STATS_DAILY_SOUNDTRACKI = "jakitowers_stats_daily_soundtracki";
+
+// ─── Klucze dla trybów non‑limit (tylko najlepsza seria) ───────────────────
+const LS_NONLIMIT_BEST_STREAK_RAP = "jakitowers_nonlimit_best_streak_rap";
+const LS_NONLIMIT_BEST_STREAK_KLASYKI = "jakitowers_nonlimit_best_streak_klasyki";
+const LS_NONLIMIT_BEST_STREAK_SOUNDTRACKI = "jakitowers_nonlimit_best_streak_soundtracki";
+
+const LS_SUBMITTED_KEY = "jakitowers_submitted";
 
 const defaultStats = (): LocalStats => ({
   gamesPlayed: 0,
@@ -47,29 +55,51 @@ function saveStats(key: string, stats: LocalStats) {
   }
 }
 
-// ─── Hook dla trybu DAILY ─────────────────────────────────────────────────────
+// ─── Hook dla trybu DAILY (obsługuje rap, klasyki, soundtracki) ─────────────
+export function useGameStats(currentDay: number, mode: "rap" | "klasyki" | "soundtracki" = "rap") {
+  const statsKey = mode === "rap"
+    ? LS_STATS_DAILY_RAP
+    : mode === "klasyki"
+    ? LS_STATS_DAILY_KLASYKI
+    : LS_STATS_DAILY_SOUNDTRACKI;
 
-export function useGameStats(currentDay: number) {
   const [localStats, setLocalStats] = useState<LocalStats>(defaultStats);
   const [globalStats, setGlobalStats] = useState<GlobalStats | null>(null);
   const [globalLoading, setGlobalLoading] = useState(false);
   const isMounted = useRef(true);
 
+  // MIGRACJA starych statystyk (tylko dla trybu rap)
+  useEffect(() => {
+    if (mode === "rap") {
+      const oldKey = "jakitowers_stats_daily";
+      const newKey = statsKey;
+      const oldData = localStorage.getItem(oldKey);
+      const newData = localStorage.getItem(newKey);
+      if (oldData && !newData) {
+        try {
+          localStorage.setItem(newKey, oldData);
+          setLocalStats(loadStats(newKey));
+        } catch {
+          // ignore
+        }
+      }
+    }
+  }, [mode, statsKey]);
+
   useEffect(() => {
     isMounted.current = true;
-    setLocalStats(loadStats(LS_STATS_DAILY));
+    setLocalStats(loadStats(statsKey));
     return () => {
       isMounted.current = false;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [statsKey]);
 
   const fetchGlobalStats = useCallback(
     async (day: number) => {
       if (!isMounted.current) return;
       setGlobalLoading(true);
       try {
-        const res = await fetch(`/api/stats?day=${day}`);
+        const res = await fetch(`/api/stats?day=${day}&mode=${mode}`);
         if (res.ok && isMounted.current) {
           setGlobalStats(await res.json());
         }
@@ -79,7 +109,7 @@ export function useGameStats(currentDay: number) {
         if (isMounted.current) setGlobalLoading(false);
       }
     },
-    []
+    [mode]
   );
 
   useEffect(() => {
@@ -104,7 +134,7 @@ export function useGameStats(currentDay: number) {
         } else {
           next.currentStreak = 0;
         }
-        if (isMounted.current) saveStats(LS_STATS_DAILY, next);
+        if (isMounted.current) saveStats(statsKey, next);
         return next;
       });
 
@@ -115,7 +145,7 @@ export function useGameStats(currentDay: number) {
           await fetch("/api/stats", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ day: currentDay, attempt, won }),
+            body: JSON.stringify({ day: currentDay, attempt, won, mode }),
           });
           localStorage.setItem(LS_SUBMITTED_KEY, JSON.stringify([...submitted, currentDay]));
           if (isMounted.current) await fetchGlobalStats(currentDay);
@@ -124,7 +154,7 @@ export function useGameStats(currentDay: number) {
         /* ignore */
       }
     },
-    [currentDay, fetchGlobalStats]
+    [currentDay, fetchGlobalStats, statsKey, mode]
   );
 
   const refetchGlobalStats = useCallback(() => {
@@ -140,30 +170,45 @@ export function useGameStats(currentDay: number) {
   };
 }
 
-// ─── Hook dla trybu NON LIMIT (tylko w pamięci, reset przy odświeżeniu) ─────
+// ─── Hook dla trybu NON‑LIMIT (tylko najlepsza seria trwała, reszta zeruje się przy zmianie trybu) ───
+export function useNonLimitStats(mode: "rap" | "klasyki" | "soundtracki" = "rap") {
+  const bestStreakKey = mode === "rap"
+    ? LS_NONLIMIT_BEST_STREAK_RAP
+    : mode === "klasyki"
+    ? LS_NONLIMIT_BEST_STREAK_KLASYKI
+    : LS_NONLIMIT_BEST_STREAK_SOUNDTRACKI;
 
-const LS_NONLIMIT_BEST_STREAK = "jakitowers_nonlimit_best_streak";
+  const [bestStreak, setBestStreak] = useState<number>(0);
+  const [stats, setStats] = useState<LocalStats>(defaultStats);
 
-export function useNonLimitStats() {
-  // Wczytujemy tylko najlepszą serię z localStorage
-  const [bestStreak, setBestStreak] = useState<number>(() => {
+  // Załaduj najlepszą serię dla bieżącego trybu (z migracją starego klucza)
+  useEffect(() => {
+    let loaded = 0;
     try {
-      const saved = localStorage.getItem(LS_NONLIMIT_BEST_STREAK);
-      return saved ? parseInt(saved, 10) : 0;
-    } catch {
-      return 0;
+      const saved = localStorage.getItem(bestStreakKey);
+      if (saved !== null) loaded = parseInt(saved, 10);
+    } catch {}
+    // Migracja starego wspólnego klucza (tylko dla rapu)
+    if (loaded === 0 && mode === "rap") {
+      try {
+        const oldBest = localStorage.getItem("jakitowers_nonlimit_best_streak");
+        if (oldBest !== null) {
+          loaded = parseInt(oldBest, 10);
+          localStorage.setItem(bestStreakKey, loaded.toString());
+        }
+      } catch {}
     }
-  });
-
-  // Stan bieżących statystyk – wszystko poza maxStreak jest zerowane przy każdym uruchomieniu
-  const [stats, setStats] = useState<LocalStats>(() => ({
-    gamesPlayed: 0,
-    gamesWon: 0,
-    currentStreak: 0,
-    maxStreak: bestStreak,          // pobieramy zapisaną najlepszą serię
-    attemptDistribution: { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, X: 0 },
-    lastPlayedDay: null,
-  }));
+    setBestStreak(loaded);
+    // Resetuj wszystkie statystyki poza najlepszą serią
+    setStats({
+      gamesPlayed: 0,
+      gamesWon: 0,
+      currentStreak: 0,
+      maxStreak: loaded,
+      attemptDistribution: { "1": 0, "2": 0, "3": 0, "4": 0, "5": 0, X: 0 },
+      lastPlayedDay: null,
+    });
+  }, [mode, bestStreakKey]);
 
   const recordResult = useCallback((won: boolean, attempt: number | null) => {
     setStats((prev) => {
@@ -177,20 +222,19 @@ export function useNonLimitStats() {
       if (won) {
         next.gamesWon += 1;
         next.currentStreak += 1;
-        // Sprawdzamy, czy obecna seria jest lepsza od dotychczasowej najlepszej
         if (next.currentStreak > next.maxStreak) {
           next.maxStreak = next.currentStreak;
-          // Zapamiętujemy nowy rekord
           try {
-            localStorage.setItem(LS_NONLIMIT_BEST_STREAK, next.maxStreak.toString());
-          } catch { /* ignore */ }
+            localStorage.setItem(bestStreakKey, next.maxStreak.toString());
+          } catch {}
+          setBestStreak(next.maxStreak); // aktualizacja stanu dla spójności
         }
       } else {
         next.currentStreak = 0;
       }
       return next;
     });
-  }, []);
+  }, [bestStreakKey]);
 
   return { stats, recordResult };
 }

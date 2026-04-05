@@ -1,60 +1,170 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, XCircle } from "lucide-react";
+import { CheckCircle2, XCircle, SkipForward, UserCheck } from "lucide-react";
 
 interface ProgressGuessesProps {
-  guesses: { display: string; status: "correct" | "wrong" | "skipped" | "empty" | "artist" }[];
+  guesses: {
+    display: string;
+    status: "correct" | "wrong" | "skipped" | "empty" | "artist";
+  }[];
   gameMode?: "daily" | "nonlimit";
 }
 
-export const ProgressGuesses = ({ guesses, gameMode = "daily" }: ProgressGuessesProps) => {
+export const ProgressGuesses = ({
+  guesses,
+  gameMode = "daily",
+}: ProgressGuessesProps) => {
+  const getStatusConfig = (status: string) => {
+    switch (status) {
+      case "correct":
+        return {
+          border: "border-green-500",
+          bg: "bg-green-500/10",
+          text: "text-green-400",
+          shadow: "shadow-[0_0_12px_rgba(34,197,94,0.2)]",
+          icon: <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" />,
+          badge: "✓",
+        };
+      case "artist":
+        return {
+          border: "border-amber-500",
+          bg: "bg-amber-500/10",
+          text: "text-amber-400",
+          shadow: "shadow-[0_0_12px_rgba(245,158,11,0.2)]",
+          icon: <UserCheck className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400" />,
+          badge: "~",
+        };
+      case "wrong":
+        return {
+          border: "border-red-500",
+          bg: "bg-red-500/10",
+          text: "text-red-400",
+          shadow: "shadow-[0_0_12px_rgba(239,68,68,0.2)]",
+          icon: <XCircle className="w-4 h-4 sm:w-5 sm:h-5 text-red-400" />,
+          badge: "✗",
+        };
+      case "skipped":
+        return {
+          border: "border-zinc-500",
+          bg: "bg-zinc-500/10",
+          text: "text-zinc-300",
+          shadow: "",
+          icon: <SkipForward className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-400" />,
+          badge: "→",
+        };
+      default:
+        return {
+          border: "border-zinc-800/50",
+          bg: "bg-zinc-900/30",
+          text: "text-zinc-600",
+          shadow: "",
+          icon: null,
+          badge: "",
+        };
+    }
+  };
+
+  // Rozbija "Autor - Tytuł" na dwie części
+  const splitDisplay = (display: string): { artist: string; title: string } => {
+    const dashIndex = display.indexOf(" - ");
+    if (dashIndex !== -1) {
+      return {
+        artist: display.slice(0, dashIndex).trim(),
+        title: display.slice(dashIndex + 3).trim(),
+      };
+    }
+    return { artist: display, title: "" };
+  };
+
   return (
-    <div className="w-full max-w-sm flex flex-col gap-4 max-md:gap-2">
-      <p className="text-[12px] max-md:text-[10px] font-black text-accent tracking-[0.7em] uppercase mb-4 max-md:mb-2 text-center">
-        {gameMode === "daily" ? "HISTORIA PRÓB" : "HISTORIA PRÓB"}
-      </p>
+    <div className="w-full max-w-sm flex flex-col gap-3 sm:gap-4">
+      {/* Nagłówek */}
+      <div className="flex items-center justify-center mb-1 px-1">
+        <p className="text-[10px] sm:text-[12px] font-black text-accent tracking-[0.3em] sm:tracking-[0.7em] uppercase">
+          HISTORIA PRÓB
+        </p>
+      </div>
+
+      {/* Lista prób */}
       {guesses.map((g, i) => {
         const hasText = !!g.display;
-        const textLength = g.display?.length || 0;
+        const config = getStatusConfig(g.status);
+        const isEmpty = g.status === "empty";
+        const emptyLabel = `PRÓBA ${i + 1}`;
+        const { artist, title } = hasText ? splitDisplay(g.display) : { artist: "", title: "" };
 
         return (
           <motion.div
-            layout
             key={i}
-            className={`h-14 max-md:h-12 w-full rounded-2xl border-2 flex items-center justify-center px-4 max-md:px-2 transition-all duration-500 text-center relative overflow-hidden ${
-              g.status === "correct"
-                ? "border-green-500 bg-green-500/15 text-green-400 shadow-[0_0_20px_rgba(34,197,94,0.4)]"
-                : g.status === "artist"
-                ? "border-yellow-400 bg-yellow-400/15 text-yellow-300 shadow-[0_0_20px_rgba(234,179,8,0.4)]"
-                : g.status === "wrong"
-                ? "border-red-500 bg-red-500/15 text-red-500 shadow-[0_0_20px_rgba(239,68,68,0.4)]"
-                : g.status === "skipped"
-                ? "border-zinc-200 bg-white/15 text-zinc-100 shadow-[0_0_20px_rgba(255,255,255,0.2)]"
-                : "border-zinc-800/80 bg-zinc-900/30 text-zinc-700"
-            }`}
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.15, delay: i * 0.03 }}
+            className={`relative w-full rounded-xl sm:rounded-2xl border-2 ${config.border} ${config.bg} ${!isEmpty ? config.shadow : ""} transition-all duration-200 overflow-hidden`}
+            // Wysokość dynamiczna – większa gdy mamy 2 linie tekstu
+            style={{ minHeight: hasText && title ? "4rem" : "3.5rem" }}
           >
-            <span
-              className="font-black tracking-widest uppercase truncate px-2"
-              style={{
-                fontSize: !hasText ? "10px" : textLength > 35 ? "8px" : textLength > 25 ? "9px" : "10px",
-                lineHeight: "1",
-              }}
-            >
-              {g.display || (gameMode === "daily" ? `PRÓBA ${i + 1}` : "______")}
-            </span>
-
-            <div className="absolute right-4 max-md:right-2 flex items-center">
-              {g.status === "correct" && (
-                <CheckCircle2 className="shrink-0 text-green-400 max-md:w-4 max-md:h-4" size={16} />
-              )}
-              {g.status === "wrong" && (
-                <XCircle className="shrink-0 text-red-500 max-md:w-4 max-md:h-4" size={16} />
-              )}
-              {g.status === "artist" && (
-                <span className="shrink-0 text-yellow-400 font-black text-base max-md:text-sm">~</span>
-              )}
+            {/* Numer próby w tle */}
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-4xl sm:text-5xl font-black opacity-[0.04] pointer-events-none select-none">
+              {i + 1}
             </div>
+
+            {/* Treść */}
+            <div className="relative z-10 flex items-center justify-between w-full h-full px-3 sm:px-4 py-2">
+              <div className="flex-1 min-w-0 pr-2">
+                {!hasText ? (
+                  // Puste pole
+                  <span className={`font-black tracking-wider uppercase block text-[10px] ${config.text}`}>
+                    {emptyLabel}
+                  </span>
+                ) : (
+                  // Autor + Tytuł jeden pod drugim
+                  <div className="flex flex-col gap-0.5">
+                    <span
+                      className={`font-black tracking-wider uppercase truncate block leading-tight ${config.text}`}
+                      style={{ fontSize: artist.length > 25 ? "8px" : "10px" }}
+                    >
+                      {artist}
+                    </span>
+                    {title && (
+                      <span
+                        className="font-semibold tracking-wide truncate block leading-tight text-white/80"
+                        style={{ fontSize: title.length > 30 ? "7px" : "9px" }}
+                      >
+                        {title}
+                      </span>
+                    )}
+                    {/* Status label */}
+                    <span
+                      className={`text-[6px] sm:text-[7px] font-black uppercase tracking-wider opacity-60 mt-0.5 block ${config.text}`}
+                    >
+                      {g.status === "correct" && "POPRAWNA"}
+                      {g.status === "artist" && "TRAFIONY ARTYSTA"}
+                      {g.status === "wrong" && "BŁĘDNA"}
+                      {g.status === "skipped" && "POMINIĘTA"}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              {/* Ikona statusu */}
+              <div className="ml-2 shrink-0">
+                {config.icon ? (
+                  config.icon
+                ) : (
+                  <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border border-zinc-700/40 flex items-center justify-center">
+                    <div className="w-1 h-1 rounded-full bg-zinc-700/40" />
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Pasek postępu dla aktywnej próby */}
+            {isEmpty && i === guesses.findIndex((g) => g.status === "empty") && (
+              <div className="absolute bottom-0 left-0 h-0.5 bg-accent/40 w-full">
+                <div className="h-full bg-accent animate-pulse" style={{ width: "100%" }} />
+              </div>
+            )}
           </motion.div>
         );
       })}

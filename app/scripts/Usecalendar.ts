@@ -1,76 +1,59 @@
-// app/scripts/useCalendar.ts
 "use client";
 
 import { useMemo } from "react";
-import { dailySongs } from "./songs";
+import { rapSongs } from "./songs/rap/rapSongs";
 
-// ─── Data startu gry ──────────────────────────────────────────────────────────
-// Day #1 = 19 marca 2026
-export const GAME_START_DATE = new Date("2026-03-20T00:00:00");
+export const GAME_START_DATE = new Date(Date.UTC(2026, 2, 19, 23, 0, 0)); // 19 marca 23:00 UTC = 20 marca 00:00 UTC+1 (zima)
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
-
-/** Dzisiejsza data bez godziny */
-function today(): Date {
-  const d = new Date();
-  d.setHours(0, 0, 0, 0);
-  return d;
+function getPolandOffset(): number {
+  const now = new Date();
+  const jan = new Date(Date.UTC(now.getUTCFullYear(), 0, 1));
+  const jul = new Date(Date.UTC(now.getUTCFullYear(), 6, 1));
+  const stdOffset = Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+  const isDST = now.getTimezoneOffset() < stdOffset;
+  return isDST ? 2 : 1;
 }
 
-/**
- * Który numer dnia jest dostępny dzisiaj.
- * Jeśli jest przed startem gry → zwraca 1 (żeby nie crashowało).
- * Jeśli przekracza liczbę piosenek → zwraca ostatnią piosenkę.
- */
+function todayPoland(): Date {
+  const now = new Date();
+  const polandOffset = getPolandOffset() * 60 * 60 * 1000;
+  const polandNow = new Date(now.getTime() + polandOffset);
+  return new Date(Date.UTC(polandNow.getUTCFullYear(), polandNow.getUTCMonth(), polandNow.getUTCDate()));
+}
+
 export function todayDayNumber(): number {
-  const start = new Date(GAME_START_DATE);
-  start.setHours(0, 0, 0, 0);
-  const diff = Math.floor((today().getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
-  const dayNum = diff + 1; // diff=0 → day 1, diff=1 → day 2, itd.
+  const diff = Math.floor((todayPoland().getTime() - GAME_START_DATE.getTime()) / (1000 * 60 * 60 * 24));
+  const dayNum = diff + 1;
   if (dayNum < 1) return 1;
-  if (dayNum > dailySongs.length) return dailySongs.length;
+  if (dayNum > rapSongs.length) return rapSongs.length;
   return dayNum;
 }
 
-/**
- * Maksymalny odblokowany numer dnia (= dzisiaj).
- * Gracz może przeglądać tylko dni <= tego numeru.
- */
 export function maxUnlockedDay(): number {
   return todayDayNumber();
 }
 
-/** Czy dany numer dnia jest już odblokowany (przeszły lub dzisiaj) */
 export function isDayUnlocked(dayNumber: number): boolean {
   return dayNumber <= maxUnlockedDay();
 }
 
-/** Zamienia numer dnia na klucz "YYYY-M-D" */
 export function dayNumberToDateKey(dayNumber: number): string {
   const date = new Date(GAME_START_DATE);
-  date.setDate(date.getDate() + dayNumber - 1);
-  return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+  date.setUTCDate(date.getUTCDate() + dayNumber - 1);
+  const polandOffset = getPolandOffset() * 60 * 60 * 1000;
+  const polandDate = new Date(date.getTime() + polandOffset);
+  return `${polandDate.getUTCFullYear()}-${polandDate.getUTCMonth() + 1}-${polandDate.getUTCDate()}`;
 }
 
-/** Zamienia klucz "YYYY-M-D" na numer dnia (null jeśli poza zakresem) */
 export function dateKeyToDayNumber(dateKey: string): number | null {
   const [year, month, day] = dateKey.split("-").map(Number);
-  const date = new Date(year, month - 1, day);
-  date.setHours(0, 0, 0, 0);
-  const start = new Date(GAME_START_DATE);
-  start.setHours(0, 0, 0, 0);
-  const diff = Math.floor((date.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+  const date = new Date(Date.UTC(year, month - 1, day));
+  const diff = Math.floor((date.getTime() - GAME_START_DATE.getTime()) / (1000 * 60 * 60 * 24));
   const dayNum = diff + 1;
-  if (dayNum < 1 || dayNum > dailySongs.length) return null;
+  if (dayNum < 1 || dayNum > rapSongs.length) return null;
   return dayNum;
 }
 
-// ─── Hook ─────────────────────────────────────────────────────────────────────
-
-/**
- * Buduje mapę { "YYYY-M-D": "win" | "lose" | null }
- * tylko dla odblokowanych dni (przeszłe + dzisiaj).
- */
 export function useCalendarHistory(
   dayResults: Record<number, "win" | "lose">
 ): Record<string, "win" | "lose" | null> {

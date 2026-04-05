@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export const CustomCursor = () => {
+  
   const [isPressed, setIsPressed] = useState(false);
 
   // 1. RAW COORDINATES - bezpośrednie wartości

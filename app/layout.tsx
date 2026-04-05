@@ -15,16 +15,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "JAKI TO WERS – zgadnij hit po wersach!",
+  title: "JAKI TO WERS – Codzienna gra muzyczna!",
   description: "Codziennie nowy utwór z polskiego rapu – zgadnij tytuł i artystę po fragmentach tekstu. Graj online za darmo! Tryb codzienny oraz tryb bez limitu!",
   openGraph: {
     title: "JAKI TO WERS – codzienna gra muzyczna",
     description: "Zgadnij piosenkę po fragmentach tekstu – codziennie nowy utwór!",
-    images: "/jakitowers.png",
   },
   robots: "index, follow",
   keywords: "jaki to wers, jakitowers, cotozahit, co to za hit, rapdle, muzyczna gra, polski rap, zgadnij piosenkę, daily challenge, rap, hiphop, hip hop, music game",
 };
+
+// export const metadata: Metadata = {
+//   title: "JAKI TO WERS – Codzienna gra muzyczna!",
+//   description: "Zmierz się z codziennymi wyzwaniami muzycznymi! Nowy utwór dnia z polskiego rapu, klasyków oraz soundtrack zawsze o północy.",
+//   openGraph: {
+//     title: "JAKI TO WERS – codzienna gra muzyczna",
+//     description: "Tryb dzienny oraz tryb nonlimit!",
+//   },
+//   robots: "index, follow",
+//   keywords: "aura, jaki to wers, jakitowers, cotozahit, co to za hit, rapdle, muzyczna gra, polski rap, zgadnij piosenkę, daily challenge, rap, hiphop, hip hop, music game, cotozahit, 100hitow, 100 hitow, hitow, hit",
+// };
+
 
 export const viewport: Viewport = {
   width: "device-width",

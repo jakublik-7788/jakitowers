@@ -8,6 +8,7 @@ interface SettingsModalProps {
   onClose: () => void;
   soundEnabled: boolean;
   setSoundEnabled: (v: boolean) => void;
+  onColorChange?: (color: string) => void;
 }
 
 const accentColors = [
@@ -21,6 +22,7 @@ const accentColors = [
   { name: "Yellow", main: "#f7d200" },
 ];
 
+const LS_ACCENT_KEY = "jakitowers_accent_color";
 const LS_SOUND_KEY = "jakitowers_sound_enabled";
 
 export const SettingsModal = ({
@@ -28,6 +30,7 @@ export const SettingsModal = ({
   onClose,
   soundEnabled,
   setSoundEnabled,
+  onColorChange,
 }: SettingsModalProps) => {
   const handleColorChange = (hex: string) => {
     const r = parseInt(hex.slice(1, 3), 16);
@@ -37,8 +40,17 @@ export const SettingsModal = ({
     document.documentElement.style.setProperty("--accent-main", hex);
     document.documentElement.style.setProperty("--accent-glow", `rgba(${rgb}, 0.4)`);
     document.documentElement.style.setProperty("--accent-glow-strong", `rgba(${rgb}, 0.8)`);
+    localStorage.setItem(LS_ACCENT_KEY, hex);
     localStorage.setItem("selected-accent", hex);
     localStorage.setItem("selected-rgb", rgb);
+    
+    // Wywołaj callback jeśli istnieje
+    if (onColorChange) {
+      onColorChange(hex);
+    }
+    
+    // Wyślij zdarzenie globalne
+    window.dispatchEvent(new CustomEvent('colorChange', { detail: hex }));
   };
 
   const handleSoundToggle = () => {

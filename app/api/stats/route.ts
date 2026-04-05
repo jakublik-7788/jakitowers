@@ -7,6 +7,7 @@ const redis = Redis.fromEnv();
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const day = searchParams.get("day");
+  const mode = searchParams.get("mode") || "rap"; // domyślnie rap
 
   if (!day) {
     return NextResponse.json({ error: "Missing day param" }, { status: 400 });
@@ -14,9 +15,9 @@ export async function GET(req: NextRequest) {
 
   try {
     const [attempts, total, wins] = await Promise.all([
-      redis.hgetall(`stats:day:${day}:attempts`),
-      redis.get<number>(`stats:day:${day}:total`),
-      redis.get<number>(`stats:day:${day}:wins`),
+      redis.hgetall(`stats:day:${day}:${mode}:attempts`),
+      redis.get<number>(`stats:day:${day}:${mode}:total`),
+      redis.get<number>(`stats:day:${day}:${mode}:wins`),
     ]);
 
     return NextResponse.json({
@@ -33,24 +34,27 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { day, attempt, won } = body as {
+    const { day, attempt, won, mode } = body as {
       day: number;
       attempt: number | null;
       won: boolean;
+      mode?: string;
     };
 
     if (!day) {
       return NextResponse.json({ error: "Missing day" }, { status: 400 });
     }
 
+    const modeKey = mode || "rap";
+
     const pipeline = redis.pipeline();
-    pipeline.incr(`stats:day:${day}:total`);
+    pipeline.incr(`stats:day:${day}:${modeKey}:total`);
 
     if (won && attempt !== null) {
-      pipeline.incr(`stats:day:${day}:wins`);
-      pipeline.hincrby(`stats:day:${day}:attempts`, String(attempt), 1);
+      pipeline.incr(`stats:day:${day}:${modeKey}:wins`);
+      pipeline.hincrby(`stats:day:${day}:${modeKey}:attempts`, String(attempt), 1);
     } else {
-      pipeline.hincrby(`stats:day:${day}:attempts`, "X", 1);
+      pipeline.hincrby(`stats:day:${day}:${modeKey}:attempts`, "X", 1);
     }
 
     await pipeline.exec();
