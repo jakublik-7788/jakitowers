@@ -39,10 +39,9 @@ import { SearchBar } from "@/app/components/SearchBar";
 import { ClipPlayer } from "@/app/components/ClipPlayer";
 import { RulesModal } from "@/app/components/RulesModal";
 import { useSoundEffects } from "@/app/scripts/useSoundEffects";
-import { useGameStats } from "@/app/scripts/Usegamestats";
+import { useGameStats, GlobalStats } from "@/app/scripts/Usegamestats";
 import { todayDayNumber, maxUnlockedDay } from "@/app/scripts/Usecalendar";
 import { Song } from "@/app/types/song";
-import { domToPng } from "modern-screenshot";
 
 // ─── Stała startu trybu ───────────────────────────────────────────────────────
 const SOUNDTRACKI_START_DAY = 18;
@@ -145,6 +144,74 @@ function loadResults(): Record<number, "win" | "lose"> {
   }
 }
 
+// ─── GlobalStatsMini ──────────────────────────────────────────────────────────
+const testGlobalStats: GlobalStats = {
+  attempts: { "1": 5, "2": 8, "3": 12, "4": 7, "5": 3, X: 4 },
+  total: 39,
+  wins: 35,
+};
+
+const GlobalStatsMini = ({
+  globalStats,
+  globalLoading,
+}: {
+  globalStats: GlobalStats | null;
+  globalLoading: boolean;
+}) => {
+  const displayStats = globalStats || testGlobalStats;
+  if (globalLoading)
+    return (
+      <div className="bg-zinc-900/80 backdrop-blur-sm border border-white/10 rounded-2xl p-4 w-64">
+        <div className="flex justify-center">
+          <div className="w-5 h-5 border-2 border-accent border-t-transparent rounded-full animate-spin" />
+        </div>
+      </div>
+    );
+  const maxCount = Math.max(...Object.values(displayStats.attempts), 1);
+  return (
+    <div className="bg-zinc-900/80 backdrop-blur-sm border border-white/10 rounded-2xl p-4 w-64 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+      <h4 className="text-[10px] font-black tracking-widest uppercase text-zinc-400 mb-3">
+        INNI GRACZE ({displayStats.total})
+      </h4>
+      <div className="space-y-1.5">
+        {[1, 2, 3, 4, 5].map((num) => {
+          const count = displayStats.attempts[num] || 0;
+          return (
+            <div key={num} className="flex items-center gap-2">
+              <span className="text-xs font-bold text-zinc-400 w-4">{num}</span>
+              <div className="flex-1 h-5 bg-white/5 rounded-full overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: `${(count / maxCount) * 100}%` }}
+                  transition={{ duration: 0.5 }}
+                  className="h-full bg-accent flex items-center justify-end px-2 text-[10px] font-bold text-white"
+                >
+                  {count > 0 && count}
+                </motion.div>
+              </div>
+            </div>
+          );
+        })}
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-bold text-zinc-400 w-4">X</span>
+          <div className="flex-1 h-5 bg-white/5 rounded-full overflow-hidden">
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{
+                width: `${((displayStats.attempts.X || 0) / maxCount) * 100}%`,
+              }}
+              transition={{ duration: 0.5 }}
+              className="h-full bg-red-500/50 flex items-center justify-end px-2 text-[10px] font-bold text-white"
+            >
+              {(displayStats.attempts.X || 0) > 0 && displayStats.attempts.X}
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // ─── TopBar ───────────────────────────────────────────────────────────────────
 const TopBar = ({
   currentDay,
@@ -179,7 +246,6 @@ const TopBar = ({
     !soundEnabled || volume === 0 ? VolumeX : volume < 0.33 ? Volume1 : Volume2;
   return (
     <>
-      {/* Desktop TopBar */}
       <div className="relative z-50 items-center justify-between px-4 md:px-8 py-4 border-b border-white/5 bg-black/40 backdrop-blur-md shrink-0 hidden md:flex">
         <div className="flex items-center gap-3">
           <button
@@ -199,7 +265,6 @@ const TopBar = ({
             </span>
           </div>
         </div>
-
         <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-2">
           <button
             onClick={onPrev}
@@ -239,7 +304,6 @@ const TopBar = ({
             </svg>
           </button>
         </div>
-
         <div className="flex items-center gap-2">
           <button
             onClick={onStats}
@@ -255,7 +319,6 @@ const TopBar = ({
             <Calendar size={14} />
             <span>Kalendarz</span>
           </button>
-
           <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 border border-white/8">
             <button
               onClick={onToggleSound}
@@ -270,7 +333,7 @@ const TopBar = ({
               step="0.01"
               value={volume}
               onChange={(e) => onVolumeChange(parseFloat(e.target.value))}
-              className="w-20 h-1.5 rounded-full appearance-none cursor-pointer bg-zinc-700 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-md [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:transition-transform [&::-moz-range-thumb]:w-3 [&::-moz-range-thumb]:h-3 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:shadow-md [&::-moz-range-thumb]:hover:scale-110 [&::-moz-range-thumb]:transition-transform"
+              className="w-20 h-1.5 rounded-full appearance-none cursor-pointer bg-zinc-700 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-md [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:transition-transform [&::-moz-range-thumb]:w-3 [&::-moz-range-thumb]:h-3 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:cursor-pointer"
               style={{
                 background: `linear-gradient(to right, var(--accent-main) ${volume * 100}%, #3f3f46 ${volume * 100}%)`,
               }}
@@ -279,7 +342,6 @@ const TopBar = ({
               {Math.round(volume * 100)}%
             </span>
           </div>
-
           <button
             onClick={onStats}
             className="md:hidden w-8 h-8 rounded-xl bg-white/5 border border-white/8 flex items-center justify-center text-zinc-500 hover:text-white transition-all"
@@ -308,7 +370,6 @@ const TopBar = ({
         </div>
       </div>
 
-      {/* Mobile TopBar */}
       <div className="relative z-50 flex items-center justify-between px-3 py-3 border-b border-white/5 bg-black/40 backdrop-blur-md shrink-0 md:hidden">
         <button
           onClick={onBack}
@@ -316,13 +377,11 @@ const TopBar = ({
         >
           <ArrowLeft size={16} />
         </button>
-
         <div className="px-3 py-1.5 rounded-lg bg-accent/10 border border-accent/20">
           <span className="text-accent font-black text-xs tracking-widest">
             SOUNDTRACKI #{currentDay}
           </span>
         </div>
-
         <div className="flex items-center gap-2">
           <button
             onClick={onStats}
@@ -384,7 +443,6 @@ const EndModal = ({
         setShowShareCard(false);
         return;
       }
-
       import("modern-screenshot").then(({ domToPng }) => {
         domToPng(shareCardElement, { quality: 1, scale: 2 })
           .then((dataUrl) => {
@@ -396,12 +454,10 @@ const EndModal = ({
             setCopied(true);
             setTimeout(() => setCopied(false), 3000);
           })
-          .catch((err) => {
-            console.error("Błąd podczas generowania grafiki:", err);
-          })
-          .finally(() => {
-            setShowShareCard(false);
-          });
+          .catch((err) =>
+            console.error("Błąd podczas generowania grafiki:", err),
+          )
+          .finally(() => setShowShareCard(false));
       });
     }, 100);
   };
@@ -410,18 +466,14 @@ const EndModal = ({
     if (!song.fullAudioSrc) return;
     const audio = new Audio(song.fullAudioSrc);
     audioRef.current = audio;
-
     const handleLoadedMetadata = () => setDuration(audio.duration);
     const handleTimeUpdate = () => setCurrentTime(audio.currentTime);
     const handleEnded = () => setIsPlayingFull(false);
-
     audio.addEventListener("loadedmetadata", handleLoadedMetadata);
     audio.addEventListener("timeupdate", handleTimeUpdate);
     audio.addEventListener("ended", handleEnded);
-
     const savedVolume = localStorage.getItem(LS_VOLUME_KEY);
     audio.volume = savedVolume ? parseFloat(savedVolume) : 0.7;
-
     return () => {
       audio.pause();
       audio.removeEventListener("loadedmetadata", handleLoadedMetadata);
@@ -519,7 +571,6 @@ const EndModal = ({
               {song.title}
             </h3>
           </div>
-
           {hasFullAudio && (
             <div className="mb-5 bg-zinc-900/60 rounded-2xl p-4 border border-white/10">
               <div className="flex items-center gap-4">
@@ -562,7 +613,6 @@ const EndModal = ({
               </div>
             </div>
           )}
-
           <div className="flex flex-col gap-2.5">
             <div className="w-full bg-zinc-900/80 py-3 rounded-2xl font-black tracking-widest uppercase italic border border-white/10 flex items-center justify-center gap-2 text-sm">
               <Clock size={14} className="text-zinc-500" />
@@ -572,7 +622,6 @@ const EndModal = ({
                 className="text-accent font-mono text-sm"
               />
             </div>
-
             <button
               onClick={handleDownloadShareCard}
               className="flex items-center justify-center gap-2 w-full bg-white/5 border border-white/10 text-white py-3 rounded-2xl font-black tracking-widest hover:bg-white/10 active:scale-95 transition-all uppercase italic text-sm"
@@ -598,7 +647,6 @@ const EndModal = ({
         </motion.div>
       </motion.div>
 
-      {/* Ukryta karta do pobrania */}
       {showShareCard && (
         <div className="fixed left-[-9999px] top-0">
           <div
@@ -697,6 +745,7 @@ export default function DailySoundtracki() {
   const [isFinished, setIsFinished] = useState(false);
   const [gameStatus, setGameStatus] = useState<"win" | "lose" | null>(null);
   const [showModal, setShowModal] = useState(false);
+  const [showGlobalStatsMini, setShowGlobalStatsMini] = useState(false); // ← NOWE
   const [showRules, setShowRules] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState<
@@ -734,7 +783,6 @@ export default function DailySoundtracki() {
     isPlayingRef.current = isPlaying;
   }, [isPlaying]);
 
-  // Init
   useEffect(() => {
     const dayParam = searchParams.get("day");
     if (dayParam) {
@@ -782,7 +830,6 @@ export default function DailySoundtracki() {
     };
   }, []);
 
-  // Load/reset day state
   useEffect(() => {
     setStateLoaded(false);
     const saved = loadDayState(currentDay);
@@ -806,6 +853,7 @@ export default function DailySoundtracki() {
       setRevealedHintsCount(0);
     }
     setShowModal(false);
+    setShowGlobalStatsMini(false); // ← NOWE
     setInputValue("");
     setSuggestions([]);
     setSelectedIndex(-1);
@@ -813,7 +861,6 @@ export default function DailySoundtracki() {
     requestAnimationFrame(() => setStateLoaded(true));
   }, [currentDay]);
 
-  // Persist day state
   useEffect(() => {
     if (!stateLoaded) return;
     saveDayState(currentDay, {
@@ -892,7 +939,6 @@ export default function DailySoundtracki() {
     };
   }, []);
 
-  // ─── Document-level swipe (działa nawet gdy modal jest otwarty) ───────────
   useEffect(() => {
     const handleTouchStart = (e: TouchEvent) => {
       touchStartX.current = e.touches[0].clientX;
@@ -1016,6 +1062,7 @@ export default function DailySoundtracki() {
       saveResults(r);
       recordResult(true, currentStep + 1);
       setShowModal(true);
+      setShowGlobalStatsMini(true); // ← NOWE
       play("win");
     } else if (currentStep < MAX_ATTEMPTS - 1) {
       setCurrentStep((p) => p + 1);
@@ -1028,6 +1075,7 @@ export default function DailySoundtracki() {
       saveResults(r);
       recordResult(false, null);
       setShowModal(true);
+      setShowGlobalStatsMini(true); // ← NOWE
       play("lose");
     }
   };
@@ -1208,6 +1256,23 @@ export default function DailySoundtracki() {
         </div>
       )}
 
+      {/* ── GLOBAL STATS MINI ── */}
+      <AnimatePresence>
+        {showGlobalStatsMini && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, x: 20 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            exit={{ opacity: 0, scale: 0.9, x: 20 }}
+            className="fixed bottom-8 right-8 z-[80001] max-md:hidden"
+          >
+            <GlobalStatsMini
+              globalStats={globalStats}
+              globalLoading={globalLoading}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <AnimatePresence>
         {gameStatus && showModal && (
           <EndModal
@@ -1218,6 +1283,7 @@ export default function DailySoundtracki() {
             onClose={() => {
               play("modalClose");
               setShowModal(false);
+              setShowGlobalStatsMini(false); // ← NOWE
             }}
           />
         )}
