@@ -389,7 +389,7 @@ export const nonlimitRapAllSongs: SongSuggestion[] = [
   { title: "Kontrola Jakości", artist: "Paluch, Szpaku" },
   { title: "Niedostępny prod by Olek", artist: "Malik Montana, OLEK, DMN" },
   { title: "Święto ogródka", artist: "Białas, White 2115" },
-  { title: "Kortyzol prod SecretRank Szwed SWD", artist: "Onar, Kabe, Kizo" },
+  { title: "Kortyzol", artist: "Onar, Kabe, Kizo" },
   { title: "Cesarz", artist: "KęKę" },
   { title: "Aromatyczne Przyprawy", artist: "Żabson, Mata" },
   { title: "HOODIE", artist: "Beteo" },
