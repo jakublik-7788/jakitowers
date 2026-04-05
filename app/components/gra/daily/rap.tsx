@@ -588,6 +588,19 @@ export default function RapPage() {
       }
     } catch {}
     setRapResults(loadRapResults());
+
+    // Jednorazowa migracja starych kluczy (jakitowers_day_X -> jakitowers_day_rap_X)
+    try {
+      for (let i = 1; i <= 17; i++) {
+        const oldKey = `jakitowers_day_${i}`;
+        const newKey = `jakitowers_day_rap_${i}`;
+        const oldData = localStorage.getItem(oldKey);
+        if (oldData && !localStorage.getItem(newKey)) {
+          localStorage.setItem(newKey, oldData);
+        }
+      }
+    } catch {}
+
   }, [searchParams]);
 
   useEffect(() => {
