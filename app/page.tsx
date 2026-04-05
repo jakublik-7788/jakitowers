@@ -60,7 +60,11 @@ type GameResult = "win" | "lose";
 function loadRapResults(): Record<number, GameResult> {
   try {
     const r = localStorage.getItem(LS_RESULTS_RAP_KEY);
-    return r ? JSON.parse(r) : {};
+    if (!r) return {};
+    const parsed = JSON.parse(r);
+    return Object.fromEntries(
+      Object.entries(parsed).map(([k, v]) => [Number(k), v])
+    ) as Record<number, GameResult>;
   } catch {
     return {};
   }
@@ -69,7 +73,11 @@ function loadRapResults(): Record<number, GameResult> {
 function loadKlasykiResults(): Record<number, GameResult> {
   try {
     const r = localStorage.getItem(LS_RESULTS_KLASYKI_KEY);
-    return r ? JSON.parse(r) : {};
+    if (!r) return {};
+    const parsed = JSON.parse(r);
+    return Object.fromEntries(
+      Object.entries(parsed).map(([k, v]) => [Number(k), v])
+    ) as Record<number, GameResult>;
   } catch {
     return {};
   }
@@ -78,7 +86,11 @@ function loadKlasykiResults(): Record<number, GameResult> {
 function loadSoundtrackiResults(): Record<number, GameResult> {
   try {
     const r = localStorage.getItem(LS_RESULTS_SOUNDTRACKI_KEY);
-    return r ? JSON.parse(r) : {};
+    if (!r) return {};
+    const parsed = JSON.parse(r);
+    return Object.fromEntries(
+      Object.entries(parsed).map(([k, v]) => [Number(k), v])
+    ) as Record<number, GameResult>;
   } catch {
     return {};
   }

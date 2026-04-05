@@ -24,10 +24,12 @@ const LS_STATS_DAILY_SOUNDTRACKI = "jakitowers_stats_daily_soundtracki";
 
 // ─── Klucze dla trybów non‑limit (tylko najlepsza seria) ───────────────────
 const LS_NONLIMIT_BEST_STREAK_RAP = "jakitowers_nonlimit_best_streak_rap";
-const LS_NONLIMIT_BEST_STREAK_KLASYKI = "jakitowers_nonlimit_best_streak_klasyki";
-const LS_NONLIMIT_BEST_STREAK_SOUNDTRACKI = "jakitowers_nonlimit_best_streak_soundtracki";
+const LS_NONLIMIT_BEST_STREAK_KLASYKI =
+  "jakitowers_nonlimit_best_streak_klasyki";
+const LS_NONLIMIT_BEST_STREAK_SOUNDTRACKI =
+  "jakitowers_nonlimit_best_streak_soundtracki";
 
-const LS_SUBMITTED_KEY = "jakitowers_submitted";
+const getSubmittedKey = (mode: string) => `jakitowers_submitted_${mode}`;
 
 const defaultStats = (): LocalStats => ({
   gamesPlayed: 0,
@@ -56,12 +58,16 @@ function saveStats(key: string, stats: LocalStats) {
 }
 
 // ─── Hook dla trybu DAILY (obsługuje rap, klasyki, soundtracki) ─────────────
-export function useGameStats(currentDay: number, mode: "rap" | "klasyki" | "soundtracki" = "rap") {
-  const statsKey = mode === "rap"
-    ? LS_STATS_DAILY_RAP
-    : mode === "klasyki"
-    ? LS_STATS_DAILY_KLASYKI
-    : LS_STATS_DAILY_SOUNDTRACKI;
+export function useGameStats(
+  currentDay: number,
+  mode: "rap" | "klasyki" | "soundtracki" = "rap",
+) {
+  const statsKey =
+    mode === "rap"
+      ? LS_STATS_DAILY_RAP
+      : mode === "klasyki"
+        ? LS_STATS_DAILY_KLASYKI
+        : LS_STATS_DAILY_SOUNDTRACKI;
 
   const [localStats, setLocalStats] = useState<LocalStats>(defaultStats);
   const [globalStats, setGlobalStats] = useState<GlobalStats | null>(null);
@@ -109,7 +115,7 @@ export function useGameStats(currentDay: number, mode: "rap" | "klasyki" | "soun
         if (isMounted.current) setGlobalLoading(false);
       }
     },
-    [mode]
+    [mode],
   );
 
   useEffect(() => {
@@ -139,22 +145,28 @@ export function useGameStats(currentDay: number, mode: "rap" | "klasyki" | "soun
       });
 
       try {
-        const submittedRaw = localStorage.getItem(LS_SUBMITTED_KEY);
-        const submitted: number[] = submittedRaw ? JSON.parse(submittedRaw) : [];
+        const submittedKey = getSubmittedKey(mode);
+        const submittedRaw = localStorage.getItem(submittedKey);
+        const submitted: number[] = submittedRaw
+          ? JSON.parse(submittedRaw)
+          : [];
         if (!submitted.includes(currentDay) && isMounted.current) {
           await fetch("/api/stats", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ day: currentDay, attempt, won, mode }),
           });
-          localStorage.setItem(LS_SUBMITTED_KEY, JSON.stringify([...submitted, currentDay]));
+          localStorage.setItem(
+            submittedKey,
+            JSON.stringify([...submitted, currentDay]),
+          );
           if (isMounted.current) await fetchGlobalStats(currentDay);
         }
       } catch {
         /* ignore */
       }
     },
-    [currentDay, fetchGlobalStats, statsKey, mode]
+    [currentDay, fetchGlobalStats, statsKey, mode],
   );
 
   const refetchGlobalStats = useCallback(() => {
@@ -171,12 +183,15 @@ export function useGameStats(currentDay: number, mode: "rap" | "klasyki" | "soun
 }
 
 // ─── Hook dla trybu NON‑LIMIT (tylko najlepsza seria trwała, reszta zeruje się przy zmianie trybu) ───
-export function useNonLimitStats(mode: "rap" | "klasyki" | "soundtracki" = "rap") {
-  const bestStreakKey = mode === "rap"
-    ? LS_NONLIMIT_BEST_STREAK_RAP
-    : mode === "klasyki"
-    ? LS_NONLIMIT_BEST_STREAK_KLASYKI
-    : LS_NONLIMIT_BEST_STREAK_SOUNDTRACKI;
+export function useNonLimitStats(
+  mode: "rap" | "klasyki" | "soundtracki" = "rap",
+) {
+  const bestStreakKey =
+    mode === "rap"
+      ? LS_NONLIMIT_BEST_STREAK_RAP
+      : mode === "klasyki"
+        ? LS_NONLIMIT_BEST_STREAK_KLASYKI
+        : LS_NONLIMIT_BEST_STREAK_SOUNDTRACKI;
 
   const [bestStreak, setBestStreak] = useState<number>(0);
   const [stats, setStats] = useState<LocalStats>(defaultStats);
@@ -210,31 +225,34 @@ export function useNonLimitStats(mode: "rap" | "klasyki" | "soundtracki" = "rap"
     });
   }, [mode, bestStreakKey]);
 
-  const recordResult = useCallback((won: boolean, attempt: number | null) => {
-    setStats((prev) => {
-      const next = { ...prev };
-      next.gamesPlayed += 1;
-      const distKey = won && attempt !== null ? String(attempt) : "X";
-      next.attemptDistribution = {
-        ...prev.attemptDistribution,
-        [distKey]: (prev.attemptDistribution[distKey] ?? 0) + 1,
-      };
-      if (won) {
-        next.gamesWon += 1;
-        next.currentStreak += 1;
-        if (next.currentStreak > next.maxStreak) {
-          next.maxStreak = next.currentStreak;
-          try {
-            localStorage.setItem(bestStreakKey, next.maxStreak.toString());
-          } catch {}
-          setBestStreak(next.maxStreak); // aktualizacja stanu dla spójności
+  const recordResult = useCallback(
+    (won: boolean, attempt: number | null) => {
+      setStats((prev) => {
+        const next = { ...prev };
+        next.gamesPlayed += 1;
+        const distKey = won && attempt !== null ? String(attempt) : "X";
+        next.attemptDistribution = {
+          ...prev.attemptDistribution,
+          [distKey]: (prev.attemptDistribution[distKey] ?? 0) + 1,
+        };
+        if (won) {
+          next.gamesWon += 1;
+          next.currentStreak += 1;
+          if (next.currentStreak > next.maxStreak) {
+            next.maxStreak = next.currentStreak;
+            try {
+              localStorage.setItem(bestStreakKey, next.maxStreak.toString());
+            } catch {}
+            setBestStreak(next.maxStreak); // aktualizacja stanu dla spójności
+          }
+        } else {
+          next.currentStreak = 0;
         }
-      } else {
-        next.currentStreak = 0;
-      }
-      return next;
-    });
-  }, [bestStreakKey]);
+        return next;
+      });
+    },
+    [bestStreakKey],
+  );
 
   return { stats, recordResult };
 }
