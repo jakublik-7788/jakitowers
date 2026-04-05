@@ -590,6 +590,7 @@ export default function RapPage() {
     setRapResults(loadRapResults());
 
     // Jednorazowa migracja starych kluczy (jakitowers_day_X -> jakitowers_day_rap_X)
+    // Jednorazowa migracja starych kluczy
     try {
       for (let i = 1; i <= 17; i++) {
         const oldKey = `jakitowers_day_${i}`;
@@ -598,6 +599,33 @@ export default function RapPage() {
         if (oldData && !localStorage.getItem(newKey)) {
           localStorage.setItem(newKey, oldData);
         }
+      }
+    } catch {}
+
+    // ← TUTAJ dodajesz nowy blok ↓
+    try {
+      const existingResults = loadRapResults();
+      let changed = false;
+
+      for (let i = 1; i <= 17; i++) {
+        if (existingResults[i] !== undefined) continue;
+
+        const raw =
+          localStorage.getItem(`jakitowers_day_rap_${i}`) ||
+          localStorage.getItem(`jakitowers_day_${i}`);
+
+        if (raw) {
+          const saved: SavedDayState = JSON.parse(raw);
+          if (saved.isFinished && saved.gameStatus) {
+            existingResults[i] = saved.gameStatus;
+            changed = true;
+          }
+        }
+      }
+
+      if (changed) {
+        saveRapResults(existingResults);
+        setRapResults(existingResults);
       }
     } catch {}
 
