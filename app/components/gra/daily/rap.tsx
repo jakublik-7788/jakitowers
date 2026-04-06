@@ -628,7 +628,6 @@ export default function RapPage() {
         setRapResults(existingResults);
       }
     } catch {}
-
   }, [searchParams]);
 
   useEffect(() => {
@@ -753,14 +752,12 @@ export default function RapPage() {
       audioRef.current = new Audio(song.audioSrc);
       currentSongIdRef.current = newSongId;
     } else if (isNewSong) {
-      const wasPlaying = isPlayingRef.current;
       audioRef.current.pause();
       audioRef.current.src = song.audioSrc ?? "";
       audioRef.current.load();
       currentSongIdRef.current = newSongId;
-      if (wasPlaying && !isFinished) {
-        audioRef.current.play().catch(() => {});
-      }
+      setIsPlaying(false);
+      setCurrentTime(0);
     }
 
     if (audioRef.current && volume !== null) {

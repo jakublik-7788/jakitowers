@@ -243,7 +243,7 @@ export const rapSongs: Song[] = [
           {
             text: "Znowu w duchu — Patrick Swayze, huh (Skrrt)",
             start: 14.15,
-            end: 16.7,
+            end: 16,
           },
         ],
       },
