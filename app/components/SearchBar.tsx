@@ -59,6 +59,31 @@ const normalizePolishChars = (str: string): string => {
   );
 };
 
+const matchesSong = (
+  s: { title: string; artist: string },
+  searchTerm: string,
+  normalizedSearchTerm: string,
+): boolean => {
+  const title = s.title.toLowerCase();
+  const artist = s.artist.toLowerCase();
+  const artistTitle = `${artist} ${title}`;
+  const titleArtist = `${title} ${artist}`;
+  const normalizedTitle = normalizePolishChars(title);
+  const normalizedArtist = normalizePolishChars(artist);
+  const normalizedArtistTitle = normalizePolishChars(artistTitle);
+  const normalizedTitleArtist = normalizePolishChars(titleArtist);
+  return (
+    title.includes(searchTerm) ||
+    artist.includes(searchTerm) ||
+    artistTitle.includes(searchTerm) ||
+    titleArtist.includes(searchTerm) ||
+    normalizedTitle.includes(normalizedSearchTerm) ||
+    normalizedArtist.includes(normalizedSearchTerm) ||
+    normalizedArtistTitle.includes(normalizedSearchTerm) ||
+    normalizedTitleArtist.includes(normalizedSearchTerm)
+  );
+};
+
 export const SearchBar = ({
   isFinished,
   isStarted,
@@ -83,7 +108,6 @@ export const SearchBar = ({
   );
   const [showHiddenPanel, setShowHiddenPanel] = useState(false);
 
-  // Wybór odpowiedniej bazy piosenek
   let songs: { title: string; artist: string }[] = [];
   if (gameMode === "nonlimit") {
     if (songSource === "rap") songs = nonlimitRapAllSongs;
@@ -146,18 +170,7 @@ export const SearchBar = ({
                 (guess) => guess.toLowerCase() === fullName,
               );
               if (isAlreadyGuessed) return false;
-              const title = s.title.toLowerCase();
-              const artist = s.artist.toLowerCase();
-              const artistTitle = `${artist} ${title}`;
-              const normalizedArtistTitle = normalizePolishChars(artistTitle);
-              return (
-                title.includes(searchTerm) ||
-                artist.includes(searchTerm) ||
-                artistTitle.includes(searchTerm) ||
-                normalizePolishChars(title).includes(normalizedSearchTerm) ||
-                normalizePolishChars(artist).includes(normalizedSearchTerm) ||
-                normalizedArtistTitle.includes(normalizedSearchTerm)
-              );
+              return matchesSong(s, searchTerm, normalizedSearchTerm);
             })
             .slice(0, 30);
           setSuggestions(filtered);
@@ -188,18 +201,7 @@ export const SearchBar = ({
             (guess) => guess.toLowerCase() === fullName,
           );
           if (isAlreadyGuessed) return false;
-          const title = s.title.toLowerCase();
-          const artist = s.artist.toLowerCase();
-          const artistTitle = `${artist} ${title}`;
-          const normalizedArtistTitle = normalizePolishChars(artistTitle);
-          return (
-            title.includes(searchTerm) ||
-            artist.includes(searchTerm) ||
-            artistTitle.includes(searchTerm) ||
-            normalizePolishChars(title).includes(normalizedSearchTerm) ||
-            normalizePolishChars(artist).includes(normalizedSearchTerm) ||
-            normalizedArtistTitle.includes(normalizedSearchTerm)
-          );
+          return matchesSong(s, searchTerm, normalizedSearchTerm);
         })
         .slice(0, 30);
       setSuggestions(filtered);
