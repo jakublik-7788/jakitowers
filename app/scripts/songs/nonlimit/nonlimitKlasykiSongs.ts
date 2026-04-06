@@ -133,29 +133,29 @@ export const nonlimitKlasykiSongs: Song[] = [
         lineIndex: 0,
         words: [
           {
-            text: "Nie znam słów, co mają jakiś większy sens",
-            start: 0.0,
-            end: 4.94,
-          },
-          {
-            text: "Jeśli tylko jedno, jedno tylko wiem",
-            start: 4.94,
-            end: 8.97,
-          },
-          {
-            text: "Być tam, zawsze tam, gdzie Ty",
-            start: 8.97,
-            end: 37.06,
-          },
-          {
             text: "Już teraz wiem, że dni są tylko po to",
-            start: 37.06,
-            end: 41.8,
+            start: 0.00,
+            end: 4.25,
           },
           {
             text: "By do Ciebie wracać każdą nocą złotą",
-            start: 41.8,
-            end: 46.83,
+            start: 4.25,
+            end: 8.75,
+          },
+          {
+            text: "Nie znam słów co mają jakiś większy sens",
+            start: 8.75,
+            end: 13.65,
+          },
+          {
+            text: "Jeśli tylko jedno, jedno tylko wiem",
+            start: 13.65,
+            end: 18.25, 
+          },
+          {
+            text: "Być tam, zawsze tam, gdzie Ty",
+            start: 18.25,
+            end: 24.9, 
           },
         ],
       },
