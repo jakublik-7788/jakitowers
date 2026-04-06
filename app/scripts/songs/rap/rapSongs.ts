@@ -681,22 +681,42 @@ export const rapSongs: Song[] = [
       },
     ],
   },
-  {
+   {
     id: 20,
     day: 20,
-    title: "Jagodzianki",
-    artist: "Malik Montana, Mr. Polska",
-    audioSrc: "/Rap/MalikMontana/20_Jagodzianki.mp3",
-    youtubeId: "JcV-q-Mv06U",
+    title: "Turkus",
+    artist: "Kaz Bałagane",
+    audioSrc: "/Rap/KazBalagane/119_Turkus.mp3",
+    youtubeId: "TgVjdAsR4kc",
     lyrics: [
       {
         lineIndex: 0,
         words: [
-          { text: "7 żyć i baluję całą noc", start: 0.0, end: 2.66 },
-          { text: "Tak jak kot", start: 2.66, end: 3.69 },
-          { text: "7 żyć i baluję", start: 3.69, end: 5.97 },
-          { text: "Mam sałatę, ale brudną no", start: 5.97, end: 7.86 },
-          { text: "Łapie ją za dupę, ona lubi to", start: 7.86, end: 9.68 },
+          {
+            text: "Powiedziała, że nie znajdę drugiej, jak ona na świecie",
+            start: 0.0,
+            end: 3.68,
+          },
+          {
+            text: "Ja widziałem taką w klubie, widziałem w aptece",
+            start: 3.68,
+            end: 7.28,
+          },
+          {
+            text: "Ja widziałem taką w sumie na poczcie, w markecie",
+            start: 7.28,
+            end: 11.24,
+          },
+          {
+            text: "W branży rozrywkowej, dobrze znanym kabarecie",
+            start: 11.24,
+            end: 15.27,
+          },
+          {
+            text: "Wszędzie widzę tych coachy, każdy chce być jak top G",
+            start: 15.27,
+            end: 18.77,
+          },
         ],
       },
     ],
@@ -1559,38 +1579,39 @@ export const rapSongs: Song[] = [
   {
     id: 44,
     day: 44,
-    title: "Bellucci",
-    artist: "Louis Villain, Guzior",
-    audioSrc: "/Rap/LouisVillain/44_Bellucci.mp3",
-    youtubeId: "yZQEUYQ6bQE",
+    title: "Nowe Szklane Domy",
+    artist: "Kaz Bałagane, @atutowy, Taco Hemingway",
+    audioSrc:
+      "/Rap/KazBalagane/343_Nowe_Szklane_Domy.mp3",
+    youtubeId: "Bv7ez_6Y_EE",
     lyrics: [
       {
         lineIndex: 0,
         words: [
           {
-            text: "Ona mnie łapiе za rękę, mówi: Uważaj na jezdnie, robi się mokra",
+            text: "Choć brzmi jak ojciec chrzestny to zrobił dwa szpagaty",
             start: 0.0,
-            end: 3.65,
+            end: 2.98,
           },
           {
-            text: "Dzisiaj nie usnę, próbuję zapеłnić czymkolwiek tą pustkę",
-            start: 3.65,
-            end: 7.35,
+            text: "Na dole siedzi kasjer, to przyjezdny z Armenii",
+            start: 2.98,
+            end: 5.9,
           },
           {
-            text: "Mam pełen bagaż doświadczeń cały wypchany w gotówce",
-            start: 7.35,
-            end: 11.05,
+            text: "Wciąż suszy ludziom głowę o fikcyjnej epidemii",
+            start: 5.9,
+            end: 10.16,
           },
           {
-            text: "My wchodzimy, to na sto, odkładamy coś na bok, no i znowu witam rok, miasto",
-            start: 11.05,
-            end: 15.85,
+            text: "Warszawa w toksynach, nad nią szklane domy",
+            start: 10.16,
+            end: 12.7,
           },
           {
-            text: "Zawijamy sos, potem zawijamy stąd i idziemy dalej ponad to",
-            start: 15.85,
-            end: 20.0,
+            text: "Jemu szczęka lata jak pinballe na żetony, uh (uh)",
+            start: 12.7,
+            end: 15.54,
           },
         ],
       },
