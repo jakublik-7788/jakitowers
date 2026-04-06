@@ -78,7 +78,9 @@ export const SearchBar = ({
   songSource = "rap",
   allSongs: allSongsProp,
 }: SearchBarProps) => {
-  const [hiddenSuggestions, setHiddenSuggestions] = useState<Set<string>>(new Set());
+  const [hiddenSuggestions, setHiddenSuggestions] = useState<Set<string>>(
+    new Set(),
+  );
   const [showHiddenPanel, setShowHiddenPanel] = useState(false);
 
   // Wybór odpowiedniej bazy piosenek
@@ -122,7 +124,9 @@ export const SearchBar = ({
     setHiddenSuggestions((prev) => new Set(prev).add(key));
     // Odroczenie aktualizacji listy podpowiedzi, aby uniknąć błędów podczas renderowania
     setTimeout(() => {
-      setSuggestions(suggestions.filter((item) => getSuggestionKey(item) !== key));
+      setSuggestions(
+        suggestions.filter((item) => getSuggestionKey(item) !== key),
+      );
     }, 0);
   };
 
@@ -146,11 +150,15 @@ export const SearchBar = ({
               if (isAlreadyGuessed) return false;
               const title = s.title.toLowerCase();
               const artist = s.artist.toLowerCase();
+              const artistTitle = `${artist} ${title}`;
+              const normalizedArtistTitle = normalizePolishChars(artistTitle);
               return (
                 title.includes(searchTerm) ||
                 artist.includes(searchTerm) ||
+                artistTitle.includes(searchTerm) ||
                 normalizePolishChars(title).includes(normalizedSearchTerm) ||
-                normalizePolishChars(artist).includes(normalizedSearchTerm)
+                normalizePolishChars(artist).includes(normalizedSearchTerm) ||
+                normalizedArtistTitle.includes(normalizedSearchTerm)
               );
             })
             .slice(0, 30);
@@ -204,12 +212,17 @@ export const SearchBar = ({
     setSuggestions([]);
     setSelectedIndex(-1);
     setTimeout(() => {
-      const input = document.querySelector('input[type="text"]') as HTMLInputElement;
+      const input = document.querySelector(
+        'input[type="text"]',
+      ) as HTMLInputElement;
       if (input) input.focus();
     }, 0);
   };
 
-  const handleSuggestionKeyDown = (e: React.KeyboardEvent, s: { title: string; artist: string }) => {
+  const handleSuggestionKeyDown = (
+    e: React.KeyboardEvent,
+    s: { title: string; artist: string },
+  ) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       handleSelectSuggestion(s);
@@ -274,7 +287,10 @@ export const SearchBar = ({
                         className="opacity-0 group-hover:opacity-100 transition-opacity p-1 hover:bg-white/10 rounded-full"
                         title="Odrzuć tę podpowiedź"
                       >
-                        <X size={14} className="text-zinc-500 hover:text-red-400" />
+                        <X
+                          size={14}
+                          className="text-zinc-500 hover:text-red-400"
+                        />
                       </button>
                     </div>
                   </div>
@@ -288,7 +304,9 @@ export const SearchBar = ({
                   >
                     {showHiddenPanel ? <EyeOff size={12} /> : <Eye size={12} />}
                     <span>
-                      {showHiddenPanel ? "Ukryj odrzucone" : `Pokaż odrzucone (${hiddenItems.length})`}
+                      {showHiddenPanel
+                        ? "Ukryj odrzucone"
+                        : `Pokaż odrzucone (${hiddenItems.length})`}
                     </span>
                   </button>
                 </div>
@@ -318,10 +336,15 @@ export const SearchBar = ({
                                 {item.title}
                               </p>
                               {item.artist && (
-                                <p className="text-zinc-500 text-[10px]">{item.artist}</p>
+                                <p className="text-zinc-500 text-[10px]">
+                                  {item.artist}
+                                </p>
                               )}
                             </div>
-                            <Trash2 size={12} className="text-red-400 rotate-90" />
+                            <Trash2
+                              size={12}
+                              className="text-red-400 rotate-90"
+                            />
                           </button>
                         );
                       })}
@@ -374,17 +397,17 @@ export const SearchBar = ({
                 isFinished || !isStarted
                   ? "bg-zinc-800 text-zinc-600 cursor-not-allowed"
                   : inputError
-                  ? "bg-red-500 text-white"
-                  : inputValue.trim() === ""
-                  ? "bg-zinc-800/30 text-zinc-600 hover:bg-accent/50 hover:text-white"
-                  : "bg-accent text-white shadow-[0_0_20px_var(--accent-glow)]"
+                    ? "bg-red-500 text-white"
+                    : inputValue.trim() === ""
+                      ? "bg-zinc-800/30 text-zinc-600 hover:bg-accent/50 hover:text-white"
+                      : "bg-accent text-white shadow-[0_0_20px_var(--accent-glow)]"
               }`}
             >
               {isFinished
                 ? "KONIEC"
                 : inputValue.trim() !== ""
-                ? "ZATWIERDŹ"
-                : "POMIŃ"}
+                  ? "ZATWIERDŹ"
+                  : "POMIŃ"}
             </button>
           )}
         </div>
