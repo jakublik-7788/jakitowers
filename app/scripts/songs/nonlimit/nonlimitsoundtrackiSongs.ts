@@ -808,17 +808,17 @@ export const nonlimitSoundtrackiSongs: Song[] = [
     title: "Incepcja",
     artist: "",
     imageUrl: "/soundtracki/Incepcja/incepcja.jpg",
-    fullAudioSrc: "/soundtracki/Incepcja/Incepcja.mp3",
+    fullAudioSrc: "/soundtracki/Incepcja/Hans Zimmer - Incepcja.mp3",
     hint1: "Film",
     hint2: "Sci-Fi / Thriller",
     hint3: "2010",
     hint4: "Christopher Nolan",
     clips: {
-      "1": "/soundtracki/Incepcja/Incepcja_1s.mp3",
-      "3": "/soundtracki/Incepcja/Incepcja_3s.mp3",
-      "5": "/soundtracki/Incepcja/Incepcja_5s.mp3",
-      "10": "/soundtracki/Incepcja/Incepcja_10s.mp3",
-      "15": "/soundtracki/Incepcja/Incepcja_15s.mp3"
+      "1": "/soundtracki/Incepcja/Hans_Zimmer___Incepcja_1s.mp3",
+      "3": "/soundtracki/Incepcja/Hans_Zimmer___Incepcja_3s.mp3",
+      "5": "/soundtracki/Incepcja/Hans_Zimmer___Incepcja_5s.mp3",
+      "10": "/soundtracki/Incepcja/Hans_Zimmer___Incepcja_10s.mp3",
+      "15": "/soundtracki/Incepcja/Hans_Zimmer___Incepcja_15s.mp3"
     },
     lyrics: []
   },
