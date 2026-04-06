@@ -98,7 +98,7 @@ export const rapSongs: Song[] = [
     day: 4,
     title: "„Tak to leciało!”",
     artist: "Otsochodzi/Otsochodzi, Taco Hemingway, lohleq",
-    audioSrc: "/Rap/4_Tak to leciało.mp3",
+    audioSrc: "/Rap/Otsochodzi/4_Tak to leciało.mp3",
     youtubeId: "0c1wRHRJNUs",
     lyrics: [
       {
@@ -138,7 +138,7 @@ export const rapSongs: Song[] = [
     day: 5,
     title: "1 na 100",
     artist: "White 2115, Mata, Pedro, BroJustChill",
-    audioSrc: "/Rap/White2115/5_1na100.mp3",
+    audioSrc: "/Rap/White 2115/5_1na100.mp3",
     youtubeId: "6-UVT5r8Ml0",
     lyrics: [
       {
