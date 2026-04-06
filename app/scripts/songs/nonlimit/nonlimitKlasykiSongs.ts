@@ -1969,7 +1969,7 @@ export const nonlimitKlasykiSongs: Song[] = [
     day: 50,
     title: "Urke",
     artist: "Wilki",
-    audioSrc: "/Klasyki/Wilki/50_Urke.mp3",
+    audioSrc: "/Klasyki/Wilki/Urke.mp3",
     youtubeId: "8YKAHgwLEMg",
     lyrics: [
       {
