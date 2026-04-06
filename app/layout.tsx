@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://jakitowers.pl'),
   title: "JAKI TO WERS – Codzienna gra muzyczna!",
   description: "Zmierz się z codziennymi wyzwaniami muzycznymi! Nowy utwór dnia z polskiego rapu, klasyków oraz soundtrack zawsze o północy.",
   openGraph: {
