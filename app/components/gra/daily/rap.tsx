@@ -587,12 +587,9 @@ export default function RapPage() {
         setVolume(0.5);
       }
     } catch {}
-    setRapResults(loadRapResults());
-
-    // Jednorazowa migracja starych kluczy (jakitowers_day_X -> jakitowers_day_rap_X)
-    // Jednorazowa migracja starych kluczy
     try {
-      for (let i = 1; i <= 17; i++) {
+      // Migracja starych kluczy (jakitowers_day_X -> jakitowers_day_rap_X)
+      for (let i = 1; i <= dailySongs.length; i++) {
         const oldKey = `jakitowers_day_${i}`;
         const newKey = `jakitowers_day_rap_${i}`;
         const oldData = localStorage.getItem(oldKey);
@@ -600,14 +597,12 @@ export default function RapPage() {
           localStorage.setItem(newKey, oldData);
         }
       }
-    } catch {}
 
-    // ← TUTAJ dodajesz nowy blok ↓
-    try {
+      // Odbuduj rapResults z dayState dla wszystkich dni
       const existingResults = loadRapResults();
       let changed = false;
 
-      for (let i = 1; i <= 17; i++) {
+      for (let i = 1; i <= dailySongs.length; i++) {
         if (existingResults[i] !== undefined) continue;
 
         const raw =
@@ -615,18 +610,18 @@ export default function RapPage() {
           localStorage.getItem(`jakitowers_day_${i}`);
 
         if (raw) {
-          const saved: SavedDayState = JSON.parse(raw);
-          if (saved.isFinished && saved.gameStatus) {
-            existingResults[i] = saved.gameStatus;
-            changed = true;
-          }
+          try {
+            const saved: SavedDayState = JSON.parse(raw);
+            if (saved.isFinished && saved.gameStatus) {
+              existingResults[i] = saved.gameStatus;
+              changed = true;
+            }
+          } catch {}
         }
       }
 
-      if (changed) {
-        saveRapResults(existingResults);
-        setRapResults(existingResults);
-      }
+      if (changed) saveRapResults(existingResults);
+      setRapResults(existingResults); // zawsze na końcu, po migracji
     } catch {}
   }, [searchParams]);
 
