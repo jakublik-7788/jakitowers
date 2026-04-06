@@ -122,7 +122,6 @@ export const SearchBar = ({
   const hideSuggestion = (s: { title: string; artist: string }) => {
     const key = getSuggestionKey(s);
     setHiddenSuggestions((prev) => new Set(prev).add(key));
-    // Odroczenie aktualizacji listy podpowiedzi, aby uniknąć błędów podczas renderowania
     setTimeout(() => {
       setSuggestions(
         suggestions.filter((item) => getSuggestionKey(item) !== key),
@@ -134,7 +133,6 @@ export const SearchBar = ({
     setHiddenSuggestions((prev) => {
       const next = new Set(prev);
       next.delete(key);
-      // Odroczenie odświeżenia listy podpowiedzi po przywróceniu
       setTimeout(() => {
         const trimmed = inputValue.trim();
         if (trimmed.length >= 2) {
@@ -192,11 +190,15 @@ export const SearchBar = ({
           if (isAlreadyGuessed) return false;
           const title = s.title.toLowerCase();
           const artist = s.artist.toLowerCase();
+          const artistTitle = `${artist} ${title}`;
+          const normalizedArtistTitle = normalizePolishChars(artistTitle);
           return (
             title.includes(searchTerm) ||
             artist.includes(searchTerm) ||
+            artistTitle.includes(searchTerm) ||
             normalizePolishChars(title).includes(normalizedSearchTerm) ||
-            normalizePolishChars(artist).includes(normalizedSearchTerm)
+            normalizePolishChars(artist).includes(normalizedSearchTerm) ||
+            normalizedArtistTitle.includes(normalizedSearchTerm)
           );
         })
         .slice(0, 30);
