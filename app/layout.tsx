@@ -16,25 +16,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "JAKI TO WERS – Codzienna gra muzyczna!",
-  description: "Codziennie nowy utwór z polskiego rapu – zgadnij tytuł i artystę po fragmentach tekstu. Graj online za darmo! Tryb codzienny oraz tryb bez limitu!",
+  description: "Zmierz się z codziennymi wyzwaniami muzycznymi! Nowy utwór dnia z polskiego rapu, klasyków oraz soundtrack zawsze o północy.",
   openGraph: {
     title: "JAKI TO WERS – codzienna gra muzyczna",
-    description: "Zgadnij piosenkę po fragmentach tekstu – codziennie nowy utwór!",
+    description: "Tryb dzienny oraz tryb nonlimit!",
   },
   robots: "index, follow",
-  keywords: "jaki to wers, jakitowers, cotozahit, co to za hit, rapdle, muzyczna gra, polski rap, zgadnij piosenkę, daily challenge, rap, hiphop, hip hop, music game",
+  keywords: "aura, jaki to wers, jakitowers, cotozahit, co to za hit, rapdle, muzyczna gra, polski rap, zgadnij piosenkę, daily challenge, rap, hiphop, hip hop, music game, cotozahit, 100hitow, 100 hitow, hitow, hit",
 };
-
-// export const metadata: Metadata = {
-//   title: "JAKI TO WERS – Codzienna gra muzyczna!",
-//   description: "Zmierz się z codziennymi wyzwaniami muzycznymi! Nowy utwór dnia z polskiego rapu, klasyków oraz soundtrack zawsze o północy.",
-//   openGraph: {
-//     title: "JAKI TO WERS – codzienna gra muzyczna",
-//     description: "Tryb dzienny oraz tryb nonlimit!",
-//   },
-//   robots: "index, follow",
-//   keywords: "aura, jaki to wers, jakitowers, cotozahit, co to za hit, rapdle, muzyczna gra, polski rap, zgadnij piosenkę, daily challenge, rap, hiphop, hip hop, music game, cotozahit, 100hitow, 100 hitow, hitow, hit",
-// };
 
 
 export const viewport: Viewport = {
@@ -62,6 +51,23 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pl">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                var c = localStorage.getItem('jakitowers_accent_color');
+                if (c && /^#[0-9a-fA-F]{6}$/.test(c)) {
+                  document.documentElement.style.setProperty('--accent-main', c);
+                  var r = parseInt(c.slice(1,3),16), g = parseInt(c.slice(3,5),16), b = parseInt(c.slice(5,7),16);
+                  document.documentElement.style.setProperty('--accent-glow', 'rgba('+r+','+g+','+b+',0.4)');
+                  document.documentElement.style.setProperty('--accent-glow-strong', 'rgba('+r+','+g+','+b+',0.2)');
+                }
+              } catch(e) {}
+            `,
+          }}
+        />
+      </head>
       <body
         className={`
           ${geistSans.variable}
