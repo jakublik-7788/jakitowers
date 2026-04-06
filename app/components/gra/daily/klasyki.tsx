@@ -539,6 +539,7 @@ export default function KlasykiPage() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const isPlayingRef = useRef(isPlaying);
   const currentSongIdRef = useRef<number | null>(null);
+  const currentStepRef = useRef(currentStep);
   const touchStartX = useRef<number | null>(null);
 
   const song = dailySongs.find((s) => s.day === currentDay) || dailySongs[0];
@@ -555,6 +556,10 @@ export default function KlasykiPage() {
   useEffect(() => {
     isPlayingRef.current = isPlaying;
   }, [isPlaying]);
+
+  useEffect(() => {
+    currentStepRef.current = currentStep;
+  }, [currentStep]);
 
   useEffect(() => {
     const dayParam = searchParams.get("day");
@@ -724,7 +729,10 @@ export default function KlasykiPage() {
 
     const syncLyrics = () => {
       setCurrentTime(audio.currentTime);
-      const lastLine = song.lyrics[0].words.slice(0, currentStep + 1).at(-1);
+      // ← ZMIANA: używamy currentStepRef.current zamiast currentStep
+      const lastLine = song.lyrics[0].words
+        .slice(0, currentStepRef.current + 1)
+        .at(-1);
       if (lastLine && audio.currentTime >= lastLine.end) {
         stopAudio();
       } else if (!audio.paused) {

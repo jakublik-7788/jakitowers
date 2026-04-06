@@ -395,7 +395,7 @@ const TopBar = ({
       </div>
     </div>
 
-    {/* Mobile TopBar - tylko ikonki i dzień w środku */}
+    {/* Mobile TopBar */}
     <div className="relative z-50 flex items-center justify-between px-3 py-3 border-b border-white/5 bg-black/40 backdrop-blur-md shrink-0 md:hidden">
       <button
         onClick={onBack}
@@ -549,6 +549,7 @@ export default function RapPage() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const isPlayingRef = useRef(isPlaying);
   const currentSongIdRef = useRef<number | null>(null);
+  const currentStepRef = useRef(currentStep); // ← NOWE
   const touchStartX = useRef<number | null>(null);
 
   const song = dailySongs.find((s) => s.day === currentDay) || dailySongs[0];
@@ -565,6 +566,11 @@ export default function RapPage() {
   useEffect(() => {
     isPlayingRef.current = isPlaying;
   }, [isPlaying]);
+
+  // ← NOWE: synchronizuj ref z aktualnym krokiem
+  useEffect(() => {
+    currentStepRef.current = currentStep;
+  }, [currentStep]);
 
   useEffect(() => {
     const dayParam = searchParams.get("day");
@@ -765,7 +771,10 @@ export default function RapPage() {
 
     const syncLyrics = () => {
       setCurrentTime(audio.currentTime);
-      const lastLine = song.lyrics[0].words.slice(0, currentStep + 1).at(-1);
+      // ← ZMIANA: używamy currentStepRef.current zamiast currentStep
+      const lastLine = song.lyrics[0].words
+        .slice(0, currentStepRef.current + 1)
+        .at(-1);
       if (lastLine && audio.currentTime >= lastLine.end) {
         stopAudio();
       } else if (!audio.paused) {
@@ -790,7 +799,8 @@ export default function RapPage() {
       audio.removeEventListener("ended", stopAudio);
       cancelAnimationFrame(frameId);
     };
-  }, [song, currentStep, stopAudio, volume, isFinished]);
+    // ← ZMIANA: usunięto currentStep z zależności
+  }, [song, stopAudio, volume, isFinished]);
 
   useEffect(() => {
     const fn = () => {
@@ -932,11 +942,8 @@ export default function RapPage() {
   const handleSeek = useCallback(
     (time: number) => {
       if (!audioRef.current || isFinished) return;
-
       if (!isStarted) setIsStarted(true);
-
       audioRef.current.currentTime = time;
-
       if (audioRef.current.paused) {
         audioRef.current.play().catch(() => {});
         setIsPlaying(true);
