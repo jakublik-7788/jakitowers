@@ -753,7 +753,7 @@ export const nonlimitRapSongs: Song[] = [
     day: 23,
     title: "W GORĄCEJ WODZIE COMPANY",
     artist: "Bardal, rów babicze",
-    audioSrc: "/Rap/rowbabicze/23_W GORĄCEJ WODZIE COMPANY.mp3",
+    audioSrc: "/Rap/rowbabicze/8_W GORĄCEJ WODZIE COMPANY.mp3",
     youtubeId: "WmYMN3zSz70",
     lyrics: [
       {
