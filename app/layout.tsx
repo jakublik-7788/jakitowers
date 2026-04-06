@@ -17,20 +17,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://jakitowers.pl'),
   title: {
-    default: "JAKI TO WERS – Codzienna gra muzyczna",  // ← krócej, bez myślnika z dywizem
+    default: "Jaki To Wers – JAKITOWERS | Codzienna gra muzyczna",
     template: "%s | JAKITOWERS",
   },
-  description: "Zgadnij piosenkę z polskiego rapu, klasyków i soundtracków. Nowe wyzwanie codziennie o północy.",
+  description: "Jaki To Wers? Zgadnij piosenkę z polskiego rapu, klasyków i soundtracków. Nowe wyzwanie codziennie o północy. Graj na JAKITOWERS!",
   openGraph: {
-    title: "JAKITOWERS – Codzienna gra muzyczna",
-    description: "Zgadnij piosenkę z polskiego rapu, klasyków i soundtracków. Nowe wyzwanie codziennie o północy.",
+    title: "Jaki To Wers – JAKITOWERS | Codzienna gra muzyczna",
+    description: "Jaki To Wers? Zgadnij piosenkę z polskiego rapu, klasyków i soundtracków. Nowe wyzwanie codziennie o północy.",
     url: "https://jakitowers.pl",
-    siteName: "JAKI TO WERS",
+    siteName: "JAKITOWERS",
     locale: "pl_PL",
     type: "website",
   },
   robots: "index, follow",
-  keywords: "aura, jaki to wers, jakitowers, cotozahit, co to za hit, rapdle, muzyczna gra, polski rap, zgadnij piosenkę, daily challenge, rap, hiphop, hip hop, music game, cotozahit, 100hitow, 100 hitow, hitow, hit",
+  keywords: "jaki to wers, jakitowers, jaki to wers gra, zgadnij piosenkę, polski rap gra, codzienna gra muzyczna, rapdle, rap quiz, hip hop gra, jaki to wers online",
 };
 
 
