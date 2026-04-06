@@ -27,7 +27,7 @@ export const soundtrackiSongs: Song[] = [
     title: "Assassin's Creed 2",
     artist: "",
     imageUrl: "/soundtracki/Assasin's Creed 2/assasin2.jpg",
-    fullAudioSrc: "/soundtracki/Assasin's Creed 2/Assassin's Creed 2.mp3",
+    fullAudioSrc: "/soundtracki/Assasin's Creed 2/AssassinsCreed2.mp3",
     hint1: "Gra",
     hint2: "Akcja / Przygodowa",
     hint3: "2009",
