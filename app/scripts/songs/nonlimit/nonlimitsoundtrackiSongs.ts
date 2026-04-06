@@ -1407,7 +1407,7 @@ export const nonlimitSoundtrackiSongs: Song[] = [
     day: 71,
     title: "Ocean's Twelve",
     artist: "",
-    imageUrl: "/soundtracki/Oceans Twelve/Oceans.jpg",
+    imageUrl: "/soundtracki/Oceans Twelve/oceans.jpg",
     fullAudioSrc: "/soundtracki/Oceans Twelve/Oceans Twelve.mp3",
     hint1: "Film",
     hint2: "Kryminał / Komedia",
