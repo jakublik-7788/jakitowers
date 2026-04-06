@@ -448,10 +448,10 @@ export const soundtrackiSongs: Song[] = [
     artist: "",
     imageUrl: "/soundtracki/Martwa Cisza/martwacisza.jpg",
     fullAudioSrc: "/soundtracki/Martwa Cisza/Martwa Cisza.mp3",
-    hint1: "Serial",
-    hint2: "Kryminał / Dramat",
-    hint3: "2017",
-    hint4: "Harlan Coben",
+    hint1: "Dead Silence",
+    hint2: "Horror",
+    hint3: "2007",
+    hint4: "James Wan",
     clips: {
       "1": "/soundtracki/Martwa Cisza/Martwa_Cisza_1s.mp3",
       "3": "/soundtracki/Martwa Cisza/Martwa_Cisza_3s.mp3",
@@ -807,17 +807,17 @@ export const soundtrackiSongs: Song[] = [
     title: "Incepcja",
     artist: "",
     imageUrl: "/soundtracki/Incepcja/incepcja.jpg",
-    fullAudioSrc: "/soundtracki/Incepcja/Incepcja.mp3",
+    fullAudioSrc: "/soundtracki/Incepcja/Hans Zimmer - Incepcja.mp3",
     hint1: "Film",
     hint2: "Sci-Fi / Thriller",
     hint3: "2010",
     hint4: "Christopher Nolan",
     clips: {
-      "1": "/soundtracki/Incepcja/Incepcja_1s.mp3",
-      "3": "/soundtracki/Incepcja/Incepcja_3s.mp3",
-      "5": "/soundtracki/Incepcja/Incepcja_5s.mp3",
-      "10": "/soundtracki/Incepcja/Incepcja_10s.mp3",
-      "15": "/soundtracki/Incepcja/Incepcja_15s.mp3"
+      "1": "/soundtracki/Incepcja/Hans_Zimmer___Incepcja_1s.mp3",
+      "3": "/soundtracki/Incepcja/Hans_Zimmer___Incepcja_3s.mp3",
+      "5": "/soundtracki/Incepcja/Hans_Zimmer___Incepcja_5s.mp3",
+      "10": "/soundtracki/Incepcja/Hans_Zimmer___Incepcja_10s.mp3",
+      "15": "/soundtracki/Incepcja/Hans_Zimmer___Incepcja_15s.mp3"
     },
     lyrics: []
   },
@@ -1081,6 +1081,7 @@ export const soundtrackiSongs: Song[] = [
     },
     lyrics: []
   },
+  //doom zmien audio
   {
     id: 72,
     day: 72,
