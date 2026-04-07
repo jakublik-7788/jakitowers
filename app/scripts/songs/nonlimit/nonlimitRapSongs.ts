@@ -8193,7 +8193,7 @@ export const nonlimitRapSongs: Song[] = [
     day: 233,
     title: "Buzi",
     artist: "Young Igi",
-    audioSrc: "/233/Igi/233_Buzi.mp3",
+    audioSrc: "/Rap/Igi/233_Buzi.mp3",
     youtubeId: "Z6lGoiB9fqc",
     lyrics: [
       {
