@@ -121,13 +121,12 @@ const HintsSection = ({
                 <p className="text-[10px] md:text-xs font-bold text-white truncate">
                   {value}
                 </p>
-                <div
-                  className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1.5 bg-zinc-800 border border-white/15 rounded-lg text-[12px] font-bold text-white whitespace-nowrap z-50 shadow-xl
-    opacity-0 pointer-events-none group-hover/hint:opacity-100 transition-opacity duration-150"
-                >
-                  {value}
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-zinc-800" />
-                </div>
+                {value.length > 15 && (
+                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1.5 bg-zinc-800 border border-white/15 rounded-lg text-[12px] font-bold text-white whitespace-nowrap z-50 shadow-xl opacity-0 pointer-events-none group-hover/hint:opacity-100 transition-opacity duration-150">
+                    {value}
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-zinc-800" />
+                  </div>
+                )}
               </div>
             </div>
           </motion.div>
