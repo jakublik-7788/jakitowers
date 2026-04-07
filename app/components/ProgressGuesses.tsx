@@ -23,7 +23,9 @@ export const ProgressGuesses = ({
           bg: "bg-green-500/10",
           text: "text-green-400",
           shadow: "shadow-[0_0_12px_rgba(34,197,94,0.2)]",
-          icon: <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" />,
+          icon: (
+            <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" />
+          ),
           badge: "✓",
         };
       case "artist":
@@ -92,7 +94,9 @@ export const ProgressGuesses = ({
         const config = getStatusConfig(g.status);
         const isEmpty = g.status === "empty";
         const emptyLabel = `PRÓBA ${i + 1}`;
-        const { artist, title } = hasText ? splitDisplay(g.display) : { artist: "", title: "" };
+        const { artist, title } = hasText
+          ? splitDisplay(g.display)
+          : { artist: "", title: "" };
 
         return (
           <motion.div
@@ -100,7 +104,7 @@ export const ProgressGuesses = ({
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.15, delay: i * 0.03 }}
-            className={`relative w-full rounded-xl sm:rounded-2xl border-2 ${config.border} ${config.bg} ${!isEmpty ? config.shadow : ""} transition-all duration-200 overflow-hidden`}
+            className={`relative w-full rounded-xl sm:rounded-2xl border-2 ${config.border} ${config.bg} ${!isEmpty ? config.shadow : ""} transition-all duration-200`}
             // Wysokość dynamiczna – większa gdy mamy 2 linie tekstu
             style={{ minHeight: hasText && title ? "4rem" : "3.5rem" }}
           >
@@ -114,25 +118,45 @@ export const ProgressGuesses = ({
               <div className="flex-1 min-w-0 pr-2">
                 {!hasText ? (
                   // Puste pole
-                  <span className={`font-black tracking-wider uppercase block text-[10px] ${config.text}`}>
+                  <span
+                    className={`font-black tracking-wider uppercase block text-[10px] ${config.text}`}
+                  >
                     {emptyLabel}
                   </span>
                 ) : (
                   // Autor + Tytuł jeden pod drugim
-                  <div className="flex flex-col gap-0.5">
-                    <span
-                      className={`font-black tracking-wider uppercase truncate block leading-tight ${config.text}`}
-                      style={{ fontSize: artist.length > 25 ? "8px" : "10px" }}
-                    >
-                      {artist}
-                    </span>
-                    {title && (
+                  <div className="flex flex-col gap-0.5 group/text">
+                    <div className="relative">
                       <span
-                        className="font-semibold tracking-wide truncate block leading-tight text-white/80"
-                        style={{ fontSize: title.length > 30 ? "7px" : "9px" }}
+                        className={`font-black tracking-wider uppercase truncate block leading-tight ${config.text}`}
+                        style={{
+                          fontSize: artist.length > 25 ? "8px" : "10px",
+                        }}
                       >
-                        {title}
+                        {artist}
                       </span>
+                      {artist.length > 25 && (
+                        <div className="absolute bottom-full left-0 mb-1 px-2 py-1 bg-zinc-800 border border-white/10 rounded-lg text-white text-[10px] font-bold whitespace-nowrap opacity-0 group-hover/text:opacity-100 transition-opacity duration-150 pointer-events-none z-50 shadow-xl">
+                          {artist}
+                        </div>
+                      )}
+                    </div>
+                    {title && (
+                      <div className="relative">
+                        <span
+                          className="font-semibold tracking-wide truncate block leading-tight text-white/80"
+                          style={{
+                            fontSize: title.length > 30 ? "7px" : "9px",
+                          }}
+                        >
+                          {title}
+                        </span>
+                        {title.length > 30 && (
+                          <div className="absolute bottom-full left-0 mb-1 px-2 py-1 bg-zinc-800 border border-white/10 rounded-lg text-white text-[10px] font-bold whitespace-nowrap opacity-0 group-hover/text:opacity-100 transition-opacity duration-150 pointer-events-none z-50 shadow-xl">
+                            {title}
+                          </div>
+                        )}
+                      </div>
                     )}
                     {/* Status label */}
                     <span
@@ -160,11 +184,15 @@ export const ProgressGuesses = ({
             </div>
 
             {/* Pasek postępu dla aktywnej próby */}
-            {isEmpty && i === guesses.findIndex((g) => g.status === "empty") && (
-              <div className="absolute bottom-0 left-0 h-0.5 bg-accent/40 w-full">
-                <div className="h-full bg-accent animate-pulse" style={{ width: "100%" }} />
-              </div>
-            )}
+            {isEmpty &&
+              i === guesses.findIndex((g) => g.status === "empty") && (
+                <div className="absolute bottom-0 left-0 h-0.5 bg-accent/40 w-full">
+                  <div
+                    className="h-full bg-accent animate-pulse"
+                    style={{ width: "100%" }}
+                  />
+                </div>
+              )}
           </motion.div>
         );
       })}

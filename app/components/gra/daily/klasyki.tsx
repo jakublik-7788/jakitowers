@@ -99,7 +99,7 @@ const hasCommonArtist = (a: string, b: string): boolean => {
       .map(norm)
       .filter((x) => x.length > 1);
   return split(a).some((x) =>
-    split(b).some((y) => x.includes(y) || y.includes(x)),
+    split(b).some((y) => x === y),  // tylko ta jedna zmiana
   );
 };
 
