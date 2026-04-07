@@ -982,7 +982,12 @@ export default function NonLimitGame() {
   // ─── NOWE: seek do dowolnego wersu (rap i klasyki) ────────────────────────
   const handleSeek = useCallback(
     (time: number) => {
-      if (!audioRef.current || isFinishedRef.current || source === "soundtracki") return;
+      if (
+        !audioRef.current ||
+        isFinishedRef.current ||
+        source === "soundtracki"
+      )
+        return;
 
       if (!isStartedRef.current) setIsStarted(true);
 
@@ -1181,16 +1186,32 @@ export default function NonLimitGame() {
           border-radius: 10px;
         }
         @keyframes waveBar {
-          from { transform: scaleY(0.35); opacity: 0.45; }
-          to { transform: scaleY(1); opacity: 1; }
+          from {
+            transform: scaleY(0.35);
+            opacity: 0.45;
+          }
+          to {
+            transform: scaleY(1);
+            opacity: 1;
+          }
         }
         @keyframes waveform {
-          from { transform: scaleY(0.4); opacity: 0.5; }
-          to { transform: scaleY(1); opacity: 1; }
+          from {
+            transform: scaleY(0.4);
+            opacity: 0.5;
+          }
+          to {
+            transform: scaleY(1);
+            opacity: 1;
+          }
         }
         @keyframes pulseOpacity {
-          from { opacity: 0.04; }
-          to { opacity: 0.1; }
+          from {
+            opacity: 0.04;
+          }
+          to {
+            opacity: 0.1;
+          }
         }
       `}</style>
 
@@ -1333,6 +1354,7 @@ export default function NonLimitGame() {
 
             <div className="relative z-20 shrink-0 bg-gradient-to-t from-zinc-950 via-zinc-950/95 to-transparent pt-4 pb-4 px-4">
               <SearchBar
+                key={currentSong?.id}
                 isFinished={isFinished}
                 isStarted={isStarted}
                 inputValue={inputValue}
