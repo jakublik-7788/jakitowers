@@ -1187,7 +1187,7 @@ export const nonlimitSoundtrackiSongs: Song[] = [
     day: 60,
     title: "Ghost of Yōtei",
     artist: "",
-    imageUrl: "/soundtracki/Ghost of Yōtei/Yotei.jpg",
+    imageUrl: "/soundtracki/Ghost of Yōtei/Yoetei.jpg",
     fullAudioSrc: "/soundtracki/Ghost of Yōtei/Ghost of Yōtei.mp3",
     hint1: "Gra",
     hint2: "Akcja / Przygodowa",
