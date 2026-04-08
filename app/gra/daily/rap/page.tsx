@@ -1,29 +1,48 @@
-"use client";
+import { Metadata } from 'next';
+import RapDailyClientWrapper from './ClientWrapper';
 
-import dynamic from 'next/dynamic';
-import { Suspense } from 'react';
-
-// Dynamiczny import komponentu z components
-const DailyGameInner = dynamic(
-  () => import('@/app/components/gra/daily/rap').then(mod => mod.default),
-  { 
-    ssr: false,
-    loading: () => (
-      <div className="min-h-dvh bg-zinc-950 flex items-center justify-center">
-        <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
-      </div>
-    )
-  }
-);
+export const metadata: Metadata = {
+  title: 'RAP',
+  description: 'Codziennie nowy polski rapowy hit. Posłuchaj fragmentu, i odgadnij tytuł!',
+  openGraph: {
+    title: 'Codzienny Rap – Jaki To Wers',
+    description: 'Codziennie nowy utwór z polskiego rapu. Sprawdź swoją wiedzę i rywalizuj ze znajomymi.',
+    url: 'https://jakitowers.pl/gra/daily/rap',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://jakitowers.pl/gra/daily/rap',
+  },
+};
 
 export default function RapDailyPage() {
   return (
-    <Suspense fallback={
-      <div className="min-h-dvh bg-zinc-950 flex items-center justify-center">
-        <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
+    <>
+      <div className="sr-only" aria-hidden="true">
+        <h1>Codzienny Rap – Jaki To Wers</h1>
+        <p>
+          Każdego dnia nowy rapowy hit. Posłuchaj krótkiego fragmentu i odgadnij 
+          tytuł oraz wykonawcę. Masz 5 prób – każda błędna odsłania kolejny fragment tekstu.
+        </p>
       </div>
-    }>
-      <DailyGameInner />
-    </Suspense>
+      <RapDailyClientWrapper />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoGame",
+            "name": "Jaki To Wers – Rap Daily",
+            "description": "Codzienna gra polegająca na odgadywaniu polskich piosenek rapowych po fragmencie.",
+            "url": "https://jakitowers.pl/gra/daily/rap",
+            "gamePlatform": "Web Browser",
+            "numberOfPlayers": 1,
+            "gameMode": "Single player",
+            "applicationCategory": "Game",
+            "operatingSystem": "Any",
+          }),
+        }}
+      />
+    </>
   );
 }

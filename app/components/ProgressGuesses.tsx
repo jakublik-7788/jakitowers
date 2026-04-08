@@ -97,6 +97,8 @@ export const ProgressGuesses = ({
         const { artist, title } = hasText
           ? splitDisplay(g.display)
           : { artist: "", title: "" };
+        
+        const isActiveEmpty = isEmpty && i === guesses.findIndex((guess) => guess.status === "empty");
 
         return (
           <motion.div
@@ -104,7 +106,7 @@ export const ProgressGuesses = ({
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.15, delay: i * 0.03 }}
-            className={`relative w-full rounded-xl sm:rounded-2xl border-2 ${config.border} ${config.bg} ${!isEmpty ? config.shadow : ""} transition-all duration-200`}
+            className={`relative w-full rounded-xl sm:rounded-2xl border-2 ${config.border} ${config.bg} ${!isEmpty ? config.shadow : ""} transition-all duration-200 overflow-hidden`}
             // Wysokość dynamiczna – większa gdy mamy 2 linie tekstu
             style={{ minHeight: hasText && title ? "4rem" : "3.5rem" }}
           >
@@ -183,16 +185,15 @@ export const ProgressGuesses = ({
               </div>
             </div>
 
-            {/* Pasek postępu dla aktywnej próby */}
-            {isEmpty &&
-              i === guesses.findIndex((g) => g.status === "empty") && (
-                <div className="absolute bottom-0 left-0 h-0.5 bg-accent/40 w-full">
-                  <div
-                    className="h-full bg-accent animate-pulse"
-                    style={{ width: "100%" }}
-                  />
-                </div>
-              )}
+            {/* Pasek postępu dla aktywnej próby - teraz wewnątrz */}
+            {isActiveEmpty && (
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent/20">
+                <div
+                  className="h-full bg-accent animate-pulse"
+                  style={{ width: "100%" }}
+                />
+              </div>
+            )}
           </motion.div>
         );
       })}

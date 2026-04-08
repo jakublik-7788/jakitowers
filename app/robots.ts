@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: '/api/', // jeśli masz API
     },
     sitemap: 'https://jakitowers.pl/sitemap.xml',
   }

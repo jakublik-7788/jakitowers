@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: 'https://jakitowers.pl',
       lastModified: new Date(),
       changeFrequency: 'daily',
-      priority: 1,
+      priority: 1.0,
     },
     {
       url: 'https://jakitowers.pl/gra/daily/rap',
@@ -27,22 +27,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: 'https://jakitowers.pl/gra/nonlimit/rap',
+      url: 'https://jakitowers.pl/gra/nonlimit',
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.7,
+      priority: 0.8,
     },
-    {
-      url: 'https://jakitowers.pl/gra/nonlimit/klasyki',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: 'https://jakitowers.pl/gra/nonlimit/soundtracki',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-  ]
+  ];
 }

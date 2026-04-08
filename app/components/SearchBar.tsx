@@ -165,9 +165,13 @@ export const SearchBar = ({
           const filtered = allSongs
             .filter((s) => {
               if (next.has(getSuggestionKey(s))) return false;
-              const fullName = `${s.artist} - ${s.title}`.toLowerCase();
+              const songName =
+                songSource === "soundtracki" || !s.artist
+                  ? s.title.toLowerCase()
+                  : `${s.artist} - ${s.title}`.toLowerCase();
+
               const isAlreadyGuessed = guessedSongs.some(
-                (guess) => guess.toLowerCase() === fullName,
+                (guess) => guess.toLowerCase() === songName,
               );
               if (isAlreadyGuessed) return false;
               return matchesSong(s, searchTerm, normalizedSearchTerm);
@@ -196,9 +200,13 @@ export const SearchBar = ({
       const filtered = allSongs
         .filter((s) => {
           if (hiddenSuggestions.has(getSuggestionKey(s))) return false;
-          const fullName = `${s.artist} - ${s.title}`.toLowerCase();
+          const songName =
+            songSource === "soundtracki" || !s.artist
+              ? s.title.toLowerCase()
+              : `${s.artist} - ${s.title}`.toLowerCase();
+
           const isAlreadyGuessed = guessedSongs.some(
-            (guess) => guess.toLowerCase() === fullName,
+            (guess) => guess.toLowerCase() === songName,
           );
           if (isAlreadyGuessed) return false;
           return matchesSong(s, searchTerm, normalizedSearchTerm);
@@ -211,7 +219,10 @@ export const SearchBar = ({
   };
 
   const handleSelectSuggestion = (s: { title: string; artist: string }) => {
-    const valueToSet = s.artist ? `${s.artist} - ${s.title}` : s.title;
+    const valueToSet =
+      songSource === "soundtracki" || !s.artist
+        ? s.title
+        : `${s.artist} - ${s.title}`;
     setInputValue(valueToSet);
     setSuggestions([]);
     setSelectedIndex(-1);

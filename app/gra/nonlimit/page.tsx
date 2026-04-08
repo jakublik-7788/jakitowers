@@ -1,28 +1,47 @@
-"use client";
+import { Metadata } from 'next';
+import NonLimitClientWrapper from './ClientWrapper';
 
-import dynamic from 'next/dynamic';
-import { Suspense } from 'react';
-
-const NonLimitGame = dynamic(
-  () => import('@/app/components/gra/nonlimit').then(mod => mod.default),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="min-h-dvh bg-zinc-950 flex items-center justify-center">
-        <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
-      </div>
-    )
-  }
-);
+export const metadata: Metadata = {
+  title: 'Non-Limit',
+  description: 'Graj bez limitu w trybach RAP, KLASYKI i SOUNDTRACKI. Losowe piosenki, serie zwycięstw i lokalne rekordy. Nieograniczona zabawa!',
+  openGraph: {
+    title: 'Jaki To Wers - Non-Limit',
+    description: 'Nielimitowana wersja gry – graj ile chcesz, wybierz źródło i bij własne rekordy serii.',
+    url: 'https://jakitowers.pl/gra/nonlimit',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://jakitowers.pl/gra/nonlimit',
+  },
+};
 
 export default function NonLimitPage() {
   return (
-    <Suspense fallback={
-      <div className="min-h-dvh bg-zinc-950 flex items-center justify-center">
-        <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
+    <>
+      <div className="sr-only" aria-hidden="true">
+        <h1>Non‑Limit – Nielimitowana gra muzyczna Jaki To Wers</h1>
+        <p>
+          Wybierz tryb: Rap, Klasyki lub Soundtracki. Graj bez ograniczeń. 
+          zdobywaj serie wygranych i poprawiaj swoje wyniki.
+        </p>
       </div>
-    }>
-      <NonLimitGame />
-    </Suspense>
+      <NonLimitClientWrapper />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoGame",
+            "name": "Jaki To Wers – Non‑Limit",
+            "description": "Nielimitowana wersja gry muzycznej z trzema trybami: Rap, Klasyki, Soundtracki. Losowe utwory, serie zwycięstw.",
+            "url": "https://jakitowers.pl/gra/nonlimit",
+            "gamePlatform": "Web Browser",
+            "numberOfPlayers": 1,
+            "gameMode": "Single player",
+            "applicationCategory": "Game",
+          }),
+        }}
+      />
+    </>
   );
 }

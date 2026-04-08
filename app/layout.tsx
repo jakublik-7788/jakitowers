@@ -17,13 +17,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://jakitowers.pl'),
   title: {
-    default: "Jaki To Wers | Codzienna gra muzyczna",
-    template: "%s | JAKITOWERS",
+    default: "Jaki To Wers - Codzienna gra muzyczna",
+    template: "%s | Jaki To Wers",
   },
-  description: "Jaki To Wers? Zgadnij piosenkę z polskiego rapu, klasyków i soundtracków. Nowe wyzwanie codziennie o północy. Graj na JAKITOWERS!",
+  description: "Jaki To Wers - Codzienna muzyczna gra onlina. Zgaduj utwór z rapu, polskich klasyków oraz słynnych soundtracków.",
   openGraph: {
-    title: "Jaki To Wers | Codzienna gra muzyczna",
-    description: "Jaki To Wers? Zgadnij piosenkę z polskiego rapu, klasyków i soundtracków. Nowe wyzwanie codziennie o północy.",
+    title: "Jaki To Wers - Codzienna gra muzyczna",
+    description: "Jaki To Wers - Codzienna muzyczna gra onlina. Zgaduj utwór z rapu, polskich klasyków oraz słynnych soundtracków.",
     url: "https://jakitowers.pl",
     siteName: "JAKITOWERS",
     locale: "pl_PL",
@@ -58,7 +58,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pl">
+    // DODAJ suppressHydrationWarning TUTAJ
+    <html lang="pl" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -66,10 +67,13 @@ export default function RootLayout({
               try {
                 var c = localStorage.getItem('jakitowers_accent_color');
                 if (c && /^#[0-9a-fA-F]{6}$/.test(c)) {
-                  document.documentElement.style.setProperty('--accent-main', c);
-                  var r = parseInt(c.slice(1,3),16), g = parseInt(c.slice(3,5),16), b = parseInt(c.slice(5,7),16);
-                  document.documentElement.style.setProperty('--accent-glow', 'rgba('+r+','+g+','+b+',0.4)');
-                  document.documentElement.style.setProperty('--accent-glow-strong', 'rgba('+r+','+g+','+b+',0.2)');
+                  var root = document.documentElement;
+                  root.style.setProperty('--accent-main', c);
+                  var r = parseInt(c.slice(1,3),16), 
+                      g = parseInt(c.slice(3,5),16), 
+                      b = parseInt(c.slice(5,7),16);
+                  root.style.setProperty('--accent-glow', 'rgba('+r+','+g+','+b+',0.4)');
+                  root.style.setProperty('--accent-glow-strong', 'rgba('+r+','+g+','+b+',0.2)');
                 }
               } catch(e) {}
             `,
@@ -89,8 +93,7 @@ export default function RootLayout({
       >
         <AmbientGlow />
         <main className="relative z-10">{children}</main>
-        <ClientCursorWrapper /> {/* tutaj używamy wrappera */}
-        {/* <PreLaunchOverlay /> */}
+        <ClientCursorWrapper />
       </body>
     </html>
   );
