@@ -545,7 +545,7 @@ const EndModal = ({
           <h2
             className={`text-3xl md:text-4xl font-[1000] italic uppercase tracking-tighter mb-0.5 text-center ${status === "win" ? "text-green-400" : "text-red-500"}`}
           >
-            {status === "win" ? "ZGADNIĘTE!" : "NIESTETY..."}
+            {status === "win" ? "GRATULACJE!" : "NIESTETY..."}
           </h2>
           <p className="text-zinc-500 text-[10px] font-black tracking-[0.3em] uppercase mb-4 text-center">
             {status === "win"

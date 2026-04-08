@@ -546,7 +546,7 @@ const RoundResult = ({
           {status === "win" ? "GRATULACJE!" : "NIESTETY..."}
         </h2>
         <p className="text-zinc-500 text-[10px] font-black tracking-[0.3em] uppercase mb-4">
-          {status === "win" ? "ODGADNIĘTE!" : "Nie tym razem.."}
+          {status === "win" ? "ZGADNIĘTE!" : "Nie tym razem.."}
         </p>
         {streak > 0 && (
           <motion.div

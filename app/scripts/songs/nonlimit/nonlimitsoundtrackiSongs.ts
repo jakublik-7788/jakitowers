@@ -906,7 +906,7 @@ export const nonlimitSoundtrackiSongs: Song[] = [
     day: 46,
     title: "ASTRO BOT",
     artist: "",
-    imageUrl: "/soundtracki/ASTRO BOT/ASTROBOT.JPG",
+    imageUrl: "/soundtracki/ASTRO BOT/ASTROBOT.jpg",
     fullAudioSrc: "/soundtracki/ASTRO BOT/ASTRO BOT.mp3",
     hint1: "Gra",
     hint2: "Platformowa",
