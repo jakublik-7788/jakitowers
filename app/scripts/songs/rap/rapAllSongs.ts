@@ -70,7 +70,7 @@ export const rapAllSongs: SongSuggestion[] = [
   { title: "Mini Man", artist: "Okekel" },
   { title: "Hit ’Em Up", artist: "Bedoes 2115" },
   { title: "Puerto Bounce", artist: "Żabson, ZetHa, Kizo" },
-  { title: "Rura musi yeah", artist: "Malik Montana, Kazior" },
+  { title: "Rura musi yeah", artist: "Tax Free, Malik Montana, Kazior" },
   { title: "All Day Everyday (Łee)", artist: "Kaz Bałagane" },
   { title: "Impreza", artist: "Sobel" },
   { title: "Comme Des Garçons", artist: "Chivas" },
