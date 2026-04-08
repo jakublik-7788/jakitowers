@@ -169,7 +169,7 @@ export const nonlimitRapAllSongs: SongSuggestion[] = [
   },
   { title: "Polski Karnawał", artist: "Żabson, Young Igi" },
   { title: "Czarne BMW", artist: "Kukon, Magiera, Avi" },
-  { title: "Dom Nad Wodą", artist: "Pezet" },
+  { title: "Dom Nad Wodą", artist: "Pezet, Wani" },
   { title: "KING", artist: "Malik Montana, Lanberry" },
   { title: "up! up! up!", artist: "Mata" },
   { title: "Hinata", artist: "Szpaku" },

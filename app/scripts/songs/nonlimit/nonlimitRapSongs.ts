@@ -4995,7 +4995,7 @@ export const nonlimitRapSongs: Song[] = [
     id: 141,
     day: 141,
     title: "Dom Nad Wodą",
-    artist: "Pezet",
+    artist: "Pezet, Wani",
     audioSrc: "/Rap/Pezet/141_DomNadWodą.mp3",
     youtubeId: "KaIsU6kSh90",
     lyrics: [
