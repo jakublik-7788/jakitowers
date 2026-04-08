@@ -12172,7 +12172,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "Ostatnia wieczerza",
     artist: "Białas, Lanek",
     audioSrc: "/Rap/Bialas/345_Ostatnia_wieczerza.mp3",
-    youtubeId: "SKquO6pMEM",
+    youtubeId: "-SKquO6pMEM",
     lyrics: [
       {
         lineIndex: 0,
