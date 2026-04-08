@@ -17,10 +17,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://jakitowers.pl'),
   title: {
-    default: "Jaki To Wers | Codzienna gra muzyczna",
+    default: "Jaki To Wers - Codzienna gra muzyczna",
     template: "%s | JAKITOWERS",
   },
-  description: "Jaki To Wers? Zgadnij piosenkę z polskiego rapu, klasyków i soundtracków. Nowe wyzwanie codziennie o północy. Graj na JAKITOWERS!",
+  description: "Jaki to wers? Codzienna piosenka z polskiego rapu, polskich klasyków i słynnych soundtracków.",
   openGraph: {
     title: "Jaki To Wers | Codzienna gra muzyczna",
     description: "Jaki To Wers? Zgadnij piosenkę z polskiego rapu, klasyków i soundtracków. Nowe wyzwanie codziennie o północy.",

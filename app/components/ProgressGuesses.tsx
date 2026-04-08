@@ -130,12 +130,12 @@ export const ProgressGuesses = ({
                       <span
                         className={`font-black tracking-wider uppercase truncate block leading-tight ${config.text}`}
                         style={{
-                          fontSize: artist.length > 25 ? "8px" : "10px",
+                          fontSize: artist.length > 53 ? "8px" : "10px",
                         }}
                       >
                         {artist}
                       </span>
-                      {artist.length > 25 && (
+                      {artist.length > 53 && (
                         <div className="absolute bottom-full left-0 mb-1 px-2 py-1 bg-zinc-800 border border-white/10 rounded-lg text-white text-[10px] font-bold whitespace-nowrap opacity-0 group-hover/text:opacity-100 transition-opacity duration-150 pointer-events-none z-50 shadow-xl">
                           {artist}
                         </div>
@@ -146,12 +146,12 @@ export const ProgressGuesses = ({
                         <span
                           className="font-semibold tracking-wide truncate block leading-tight text-white/80"
                           style={{
-                            fontSize: title.length > 30 ? "7px" : "9px",
+                            fontSize: title.length > 53 ? "7px" : "9px",
                           }}
                         >
                           {title}
                         </span>
-                        {title.length > 30 && (
+                        {title.length > 53 && (
                           <div className="absolute bottom-full left-0 mb-1 px-2 py-1 bg-zinc-800 border border-white/10 rounded-lg text-white text-[10px] font-bold whitespace-nowrap opacity-0 group-hover/text:opacity-100 transition-opacity duration-150 pointer-events-none z-50 shadow-xl">
                             {title}
                           </div>
