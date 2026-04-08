@@ -1481,7 +1481,7 @@ export const rapSongs: Song[] = [
     day: 41,
     title: "La Vida Loca",
     artist: "White 2115",
-    audioSrc: "/RapWhite 2115/41_La.mp3",
+    audioSrc: "/Rap/White 2115/41_La.mp3",
     youtubeId: "OUNkvORWKIU",
     lyrics: [
       {
