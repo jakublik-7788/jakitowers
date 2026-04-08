@@ -448,7 +448,7 @@ export const soundtrackiSongs: Song[] = [
     artist: "",
     imageUrl: "/soundtracki/Martwa Cisza/martwacisza.jpg",
     fullAudioSrc: "/soundtracki/Martwa Cisza/Martwa Cisza.mp3",
-    hint1: "Dead Silence",
+    hint1: "Film",
     hint2: "Horror",
     hint3: "2007",
     hint4: "James Wan",
