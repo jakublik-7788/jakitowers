@@ -1346,7 +1346,7 @@ export default function NonLimitGame() {
                     )}
                   </div>
                   <div className="w-full md:flex-1 flex justify-center">
-                    <ProgressGuesses guesses={guesses} gameMode="nonlimit" />
+                    <ProgressGuesses guesses={guesses} gameMode="nonlimit"  />
                   </div>
                 </div>
               </div>

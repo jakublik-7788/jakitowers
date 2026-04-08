@@ -9,11 +9,13 @@ interface ProgressGuessesProps {
     status: "correct" | "wrong" | "skipped" | "empty" | "artist";
   }[];
   gameMode?: "daily" | "nonlimit";
+  isGameFinished?: boolean; // nowy prop – czy gra już zakończona
 }
 
 export const ProgressGuesses = ({
   guesses,
   gameMode = "daily",
+  isGameFinished = false,
 }: ProgressGuessesProps) => {
   const getStatusConfig = (status: string) => {
     switch (status) {
@@ -79,6 +81,9 @@ export const ProgressGuesses = ({
     return { artist: display, title: "" };
   };
 
+  // Znajdź indeks pierwszej pustej próby (jeśli gra nie jest zakończona)
+  const firstEmptyIndex = guesses.findIndex((g) => g.status === "empty");
+
   return (
     <div className="w-full max-w-sm flex flex-col gap-3 sm:gap-4">
       {/* Nagłówek */}
@@ -98,7 +103,8 @@ export const ProgressGuesses = ({
           ? splitDisplay(g.display)
           : { artist: "", title: "" };
         
-        const isActiveEmpty = isEmpty && i === guesses.findIndex((guess) => guess.status === "empty");
+        // Aktywna próba = pierwsza pusta i gra NIE jest zakończona
+        const isActiveEmpty = isEmpty && i === firstEmptyIndex && !isGameFinished;
 
         return (
           <motion.div
@@ -107,7 +113,6 @@ export const ProgressGuesses = ({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.15, delay: i * 0.03 }}
             className={`relative w-full rounded-xl sm:rounded-2xl border-2 ${config.border} ${config.bg} ${!isEmpty ? config.shadow : ""} transition-all duration-200 overflow-hidden`}
-            // Wysokość dynamiczna – większa gdy mamy 2 linie tekstu
             style={{ minHeight: hasText && title ? "4rem" : "3.5rem" }}
           >
             {/* Numer próby w tle */}
@@ -119,14 +124,12 @@ export const ProgressGuesses = ({
             <div className="relative z-10 flex items-center justify-between w-full h-full px-3 sm:px-4 py-2">
               <div className="flex-1 min-w-0 pr-2">
                 {!hasText ? (
-                  // Puste pole
                   <span
                     className={`font-black tracking-wider uppercase block text-[10px] ${config.text}`}
                   >
                     {emptyLabel}
                   </span>
                 ) : (
-                  // Autor + Tytuł jeden pod drugim
                   <div className="flex flex-col gap-0.5 group/text">
                     <div className="relative">
                       <span
@@ -160,7 +163,6 @@ export const ProgressGuesses = ({
                         )}
                       </div>
                     )}
-                    {/* Status label */}
                     <span
                       className={`text-[6px] sm:text-[7px] font-black uppercase tracking-wider opacity-60 mt-0.5 block ${config.text}`}
                     >
@@ -185,7 +187,7 @@ export const ProgressGuesses = ({
               </div>
             </div>
 
-            {/* Pasek postępu dla aktywnej próby - teraz wewnątrz */}
+            {/* Pasek postępu – tylko dla aktywnej próby i gdy gra NIE jest zakończona */}
             {isActiveEmpty && (
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent/20">
                 <div

@@ -1062,7 +1062,7 @@ export default function KlasykiPage() {
 
         <div className="w-full md:w-1/2 flex items-center justify-center">
           <div className="w-full max-w-[280px] sm:max-w-md">
-            <ProgressGuesses guesses={guesses} />
+            <ProgressGuesses guesses={guesses} isGameFinished={isFinished} />
           </div>
         </div>
       </div>

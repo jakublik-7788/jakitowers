@@ -1229,7 +1229,7 @@ export default function DailySoundtracki() {
         </div>
 
         <div className="w-full md:w-1/2 flex justify-center">
-          <ProgressGuesses guesses={guesses} />
+          <ProgressGuesses guesses={guesses} isGameFinished={isFinished} />
         </div>
       </div>
 
