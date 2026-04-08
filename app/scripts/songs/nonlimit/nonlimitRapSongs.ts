@@ -2507,29 +2507,29 @@ export const nonlimitRapSongs: Song[] = [
         lineIndex: 0,
         words: [
           {
-            text: "Wielu z nich chyba serio już nie rozumiem",
-            start: 0.0,
-            end: 3.49,
-          },
-          {
-            text: "Kiedy jestem sam, znowu czuję, że ginę",
-            start: 3.49,
-            end: 6.07,
-          },
-          {
-            text: "Gubię się w tym, gubię furię",
-            start: 6.07,
-            end: 8.31,
-          },
-          {
             text: "Nie pytaj czemu rzadko tak widujesz mnie w tym klubie",
-            start: 8.31,
-            end: 11.96,
+            start: 0.05,
+            end: 3.7,
           },
           {
             text: "Stres mnie ciągle budzi, choć ciągle więcej chcę",
-            start: 11.96,
-            end: 15.46,
+            start: 3.7,
+            end: 7.23,
+          },
+          {
+            text: "Nie analizuję, co dobre, a co złe",
+            start: 7.23,
+            end: 10.22,
+          },
+          {
+            text: "Ważniejsze sprawy wjechały na banie mi na szczęście",
+            start: 10.22,
+            end: 13.71,
+          },
+          {
+            text: "A nadal gonię, jakbym sam nie wiedział co to szczęście",
+            start: 13.71,
+            end: 13.71, // brak kolejnego timestampu
           },
         ],
       },
@@ -8388,25 +8388,29 @@ export const nonlimitRapSongs: Song[] = [
         lineIndex: 0,
         words: [
           {
-            text: "Wielu z nich chyba serio już nie rozumiem",
-            start: 0.0,
-            end: 3.49,
-          },
-          {
-            text: "Kiedy jestem sam, znowu czuję, że ginę",
-            start: 3.49,
-            end: 6.07,
-          },
-          { text: "Gubię się w tym, gubię furię", start: 6.07, end: 8.31 },
-          {
             text: "Nie pytaj czemu rzadko tak widujesz mnie w tym klubie",
-            start: 8.31,
-            end: 11.96,
+            start: 0.05,
+            end: 3.7,
           },
           {
             text: "Stres mnie ciągle budzi, choć ciągle więcej chcę",
-            start: 11.96,
-            end: 15.46,
+            start: 3.7,
+            end: 7.23,
+          },
+          {
+            text: "Nie analizuję, co dobre, a co złe",
+            start: 7.23,
+            end: 10.22,
+          },
+          {
+            text: "Ważniejsze sprawy wjechały na banie mi na szczęście",
+            start: 10.22,
+            end: 13.71,
+          },
+          {
+            text: "A nadal gonię, jakbym sam nie wiedział co to szczęście",
+            start: 13.71,
+            end: 17, 
           },
         ],
       },
@@ -12447,8 +12451,7 @@ export const nonlimitRapSongs: Song[] = [
     day: 342,
     title: "Nowe Szklane Domy",
     artist: "Kaz Bałagane, @atutowy, Taco Hemingway",
-    audioSrc:
-      "/Rap/KazBalagane/343_Nowe_Szklane_Domy.mp3",
+    audioSrc: "/Rap/KazBalagane/343_Nowe_Szklane_Domy.mp3",
     youtubeId: "Bv7ez_6Y_EE",
     lyrics: [
       {
