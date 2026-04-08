@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle2, XCircle, SkipForward, UserCheck } from "lucide-react";
+import { useState } from "react";
 
 interface ProgressGuessesProps {
   guesses: {
@@ -9,7 +10,7 @@ interface ProgressGuessesProps {
     status: "correct" | "wrong" | "skipped" | "empty" | "artist";
   }[];
   gameMode?: "daily" | "nonlimit";
-  isGameFinished?: boolean; // nowy prop – czy gra już zakończona
+  isGameFinished?: boolean;
 }
 
 export const ProgressGuesses = ({
@@ -17,6 +18,10 @@ export const ProgressGuesses = ({
   gameMode = "daily",
   isGameFinished = false,
 }: ProgressGuessesProps) => {
+  const [hoveredArtist, setHoveredArtist] = useState<number | null>(null);
+  const [hoveredTitle, setHoveredTitle] = useState<number | null>(null);
+  const [tooltipPosition, setTooltipPosition] = useState<{ top: number; left: number } | null>(null);
+
   const getStatusConfig = (status: string) => {
     switch (status) {
       case "correct":
@@ -69,7 +74,6 @@ export const ProgressGuesses = ({
     }
   };
 
-  // Rozbija "Autor - Tytuł" na dwie części
   const splitDisplay = (display: string): { artist: string; title: string } => {
     const dashIndex = display.indexOf(" - ");
     if (dashIndex !== -1) {
@@ -81,19 +85,34 @@ export const ProgressGuesses = ({
     return { artist: display, title: "" };
   };
 
-  // Znajdź indeks pierwszej pustej próby (jeśli gra nie jest zakończona)
   const firstEmptyIndex = guesses.findIndex((g) => g.status === "empty");
+
+  const handleArtistHover = (i: number, e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setTooltipPosition({
+      top: rect.top - 8,
+      left: rect.left,
+    });
+    setHoveredArtist(i);
+  };
+
+  const handleTitleHover = (i: number, e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setTooltipPosition({
+      top: rect.top - 8,
+      left: rect.left,
+    });
+    setHoveredTitle(i);
+  };
 
   return (
     <div className="w-full max-w-sm flex flex-col gap-3 sm:gap-4">
-      {/* Nagłówek */}
       <div className="flex items-center justify-center mb-1 px-1">
         <p className="text-[10px] sm:text-[12px] font-black text-accent tracking-[0.3em] sm:tracking-[0.7em] uppercase">
           HISTORIA PRÓB
         </p>
       </div>
 
-      {/* Lista prób */}
       {guesses.map((g, i) => {
         const hasText = !!g.display;
         const config = getStatusConfig(g.status);
@@ -103,8 +122,9 @@ export const ProgressGuesses = ({
           ? splitDisplay(g.display)
           : { artist: "", title: "" };
         
-        // Aktywna próba = pierwsza pusta i gra NIE jest zakończona
         const isActiveEmpty = isEmpty && i === firstEmptyIndex && !isGameFinished;
+        const isArtistTooLong = artist.length > 53;
+        const isTitleTooLong = title.length > 53;
 
         return (
           <motion.div
@@ -115,12 +135,10 @@ export const ProgressGuesses = ({
             className={`relative w-full rounded-xl sm:rounded-2xl border-2 ${config.border} ${config.bg} ${!isEmpty ? config.shadow : ""} transition-all duration-200 overflow-hidden`}
             style={{ minHeight: hasText && title ? "4rem" : "3.5rem" }}
           >
-            {/* Numer próby w tle */}
             <div className="absolute left-3 top-1/2 -translate-y-1/2 text-4xl sm:text-5xl font-black opacity-[0.04] pointer-events-none select-none">
               {i + 1}
             </div>
 
-            {/* Treść */}
             <div className="relative z-10 flex items-center justify-between w-full h-full px-3 sm:px-4 py-2">
               <div className="flex-1 min-w-0 pr-2">
                 {!hasText ? (
@@ -130,39 +148,41 @@ export const ProgressGuesses = ({
                     {emptyLabel}
                   </span>
                 ) : (
-                  <div className="flex flex-col gap-0.5 group/text">
-                    <div className="relative">
+                  <div className="flex flex-col gap-0.5">
+                    {/* Autor z tooltipem */}
+                    <div 
+                      className="relative inline-block w-full"
+                      onMouseEnter={(e) => isArtistTooLong && handleArtistHover(i, e)}
+                      onMouseLeave={() => setHoveredArtist(null)}
+                    >
                       <span
                         className={`font-black tracking-wider uppercase truncate block leading-tight ${config.text}`}
                         style={{
-                          fontSize: artist.length > 53 ? "8px" : "10px",
+                          fontSize: isArtistTooLong ? "8px" : "10px",
                         }}
                       >
                         {artist}
                       </span>
-                      {artist.length > 53 && (
-                        <div className="absolute bottom-full left-0 mb-1 px-2 py-1 bg-zinc-800 border border-white/10 rounded-lg text-white text-[10px] font-bold whitespace-nowrap opacity-0 group-hover/text:opacity-100 transition-opacity duration-150 pointer-events-none z-50 shadow-xl">
-                          {artist}
-                        </div>
-                      )}
                     </div>
+
+                    {/* Tytuł z tooltipem */}
                     {title && (
-                      <div className="relative">
+                      <div 
+                        className="relative inline-block w-full"
+                        onMouseEnter={(e) => isTitleTooLong && handleTitleHover(i, e)}
+                        onMouseLeave={() => setHoveredTitle(null)}
+                      >
                         <span
                           className="font-semibold tracking-wide truncate block leading-tight text-white/80"
                           style={{
-                            fontSize: title.length > 53 ? "7px" : "9px",
+                            fontSize: isTitleTooLong ? "7px" : "9px",
                           }}
                         >
                           {title}
                         </span>
-                        {title.length > 53 && (
-                          <div className="absolute bottom-full left-0 mb-1 px-2 py-1 bg-zinc-800 border border-white/10 rounded-lg text-white text-[10px] font-bold whitespace-nowrap opacity-0 group-hover/text:opacity-100 transition-opacity duration-150 pointer-events-none z-50 shadow-xl">
-                            {title}
-                          </div>
-                        )}
                       </div>
                     )}
+
                     <span
                       className={`text-[6px] sm:text-[7px] font-black uppercase tracking-wider opacity-60 mt-0.5 block ${config.text}`}
                     >
@@ -175,7 +195,6 @@ export const ProgressGuesses = ({
                 )}
               </div>
 
-              {/* Ikona statusu */}
               <div className="ml-2 shrink-0">
                 {config.icon ? (
                   config.icon
@@ -187,7 +206,6 @@ export const ProgressGuesses = ({
               </div>
             </div>
 
-            {/* Pasek postępu – tylko dla aktywnej próby i gdy gra NIE jest zakończona */}
             {isActiveEmpty && (
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent/20">
                 <div
@@ -199,6 +217,21 @@ export const ProgressGuesses = ({
           </motion.div>
         );
       })}
+
+      {/* Globalny tooltip – renderowany poza kontenerami */}
+      {(hoveredArtist !== null || hoveredTitle !== null) && tooltipPosition && (
+        <div
+          className="fixed px-2 py-1 bg-zinc-800 border border-white/10 rounded-lg text-white text-[10px] font-bold whitespace-nowrap z-[9999] shadow-xl pointer-events-none"
+          style={{
+            top: tooltipPosition.top,
+            left: tooltipPosition.left,
+            transform: 'translateY(-100%)',
+          }}
+        >
+          {hoveredArtist !== null && guesses[hoveredArtist] && splitDisplay(guesses[hoveredArtist].display).artist}
+          {hoveredTitle !== null && guesses[hoveredTitle] && splitDisplay(guesses[hoveredTitle].display).title}
+        </div>
+      )}
     </div>
   );
 };
