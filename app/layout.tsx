@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ClientCursorWrapper } from "./components/ClientCursorWrapper"; // nowy import
-import { PreLaunchOverlay } from "./components/PreLaunchOverlay";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
