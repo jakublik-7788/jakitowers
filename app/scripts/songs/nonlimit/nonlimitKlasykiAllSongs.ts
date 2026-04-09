@@ -67,7 +67,7 @@ export const nonlimitKlasykiAllSongs: SongSuggestion[] = [
   { title: "Zostawcie titanica", artist: "Lady Pank" },
   { title: "King Bruce Lee Karate Mistrz", artist: "Franek Kimono" },
   { title: "Hi-Fi", artist: "Wanda i Banda" },
-  { title: "Cykady na Cykladach - 2011 Remaster", artist: "Maanam" },
+  { title: "Cykady na Cykladach", artist: "Maanam" },
   { title: "Ostatni raz zatańczysz ze mną", artist: "Krzysztof Krawczyk" },
   { title: "Długość dźwięku samotności", artist: "Myslovitz" },
   { title: "Makumba", artist: "Big Cyc" },
