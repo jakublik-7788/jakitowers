@@ -16,7 +16,7 @@ export const nonlimitKlasykiAllSongs: SongSuggestion[] = [
     title: "Zawsze Z Toba Chcialbym Byc... (Przez Miesiac :) )",
     artist: "Ich Troje",
   },
-  { title: "Gdy nie madzieci", artist: "Kult" },
+  { title: "Gdy nie ma dzieci", artist: "Kult" },
   { title: "Dla Mnie Masz Stajla", artist: "Trzeci Wymiar" },
   { title: "Jej czarne oczy", artist: "Ivan i Delfin" },
   { title: "Ale Wkoło Jest Wesoło", artist: "Perfect" },
