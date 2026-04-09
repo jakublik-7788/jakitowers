@@ -387,7 +387,7 @@ export const nonlimitRapAllSongs: SongSuggestion[] = [
   { title: "Czerwony Rum", artist: "Słoń, Chris Carson" },
   { title: "UPS", artist: "Belmondo, GSP, Bajorson" },
   { title: "Kontrola Jakości", artist: "Paluch, Szpaku" },
-  { title: "Niedostępny prod by Olek", artist: "Malik Montana, OLEK, DMN" },
+  { title: "Niedostępny", artist: "Malik Montana, OLEK, DMN" },
   { title: "Święto ogródka", artist: "Białas, White 2115" },
   { title: "Kortyzol", artist: "Onar, Kabe, Kizo" },
   { title: "Cesarz", artist: "KęKę" },
