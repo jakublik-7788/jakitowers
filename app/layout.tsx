@@ -27,9 +27,23 @@ export const metadata: Metadata = {
     siteName: "JAKITOWERS",
     locale: "pl_PL",
     type: "website",
+     images: [
+      {
+        url: "/Logo1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Jaki To Wers – Codzienna gra muzyczna",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jaki To Wers - Codzienna gra muzyczna",
+    description: "Jaki To Wers - Codzienna muzyczna gra online. Zgaduj utwór z rapu, polskich klasyków oraz słynnych soundtracków.",
+    images: ["/LogoTwitter.jpg"],
   },
   robots: "index, follow",
-  keywords: "jaki to wers, jakitowers, jaki to wers gra, zgadnij piosenkę, polski rap gra, codzienna gra muzyczna, rapdle, rap quiz, hip hop gra, jaki to wers online",
+  keywords: "jaki to wers, jakitowers, jaki to wers gra, zgadnij piosenkę, polski rap gra, codzienna gra muzyczna, rapdle, rap quiz, hip hop gra, jaki to wers online, hit, co to za hit, cotozahit, 100hitow, 100 hitow",
 };
 
 
