@@ -359,10 +359,10 @@ export const nonlimitRapSongs: Song[] = [
   {
     id: 11,
     day: 11,
-    title: "Hit ’Em Up",
-    artist: "Bedoes 2115",
-    audioSrc: "/11_Hit 'Em Up.mp3",
-    youtubeId: "EMAZETA-bXU",
+    title: "Plaster",
+    artist: "Szpaku, Deemz",
+    audioSrc: "/Rap/Szpaku/11_Plaster.mp3",
+    youtubeId: "1jqkDDh0v6o",
     lyrics: [
       {
         lineIndex: 0,

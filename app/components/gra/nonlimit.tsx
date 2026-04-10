@@ -91,8 +91,8 @@ const hasCommonArtist = (a: string, b: string): boolean => {
       .split(/[,&(]/)
       .map(norm)
       .filter((x) => x.length > 1);
-  return split(a).some((x) =>
-    split(b).some((y) => x === y),  // tylko ta jedna zmiana
+  return split(a).some(
+    (x) => split(b).some((y) => x === y), // tylko ta jedna zmiana
   );
 };
 
@@ -1105,7 +1105,8 @@ export default function NonLimitGame() {
     } else {
       const isCorrect = isSoundtracki
         ? norm(songInDb.title) === norm(currentSong.title)
-        : songInDb.title.toLowerCase() === currentSong.title.toLowerCase();
+        : songInDb.title.toLowerCase() === currentSong.title.toLowerCase() &&
+          hasCommonArtist(songInDb.artist, currentSong.artist ?? "");
       const artistMatch =
         !isCorrect &&
         !isSoundtracki &&
@@ -1346,7 +1347,7 @@ export default function NonLimitGame() {
                     )}
                   </div>
                   <div className="w-full md:flex-1 flex justify-center">
-                    <ProgressGuesses guesses={guesses} gameMode="nonlimit"  />
+                    <ProgressGuesses guesses={guesses} gameMode="nonlimit" />
                   </div>
                 </div>
               </div>
