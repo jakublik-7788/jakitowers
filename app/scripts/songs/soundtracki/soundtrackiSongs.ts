@@ -107,7 +107,7 @@ export const soundtrackiSongs: Song[] = [
     title: "Breaking Bad",
     artist: "",
     imageUrl: "/soundtracki/Breaking Bad Main/breakingbad.jpg",
-    fullAudioSrc: "/soundtracki/Breaking Bad Main/Breaking Bad.mp3",
+    fullAudioSrc: "/soundtracki/Breaking Bad Main/Breaking Bad Main.mp3",
     hint1: "Serial",
     hint2: "Kryminał / Dramat",
     hint3: "2008",
