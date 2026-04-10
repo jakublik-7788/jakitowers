@@ -2529,7 +2529,7 @@ export const nonlimitRapSongs: Song[] = [
           {
             text: "A nadal gonię, jakbym sam nie wiedział co to szczęście",
             start: 13.71,
-            end: 13.71, // brak kolejnego timestampu
+            end: 17, // brak kolejnego timestampu
           },
         ],
       },
@@ -8376,46 +8376,46 @@ export const nonlimitRapSongs: Song[] = [
       },
     ],
   },
-  {
-    id: 238,
-    day: 238,
-    title: "Mów",
-    artist: "Otsochodzi",
-    audioSrc: "/Rap/Otsochodzi/238_Mw.mp3",
-    youtubeId: "LmVoRtpmUus",
-    lyrics: [
-      {
-        lineIndex: 0,
-        words: [
-          {
-            text: "Nie pytaj czemu rzadko tak widujesz mnie w tym klubie",
-            start: 0.05,
-            end: 3.7,
-          },
-          {
-            text: "Stres mnie ciągle budzi, choć ciągle więcej chcę",
-            start: 3.7,
-            end: 7.23,
-          },
-          {
-            text: "Nie analizuję, co dobre, a co złe",
-            start: 7.23,
-            end: 10.22,
-          },
-          {
-            text: "Ważniejsze sprawy wjechały na banie mi na szczęście",
-            start: 10.22,
-            end: 13.71,
-          },
-          {
-            text: "A nadal gonię, jakbym sam nie wiedział co to szczęście",
-            start: 13.71,
-            end: 17, 
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: 238,
+  //   day: 238,
+  //   title: "Mów",
+  //   artist: "Otsochodzi",
+  //   audioSrc: "/Rap/Otsochodzi/238_Mw.mp3",
+  //   youtubeId: "LmVoRtpmUus",
+  //   lyrics: [
+  //     {
+  //       lineIndex: 0,
+  //       words: [
+  //         {
+  //           text: "Nie pytaj czemu rzadko tak widujesz mnie w tym klubie",
+  //           start: 0.05,
+  //           end: 3.7,
+  //         },
+  //         {
+  //           text: "Stres mnie ciągle budzi, choć ciągle więcej chcę",
+  //           start: 3.7,
+  //           end: 7.23,
+  //         },
+  //         {
+  //           text: "Nie analizuję, co dobre, a co złe",
+  //           start: 7.23,
+  //           end: 10.22,
+  //         },
+  //         {
+  //           text: "Ważniejsze sprawy wjechały na banie mi na szczęście",
+  //           start: 10.22,
+  //           end: 13.71,
+  //         },
+  //         {
+  //           text: "A nadal gonię, jakbym sam nie wiedział co to szczęście",
+  //           start: 13.71,
+  //           end: 17, 
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     id: 239,
     day: 239,
