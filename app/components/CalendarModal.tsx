@@ -15,6 +15,7 @@ interface CalendarModalProps {
   soundtrackiResults: Record<number, "win" | "lose">; // NEW
   onDayClick: (day: number) => void;
   totalDays: number;
+  startDay?: number;
 }
 
 export const CalendarModal = ({
@@ -27,6 +28,7 @@ export const CalendarModal = ({
   soundtrackiResults,
   onDayClick,
   totalDays,
+  startDay = 1
 }: CalendarModalProps) => {
   const today = todayDayNumber();
 
@@ -73,7 +75,7 @@ export const CalendarModal = ({
   const isDayClickable = (day: number): boolean => {
     const dayNum = getDayNumber(day);
     if (!dayNum) return false;
-    return dayNum <= totalDays && isDayUnlocked(dayNum);
+    return dayNum >= startDay && dayNum <= totalDays && isDayUnlocked(dayNum);
   };
 
   const handleDayClick = (day: number) => {
@@ -95,6 +97,7 @@ export const CalendarModal = ({
   ];
 
   const weekDays = ["PON", "WT", "ŚR", "CZW", "PT", "SOB", "NDZ"];
+
 
   return (
     <AnimatePresence>

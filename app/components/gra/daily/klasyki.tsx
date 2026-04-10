@@ -1139,6 +1139,7 @@ export default function KlasykiPage() {
         soundtrackiResults={{}}
         onDayClick={(d) => setCurrentDay(Math.max(d, KLASYKI_START_DAY))}
         totalDays={totalDays}
+        startDay={KLASYKI_START_DAY}
       />
 
       <StatsModal
