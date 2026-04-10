@@ -98,8 +98,8 @@ const hasCommonArtist = (a: string, b: string): boolean => {
       .split(/[,&(]/)
       .map(norm)
       .filter((x) => x.length > 1);
-  return split(a).some((x) =>
-    split(b).some((y) => x === y),  // tylko ta jedna zmiana
+  return split(a).some(
+    (x) => split(b).some((y) => x === y), // tylko ta jedna zmiana
   );
 };
 
@@ -660,14 +660,20 @@ export default function KlasykiPage() {
 
   // ─── Document-level swipe (działa nawet gdy modal jest otwarty) ───────────
   useEffect(() => {
+    const touchStartY = useRef<number | null>(null); // ← DODAJ ref obok touchStartX
+
     const handleTouchStart = (e: TouchEvent) => {
       touchStartX.current = e.touches[0].clientX;
+      touchStartY.current = e.touches[0].clientY; // ← DODAJ
     };
     const handleTouchEnd = (e: TouchEvent) => {
-      if (touchStartX.current === null) return;
+      if (touchStartX.current === null || touchStartY.current === null) return;
       const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+      const deltaY = e.changedTouches[0].clientY - touchStartY.current; // ← DODAJ
       touchStartX.current = null;
+      touchStartY.current = null; // ← DODAJ
       if (Math.abs(deltaX) < 50) return;
+      if (Math.abs(deltaY) > Math.abs(deltaX)) return; // ← DODAJ: pionowy gest = ignoruj
       if (deltaX > 0 && currentDay > KLASYKI_START_DAY) goToPrevDay();
       else if (deltaX < 0 && currentDay < maxUnlockedDay()) goToNextDay();
     };

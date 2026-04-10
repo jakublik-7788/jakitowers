@@ -94,8 +94,8 @@ const hasCommonArtist = (a: string, b: string): boolean => {
       .split(/[,&(]/)
       .map(norm)
       .filter((x) => x.length > 1);
-  return split(a).some((x) =>
-    split(b).some((y) => x === y),  // tylko ta jedna zmiana
+  return split(a).some(
+    (x) => split(b).some((y) => x === y), // tylko ta jedna zmiana
   );
 };
 
@@ -550,7 +550,6 @@ export default function RapPage() {
   const isPlayingRef = useRef(isPlaying);
   const currentSongIdRef = useRef<number | null>(null);
   const currentStepRef = useRef(currentStep); // ← NOWE
-  const touchStartX = useRef<number | null>(null);
 
   const song = dailySongs.find((s) => s.day === currentDay) || dailySongs[0];
 
@@ -704,22 +703,23 @@ export default function RapPage() {
   }, [selectedIndex]);
 
   // Swipe handlers dla mobile
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null); // ← DODAJ
+
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY; // ← DODAJ
   };
-
   const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
+    if (touchStartX.current === null || touchStartY.current === null) return;
     const deltaX = e.changedTouches[0].clientX - touchStartX.current;
-    const minSwipeDistance = 50;
-    if (Math.abs(deltaX) > minSwipeDistance) {
-      if (deltaX > 0 && currentDay > 1) {
-        goToPrevDay();
-      } else if (deltaX < 0 && currentDay < maxUnlockedDay()) {
-        goToNextDay();
-      }
-    }
+    const deltaY = e.changedTouches[0].clientY - touchStartY.current; // ← DODAJ
     touchStartX.current = null;
+    touchStartY.current = null; // ← DODAJ
+    if (Math.abs(deltaX) < 50) return;
+    if (Math.abs(deltaY) > Math.abs(deltaX)) return; // ← DODAJ: pionowy gest = ignoruj
+    if (deltaX > 0 && currentDay > 1) goToPrevDay();
+    else if (deltaX < 0 && currentDay < maxUnlockedDay()) goToNextDay();
   };
 
   const stopAudio = useCallback(() => {
