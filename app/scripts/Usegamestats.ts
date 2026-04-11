@@ -30,6 +30,9 @@ const LS_NONLIMIT_BEST_STREAK_SOUNDTRACKI =
   "jakitowers_nonlimit_best_streak_soundtracki";
 
 const getSubmittedKey = (mode: string) => `jakitowers_submitted_${mode}`;
+const getCacheKey = (mode: string, day: number) =>
+  `jakitowers_globalcache_${mode}_${day}`;
+const CACHE_TTL = 5 * 60 * 1000; // 5 minut
 
 const defaultStats = (): LocalStats => ({
   gamesPlayed: 0,
@@ -101,13 +104,41 @@ export function useGameStats(
   }, [statsKey]);
 
   const fetchGlobalStats = useCallback(
-    async (day: number) => {
+    async (day: number, skipCache = false) => {
       if (!isMounted.current) return;
+
+      // Sprawdź cache jeśli nie wymuszamy odświeżenia
+      if (!skipCache) {
+        try {
+          const cacheKey = getCacheKey(mode, day);
+          const cached = localStorage.getItem(cacheKey);
+          if (cached) {
+            const { data, timestamp } = JSON.parse(cached);
+            if (Date.now() - timestamp < CACHE_TTL) {
+              setGlobalStats(data);
+              return;
+            }
+          }
+        } catch {
+          /* ignore */
+        }
+      }
+
       setGlobalLoading(true);
       try {
         const res = await fetch(`/api/stats?day=${day}&mode=${mode}`);
         if (res.ok && isMounted.current) {
-          setGlobalStats(await res.json());
+          const data = await res.json();
+          setGlobalStats(data);
+          // Zapisz do cache
+          try {
+            localStorage.setItem(
+              getCacheKey(mode, day),
+              JSON.stringify({ data, timestamp: Date.now() }),
+            );
+          } catch {
+            /* ignore */
+          }
         }
       } catch {
         /* ignore */
@@ -160,7 +191,14 @@ export function useGameStats(
             submittedKey,
             JSON.stringify([...submitted, currentDay]),
           );
-          if (isMounted.current) await fetchGlobalStats(currentDay);
+          // Po zapisie wyniku — wymuś świeże dane (skipCache = true)
+          // i wyczyść cache żeby kolejny fetch też był świeży
+          try {
+            localStorage.removeItem(getCacheKey(mode, currentDay));
+          } catch {
+            /* ignore */
+          }
+          if (isMounted.current) await fetchGlobalStats(currentDay, true);
         }
       } catch {
         /* ignore */
@@ -243,7 +281,7 @@ export function useNonLimitStats(
             try {
               localStorage.setItem(bestStreakKey, next.maxStreak.toString());
             } catch {}
-            setBestStreak(next.maxStreak); // aktualizacja stanu dla spójności
+            setBestStreak(next.maxStreak);
           }
         } else {
           next.currentStreak = 0;
