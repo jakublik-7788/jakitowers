@@ -2,7 +2,7 @@ import { SongSuggestion } from "@/app/types/song";
 
 export const nonlimitKlasykiAllSongs: SongSuggestion[] = [
   { title: "Otwieram wino", artist: "Sidney Polak, Pezet" },
-  { title: "Sen o Warszawie", artist: "Niemen" },
+  { title: "Sen o Warszawie", artist: "Czesław Niemen" },
   { title: "Pokolenie", artist: "Kombii" },
   { title: "Kryzysowa narzeczona", artist: "Lady Pank" },
   { title: "Dzieci wybiegły", artist: "Elektryczne Gitary" },
