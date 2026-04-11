@@ -550,6 +550,7 @@ export default function RapPage() {
   const isPlayingRef = useRef(isPlaying);
   const currentSongIdRef = useRef<number | null>(null);
   const currentStepRef = useRef(currentStep); // ← NOWE
+  const volumeRef = useRef<number>(0.5);
 
   const song = dailySongs.find((s) => s.day === currentDay) || dailySongs[0];
 
@@ -631,11 +632,10 @@ export default function RapPage() {
   }, [searchParams]);
 
   useEffect(() => {
-    if (audioRef.current && volume !== null) {
-      const wasPlaying = !audioRef.current.paused;
-      audioRef.current.volume = volume;
-      if (wasPlaying && audioRef.current.paused) {
-        audioRef.current.play().catch(() => {});
+    if (volume !== null) {
+      volumeRef.current = volume;
+      if (audioRef.current) {
+        audioRef.current.volume = volume;
       }
     }
   }, [volume]);
@@ -751,18 +751,16 @@ export default function RapPage() {
 
     if (!audioRef.current) {
       audioRef.current = new Audio(song.audioSrc);
+      audioRef.current.volume = volumeRef.current;
       currentSongIdRef.current = newSongId;
     } else if (isNewSong) {
       audioRef.current.pause();
       audioRef.current.src = song.audioSrc ?? "";
       audioRef.current.load();
+      audioRef.current.volume = volumeRef.current;
       currentSongIdRef.current = newSongId;
       setIsPlaying(false);
       setCurrentTime(0);
-    }
-
-    if (audioRef.current && volume !== null) {
-      audioRef.current.volume = volume;
     }
 
     let frameId: number;
@@ -800,7 +798,7 @@ export default function RapPage() {
       cancelAnimationFrame(frameId);
     };
     // ← ZMIANA: usunięto currentStep z zależności
-  }, [song, stopAudio, volume, isFinished]);
+  }, [song, stopAudio, isFinished]);
 
   useEffect(() => {
     const fn = () => {

@@ -98,8 +98,8 @@ const hasCommonArtist = (a: string, b: string): boolean => {
       .split(/[,&(]/)
       .map(norm)
       .filter((x) => x.length > 1);
-  return split(a).some((x) =>
-    split(b).some((y) => x === y),  // tylko ta jedna zmiana
+  return split(a).some(
+    (x) => split(b).some((y) => x === y), // tylko ta jedna zmiana
   );
 };
 
@@ -540,6 +540,7 @@ export default function KlasykiPage() {
   const isPlayingRef = useRef(isPlaying);
   const currentSongIdRef = useRef<number | null>(null);
   const currentStepRef = useRef(currentStep);
+  const volumeRef = useRef<number>(0.5);
   const touchStartX = useRef<number | null>(null);
 
   const song = dailySongs.find((s) => s.day === currentDay) || dailySongs[0];
@@ -587,11 +588,10 @@ export default function KlasykiPage() {
   }, [searchParams]);
 
   useEffect(() => {
-    if (audioRef.current && volume !== null) {
-      const wasPlaying = !audioRef.current.paused;
-      audioRef.current.volume = volume;
-      if (wasPlaying && audioRef.current.paused) {
-        audioRef.current.play().catch(() => {});
+    if (volume !== null) {
+      volumeRef.current = volume;
+      if (audioRef.current) {
+        audioRef.current.volume = volume;
       }
     }
   }, [volume]);
@@ -709,18 +709,16 @@ export default function KlasykiPage() {
 
     if (!audioRef.current) {
       audioRef.current = new Audio(song.audioSrc);
+      audioRef.current.volume = volumeRef.current;
       currentSongIdRef.current = newSongId;
     } else if (isNewSong) {
       audioRef.current.pause();
       audioRef.current.src = song.audioSrc ?? "";
       audioRef.current.load();
+      audioRef.current.volume = volumeRef.current;
       currentSongIdRef.current = newSongId;
       setIsPlaying(false);
       setCurrentTime(0);
-    }
-
-    if (audioRef.current && volume !== null) {
-      audioRef.current.volume = volume;
     }
 
     let frameId: number;
@@ -757,7 +755,7 @@ export default function KlasykiPage() {
       audio.removeEventListener("ended", stopAudio);
       cancelAnimationFrame(frameId);
     };
-  }, [song, currentStep, stopAudio, volume, isFinished]);
+  }, [song, currentStep, stopAudio, isFinished]);
 
   useEffect(() => {
     const fn = () => {
