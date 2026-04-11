@@ -15,40 +15,28 @@ export async function GET(req: NextRequest) {
 
   try {
     const dayNum = parseInt(day);
-    const useNewFormat = dayNum >= 17 || mode !== "rap";
+    const key =
+      dayNum >= 17 || mode !== "rap"
+        ? `stats:day:${day}:${mode}`
+        : `stats:day:${day}`;
 
-    const newKey = `stats:day:${day}:${mode}`;
-    const oldKey = `stats:day:${day}`;
-
-    const key = useNewFormat ? newKey : oldKey;
-
-    const [attempts, total, wins] = await Promise.all([
-      redis.hgetall(`${key}:attempts`),
-      redis.get<number>(`${key}:total`),
-      redis.get<number>(`${key}:wins`),
-    ]);
-
-    if ((!attempts || Object.keys(attempts).length === 0) && mode === "rap" && useNewFormat) {
-      const [oldAttempts, oldTotal, oldWins] = await Promise.all([
-        redis.hgetall(`${oldKey}:attempts`),
-        redis.get<number>(`${oldKey}:total`),
-        redis.get<number>(`${oldKey}:wins`),
-      ]);
-      return NextResponse.json({
-        attempts: oldAttempts ?? {},
-        total: oldTotal ?? 0,
-        wins: oldWins ?? 0,
-      });
-    }
+    const pipeline = redis.pipeline();
+    pipeline.hgetall(`${key}:attempts`);
+    pipeline.get(`${key}:total`);
+    pipeline.get(`${key}:wins`);
+    const [attempts, total, wins] = await pipeline.exec();
 
     return NextResponse.json({
-      attempts: attempts ?? {},
-      total: total ?? 0,
-      wins: wins ?? 0,
+      attempts: (attempts as Record<string, number>) ?? {},
+      total: (total as number) ?? 0,
+      wins: (wins as number) ?? 0,
     });
   } catch (err) {
     console.error("Redis GET error:", err);
-    return NextResponse.json({ error: "Failed to fetch stats" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Failed to fetch stats" },
+      { status: 500 },
+    );
   }
 }
 
@@ -62,25 +50,24 @@ export async function POST(req: NextRequest) {
     }
 
     const dayNum = parseInt(day);
-    const useNewFormat = dayNum >= 17 || mode !== "rap";
-    const key = useNewFormat ? `stats:day:${day}:${mode}` : `stats:day:${day}`;
+    const key =
+      dayNum >= 17 || mode !== "rap"
+        ? `stats:day:${day}:${mode}`
+        : `stats:day:${day}`;
 
     const pipeline = redis.pipeline();
-
     pipeline.incr(`${key}:total`);
-
-    if (won) {
-      pipeline.incr(`${key}:wins`);
-    }
-
+    if (won) pipeline.incr(`${key}:wins`);
     const attemptKey = won && attempt !== null ? String(attempt) : "X";
     pipeline.hincrby(`${key}:attempts`, attemptKey, 1);
-
     await pipeline.exec();
 
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error("Redis POST error:", err);
-    return NextResponse.json({ error: "Failed to save stats" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Failed to save stats" },
+      { status: 500 },
+    );
   }
 }
