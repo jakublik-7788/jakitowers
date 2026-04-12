@@ -86,6 +86,7 @@ export const nonlimitKlasykiAllSongs: SongSuggestion[] = [
   { title: "Ciągle pada", artist: "Czerwone Gitary" },
   { title: "Dzień jeden w roku", artist: "Czerwone Gitary" },
   { title: "Rzucę ciebie, rzucę nas", artist: "Witek Muzyk Ulicy" },
+  //od tad zrobic
   { title: "Tylko ona jedyna", artist: "After Party" },
   { title: "Co mi Panie dasz", artist: "Bajm" },
   { title: "Jezioro szczęścia", artist: "Bajm" },

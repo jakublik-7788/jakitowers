@@ -27,7 +27,28 @@ const LS_NONLIMIT_BEST_STREAK_SOUNDTRACKI = "jakitowers_nonlimit_best_streak_sou
 
 const getSubmittedKey = (mode: string) => `jakitowers_submitted_${mode}`;
 const getCacheKey = (mode: string, day: number) => `jakitowers_globalcache_${mode}_${day}`;
-const CACHE_TTL = 5 * 60 * 1000;
+
+// Dzisiejszy dzień gry — potrzebny do rozróżnienia "stary dzień" vs "dzisiaj"
+function getTodayDayNumber(): number {
+  try {
+    // Zakładamy ten sam mechanizm co todayDayNumber() z Usecalendar
+    const START = new Date("2024-11-04T00:00:00+01:00");
+    const now = new Date();
+    const diff = Math.floor((now.getTime() - START.getTime()) / (1000 * 60 * 60 * 24));
+    return diff + 1;
+  } catch {
+    return 1;
+  }
+}
+
+// Stare dni mają niezmienne statystyki — cache 24h
+// Dzisiejszy dzień może się zmieniać — cache 30 min
+const CACHE_TTL_TODAY = 30 * 60 * 1000;      // 30 minut (było 5)
+const CACHE_TTL_OLD_DAY = 24 * 60 * 60 * 1000; // 24 godziny dla starszych dni
+
+function getCacheTTL(day: number): number {
+  return day < getTodayDayNumber() ? CACHE_TTL_OLD_DAY : CACHE_TTL_TODAY;
+}
 
 const defaultStats = (): LocalStats => ({
   gamesPlayed: 0,
@@ -104,7 +125,8 @@ export function useGameStats(
           const cached = localStorage.getItem(cacheKey);
           if (cached) {
             const { data, timestamp } = JSON.parse(cached);
-            if (Date.now() - timestamp < CACHE_TTL) {
+            const ttl = getCacheTTL(day);
+            if (Date.now() - timestamp < ttl) {
               setGlobalStats(data);
               return;
             }
