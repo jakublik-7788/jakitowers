@@ -4,18 +4,53 @@ import { Redis } from "@upstash/redis";
 
 const redis = Redis.fromEnv();
 
-// Cache w pamięci serwera — działa dla wszystkich graczy na tej samej instancji
+// Cache w pamięci serwera — tylko dla starych dni
 const cache = new Map<string, { data: unknown; timestamp: number }>();
-const CACHE_TTL = 30 * 60 * 1000; // 30 minut (było 5)
+const CACHE_TTL_OLD = 24 * 60 * 60 * 1000; // 24h — stare dni się nie zmieniają
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
+// ─── Helpers — identyczna logika jak w Usecalendar.ts ────────────────────────
 
-// Nowy klucz (1 JSON = 1 komenda). Stary format: hgetall + get + get = 3 komendy
+// 19 marca 2026 23:00 UTC = 20 marca 00:00 polskiego czasu (zima)
+const GAME_START_DATE = new Date(Date.UTC(2026, 2, 19, 23, 0, 0));
+
+function getPolandOffset(): number {
+  const now = new Date();
+  const jan = new Date(Date.UTC(now.getUTCFullYear(), 0, 1));
+  const jul = new Date(Date.UTC(now.getUTCFullYear(), 6, 1));
+  const stdOffset = Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+  const isDST = now.getTimezoneOffset() < stdOffset;
+  return isDST ? 2 : 1;
+}
+
+function todayPoland(): Date {
+  const now = new Date();
+  const polandOffset = getPolandOffset() * 60 * 60 * 1000;
+  const polandNow = new Date(now.getTime() + polandOffset);
+  return new Date(
+    Date.UTC(
+      polandNow.getUTCFullYear(),
+      polandNow.getUTCMonth(),
+      polandNow.getUTCDate(),
+    ),
+  );
+}
+
+function getTodayDayNumber(): number {
+  const diff = Math.floor(
+    (todayPoland().getTime() - GAME_START_DATE.getTime()) /
+      (1000 * 60 * 60 * 24),
+  );
+  const dayNum = diff + 1;
+  if (dayNum < 1) return 1;
+  return dayNum;
+}
+
+// ─── Redis helpers ────────────────────────────────────────────────────────────
+
 function newKey(day: string, mode: string) {
   return `stats2:${mode}:${day}`;
 }
 
-// Stary klucz — tylko do odczytu danych historycznych
 function legacyKey(day: string, mode: string) {
   const dayNum = parseInt(day);
   return dayNum >= 17 || mode !== "rap"
@@ -29,11 +64,7 @@ interface StatsData {
   wins: number;
 }
 
-const emptyStats = (): StatsData => ({ attempts: {}, total: 0, wins: 0 });
-
 // ─── Migracja danych historycznych ───────────────────────────────────────────
-// Jeśli nowy klucz nie istnieje, próbuje wczytać ze starego formatu (hgetall + get + get)
-// i od razu zapisuje do nowego formatu — żeby następnym razem już była 1 komenda.
 async function migrateIfNeeded(day: string, mode: string): Promise<StatsData> {
   const legacy = legacyKey(day, mode);
 
@@ -49,7 +80,6 @@ async function migrateIfNeeded(day: string, mode: string): Promise<StatsData> {
     wins: (wins as number) ?? 0,
   };
 
-  // Jeśli są jakiekolwiek dane historyczne, zapisz do nowego formatu
   if (data.total > 0) {
     await redis.set(newKey(day, mode), JSON.stringify(data));
   }
@@ -67,34 +97,44 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Missing day param" }, { status: 400 });
   }
 
+  const isToday = parseInt(day, 10) >= getTodayDayNumber();
   const cacheKey = `${day}:${mode}`;
 
-  // 1. Sprawdź cache serwerowy
-  const cached = cache.get(cacheKey);
-  if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
-    return NextResponse.json(cached.data, {
-      headers: { "Cache-Control": "s-maxage=1800, stale-while-revalidate=3600" },
-    });
+  // Stare dni — użyj cache serwera (dane niezmienne)
+  // Dzisiejszy dzień — zawsze idź do Redis po świeże dane
+  if (!isToday) {
+    const cached = cache.get(cacheKey);
+    if (cached && Date.now() - cached.timestamp < CACHE_TTL_OLD) {
+      return NextResponse.json(cached.data, {
+        headers: {
+          "Cache-Control": "s-maxage=86400, stale-while-revalidate=172800",
+        },
+      });
+    }
   }
 
   try {
-    // 2. Nowy format — 1 komenda Redis
     const raw = await redis.get<string>(newKey(day, mode));
 
     let data: StatsData;
 
     if (raw) {
-      // Nowy format istnieje
       data = typeof raw === "string" ? JSON.parse(raw) : (raw as StatsData);
     } else {
-      // Nowy format nie istnieje — sprawdź stary (migracja)
       data = await migrateIfNeeded(day, mode);
     }
 
-    cache.set(cacheKey, { data, timestamp: Date.now() });
+    // Cache tylko stare dni
+    if (!isToday) {
+      cache.set(cacheKey, { data, timestamp: Date.now() });
+    }
 
     return NextResponse.json(data, {
-      headers: { "Cache-Control": "s-maxage=1800, stale-while-revalidate=3600" },
+      headers: {
+        "Cache-Control": isToday
+          ? "no-store"
+          : "s-maxage=86400, stale-while-revalidate=172800",
+      },
     });
   } catch (err) {
     console.error("Redis GET error:", err);
@@ -117,7 +157,6 @@ export async function POST(req: NextRequest) {
 
     const key = newKey(String(day), mode);
 
-    // 1 komenda odczytu
     const raw = await redis.get<string>(key);
 
     let data: StatsData;
@@ -125,20 +164,17 @@ export async function POST(req: NextRequest) {
     if (raw) {
       data = typeof raw === "string" ? JSON.parse(raw) : (raw as StatsData);
     } else {
-      // Brak nowego klucza — sprawdź czy są dane historyczne do migracji
       data = await migrateIfNeeded(String(day), mode);
     }
 
-    // Aktualizuj dane
     data.total += 1;
     if (won) data.wins += 1;
     const attemptKey = won && attempt !== null ? String(attempt) : "X";
     data.attempts[attemptKey] = (data.attempts[attemptKey] ?? 0) + 1;
 
-    // 1 komenda zapisu
     await redis.set(key, JSON.stringify(data));
 
-    // Wyczyść cache po zapisie
+    // Wyczyść cache serwera
     cache.delete(`${day}:${mode}`);
 
     return NextResponse.json({ success: true });

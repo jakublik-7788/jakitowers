@@ -28,15 +28,12 @@ const LS_NONLIMIT_BEST_STREAK_SOUNDTRACKI = "jakitowers_nonlimit_best_streak_sou
 
 const getSubmittedKey = (mode: string) => `jakitowers_submitted_${mode}`;
 const CACHE_VERSION = "v2";
-const getCacheKey = (mode: string, day: number) => `jakitowers_globalcache_${CACHE_VERSION}_${mode}_${day}`;
+const getCacheKey = (mode: string, day: number) =>
+  `jakitowers_globalcache_${CACHE_VERSION}_${mode}_${day}`;
 
-// Stare dni mają niezmienne statystyki — cache 24h
-// Dzisiejszy dzień może się zmieniać — cache 30 min
-const CACHE_TTL_TODAY = 30 * 60 * 1000; // 30 minut tylko dla dzisiejszego dnia
-
-function getCacheTTL(day: number): number {
-  return day < todayDayNumber() ? 0 : CACHE_TTL_TODAY;
-}
+// Stare dni (już zakończone) cache'ujemy długo — dane się nie zmienią
+// Dzisiejszy dzień — nigdy nie cache'ujemy, zawsze świeży fetch
+const CACHE_TTL_OLD = 24 * 60 * 60 * 1000; // 24h dla poprzednich dni
 
 const defaultStats = (): LocalStats => ({
   gamesPlayed: 0,
@@ -107,14 +104,16 @@ export function useGameStats(
       if (!isMounted.current) return;
       if (fetchingRef.current) return;
 
-      if (!skipCache) {
+      const isToday = day >= todayDayNumber();
+
+      // Dzisiejszy dzień — zawsze idź do serwera, nigdy nie używaj cache
+      if (!isToday && !skipCache) {
         try {
           const cacheKey = getCacheKey(mode, day);
           const cached = localStorage.getItem(cacheKey);
           if (cached) {
             const { data, timestamp } = JSON.parse(cached);
-            const ttl = getCacheTTL(day);
-            if (Date.now() - timestamp < ttl) {
+            if (Date.now() - timestamp < CACHE_TTL_OLD) {
               setGlobalStats(data);
               return;
             }
@@ -129,12 +128,15 @@ export function useGameStats(
         if (res.ok && isMounted.current) {
           const data = await res.json();
           setGlobalStats(data);
-          try {
-            localStorage.setItem(
-              getCacheKey(mode, day),
-              JSON.stringify({ data, timestamp: Date.now() }),
-            );
-          } catch {}
+          // Zapisz do cache tylko stare dni — dzisiejszy zawsze fetchujemy świeżo
+          if (!isToday) {
+            try {
+              localStorage.setItem(
+                getCacheKey(mode, day),
+                JSON.stringify({ data, timestamp: Date.now() }),
+              );
+            } catch {}
+          }
         }
       } catch {
       } finally {
@@ -185,9 +187,7 @@ export function useGameStats(
             submittedKey,
             JSON.stringify([...submitted, currentDay]),
           );
-          try {
-            localStorage.removeItem(getCacheKey(mode, currentDay));
-          } catch {}
+          // Nie ma co czyścić cache dla dzisiejszego dnia — i tak go nie zapisujemy
           if (isMounted.current) await fetchGlobalStats(currentDay, true);
         }
       } catch {}
