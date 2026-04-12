@@ -22,14 +22,11 @@ const LS_STATS_DAILY_KLASYKI = "jakitowers_stats_daily_klasyki";
 const LS_STATS_DAILY_SOUNDTRACKI = "jakitowers_stats_daily_soundtracki";
 
 const LS_NONLIMIT_BEST_STREAK_RAP = "jakitowers_nonlimit_best_streak_rap";
-const LS_NONLIMIT_BEST_STREAK_KLASYKI =
-  "jakitowers_nonlimit_best_streak_klasyki";
-const LS_NONLIMIT_BEST_STREAK_SOUNDTRACKI =
-  "jakitowers_nonlimit_best_streak_soundtracki";
+const LS_NONLIMIT_BEST_STREAK_KLASYKI = "jakitowers_nonlimit_best_streak_klasyki";
+const LS_NONLIMIT_BEST_STREAK_SOUNDTRACKI = "jakitowers_nonlimit_best_streak_soundtracki";
 
 const getSubmittedKey = (mode: string) => `jakitowers_submitted_${mode}`;
-const getCacheKey = (mode: string, day: number) =>
-  `jakitowers_globalcache_${mode}_${day}`;
+const getCacheKey = (mode: string, day: number) => `jakitowers_globalcache_${mode}_${day}`;
 const CACHE_TTL = 5 * 60 * 1000;
 
 const defaultStats = (): LocalStats => ({
@@ -71,6 +68,7 @@ export function useGameStats(
   const [globalStats, setGlobalStats] = useState<GlobalStats | null>(null);
   const [globalLoading, setGlobalLoading] = useState(false);
   const isMounted = useRef(true);
+  const fetchingRef = useRef(false);
 
   useEffect(() => {
     if (mode === "rap") {
@@ -98,6 +96,7 @@ export function useGameStats(
   const fetchGlobalStats = useCallback(
     async (day: number, skipCache = false) => {
       if (!isMounted.current) return;
+      if (fetchingRef.current) return;
 
       if (!skipCache) {
         try {
@@ -113,6 +112,7 @@ export function useGameStats(
         } catch {}
       }
 
+      fetchingRef.current = true;
       setGlobalLoading(true);
       try {
         const res = await fetch(`/api/stats?day=${day}&mode=${mode}`);
@@ -128,6 +128,7 @@ export function useGameStats(
         }
       } catch {
       } finally {
+        fetchingRef.current = false;
         if (isMounted.current) setGlobalLoading(false);
       }
     },
@@ -163,9 +164,7 @@ export function useGameStats(
       try {
         const submittedKey = getSubmittedKey(mode);
         const submittedRaw = localStorage.getItem(submittedKey);
-        const submitted: number[] = submittedRaw
-          ? JSON.parse(submittedRaw)
-          : [];
+        const submitted: number[] = submittedRaw ? JSON.parse(submittedRaw) : [];
         if (!submitted.includes(currentDay) && isMounted.current) {
           await fetch("/api/stats", {
             method: "POST",
