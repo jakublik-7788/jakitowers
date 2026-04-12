@@ -1149,7 +1149,6 @@ export default function DailySoundtracki() {
         }}
         onStats={() => {
           play("modalOpen");
-          refetchGlobalStats();
           setIsStatsOpen(true);
         }}
         onSettings={() => {
@@ -1313,7 +1312,7 @@ export default function DailySoundtracki() {
         soundtrackiResults={results}
         onDayClick={(d) => setCurrentDay(Math.max(d, SOUNDTRACKI_START_DAY))}
         totalDays={soundtrackiSongs.length}
-         startDay={SOUNDTRACKI_START_DAY}
+        startDay={SOUNDTRACKI_START_DAY}
       />
       <StatsModal
         isOpen={isStatsOpen}

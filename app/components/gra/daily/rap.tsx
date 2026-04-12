@@ -1048,7 +1048,6 @@ export default function RapPage() {
         }}
         onStats={() => {
           play("modalOpen");
-          refetchGlobalStats();
           setIsStatsOpen(true);
         }}
         onSettings={() => {

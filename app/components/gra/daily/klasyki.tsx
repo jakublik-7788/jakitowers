@@ -999,7 +999,6 @@ export default function KlasykiPage() {
         }}
         onStats={() => {
           play("modalOpen");
-          refetchGlobalStats();
           setIsStatsOpen(true);
         }}
         onSettings={() => {
