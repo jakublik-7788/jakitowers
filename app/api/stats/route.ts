@@ -4,6 +4,10 @@ import { Redis } from "@upstash/redis";
 
 const redis = Redis.fromEnv();
 
+// Cache w pamięci serwera - działa dla wszystkich graczy
+const cache = new Map<string, { data: unknown; timestamp: number }>();
+const CACHE_TTL = 5 * 60 * 1000; // 5 minut
+
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const day = searchParams.get("day");
@@ -11,6 +15,12 @@ export async function GET(req: NextRequest) {
 
   if (!day) {
     return NextResponse.json({ error: "Missing day param" }, { status: 400 });
+  }
+
+  const cacheKey = `${day}:${mode}`;
+  const cached = cache.get(cacheKey);
+  if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
+    return NextResponse.json(cached.data);
   }
 
   try {
@@ -26,11 +36,15 @@ export async function GET(req: NextRequest) {
     pipeline.get(`${key}:wins`);
     const [attempts, total, wins] = await pipeline.exec();
 
-    return NextResponse.json({
+    const data = {
       attempts: (attempts as Record<string, number>) ?? {},
       total: (total as number) ?? 0,
       wins: (wins as number) ?? 0,
-    });
+    };
+
+    cache.set(cacheKey, { data, timestamp: Date.now() });
+
+    return NextResponse.json(data);
   } catch (err) {
     console.error("Redis GET error:", err);
     return NextResponse.json(
@@ -61,6 +75,9 @@ export async function POST(req: NextRequest) {
     const attemptKey = won && attempt !== null ? String(attempt) : "X";
     pipeline.hincrby(`${key}:attempts`, attemptKey, 1);
     await pipeline.exec();
+
+    // Wyczyść cache po zapisie
+    cache.delete(`${day}:${mode}`);
 
     return NextResponse.json({ success: true });
   } catch (err) {
