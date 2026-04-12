@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
+import { todayDayNumber } from "@/app/scripts/Usecalendar";
 
 export interface LocalStats {
   gamesPlayed: number;
@@ -26,28 +27,15 @@ const LS_NONLIMIT_BEST_STREAK_KLASYKI = "jakitowers_nonlimit_best_streak_klasyki
 const LS_NONLIMIT_BEST_STREAK_SOUNDTRACKI = "jakitowers_nonlimit_best_streak_soundtracki";
 
 const getSubmittedKey = (mode: string) => `jakitowers_submitted_${mode}`;
-const getCacheKey = (mode: string, day: number) => `jakitowers_globalcache_${mode}_${day}`;
-
-// Dzisiejszy dzień gry — potrzebny do rozróżnienia "stary dzień" vs "dzisiaj"
-function getTodayDayNumber(): number {
-  try {
-    // Zakładamy ten sam mechanizm co todayDayNumber() z Usecalendar
-    const START = new Date("2024-11-04T00:00:00+01:00");
-    const now = new Date();
-    const diff = Math.floor((now.getTime() - START.getTime()) / (1000 * 60 * 60 * 24));
-    return diff + 1;
-  } catch {
-    return 1;
-  }
-}
+const CACHE_VERSION = "v2";
+const getCacheKey = (mode: string, day: number) => `jakitowers_globalcache_${CACHE_VERSION}_${mode}_${day}`;
 
 // Stare dni mają niezmienne statystyki — cache 24h
 // Dzisiejszy dzień może się zmieniać — cache 30 min
-const CACHE_TTL_TODAY = 30 * 60 * 1000;      // 30 minut (było 5)
-const CACHE_TTL_OLD_DAY = 24 * 60 * 60 * 1000; // 24 godziny dla starszych dni
+const CACHE_TTL_TODAY = 30 * 60 * 1000; // 30 minut tylko dla dzisiejszego dnia
 
 function getCacheTTL(day: number): number {
-  return day < getTodayDayNumber() ? CACHE_TTL_OLD_DAY : CACHE_TTL_TODAY;
+  return day < todayDayNumber() ? 0 : CACHE_TTL_TODAY;
 }
 
 const defaultStats = (): LocalStats => ({

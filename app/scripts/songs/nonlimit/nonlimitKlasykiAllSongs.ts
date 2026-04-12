@@ -96,7 +96,7 @@ export const nonlimitKlasykiAllSongs: SongSuggestion[] = [
   { title: "Świat według Kiepskich", artist: "Big Cyc" },
   { title: "Rudy się żeni", artist: "Big Cyc" },
   { title: "Kocham piwo", artist: "Big Cyc" },
-  { title: "Kochaj mnie", artist: "Brathanki" },
+  { title: "W Kinie W Lublinie - Kochaj Mnie", artist: "Brathanki" },
   { title: "Gdzie ten który powie mi", artist: "Brathanki" },
   { title: "Ona lubi pomarańcze", artist: "After Party" },
   { title: "Bal wszystkich świętych", artist: "Budka Suflera" },
