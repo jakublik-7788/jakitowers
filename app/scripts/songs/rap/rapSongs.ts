@@ -912,38 +912,38 @@ export const rapSongs: Song[] = [
   {
     id: 26,
     day: 26,
-    title: "WMTB",
-    artist: "OKI, Young Igi, Otsochodzi, OIO, @atutowy",
-    audioSrc: "/Rap/OKI/26_WMTB.mp3",
-    youtubeId: "AFAHY0LOhWw",
+    title: "jumper",
+    artist: "chillwagon",
+    audioSrc: "/Rap/chillwagon/365_jumper.mp3",
+    youtubeId: "K6pTnhOCmBQ",
     lyrics: [
       {
         lineIndex: 0,
         words: [
           {
-            text: "Powiedz na osiedlu, że wychodzi OIO płyta",
+            text: "Ludzie piją i tańczą, tak łapią luz",
             start: 0.0,
-            end: 2.55,
+            end: 2.04,
           },
           {
-            text: "Nie, nie, nie na żadnych featach, ze sceną jesteśmy kwita",
-            start: 2.55,
-            end: 5.28,
+            text: "Ludzie codziennie walczą żeby wyjść na plus",
+            start: 2.04,
+            end: 4.14,
           },
           {
-            text: "Po-po-powiedz na osiedlu, że wychodzi OIO płyta",
-            start: 5.28,
+            text: "Kocham chwilę gdy mi wszystko jedno",
+            start: 4.14,
+            end: 5.9,
+          },
+          {
+            text: "To jedna z nich, więc, byku, skacz, nie pierdol",
+            start: 5.9,
             end: 8.0,
           },
           {
-            text: "Nie, nie, nie na żadnych featach, ze sceną jesteśmy kwita",
+            text: "Kto nie skacze ten z policji, hop, hop, hop",
             start: 8.0,
-            end: 11.05,
-          },
-          {
-            text: "Chcę uprawiać seks jak Pamela Anderson i Tommy Lee",
-            start: 11.05,
-            end: 13.64,
+            end: 10.82,
           },
         ],
       },

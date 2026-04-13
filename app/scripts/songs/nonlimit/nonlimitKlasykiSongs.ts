@@ -134,7 +134,7 @@ export const nonlimitKlasykiSongs: Song[] = [
         words: [
           {
             text: "Już teraz wiem, że dni są tylko po to",
-            start: 0.00,
+            start: 0.0,
             end: 4.25,
           },
           {
@@ -150,12 +150,12 @@ export const nonlimitKlasykiSongs: Song[] = [
           {
             text: "Jeśli tylko jedno, jedno tylko wiem",
             start: 13.65,
-            end: 18.25, 
+            end: 18.25,
           },
           {
             text: "Być tam, zawsze tam, gdzie Ty",
             start: 18.25,
-            end: 24.9, 
+            end: 24.9,
           },
         ],
       },
@@ -3160,6 +3160,1967 @@ export const nonlimitKlasykiSongs: Song[] = [
             text: "Gdy w nocy czujesz się jak lew",
             start: 9.2,
             end: 11,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 80,
+    day: 80,
+    title: "Tylko ona jedyna",
+    artist: "After Party",
+    audioSrc: "/Klasyki/AfterParty/80_Tylko_ona_jedyna_-_Radio_Edit.mp3",
+    youtubeId: "cVLIqMSYNls",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ja na Ciebie bardzo lubię patrzeć",
+            start: 0.0,
+            end: 2.55,
+          },
+          {
+            text: "Bo jesteś dla mnie wszystkim, jesteś moim skarbem",
+            start: 2.55,
+            end: 6.85,
+          },
+          {
+            text: "Whoa",
+            start: 6.85,
+            end: 8.45,
+          },
+          {
+            text: "Jesteś moim skarbem, whoa (whoa)",
+            start: 8.45,
+            end: 12.95,
+          },
+          {
+            text: "Skarbem...",
+            start: 12.95,
+            end: 15, // brak kolejnego timestampu
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 81,
+    day: 81,
+    title: "Co mi Panie dasz",
+    artist: "Bajm",
+    audioSrc: "/Klasyki/Bajm/81_Co_mi_Panie_dasz.mp3",
+    youtubeId: "RrAn5pGqu_w",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Tu wszystko wypada",
+            start: 0.0,
+            end: 3.1,
+          },
+          {
+            text: "Co mi, Panie, dasz",
+            start: 3.1,
+            end: 6.38,
+          },
+          {
+            text: "W ten niepewny czas?",
+            start: 6.38,
+            end: 9.35,
+          },
+          {
+            text: "Jakie słowa ukołyszą",
+            start: 9.35,
+            end: 11.25,
+          },
+          {
+            text: "Moją duszę, moją przyszłość",
+            start: 11.25,
+            end: 12.76,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 82,
+    day: 82,
+    title: "Jezioro szczęścia",
+    artist: "Bajm",
+    audioSrc: "/Klasyki/Bajm/82_Jezioro_szczęścia.mp3",
+    youtubeId: "DveOTb29CgE",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Wspomnienia jak lawa gorąca",
+            start: 0.0,
+            end: 4.04,
+          },
+          {
+            text: "Uciekam przed nimi tak co noc",
+            start: 4.04,
+            end: 28.19,
+          },
+          {
+            text: "Jezioro ma Twój zapach",
+            start: 28.19,
+            end: 31.11,
+          },
+          {
+            text: "I twój smak",
+            start: 31.11,
+            end: 36.16,
+          },
+          {
+            text: "Czuję to, gdy tylko",
+            start: 36.16,
+            end: 38.52,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 83,
+    day: 83,
+    title: "O Tobie",
+    artist: "Bajm",
+    audioSrc: "/Klasyki/Bajm/83_O_Tobie.mp3",
+    youtubeId: "8Hbr3NOQ3fc",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Dla której gubisz radość chwil",
+            start: 0.0,
+            end: 5.33,
+          },
+          {
+            text: "Liczy się wciąż niepewność",
+            start: 5.33,
+            end: 10.19,
+          },
+          {
+            text: "Którą przynoszą dni",
+            start: 10.19,
+            end: 20.47,
+          },
+          {
+            text: "Nie uciekaj od słów",
+            start: 20.47,
+            end: 22.57,
+          },
+          {
+            text: "Najprostszych tych, wiesz",
+            start: 22.57,
+            end: 24.83,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 84,
+    day: 84,
+    title: "Ta sama chwila",
+    artist: "Bajm",
+    audioSrc: "/Klasyki/Bajm/84_Ta_sama_chwila.mp3",
+    youtubeId: "RgunsXL9Lo0",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Nie odnajdzie więcej nas, ta sama chwila",
+            start: 0.0,
+            end: 9.89,
+          },
+          {
+            text: "Nie odnajdzie więcej nas, ta sama chwila",
+            start: 9.89,
+            end: 21.98,
+          },
+          {
+            text: "Niech każdy dzień dodaje nam sił",
+            start: 21.98,
+            end: 29.64,
+          },
+          {
+            text: "Może znajdziemy siebie znów",
+            start: 29.64,
+            end: 39.56,
+          },
+          {
+            text: "Nie odnajdzie więcej nas, ta sama chwila",
+            start: 39.56,
+            end: 49.44,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 85,
+    day: 85,
+    title: "Dwa serca dwa smutki",
+    artist: "Bajm",
+    audioSrc: "/Klasyki/Bajm/85_Dwa_serca__dwa_smutki.mp3",
+    youtubeId: "HPJ5AOL0eCs",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Więc całuj mnie częściej",
+            start: 0.0,
+            end: 4.94,
+          },
+          {
+            text: "Bo nie wiem jak będzie, o nie, nie!",
+            start: 4.94,
+            end: 45.77,
+          },
+          {
+            text: "Więc teraz serca mam dwa",
+            start: 45.77,
+            end: 51.53,
+          },
+          {
+            text: "Smutki dwa",
+            start: 51.53,
+            end: 55.38,
+          },
+          {
+            text: "I miłość po kres",
+            start: 55.38,
+            end: 60.13,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 86,
+    day: 86,
+    title: "Świat według Kiepskich",
+    artist: "Big Cyc",
+    audioSrc: "/Klasyki/Big Cyc/86_Świat_według_Kiepskich.mp3",
+    youtubeId: "sOPysIhN-V4",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Kiepskich życie, Kiepskich świat",
+            start: 0.0,
+            end: 12.53,
+          },
+          {
+            text: "Są nadzieje i miłości",
+            start: 12.53,
+            end: 15.01,
+          },
+          {
+            text: "Są zwycięstwa i radości",
+            start: 15.01,
+            end: 17.61,
+          },
+          {
+            text: "Są skandale i hałasy",
+            start: 17.61,
+            end: 20.28,
+          },
+          {
+            text: "Na tapczanie wygibasy",
+            start: 20.28,
+            end: 22.81,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 87,
+    day: 87,
+    title: "Rudy się żeni",
+    artist: "Big Cyc",
+    audioSrc: "/Klasyki/Big Cyc/87_Rudy_Się_Żeni_-_Live.mp3",
+    youtubeId: "7XbHztbxX60",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ja nie wierzę w to do dzisiaj, że Rudy się żeni",
+            start: 0.0,
+            end: 8,
+          },
+          {
+            text: "On pił piwo, słuchał punka i lubił się bić",
+            start: 8,
+            end: 16,
+          },
+          {
+            text: "Ale ona go kocha i ona to zmieni",
+            start: 16,
+            end: 24,
+          },
+          {
+            text: "Bo w kagańcu w potulną owcę, zmienia się dziki lew",
+            start: 24,
+            end: 32,
+          },
+          {
+            text: "Rudy, Rudy się żeni",
+            start: 32,
+            end: 36,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 88,
+    day: 88,
+    title: "Kocham piwo",
+    artist: "Big Cyc",
+    audioSrc: "/Klasyki/Big Cyc/88_Kocham_piwo.mp3",
+    youtubeId: "A_Tttp9Jea8",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Z uszu woja poszła para",
+            start: 0.0,
+            end: 3.33,
+          },
+          {
+            text: "Szybko wypluł sztuczną szczękę",
+            start: 3.33,
+            end: 6.87,
+          },
+          {
+            text: "Został smoka przyjacielem",
+            start: 6.87,
+            end: 9.86,
+          },
+          {
+            text: "I poprosił go o rękę",
+            start: 9.86,
+            end: 14.26,
+          },
+          {
+            text: "Piwo",
+            start: 14.26,
+            end: 16.31,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 89,
+    day: 89,
+    title: "W Kinie W Lublinie - Kochaj Mnie",
+    artist: "Brathanki",
+    audioSrc: "/Klasyki/Brathanki/89_W_Kinie_W_Lublinie_-_Kochaj_Mnie.mp3",
+    youtubeId: "kWRhdN2XusA",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ale z calej siły kochaj",
+            start: 0.0,
+            end: 2.97,
+          },
+          {
+            text: "W gminie, w Kętrzynie - kochaj mnie",
+            start: 2.97,
+            end: 5.37,
+          },
+          {
+            text: "W metrze i w swetrze - kochaj mnie",
+            start: 5.37,
+            end: 7.54,
+          },
+          {
+            text: "Czy miasto czy wiocha ty mnie z całej siły kochaj",
+            start: 7.54,
+            end: 12.45,
+          },
+          {
+            text: "W radości no i w smutku",
+            start: 12.45,
+            end: 13.95,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 90,
+    day: 90,
+    title: "Gdzie ten który powie mi",
+    artist: "Brathanki",
+    audioSrc: "/Klasyki/Brathanki/90_Gdzie_Ten__Ktory_Powie_Mi.mp3",
+    youtubeId: "ClMjWj-y5Io",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Gdzie ten, który powie mi, że do końca swoich dni",
+            start: 0.0,
+            end: 7.55,
+          },
+          {
+            text: "Że do ostatniego tchu będę całym życiem mu?",
+            start: 7.55,
+            end: 13.34,
+          },
+          {
+            text: "Bez kochania ginę tak jak zamknięty w klatce ptak",
+            start: 13.34,
+            end: 18.52,
+          },
+          {
+            text: "Nie chcę więcej ptakiem być, chcę nareszcie zacząć żyć",
+            start: 18.52,
+            end: 24.07,
+          },
+          {
+            text: "Gdzie ten, który powie mi, że do końca swoich dni",
+            start: 24.07,
+            end: 27.88,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 91,
+    day: 91,
+    title: "Ona lubi pomarańcze",
+    artist: "After Party",
+    audioSrc: "/Klasyki/AfterParty/91_Ona_lubi_pomarańcze.mp3",
+    youtubeId: "qAdIPAdzjvY",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Tylko ty masz to",
+            start: 0.0,
+            end: 1.25,
+          },
+          {
+            text: "Czego nie ma nikt",
+            start: 1.25,
+            end: 3.15,
+          },
+          {
+            text: "Urode, uśmiech",
+            start: 3.15,
+            end: 4.55,
+          },
+          {
+            text: "I szałowy styl",
+            start: 4.55,
+            end: 6.35,
+          },
+          {
+            text: "Kocham ją właśnie tak, właśnie tak, uło-o",
+            start: 6.35,
+            end: 13.5,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 92,
+    day: 92,
+    title: "Bal wszystkich świętych",
+    artist: "Budka Suflera",
+    audioSrc: "/Klasyki/Budka Suflera/92_Bal_wszystkich_świętych.mp3",
+    youtubeId: "kE87oI5rdew",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Lub o tydzień cofnąć czas, ale nie da się",
+            start: 0.0,
+            end: 7.65,
+          },
+          {
+            text: "Chociaż samotności smak aż do bolu znam",
+            start: 7.65,
+            end: 15.85,
+          },
+          {
+            text: "Kiedy innych niedziel brak, trudno co mi tam...",
+            start: 15.85,
+            end: 25.45,
+          },
+          {
+            text: "Wszyscy święci balują w niebie",
+            start: 25.45,
+            end: 29.35,
+          },
+          {
+            text: "Złoty sypie się kurz",
+            start: 29.35,
+            end: 33.4,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 93,
+    day: 93,
+    title: "Za ostatni grosz",
+    artist: "Budka Suflera",
+    audioSrc: "/Klasyki/Budka Suflera/93_Za_ostatni_grosz.mp3",
+    youtubeId: "PYpg4BypJoA",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Wczoraj blekitny wiatr, dzisiaj duszny, zly sen",
+            start: 0.0,
+            end: 5.25,
+          },
+          {
+            text: "Z drugiej strony mych snów, wszystko lepszy ma smak",
+            start: 5.25,
+            end: 10.16,
+          },
+          {
+            text: "Bo w powietrzu jest luz i muzyka wciąż gra",
+            start: 10.16,
+            end: 18.5,
+          },
+          {
+            text: "Za ostatni grosz kupię dziś chociaż cień tamtych dni",
+            start: 18.5,
+            end: 29,
+          },
+          {
+            text: "Za ostatni grosz wino z zielonych lat chcę znów pić",
+            start: 29,
+            end: 36.3,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 94,
+    day: 94,
+    title: "Jest taki samotny dom",
+    artist: "Budka Suflera",
+    audioSrc: "/Klasyki/Budka Suflera/94_Jest_taki_samotny_dom.mp3",
+    youtubeId: "wT_ObQMSs3U",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Nagle ptaki budzą mnie, tłukąc się do okien",
+            start: 0.0,
+            end: 7.58,
+          },
+          {
+            text: "A po nocy przychodzi dzień, a po burzy spokój",
+            start: 7.58,
+            end: 15.13,
+          },
+          {
+            text: "Nagle ptaki budzą mnie, tłukąc się do okien",
+            start: 15.13,
+            end: 24.19,
+          },
+          {
+            text: "Znowu szary, pusty dom, gdzie schroniłem się (A po nocy przychodzi dzień, a po burzy spokój)",
+            start: 24.19,
+            end: 30.64,
+          },
+          {
+            text: "I najmilsza z wszystkich, wszystkich mi, na witraża szkle (Nagle ptaki budzą mnie, tłukąc się do okien)",
+            start: 30.64,
+            end: 37.78,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 95,
+    day: 95,
+    title: "Ratujmy co się da",
+    artist: "Budka Suflera",
+    audioSrc: "/Klasyki/Budka Suflera/95_Ratujmy_co_się_da.mp3",
+    youtubeId: "ZrhjFzEQ_hY",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Wóz tnie powietrze, jak nóż weselny tort",
+            start: 0.0,
+            end: 4.59,
+          },
+          {
+            text: "W najbliższym mieście każę obudzić dzwon",
+            start: 4.59,
+            end: 9.11,
+          },
+          {
+            text: "Za marzenia słono płaci się",
+            start: 9.11,
+            end: 13.63,
+          },
+          {
+            text: "Lecz życie tak niepowtarzalne jest",
+            start: 13.63,
+            end: 18.22,
+          },
+          {
+            text: "Wyciągasz palce wtedy, gdy zmieniam bieg",
+            start: 18.22,
+            end: 22.24,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 96,
+    day: 96,
+    title: "Chodź na kolana",
+    artist: "Czadoman",
+    audioSrc: "/Klasyki/Czadoman/96_Chodź_na_kolana.mp3",
+    youtubeId: "p_PJM7F9_jc",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Powiedz mi, czego chciałabyś dziewczyno",
+            start: 0.0,
+            end: 3.72,
+          },
+          {
+            text: "Po środku nocy, sami ze sobą",
+            start: 3.72,
+            end: 7.13,
+          },
+          {
+            text: "Tak bardzo chciałbym zostać tutaj z Tobą",
+            start: 7.13,
+            end: 10.41,
+          },
+          {
+            text: "Choć na kolana i nie mów, że nie wypada",
+            start: 10.41,
+            end: 16.74,
+          },
+          {
+            text: "No chodź na kolana i nie mów, że nie wypada",
+            start: 16.74,
+            end: 23.87,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 97,
+    day: 97,
+    title: "Kwiaty we włosach",
+    artist: "Czerwone Gitary",
+    audioSrc: "/Klasyki/CzerwoneGitary/97_Kwiaty_we_włosach.mp3",
+    youtubeId: "e0Flwrc7oAQ",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Nie powiem, Tak, nie powiem, Nie",
+            start: 0.0,
+            end: 4.51,
+          },
+          {
+            text: "Bez wspomnień czasem łatwiej żyć",
+            start: 4.51,
+            end: 8.56,
+          },
+          {
+            text: "Nie wraca nic",
+            start: 8.56,
+            end: 14.11,
+          },
+          {
+            text: "Kwiaty we włosach potargał wiatr",
+            start: 14.11,
+            end: 18.48,
+          },
+          {
+            text: "Wyrzuć z pamięci ostatni ślad",
+            start: 18.48,
+            end: 22.51,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 98,
+    day: 98,
+    title: "Historia jednej znajomości",
+    artist: "Czerwone Gitary",
+    audioSrc: "/Klasyki/CzerwoneGitary/98_Historia_jednej_znajomości.mp3",
+    youtubeId: "t9Y5om7VaPQ",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Upływały razem nam",
+            start: 0.0,
+            end: 4.56,
+          },
+          {
+            text: "Rano skwer, plaża lub",
+            start: 4.56,
+            end: 9.16,
+          },
+          {
+            text: "Molo gdy zapadał zmierzch",
+            start: 9.16,
+            end: 12.68,
+          },
+          {
+            text: "Molo gdy zapadał zmierzch",
+            start: 12.68,
+            end: 17.88,
+          },
+          {
+            text: "Sia-la-la-la-la-la-la-la-la-la",
+            start: 17.88,
+            end: 21.85,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 99,
+    day: 99,
+    title: "Iść W Stronę Słońca",
+    artist: "Dwa plus Jeden",
+    audioSrc: "/Klasyki/Dwa plus Jeden/99_Słońca.mp3",
+    youtubeId: "aWQz6lrZ3Pw",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Iść ciągle iść w stronę słońca",
+            start: 0.0,
+            end: 7.65,
+          },
+          {
+            text: "W stronę słońca aż po horyzontu kres",
+            start: 7.65,
+            end: 15.35,
+          },
+          {
+            text: "Iść ciągle iść tak bez końca",
+            start: 15.35,
+            end: 24.75,
+          },
+          {
+            text: "Witać jeden przebudzony właśnie dzień",
+            start: 24.75,
+            end: 32.55,
+          },
+          {
+            text: "Wciąż witać go jak nadziei dobry znak",
+            start: 32.55,
+            end: 41.6,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 100,
+    day: 100,
+    title: "Partyzant",
+    artist: "Dżem",
+    audioSrc: "/Klasyki/Dzem/100_Partyzant.mp3",
+    youtubeId: "9w-D8LNyomQ",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Za tych co przelali tu krew",
+            start: 0.0,
+            end: 1.9,
+          },
+          {
+            text: "Jeszcze dzień może wytrwam tu dwa",
+            start: 1.9,
+            end: 55.75,
+          },
+          {
+            text: "Może dwa?",
+            start: 5.75,
+            end: 9.2,
+          },
+          {
+            text: "Boże Mój czemu bawią się tak?",
+            start: 9.2,
+            end: 13.3,
+          },
+          {
+            text: "W imię czego niszczą mój świat!",
+            start: 13.3,
+            end: 17.2,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 101,
+    day: 101,
+    title: "Whisky",
+    artist: "Dżem",
+    audioSrc: "/Klasyki/Dzem/101_Whisky_-_2003_Remaster.mp3",
+    youtubeId: "zfwGiieFkKo",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Stać się jednym z nich",
+            start: 0.0,
+            end: 7.65,
+          },
+          {
+            text: "Już miałem na oku hacjendę, wspaniałą mówię Wam",
+            start: 7.65,
+            end: 14.14,
+          },
+          {
+            text: "Lecz nie chciała tam zamieszkać żadna z pięknych dam",
+            start: 14.14,
+            end: 21.23,
+          },
+          {
+            text: "Wszystkie śmiały się wołając, wołając za mną wciąż:",
+            start: 21.23,
+            end: 27.97,
+          },
+          {
+            text: "Bardzo ładny frak",
+            start: 27.97,
+            end: 31.48,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 102,
+    day: 102,
+    title: "Bujaj się",
+    artist: "After Party",
+    audioSrc: "/Klasyki/AfterParty/102_Bujaj_się_-_Radio_Edit.mp3",
+    youtubeId: "XbRCWS3VumM",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Uu uu",
+            start: 0.0,
+            end: 5.81,
+          },
+          {
+            text: "Bujaj się",
+            start: 5.81,
+            end: 7.36,
+          },
+          {
+            text: "Uu uu",
+            start: 7.36,
+            end: 16.36,
+          },
+          {
+            text: "Za wszystko co zrobiłaś",
+            start: 16.36,
+            end: 19.96,
+          },
+          {
+            text: "Że mi nie wybaczyłaś",
+            start: 19.96,
+            end: 23.66,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 103,
+    day: 103,
+    title: "Jak malowany ptak",
+    artist: "Dżem",
+    audioSrc: "/Klasyki/Dzem/103_Jak_malowany_ptak_-_2003_Remaster.mp3",
+    youtubeId: "6wZqIQjW5Vg",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Gdy lecą, lecą tak, jak ten malowany ptak.",
+            start: 0.0,
+            end: 7.99,
+          },
+          {
+            text: "Czy przyjmiesz mnie mój Boże,",
+            start: 7.99,
+            end: 11.15,
+          },
+          {
+            text: "Kiedy odejść przyjdzie czas?",
+            start: 11.15,
+            end: 14.85,
+          },
+          {
+            text: "Czy podasz mi swą rękę?",
+            start: 14.85,
+            end: 18.35,
+          },
+          {
+            text: "A może będziesz się bał?",
+            start: 18.35,
+            end: 52.52,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 104,
+    day: 104,
+    title: "List do M",
+    artist: "Dżem",
+    audioSrc: "/Klasyki/Dzem/104_List_Do_M__-_2003_Remaster.mp3",
+    youtubeId: "KkhHF0qUsKE",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Gdzie Ty jesteś, a mnie tam nie ma",
+            start: 0.0,
+            end: 8.0,
+          },
+          {
+            text: "Gdzie nie wrócę już, chyba, chyba nie",
+            start: 8.0,
+            end: 15.81,
+          },
+          {
+            text: "Mamo, bardzo Cię kocham, kocham Cię",
+            start: 15.81,
+            end: 23.15,
+          },
+          {
+            text: "Myślałem, że Ty skrzywdziłaś mnie",
+            start: 23.15,
+            end: 31.48,
+          },
+          {
+            text: "A to ja skrzywdziłem Ciebie",
+            start: 31.48,
+            end: 39.18,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 105,
+    day: 105,
+    title: "Naiwne pytania",
+    artist: "Dżem",
+    audioSrc: "/Klasyki/Dzem/105_Naiwne_pytania_-_2003_Remaster.mp3",
+    youtubeId: "yDsQ7TUZM1U",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Teraz jestem duży",
+            start: 0.0,
+            end: 3.98,
+          },
+          {
+            text: "I wiem, że w życiu piękne są tylko chwile",
+            start: 3.98,
+            end: 14.51,
+          },
+          {
+            text: "Dlatego czasem warto żyć",
+            start: 14.51,
+            end: 21.78,
+          },
+          {
+            text: "Dlatego czasem warto żyć!",
+            start: 21.78,
+            end: 28.84,
+          },
+          {
+            text: "W życiu piękne są tylko chwile",
+            start: 28.84,
+            end: 36.31,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 106,
+    day: 106,
+    title: "Co ty tutaj robisz",
+    artist: "Elektryczne Gitary",
+    audioSrc: "/Klasyki/Elektryczne Gitary/106_Co_Ty_Tutaj_Robisz.mp3",
+    youtubeId: "ZkdvU7nPM5Q",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Dla wielkich oraz osłów",
+            start: 0.0,
+            end: 1.35,
+          },
+          {
+            text: "By się rzucić z mostu no i łowić.",
+            start: 1.35,
+            end: 4.25,
+          },
+          {
+            text: "Już każdy powiedział to co wiedział",
+            start: 4.25,
+            end: 7.4,
+          },
+          {
+            text: "Trzy razy wysłuchał dobrze mnie",
+            start: 7.4,
+            end: 9.5,
+          },
+          {
+            text: "Wszyscy zgadzają się ze sobą",
+            start: 9.5,
+            end: 11.8,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 107,
+    day: 107,
+    title: "To koniec",
+    artist: "Elektryczne Gitary",
+    audioSrc: "/Klasyki/Elektryczne Gitary/107_To_koniec_-_2014.mp3",
+    youtubeId: "WNnzw90vxrE",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Tak dłubie i gmera, napisze, wymyśli",
+            start: 0.0,
+            end: 2.57,
+          },
+          {
+            text: "Obejdzie wokoło, zabrudzi, wyczyści",
+            start: 2.57,
+            end: 5.11,
+          },
+          {
+            text: "I krzaczek przy drodze i brat przy maszynie",
+            start: 5.11,
+            end: 7.42,
+          },
+          {
+            text: "Jak noga w skarpecie, sprzedawca w kantynie",
+            start: 7.42,
+            end: 10.19,
+          },
+          {
+            text: "Kamyczek na polu i strażnik na straży",
+            start: 10.19,
+            end: 12.4,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 108,
+    day: 108,
+    title: "Noś długie włosy",
+    artist: "Elektryczne Gitary",
+    audioSrc: "/Klasyki/Elektryczne Gitary/108_Noś_długie_włosy_-_2014.mp3",
+    youtubeId: "2_fxoL0DjyE",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "A ty noś noś noś długie włosy jak my",
+            start: 0.0,
+            end: 3.14,
+          },
+          {
+            text: "HEJ!",
+            start: 3.14,
+            end: 14.61,
+          },
+          {
+            text: "Idzie hipis z długimi włosami",
+            start: 14.61,
+            end: 15.67,
+          },
+          {
+            text: "Skręcił z Kruczej idzie Alejami",
+            start: 15.67,
+            end: 17.9,
+          },
+          {
+            text: "A ty noś noś noś długie włosy jak my",
+            start: 17.9,
+            end: 23.09,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 109,
+    day: 109,
+    title: "Tak smakuje życie",
+    artist: "Enej",
+    audioSrc: "/Klasyki/Enej/109_Tak_Smakuje_Życie.mp3",
+    youtubeId: "QUaJF5faWBU",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Teraz twoja kolej",
+            start: 0.0,
+            end: 2.3,
+          },
+          {
+            text: "By zapalić ogień",
+            start: 2.3,
+            end: 5.05,
+          },
+          {
+            text: "Co ogrzeje to uczucie",
+            start: 5.05,
+            end: 7.3,
+          },
+          {
+            text: "Radzą zakochani ludzie",
+            start: 7.3,
+            end: 10.3,
+          },
+          {
+            text: "I powiedzą, że ta",
+            start: 10.3,
+            end: 12.9, // brak kolejnego timestampu
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 110,
+    day: 110,
+    title: "Radio Hello",
+    artist: "Enej",
+    audioSrc: "/Klasyki/Enej/110_Radio_Hello.mp3",
+    youtubeId: "isN0lz_2VBk",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Podaruje ti neperespani dni",
+            start: 0.0,
+            end: 3.46,
+          },
+          {
+            text: "Dobryj deń mersi, dobryj deń tobi!",
+            start: 3.46,
+            end: 10.14,
+          },
+          {
+            text: "Dobryj deń, dobryj deń,",
+            start: 10.14,
+            end: 12.76,
+          },
+          {
+            text: "Tu twoje radio, hello, hello",
+            start: 12.76,
+            end: 17.25,
+          },
+          {
+            text: "Dobryj deń, dobryj deń",
+            start: 17.25,
+            end: 19.75,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 111,
+    day: 111,
+    title: "Łydka",
+    artist: "Happysad",
+    audioSrc: "/Klasyki/Happysad/111_Łydka.mp3",
+    youtubeId: "mDRXULGgh-A",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Wydrylujesz śliną mnie",
+            start: 0.0,
+            end: 3.16,
+          },
+          {
+            text: "Otoczysz sprężystą łydką",
+            start: 3.16,
+            end: 7.07,
+          },
+          {
+            text: "Wydrylujesz śliną mnie",
+            start: 7.07,
+            end: 10.32,
+          },
+          {
+            text: "Otoczysz sprężystą łydką",
+            start: 10.32,
+            end: 16.2,
+          },
+          {
+            text: "Ale to nie wszystko",
+            start: 16.2,
+            end: 19.69,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 112,
+    day: 112,
+    title: "Psychologa",
+    artist: "Happysad",
+    audioSrc: "/Klasyki/Happysad/112_Psychologa___.mp3",
+    youtubeId: "z2OUQcf7xUM",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Zdolności kredytowej",
+            start: 0.0,
+            end: 3.57,
+          },
+          {
+            text: "Ja sobie sam poradzę",
+            start: 3.57,
+            end: 5.44,
+          },
+          {
+            text: "Mam dosyć Twoich marzeń",
+            start: 5.44,
+            end: 7.43,
+          },
+          {
+            text: "Ja sobie sam poradzę",
+            start: 7.43,
+            end: 10.74,
+          },
+          {
+            text: "Wszyscy politycy, dziennikarze",
+            start: 10.74,
+            end: 12.8,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 113,
+    day: 113,
+    title: "Mów mi dobrze",
+    artist: "Happysad",
+    audioSrc: "/Klasyki/Happysad/113_Mów_mi_dobrze.mp3",
+    youtubeId: "JUBkQNxYz9U",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "I kurczę się, w sobie zamykam",
+            start: 0.0,
+            end: 4,
+          },
+          {
+            text: "I kurczę się, w sobie zamykam",
+            start: 4,
+            end: 7.99,
+          },
+          {
+            text: "Bo ja na złe",
+            start: 7.99,
+            end: 11.89,
+          },
+          {
+            text: "Bo ja na złe reaguje źle",
+            start: 11.89,
+            end: 15.87,
+          },
+          {
+            text: "I kurczę się, w sobie zamykam",
+            start: 15.87,
+            end: 19.94,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 114,
+    day: 114,
+    title: "W piwnicy u dziadka",
+    artist: "Happysad",
+    audioSrc: "/Klasyki/Happysad/114_W_piwnicy_u_dziadka.mp3",
+    youtubeId: "WRdLw-vnwqo",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "A mróz trzaskał jak bat.",
+            start: 0.0,
+            end: 3.2,
+          },
+          {
+            text: "No a jeśli wychylaliśmy nosa",
+            start: 3.2,
+            end: 6.7,
+          },
+          {
+            text: "No to tylko na moment nad staw",
+            start: 6.7,
+            end: 10,
+          },
+          {
+            text: "A co by rybom podać tlen",
+            start: 10,
+            end: 12.95,
+          },
+          {
+            text: "No ale póki jeszcze był dzień wracaliśmy pod dach.",
+            start: 12.95,
+            end: 17.2,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 115,
+    day: 115,
+    title: "Bez znieczulenia",
+    artist: "Happysad",
+    audioSrc: "/Klasyki/Happysad/115_Bez_znieczulenia.mp3",
+    youtubeId: "lWV6CKrj1e4",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Hej, ja przed Tobą się rozbieram",
+            start: 0.0,
+            end: 6.96,
+          },
+          {
+            text: "Zrzucam zmięte, brudne myśli",
+            start: 6.96,
+            end: 15.14,
+          },
+          {
+            text: "I przed Tobą umieram",
+            start: 15.14,
+            end: 21.14,
+          },
+          {
+            text: " Chore serce otwieram bez znieczulenia",
+            start: 21.14,
+            end: 34.5,
+          },
+          {
+            text: "Hej, ja przed Tobą się rozklejam",
+            start: 34.5,
+            end: 38.8,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 116,
+    day: 116,
+    title: "A wszystko to...(Bo Ciebie Kocham)",
+    artist: "Ich Troje",
+    audioSrc: "/Klasyki/Ich Troje/116_A_Wszystko_To____Bo_Ciebie_Kocham_.mp3",
+    youtubeId: "869mcrMEysE",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "I nie wiem, jak bez Ciebie mógłbym żyć.",
+            start: 0.0,
+            end: 4.46,
+          },
+          {
+            text: "Chodź, pokażę ci, czym moja miłość jest.",
+            start: 4.46,
+            end: 8.65,
+          },
+          {
+            text: "Dla ciebie zabije się!",
+            start: 8.65,
+            end: 13.02,
+          },
+          {
+            text: "Zdarza mi się być na haju, wiesz, jak jest.",
+            start: 13.02,
+            end: 16.94,
+          },
+          {
+            text: "Dziwne wizje wchodzą, nie pożądasz mnie...",
+            start: 16.94,
+            end: 20.93,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 117,
+    day: 117,
+    title: "Powiedz",
+    artist: "Ich Troje",
+    audioSrc: "/Klasyki/Ich Troje/117_Powiedz.mp3",
+    youtubeId: "j0U4lrfzv6U",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Moich straconych dni",
+            start: 0.0,
+            end: 2.29,
+          },
+          {
+            text: "Moich łez wylanych - łez",
+            start: 2.29,
+            end: 28.9,
+          },
+          {
+            text: "Wstań, powiedz nie jestem sam",
+            start: 28.9,
+            end: 31.77,
+          },
+          {
+            text: "I nigdy więcej już nikt nie powie",
+            start: 31.77,
+            end: 35.55,
+          },
+          {
+            text: "Sępie miłości, nie kochasz",
+            start: 35.55,
+            end: 38.83,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 118,
+    day: 118,
+    title: "Wypijmy za to",
+    artist: "Ich Troje",
+    audioSrc: "/Klasyki/Ich Troje/118_Wypijmy_Za_To__.mp3",
+    youtubeId: "YL0N1ARFrsA",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "I będzie tylko ze mną",
+            start: 0.0,
+            end: 2.29,
+          },
+          {
+            text: "Przez wszystkie dni i noce",
+            start: 2.29,
+            end: 4.5,
+          },
+          {
+            text: "Zostaniesz sam",
+            start: 4.5,
+            end: 6.07,
+          },
+          {
+            text: "Sam siebie będziesz miał",
+            start: 6.07,
+            end: 9.85,
+          },
+          {
+            text: "I kochał",
+            start: 9.85,
+            end: 11.03,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 119,
+    day: 119,
+    title: "Peron",
+    artist: "Jamal",
+    audioSrc: "/Klasyki/Jamal/119_Peron.mp3",
+    youtubeId: "TiinAVjPyRs",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "To co w sobie mam tylko ciągnie mnie w dół",
+            start: 0.0,
+            end: 4.12,
+          },
+          {
+            text: "Zostań, poukładaj mi sny",
+            start: 4.12,
+            end: 7.49,
+          },
+          {
+            text: "Jeden z nich na pewno to my",
+            start: 7.49,
+            end: 11.51,
+          },
+          {
+            text: "Zostań, potrzebuję cię tu",
+            start: 11.51,
+            end: 16.04,
+          },
+          {
+            text: "To co w sobie mam, nie chcę się dzielić na pół",
+            start: 16.04,
+            end: 19.51,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 120,
+    day: 120,
+    title: "Kiedyś było inaczej",
+    artist: "Jeden Osiem L",
+    audioSrc: "/Klasyki/Jeden Osiem L/120_Kiedyś_było_inaczej.mp3",
+    youtubeId: "6cvoB3OS19w",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Porażkami się nie przejmuj",
+            start: 0.0,
+            end: 1.56,
+          },
+          {
+            text: "Chociaż było ich tyle",
+            start: 1.56,
+            end: 3.0,
+          },
+          {
+            text: "Kiedyś było inaczej",
+            start: 3.0,
+            end: 4.25,
+          },
+          {
+            text: "Zapamiętaj dobre chwile",
+            start: 4.25,
+            end: 5.87,
+          },
+          {
+            text: "Porażkami się nie przejmuj",
+            start: 5.87,
+            end: 7.18,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 121,
+    day: 121,
+    title: "Mój przyjacielu",
+    artist: "Krzysztof Krawczyk, Goran Bregović",
+    audioSrc:
+      "/Klasyki/Krzysztof Krawczyk/121_Mój_przyjacielu.mp3",
+    youtubeId: "g0kgw2kkFnM",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Dał gitarę, dał samochód - żony nie dał, ju!",
+            start: 0.0,
+            end: 2.3,
+          },
+          {
+            text: "Teraz pijesz wino, pijesz aż do dna,",
+            start: 2.3,
+            end: 5.12,
+          },
+          {
+            text: "Późna już godzina, próżno czekasz dnia.",
+            start: 5.12,
+            end: 7.62,
+          },
+          {
+            text: "Chciałbyś się rozpłynąć, uciec, gdzie się da.",
+            start: 7.62,
+            end: 10.3,
+          },
+          {
+            text: "Proszę zostań na noc, przyjaźń swoje prawa ma.",
+            start: 10.3,
+            end: 16.1,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 122,
+    day: 122,
+    title: "Za tobą pójdę jak na bal",
+    artist: "Krzysztof Krawczyk",
+    audioSrc: "/Klasyki/Krzysztof Krawczyk/122_Za_tobą_pójdę_jak_na_bal.mp3",
+    youtubeId: "97mN7Wbr8ek",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Zapomnieć, ze zbyt szybko mija czas",
+            start: 0.0,
+            end: 4.46,
+          },
+          {
+            text: "Śmiać się z życia, póki trwa",
+            start: 4.46,
+            end: 8.8,
+          },
+          {
+            text: "Za Tobą pojdę jak na bal, nie obejrze się",
+            start: 8.8,
+            end: 14.74,
+          },
+          {
+            text: "Nikt mnie nie zatrzyma, nie zatrzyma mnie",
+            start: 14.74,
+            end: 19.18,
+          },
+          {
+            text: "Niczego mi nie będzie żal, pójdę tak jak dym",
+            start: 19.18,
+            end: 24.88,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 123,
+    day: 123,
+    title: "Pragnienie miłości",
+    artist: "Akcent",
+    audioSrc: "/Klasyki/Akcent/123_Pragnienie_Miłości.mp3",
+    youtubeId: "2kg3Iz1UFGU",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "I chcę Cię bardzo i nie mogę chcieć",
+            start: 0.0,
+            end: 3.33,
+          },
+          {
+            text: "I mieć chcę Ciebie i nie mogę mieć",
+            start: 3.33,
+            end: 6.81,
+          },
+          {
+            text: "I dawać wszystko i nie mogę dać",
+            start: 6.81,
+            end: 10.32,
+          },
+          {
+            text: "I brać chcę miłość i nie mogę brać",
+            start: 10.32,
+            end: 29.13,
+          },
+          {
+            text: "Być guziczkiem w klawiaturze telefonu",
+            start: 29.13,
+            end: 32.44,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 124,
+    day: 124,
+    title: "Bo jesteś ty",
+    artist: "Krzysztof Krawczyk",
+    audioSrc: "/Klasyki/Krzysztof Krawczyk/124_Bo_jesteś_Ty.mp3",
+    youtubeId: "vVMvZFomaeY",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Chciałbym tak trwać nawet tysiąc lat",
+            start: 0.0,
+            end: 6.72,
+          },
+          {
+            text: "♪",
+            start: 6.72,
+            end: 9.63,
+          },
+          {
+            text: "Bo jesteś Ty",
+            start: 9.63,
+            end: 13.43,
+          },
+          {
+            text: "Znów przy mnie budzisz się",
+            start: 13.43,
+            end: 17.76,
+          },
+          {
+            text: "Bo jesteś Ty",
+            start: 17.76,
+            end: 22.16,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 125,
+    day: 125,
+    title: "Pszczółka Maja",
+    artist: "Akcent",
+    audioSrc: "/Klasyki/Akcent/125_Pszczółka_Maja.mp3",
+    youtubeId: "blA6y6cvcvY",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Przyleciała gdzieś na kwiatek, ooo",
+            start: 0.0,
+            end: 3.8,
+          },
+          {
+            text: "Ale z Gucia jest gagatek",
+            start: 3.8,
+            end: 6.3,
+          },
+          {
+            text: "Atakuje niespodzianie",
+            start: 6.3,
+            end: 8.85,
+          },
+          {
+            text: "Z tego wielkie jest śniadanie",
+            start: 8.85,
+            end: 12.2,
+          },
+          {
+            text: "Pszczółka Maja, sobie lata, ooo",
+            start: 12.2,
+            end: 17, // brak kolejnego timestampu
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 126,
+    day: 126,
+    title: "Życie to są chwile",
+    artist: "Akcent",
+    audioSrc: "/Klasyki/Akcent/126_Życie_To_Są_Chwile.mp3",
+    youtubeId: "94NwKQ9T_oY",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "A zegar daje znak",
+            start: 0.0,
+            end: 2.5,
+          },
+          {
+            text: "Nie zatrzymasz go i tak",
+            start: 2.5,
+            end: 5.85,
+          },
+          {
+            text: "Więc wspominaj chwile, chwile",
+            start: 5.85,
+            end: 9.1,
+          },
+          {
+            text: "Przecież było ich aż tyle...",
+            start: 9.1,
+            end: 12.65,
+          },
+          {
+            text: "Zegar nie zaszkodzi nam",
+            start: 12.65,
+            end: 15.7,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 127,
+    day: 127,
+    title: "Moja gwiazda",
+    artist: "Akcent",
+    audioSrc: "/Klasyki/Akcent/127_Moja_Gwiazda.mp3",
+    youtubeId: "hTZZyDXRt6s",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Noc, noc, noc, niebo pełne gwiazd,",
+            start: 0.0,
+            end: 3.3,
+          },
+          {
+            text: "Zmrok się w ciemność nagle zmienia.",
+            start: 3.3,
+            end: 6.4,
+          },
+          {
+            text: "Wiem, wiem, wiem, jedna spośród nich,",
+            start: 5.4,
+            end: 10.5,
+          },
+          {
+            text: "Może moje spełnić pragnienia.",
+            start: 10.5,
+            end: 13.3,
+          },
+          {
+            text: "Nikt nie dowie się, czego bardzo chcę,",
+            start: 13.3,
+            end: 16.7,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 128,
+    day: 128,
+    title: "Bananowa Agnieszka",
+    artist: "After Party",
+    audioSrc: "/Klasyki/AfterParty/128_Bananowa_Agnieszka.mp3",
+    youtubeId: "bcdJqdYp9jY",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ona tu niedaleko mieszka, ło-o-o",
+            start: 0.0,
+            end: 3.37,
+          },
+          {
+            text: "Taka seksowna, roześmiana",
+            start: 3.37,
+            end: 6.76,
+          },
+          {
+            text: "Codziennie rano je banana, ło-o-o",
+            start: 6.76,
+            end: 10.32,
+          },
+          {
+            text: "Bo w moim sercu jest Agnieszka",
+            start: 10.32,
+            end: 13.77,
+          },
+          {
+            text: "Ona tu niedaleko mieszka, ło-o-o",
+            start: 13.77,
+            end: 17.23,
           },
         ],
       },

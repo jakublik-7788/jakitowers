@@ -8410,7 +8410,7 @@ export const nonlimitRapSongs: Song[] = [
   //         {
   //           text: "A nadal gonię, jakbym sam nie wiedział co to szczęście",
   //           start: 13.71,
-  //           end: 17, 
+  //           end: 17,
   //         },
   //       ],
   //     },
@@ -12486,4 +12486,1806 @@ export const nonlimitRapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 343,
+    day: 343,
+    title: "ZAZA",
+    artist: "Aleshen",
+    audioSrc: "/Rap/Aleshen/346_ZAZA.mp3",
+    youtubeId: "Zzxlpn_J35c",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Za to mam bliżej do celu, za długo siedziałem w cieniu",
+            start: 0.0,
+            end: 2.51,
+          },
+          {
+            text: "Na sen za-za-za-za-za, zapadam się gdzieś w mieście",
+            start: 2.51,
+            end: 6.12,
+          },
+          {
+            text: "Zanurzam się w tekście, za wysoko, za wcześnie",
+            start: 6.12,
+            end: 8.73,
+          },
+          {
+            text: "Zawsze to czuję, jak wchodzę na blok swój",
+            start: 8.73,
+            end: 11.66,
+          },
+          {
+            text: "Wszystko co widzisz zależy od kątów",
+            start: 11.66,
+            end: 14.7,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 344,
+    day: 344,
+    title: "TURYSTA",
+    artist: "2115, Blacha 2115, White 2115, Flexxy 2115, kuqe 2115",
+    audioSrc: "/Rap/2115/344_TURYSTA.mp3",
+    youtubeId: "f4b4IgCxvR0",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Mam już stan, chodzę lekko wcięty (okej)",
+            start: 0.0,
+            end: 1.88,
+          },
+          {
+            text: "Ktoś mi wciska stuff łamanym angielskim (okej)",
+            start: 1.88,
+            end: 3.69,
+          },
+          {
+            text: "Mówię, Dobra, daj, tylko dwie kreski",
+            start: 3.69,
+            end: 5.65,
+          },
+          {
+            text: "I się pytam, czy mi stanie po tym kutas",
+            start: 5.65,
+            end: 7.53,
+          },
+          {
+            text: "Jestem w klubie, pachnę Diorem, ze mną Kuba",
+            start: 7.53,
+            end: 9.39,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 345,
+    day: 345,
+    title: "Michelangelo",
+    artist: "Avi, Louis Villain",
+    audioSrc: "/Rap/Avi/347_Michelangelo.mp3",
+    youtubeId: "tf1fqJGWPpg",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Się skundlili przez papierki zwane forsą",
+            start: 0.0,
+            end: 2.57,
+          },
+          {
+            text: "A na tle tych kundli to ja jestem cane corso",
+            start: 2.57,
+            end: 5.14,
+          },
+          {
+            text: "Kiedyś te sny wydawały się odległe (odległe)",
+            start: 5.14,
+            end: 7.73,
+          },
+          {
+            text: "Dziś nie bądź zły, że w końcu tu dobiegłem",
+            start: 7.73,
+            end: 10.64,
+          },
+          {
+            text: "Muszę skończyć to co kiedyś się zaczęło",
+            start: 10.64,
+            end: 13.11,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 346,
+    day: 346,
+    title: "WPR",
+    artist: "Avi, Louis Villain, Kabe",
+    audioSrc: "/Rap/Avi/348_WPR.mp3",
+    youtubeId: "_y6ZWMSODA0",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Daję na wypiskę, no bo siedzą moje ziomki",
+            start: 0.0,
+            end: 2.38,
+          },
+          {
+            text: "A jak siedzą, to i kminią Stephen Hawking",
+            start: 2.38,
+            end: 5.07,
+          },
+          {
+            text: "Teraz zdziwieni, kiedy jadę sobie S-ką",
+            start: 5.07,
+            end: 7.54,
+          },
+          {
+            text: "Przecież mówiłem, zrobię milion przed trzydziestką",
+            start: 7.54,
+            end: 10.14,
+          },
+          {
+            text: "Jeden z nielicznych, którzy oddali się sztuce",
+            start: 10.14,
+            end: 12.42,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 347,
+    day: 347,
+    title: "Alma Mater",
+    artist: "Avi, Louis Villain, Ero JWP, Onar",
+    audioSrc: "/Rap/Avi/349_Alma_Mater.mp3",
+    youtubeId: "P1fEI42BSl8",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Tu gdzie nie podchodź jak się nie znamy",
+            start: 0.0,
+            end: 3.07,
+          },
+          {
+            text: "Tu gdzie ludzie Ci patrzą w kiermany",
+            start: 3.07,
+            end: 5.11,
+          },
+          {
+            text: "Gdzie najlepsze jeszcze przed nami",
+            start: 5.11,
+            end: 7.74,
+          },
+          {
+            text: "Tu gdzie Raszyn, Ursynów, Bielany",
+            start: 7.74,
+            end: 9.5,
+          },
+          {
+            text: "Jestem z miasta Syreny, gdzie ciągle słychać syreny",
+            start: 9.5,
+            end: 12.65,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 348,
+    day: 348,
+    title: "Baba Hassan",
+    artist: "Baba Hassan, Pusher, Oska030, Oil Beatz, @atutowy",
+    audioSrc: "/Rap/BabaHassan/350_Baba_Hassan.mp3",
+    youtubeId: "TOk0wqcU3hs",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Dzisiaj wyjebane, leje się Martini",
+            start: 0.0,
+            end: 3.0,
+          },
+          {
+            text: "Dziewczyny se biegają, ubrane w Amiri",
+            start: 3.0,
+            end: 5.92,
+          },
+          {
+            text: "Ich pośladki w kształcie, soczystej brzoskwini",
+            start: 5.92,
+            end: 8.86,
+          },
+          {
+            text: "Ona taka piękna, wygląda jak bogini",
+            start: 8.86,
+            end: 11.62,
+          },
+          {
+            text: "Kocham wtedy kiedy dobrze leży na niej mini",
+            start: 11.62,
+            end: 14.46,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 349,
+    day: 349,
+    title: "GZMN",
+    artist: "Pusher, Oska030, Mercury, Skibovicz, Baba Hassan",
+    audioSrc: "/Rap/Pusher/352_GZMN.mp3",
+    youtubeId: "l3kMw1cabHE",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "To pieniądze robią status",
+            start: 0.0,
+            end: 1.24,
+          },
+          {
+            text: "600 koni, czarny Brabus",
+            start: 1.24,
+            end: 2.44,
+          },
+          {
+            text: "W bagażniku ostry Magnum, na obcasach tańczysz tango",
+            start: 2.44,
+            end: 4.52,
+          },
+          {
+            text: "Palenie mango albo bubble gum gelato",
+            start: 4.52,
+            end: 6.77,
+          },
+          {
+            text: "Interesy jak El Chapo, Ty na zawsze będziesz szmatą",
+            start: 6.77,
+            end: 9.74,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 350,
+    day: 350,
+    title: "Leje Wina",
+    artist: "Pusher, GRACEK, Baba Hassan",
+    audioSrc: "/Rap/Pusher/353_Leje_Wina.mp3",
+    youtubeId: "XTvPYw2QbZo",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ja jej nie wierzę, gdy mówi, że mnie kocha",
+            start: 0.0,
+            end: 2.98,
+          },
+          {
+            text: "Mówiła tak już pewnie do niejednego chłopa",
+            start: 2.98,
+            end: 6.52,
+          },
+          {
+            text: "W miejscu, którym ma serce jest sukces i mamona",
+            start: 6.52,
+            end: 9.96,
+          },
+          {
+            text: "Wolę mieć kupione szczęście, niż się smucić przez stan konta",
+            start: 9.96,
+            end: 13.4,
+          },
+          {
+            text: "Leje wina do kielicha jej (aj-aj-aj-aj-aj-aj)",
+            start: 13.4,
+            end: 16.79,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 351,
+    day: 351,
+    title: "Mademoiselle",
+    artist: "Blacha 2115",
+    audioSrc: "/Rap/Blacha/359_Mademoiselle.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Bo jesteś dzisiaj moją Mad-mad-mademoiselle",
+            start: 0.0,
+            end: 7.07,
+          },
+          {
+            text: "Nie chodzi mi o sex, chyba żartujesz",
+            start: 7.07,
+            end: 9.26,
+          },
+          {
+            text: "Bo dzisiaj jesteś moją Mademoiselle",
+            start: 9.26,
+            end: 11.6,
+          },
+          {
+            text: "Na tej stacji z byłym chodziłaś na kawę",
+            start: 11.6,
+            end: 13.86,
+          },
+          {
+            text: "Dzisiaj ze mną opierdolisz tą stację",
+            start: 13.86,
+            end: 16.02,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 352,
+    day: 352,
+    title: "Casablanca",
+    artist: "Blacha 2115",
+    audioSrc: "/Rap/Blacha/360_Casablanca.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Gotujesz mi coś, ja się ubieram",
+            start: 0.0,
+            end: 2.49,
+          },
+          {
+            text: "Casablanca, Casablanca, mógłbym zrobić o tym film",
+            start: 2.49,
+            end: 6.14,
+          },
+          {
+            text: "Stale sobą mnie zadziwiasz, a nie znamy się od dziś",
+            start: 6.14,
+            end: 10.17,
+          },
+          {
+            text: "Napijmy się tak, napijmy się tak, aż obojętne będzie ile kosztuje świat",
+            start: 10.17,
+            end: 14.11,
+          },
+          {
+            text: "Napijmy się tak, napijmy się tak, aż obojętne będzie ile kosztuje świat",
+            start: 14.11,
+            end: 18.08,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 353,
+    day: 353,
+    title: "ziarnko do ziarnka",
+    artist: "chillwagon",
+    audioSrc: "/Rap/chillwagon/362_ziarnko_do_ziarnka.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ziarno do ziarenka, dziób, dziób",
+            start: 0.0,
+            end: 1.64,
+          },
+          {
+            text: "Tak jak buch do bucha, pozbierany do płuc",
+            start: 1.64,
+            end: 4.3,
+          },
+          {
+            text: "Ty jesteś niezdolny paziu, jak to twoje crew",
+            start: 4.3,
+            end: 7.34,
+          },
+          {
+            text: "Jakbym oglądał wojnę światów tak jak Tomek Cruise, oh",
+            start: 7.34,
+            end: 11.2,
+          },
+          {
+            text: "Będę robił swoje, nawet jak nie rozumieją",
+            start: 11.2,
+            end: 13.8,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 354,
+    day: 354,
+    title: "OSZUKAJ PRZEZNACZENIE",
+    artist: "Yung Adisz, Gottastral",
+    audioSrc: "/Rap/Adisz/363_OSZUKAJ_PRZEZNACZENIE.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "O-oszukaj przeznaczenie i spełniaj swe marzenie",
+            start: 0.0,
+            end: 2.78,
+          },
+          {
+            text: "Nigdy nie dawaj się kurwom, rozpierdala ich ciśnienie",
+            start: 2.78,
+            end: 5.73,
+          },
+          {
+            text: "O-oni ciągle płaczą, ale nigdy się nie zmienię",
+            start: 5.73,
+            end: 8.66,
+          },
+          {
+            text: "Na mnie coś pierdoli, ma na głowie urojenie",
+            start: 8.66,
+            end: 11.27,
+          },
+          {
+            text: "Suko, jestem tym najlepszym, to jest moje przeznaczenie",
+            start: 11.27,
+            end: 14.19,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 355,
+    day: 355,
+    title: "jeden jeden",
+    artist: "chillwagon",
+    audioSrc: "/Rap/chillwagon/364_jeden_jeden.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Chyba znów strzeliłeś gola, mordzia, ja strzeliłem siedem",
+            start: 0.0,
+            end: 2.02,
+          },
+          {
+            text: "No i w takiej sytuacji wcale nie jest jeden-jeden",
+            start: 2.02,
+            end: 4.84,
+          },
+          {
+            text: "Jeden-jeden, jeden-jeden, jeden-jeden, jeden-jeden",
+            start: 4.84,
+            end: 6.95,
+          },
+          {
+            text: "Ciągle tak tu jest, ciągle jeden krok od ciebie, hej",
+            start: 6.95,
+            end: 10.07,
+          },
+          {
+            text: "Fioletowy łeb, nie od kodeiny, ej",
+            start: 10.07,
+            end: 12.36,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 356,
+    day: 356,
+    title: "jumper",
+    artist: "chillwagon",
+    audioSrc: "/Rap/chillwagon/365_jumper.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ludzie piją i tańczą, tak łapią luz",
+            start: 0.0,
+            end: 2.04,
+          },
+          {
+            text: "Ludzie codziennie walczą żeby wyjść na plus",
+            start: 2.04,
+            end: 4.14,
+          },
+          {
+            text: "Kocham chwilę gdy mi wszystko jedno",
+            start: 4.14,
+            end: 5.9,
+          },
+          {
+            text: "To jedna z nich, więc, byku, skacz, nie pierdol",
+            start: 5.9,
+            end: 8.0,
+          },
+          {
+            text: "Kto nie skacze ten z policji, hop, hop, hop",
+            start: 8.0,
+            end: 10.82,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 357,
+    day: 357,
+    title: "Malibu Barbie",
+    artist:
+      "club2020, OKI, Otsochodzi, Taco Hemingway, Young Leosia, Dwa Sławy, Gruby Mielzky",
+    audioSrc: "/Rap/club2020/366_Malibu_Barbie.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Gdy tak wygląda mi nie przeszkadza, że gada mi bajki",
+            start: 0.0,
+            end: 3.44,
+          },
+          {
+            text: "Ona jest stylish, ona ma vibe'ik - Malibu Barbie",
+            start: 3.44,
+            end: 6.68,
+          },
+          {
+            text: "Chevy drop top cofa się do nineteen nineties",
+            start: 6.68,
+            end: 10.27,
+          },
+          {
+            text: "Ona jest stylish, ona ma vibik - Malibu Barbie (yee)",
+            start: 10.27,
+            end: 13.66,
+          },
+          {
+            text: "Gdy tak wygląda mi nie przeszkadza, że gada mi bajki",
+            start: 13.66,
+            end: 17.04,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 358,
+    day: 358,
+    title: "club2020",
+    artist: "club2020, Taco Hemingway, OKI, Otsochodzi, CatchUp, Young Igi",
+    audioSrc: "/Rap/club2020/367_club2020.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Dzięki Twenty Twenty zarobiłem tu milion",
+            start: 0.0,
+            end: 1.79,
+          },
+          {
+            text: "Ja milion",
+            start: 1.79,
+            end: 2.65,
+          },
+          {
+            text: "I ja też milion",
+            start: 2.65,
+            end: 3.71,
+          },
+          {
+            text: "Wpadłem tutaj z mą familią",
+            start: 3.71,
+            end: 5.76,
+          },
+          {
+            text: "Mordo, kurwa, to jest czwarty milion",
+            start: 5.76,
+            end: 7.33,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 359,
+    day: 359,
+    title: "Ej mała",
+    artist: "club2020, OKI, Young Igi, Otsochodzi, Taco Hemingway",
+    audioSrc: "/Rap/club2020/368_Ej__mała_.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ej, mała, 2020 club na ośce (na-na-na, na-na-na)",
+            start: 0.0,
+            end: 4.63,
+          },
+          {
+            text: "Wchodzimy do Vitkaca tak jakbyśmy odwiedzali Decathlon",
+            start: 4.63,
+            end: 7.26,
+          },
+          {
+            text: "Wychodzę z fury, jakiś ziomal do mnie podjeżdża z gadką",
+            start: 7.26,
+            end: 9.74,
+          },
+          {
+            text: "CCTV to widzi, to double sissy, nie DC",
+            start: 9.74,
+            end: 12.34,
+          },
+          {
+            text: "Nie wierzy oczom, mordko my jesteśmy prawdziwi",
+            start: 12.34,
+            end: 14.71,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 360,
+    day: 360,
+    title: "Tak naprawdę",
+    artist:
+      "club2020, PRO8L3M, Łajzol, HAŁASTRA, Avi, Taco Hemingway, Dwa Sławy, Gruby Mielzky",
+    audioSrc: "/Rap/club2020/369_Tak_naprawdę.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Tak szczerze to chuj mnie czy jeździsz se mazdą czy starym ogórkiem",
+            start: 0.0,
+            end: 3.35,
+          },
+          {
+            text: "Czy może G-klasą? Chociaż nigdy w życiu nie miałeś pod górkę",
+            start: 3.35,
+            end: 7.08,
+          },
+          {
+            text: "Tak serio, gdy pytasz; Wiesz kim ja jestem?",
+            start: 7.08,
+            end: 9.29,
+          },
+          {
+            text: "To kurwa nie wiem kim jesteś",
+            start: 9.29,
+            end: 11.15,
+          },
+          {
+            text: "Bo jestem gościem co wie czego chce no i wie kogo nie chce",
+            start: 11.15,
+            end: 14.34,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 361,
+    day: 361,
+    title: "Gucci Mane",
+    artist: "Deemz, Bedoes 2115, Young Multi",
+    audioSrc: "/Rap/Deemz/370_Gucci_Mane.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Na twarzy wypisany lód tak jak Gucci Mane",
+            start: 0.0,
+            end: 2.7,
+          },
+          {
+            text: "Przejmujemy klub tak jak Gucci Mane",
+            start: 2.7,
+            end: 5.92,
+          },
+          {
+            text: "Trap, trap aż po grób tak jak Gucci Mane (Gucci Mane)",
+            start: 5.92,
+            end: 9.06,
+          },
+          {
+            text: "Gucci Mane (Mane), Gucci Mane",
+            start: 9.06,
+            end: 11.52,
+          },
+          {
+            text: "Trap, trap aż po grób tak jak Gucci Mane (Gucci Mane)",
+            start: 11.52,
+            end: 14.76,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 362,
+    day: 362,
+    title: "I Took A Pill In Remiza",
+    artist: "Deemz, GOMBAO 33",
+    audioSrc: "/Rap/Deemz/372_I_Took_A_Pill_In_Remiza.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Browar, wódka, refill, woda",
+            start: 0.0,
+            end: 3.58,
+          },
+          {
+            text: "Jestem smakoszem kebsów, no bo to moja metoda na głoda",
+            start: 3.58,
+            end: 7.08,
+          },
+          {
+            text: "Ona chce centymetrów (dużo)",
+            start: 7.08,
+            end: 9.52,
+          },
+          {
+            text: "Dzwonię do Biesiadowa",
+            start: 9.52,
+            end: 11.39,
+          },
+          {
+            text: "52 cm, szynka, salami 30 PLN",
+            start: 11.39,
+            end: 14.89,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 363,
+    day: 363,
+    title: "Wielka szkoda",
+    artist: "Diho, Fagata",
+    audioSrc: "/Rap/Diho/373_Wielka_szkoda.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "A ja kurwa ciągle błyszcze, na salonach",
+            start: 0.0,
+            end: 3.11,
+          },
+          {
+            text: "Jak go skuje kajdankami to odwróci się rola",
+            start: 3.11,
+            end: 6.07,
+          },
+          {
+            text: "On mi wpycha czekoladki (yhym), jak zakolak",
+            start: 6.07,
+            end: 8.63,
+          },
+          {
+            text: "No i musi stracić oddech jakby dmuchał balona (ah, ah, ah)",
+            start: 8.63,
+            end: 11.92,
+          },
+          {
+            text: "A ja ciągle chodzę, napalona (mua)",
+            start: 11.92,
+            end: 14.48,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 364,
+    day: 364,
+    title: "dno",
+    artist: "Yung Adisz",
+    audioSrc: "/Rap/Adisz/374_dno.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Nie spodziewałem się, że w życiu znowu znajdę szczęście",
+            start: 0.0,
+            end: 3.99,
+          },
+          {
+            text: "Chyba się myliłem, teraz widzę to nareszcie",
+            start: 3.99,
+            end: 7.41,
+          },
+          {
+            text: "Ona jest wyjątkowa, nie jak inne szmaty",
+            start: 7.41,
+            end: 10.67,
+          },
+          {
+            text: "Mógłbym dać jej coś w prezencie, mógłbym dać jej kwiaty",
+            start: 10.67,
+            end: 14.65,
+          },
+          {
+            text: "Ona jest wyjątkowa, nie jak inne szmaty",
+            start: 14.65,
+            end: 18.25,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 365,
+    day: 365,
+    title: "Rose Moët",
+    artist: "Malik Montana, Diho",
+    audioSrc: "/Rap/MalikMontana/376_Rose_Moët.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Beng",
+            start: 0.0,
+            end: 0.59,
+          },
+          {
+            text: "Bo tu się dzwoni po kopyta, a nie po psy",
+            start: 0.59,
+            end: 3.64,
+          },
+          {
+            text: "W-wa styl, możesz talerze myć",
+            start: 3.64,
+            end: 6.49,
+          },
+          {
+            text: "Bo tu się dzwoni po kopyta, a nie po psy",
+            start: 6.49,
+            end: 9.6,
+          },
+          {
+            text: "W-wa styl, możesz talerze myć",
+            start: 9.6,
+            end: 12.51,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 366,
+    day: 366,
+    title: "Woda Księżycowa",
+    artist: "Kubi Producent, bambi, Fukaj, stickxr",
+    audioSrc: "/Rap/Fukaj/379_Woda_Księżycowa.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ja całe niebo bym ściągnął na ziemię",
+            start: 0.0,
+            end: 2.49,
+          },
+          {
+            text: "Żeby zobaczyć Cię jeszcze raz",
+            start: 2.49,
+            end: 4.7,
+          },
+          {
+            text: "Żeby zobaczyć Cię pierwszy raz",
+            start: 4.7,
+            end: 6.3,
+          },
+          {
+            text: "I ten blask w Twoim oku",
+            start: 6.3,
+            end: 8.1,
+          },
+          {
+            text: "No i nas razem znowu",
+            start: 8.1,
+            end: 9.45,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 367,
+    day: 367,
+    title: "OWOCE 3",
+    artist: "Fukaj, charlie moncler",
+    audioSrc: "/Rap/Fukaj/380_OWOCE_3.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Bit się zwolnił, lecz my nie zwalniamy tempa",
+            start: 0.0,
+            end: 1.99,
+          },
+          {
+            text: "Gdy kończy się piosenka to zaczyna się następna",
+            start: 1.99,
+            end: 4.48,
+          },
+          {
+            text: "Kolejka się niedługo będzie ustawiać po zdjęcia",
+            start: 4.48,
+            end: 7.22,
+          },
+          {
+            text: "I kolejka za tych o których będę zawsze pamiętał",
+            start: 7.22,
+            end: 9.74,
+          },
+          {
+            text: "Wciąż chuj z nami, długa droga za nami",
+            start: 9.74,
+            end: 12.39,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 368,
+    day: 368,
+    title: "BALI",
+    artist: "Gedz",
+    audioSrc: "/Rap/Gedz/381_BALI.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ja zabiorę cię wyżej, mówią mi Gagarin",
+            start: 0.0,
+            end: 3.42,
+          },
+          {
+            text: "W głowie rodeo jak Travis",
+            start: 3.42,
+            end: 5.48,
+          },
+          {
+            text: "Myślę o rzeczach, których nie da się naprawić",
+            start: 5.48,
+            end: 7.68,
+          },
+          {
+            text: "Ty chciałabyś móc się bawić",
+            start: 7.68,
+            end: 9.59,
+          },
+          {
+            text: "Ale od rana tylko sprawy, sprawy, sprawy",
+            start: 9.59,
+            end: 11.87,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 369,
+    day: 369,
+    title: "KOSMITA",
+    artist: "Gedz, Sokos, 808Bros",
+    audioSrc: "/Rap/Gedz, Sokos, 808Bros/382_KOSMITA.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Krzyczą, że styl, ej, krzyczeli, że wstyd",
+            start: 0.0,
+            end: 4,
+          },
+          {
+            text: "Nie pasi Ci coś, to chuj Ci w ryj (to chuj Ci w ryj)",
+            start: 4,
+            end: 7.5,
+          },
+          {
+            text: "Jestem kosmitą i lecę z tym",
+            start: 7.5,
+            end: 10.9,
+          },
+          {
+            text: "Co więcej mogę powiedzieć Ci, bon appétit",
+            start: 10.9,
+            end: 28,
+          },
+          {
+            text: "Kiedyś ta suka (dama) była jak ciekły azot",
+            start: 28,
+            end: 31.39,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 370,
+    day: 370,
+    title: "MORFINA",
+    artist: "Gedz, LOAA, 808Bros",
+    audioSrc: "/Rap/Gedz/385_MORFINA.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "W czasach muzy tępej, jak jebane disco polo",
+            start: 0.0,
+            end: 2.36,
+          },
+          {
+            text: "Od tego sialalalala, nas umysły bolą",
+            start: 2.36,
+            end: 4.52,
+          },
+          {
+            text: "Jestem mesjaszem, moi ludzie idą dobrą drogą",
+            start: 4.52,
+            end: 6.63,
+          },
+          {
+            text: "Choć nie zawsze zgadza się kwit (życie kosztuje sporo)",
+            start: 6.63,
+            end: 8.98,
+          },
+          {
+            text: "Oh, jak świeci u nas coś, to skille kolo",
+            start: 8.98,
+            end: 11.15,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 371,
+    day: 371,
+    title: "Patologika",
+    artist: "Alan",
+    audioSrc: "/Rap/Alan/386_Patologika.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Całe życie masz na wozie, każdy w końcu skończy pod",
+            start: 0.0,
+            end: 2.23,
+          },
+          {
+            text: "Pachnie ode mnie rybakiem, od opierdalania szprot",
+            start: 2.23,
+            end: 4.61,
+          },
+          {
+            text: "Jak się pchają na plakaty z ryjem wytapetowanym",
+            start: 4.61,
+            end: 6.7,
+          },
+          {
+            text: "Tobie ziomal spawał dupę, stąd jest moda na blachary",
+            start: 6.7,
+            end: 9.12,
+          },
+          {
+            text: "Polityka się posypie, płaczem wylewają żal",
+            start: 9.12,
+            end: 11.38,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 372,
+    day: 372,
+    title: "KokaPaniePenga",
+    artist: "Alberto, Josef Bratan, 730",
+    audioSrc: "/Rap/Alberto/345_KokaPaniePenga.mp3",
+    youtubeId: "zwoPNPzcQgI",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Nie cofam do tyłu, bo idę za ciosem",
+            start: 0.0,
+            end: 2.29,
+          },
+          {
+            text: "Liczę tą forsę, nie przespane noce",
+            start: 2.29,
+            end: 3.87,
+          },
+          {
+            text: "Co drugi brat tu z bratem ma kosę",
+            start: 3.87,
+            end: 5.21,
+          },
+          {
+            text: "Los rozdaje karty, a w talii jest joker",
+            start: 5.21,
+            end: 7.05,
+          },
+          {
+            text: "Rzadko tu kiedy kończyło na gadce, o wszystko musiałem się bić",
+            start: 7.05,
+            end: 9.99,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 373,
+    day: 373,
+    title: "SQP",
+    artist: "Baba Hassan, Pusher, Oska030, brokeasfbeats, Polski Bandyta",
+    audioSrc: "/Rap/BabaHassan/351_SQP.mp3",
+    youtubeId: "mrZvl22vY2k",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Es reicht nur ein Handschlag",
+            start: 0.0,
+            end: 1.06,
+          },
+          {
+            text: "Berlin bis nach Warschau",
+            start: 1.06,
+            end: 2.6,
+          },
+          {
+            text: "Towar leci w paczkach",
+            start: 2.6,
+            end: 3.44,
+          },
+          {
+            text: "Skyty czy lato gruda i banknot",
+            start: 3.44,
+            end: 5.37,
+          },
+          {
+            text: "Nie ma tu pardon berlińskie bagno",
+            start: 5.37,
+            end: 9.48,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 374,
+    day: 374,
+    title: "BRUCE",
+    artist: "2115, White 2115, kuqe 2115, Flexxy 2115",
+    audioSrc: "/Rap/2115/354_BRUCE.mp3",
+    youtubeId: "ZfaVJIv-jzM",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Pięć sztuk we dwóch no i chuj tam z psami",
+            start: 0.0,
+            end: 2.78,
+          },
+          {
+            text: "Niech śpią pod drzwiami",
+            start: 2.78,
+            end: 4.42,
+          },
+          {
+            text: "Dmucham w judasza niech se postoją do białego rana",
+            start: 4.42,
+            end: 7.1,
+          },
+          {
+            text: "Znam swoje prawa nie mam obowiązku do otwierania",
+            start: 7.1,
+            end: 10.33,
+          },
+          {
+            text: "Tym kurwom mieszkania",
+            start: 10.33,
+            end: 11.39,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 375,
+    day: 375,
+    title: "Problemy Luxusowe",
+    artist: "Baba Hassan, Pusher, Oska030, @atutowy, Polski Bandyta",
+    audioSrc: "/Rap/BabaHassan/355_Problemy_Luxusowe.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Niby roszpunka z niej, to całą noc ciągnie ją za te warkocze",
+            start: 0.0,
+            end: 3.69,
+          },
+          {
+            text: "Każdy z nas prawdziwy jest",
+            start: 3.69,
+            end: 5.41,
+          },
+          {
+            text: "Żaden scenariusz to nie bracia Mroczek",
+            start: 5.41,
+            end: 7.27,
+          },
+          {
+            text: "Chcemy wyjść, a ty chcesz wejść, na ulicy jebiesz tylko moczem",
+            start: 7.27,
+            end: 10.67,
+          },
+          {
+            text: "Ciroc a nie Soplica, policja nas tu ściga",
+            start: 10.67,
+            end: 14.58,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 376,
+    day: 376,
+    title: "Chłopaki nie płaczą",
+    artist: "Bedoes 2115, Kubi Producent, Taco Hemingway",
+    audioSrc: "/Rap/Bedoes/356_Chłopaki_nie_płaczą.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Na to nie jest bracie za późno",
+            start: 0.0,
+            end: 4.01,
+          },
+          {
+            text: "Też kiedyś dostałem w mordę i miałem złamaną rękę",
+            start: 4.01,
+            end: 6.57,
+          },
+          {
+            text: "Też kiedyś dostałem kosza i miałem złamane serce",
+            start: 6.57,
+            end: 9.5,
+          },
+          {
+            text: "Też kiedyś było źle, też kiedyś było słabo",
+            start: 9.5,
+            end: 14.48,
+          },
+          {
+            text: "Też kiedyś dostałem w mordę i miałem złamaną rękę",
+            start: 14.48,
+            end: 16.77,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 377,
+    day: 377,
+    title: "YoMenik",
+    artist: "Belmondo, GSP, YoMenik",
+    audioSrc: "/Rap/Belmondo/357_YoMenik.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "YoMenik, znowu upaleni",
+            start: 0.0,
+            end: 3.46,
+          },
+          {
+            text: "YoMenik, menik, menik, pakuj hajs do kieszeni, YoMenik",
+            start: 3.46,
+            end: 7.44,
+          },
+          {
+            text: "O rety, kotlety, na stole leży paka Mary, Mary",
+            start: 7.44,
+            end: 11.63,
+          },
+          {
+            text: "Dajcieże mnie wstać z pakamery",
+            start: 11.63,
+            end: 14.08,
+          },
+          {
+            text: "Dzwonię do kolegi, to YoMenik, Co tam leci?",
+            start: 14.08,
+            end: 17.19,
+          }
+        ],
+      }
+    ],
+  },
+  {
+    id: 378,
+    day: 378,
+    title: "Yebać",
+    artist: "Belmondo, GSP",
+    audioSrc: "/Rap/Belmondo/358_Yebać.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Tych klaunów, pajaców",
+            start: 0.0,
+            end: 2.2,
+          },
+          {
+            text: "Yebać słabych producentów grass'u (yebać)",
+            start: 2.2,
+            end: 7.12,
+          },
+          {
+            text: "Yebać przydupasów, fagasów",
+            start: 7.12,
+            end: 9.82,
+          },
+          {
+            text: "Yebać, yebać, yebać, i w dwójnasób (yebać)",
+            start: 9.82,
+            end: 13.48,
+          },
+          {
+            text: "Yebać limity hałasu (yebać)",
+            start: 13.48,
+            end: 17.15,
+          }
+        ],
+      }
+    ],
+  },
+  {
+    id: 379,
+    day: 379,
+    title: "chillwagon",
+    artist: "chillwagon",
+    audioSrc: "/Rap/chillwagon/361_chillwagon.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Cel jest bliziutko, mordeczko, tam, zaraz na prawo",
+            start: 0.0,
+            end: 2.3,
+          },
+          {
+            text: "I tam czeka spokój, i tam czeka zielę, i wszystko to czego kiedyś brakowało,",
+            start: 2.3,
+            end: 6.1,
+          },
+          {
+            text: "chillwagon, chillwagon",
+            start: 6,
+            end: 7.5,
+          },
+          {
+            text: "Chcą z nami pojechać, to kurwy się nieźle przejadą",
+            start: 7.5,
+            end: 10.5,
+          },
+          {
+            text: "Na stole jest trawa, nie kawior, na głośnikach Kazior i Major",
+            start: 10.5,
+            end: 14.6,
+          }
+        ],
+      }
+    ],
+  },
+   {
+    id: 380,
+    day: 380,
+    title: "Fiesta",
+    artist: "Deemz, Smolasty, Sobel",
+    audioSrc: "/Rap/Deemz/371_Fiesta.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "U mnie codziennie tylko fiesta",
+            start: 0.0,
+            end: 2.39,
+          },
+          {
+            text: "Całą noc i cały dzień",
+            start: 2.39,
+            end: 4.64,
+          },
+          {
+            text: "Dla Ciebie mogę dzisiaj nie spać",
+            start: 4.64,
+            end: 7.45,
+          },
+          {
+            text: "Buena chica, quién eres?",
+            start: 7.45,
+            end: 9.34,
+          },
+          {
+            text: "U mnie codziennie tylko fiesta",
+            start: 9.34,
+            end: 12.03,
+          }
+        ],
+      }
+    ],
+  },
+  {
+    id: 381,
+    day: 381,
+    title: "WAWA022",
+    artist: "Sentino, Diho, BNP",
+    audioSrc: "/Rap/Sentino/375_WAWA022.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "I niejeden dostał w mordę, bo chciał coś pierdolić do mnie",
+            start: 0.0,
+            end: 3.31,
+          },
+          {
+            text: "To się działo gdzieś, na Dzikim Wschodzie",
+            start: 3.31,
+            end: 6.12,
+          },
+          {
+            text: "Nie przeszkadzał nam brak auta, bo się tankowało co dzień",
+            start: 6.12,
+            end: 9.13,
+          },
+          {
+            text: "A po drodze się gadało o zegarkach i o modzie",
+            start: 9.13,
+            end: 11.83,
+          },
+          {
+            text: "A jak chciało się coś nagrać, to studio było pod nosem",
+            start: 11.83,
+            end: 15.41,
+          }
+        ],
+      }
+    ],
+  },
+  {
+    id: 382,
+    day: 382,
+    title: "Przeciwko kurestwu i upadkowi zasad",
+    artist: "FIRMA, Hemp Gru",
+    audioSrc: "/Rap/FIRMA/377_Przeciwko_kurestwu_i_upadkowi_zasad.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Małolat chce zarobić – kroi swego",
+            start: 0.0,
+            end: 2.18,
+          },
+          {
+            text: "Jest tego coraz więcej na ulicy, opadają ci ręce",
+            start: 2.18,
+            end: 4.81,
+          },
+          {
+            text: "To dlatego, że masz zasady i serce",
+            start: 4.81,
+            end: 7.24,
+          },
+          {
+            text: "Masz to coś, czego ta kurwa nie posiądzie nigdy więcej",
+            start: 7.24,
+            end: 9.32,
+          },
+          {
+            text: "Hemp Gru, Firma rozwiązuje ci ręce",
+            start: 9.32,
+            end: 12.02,
+          }
+        ],
+      }
+    ],
+  },
+  {
+    id: 383,
+    day: 383,
+    title: "Zabiorę Cię Tam",
+    artist: "Fukaj, Vito Bambino",
+    audioSrc: "/Rap/Fukaj/378_Zabiorę_Cię_Tam.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ona mmm, ona woo",
+            start: 0.0,
+            end: 2.25,
+          },
+          {
+            text: "Jej strój w szwach pęka",
+            start: 2.25,
+            end: 7.65,
+          },
+          {
+            text: "Ona musi być z piekła (woo)",
+            start: 7.65,
+            end: 10.09,
+          },
+          {
+            text: "Niczym duch mnie traktuje, jakbym był z powietrza (mmm)",
+            start: 10.09,
+            end: 17.36,
+          },
+          {
+            text: "A jego dusza jest lekka (woo)",
+            start: 17.36,
+            end: 20.52,
+          }
+        ],
+      }
+    ],
+  },
+  {
+    id: 384,
+    day: 384,
+    title: "YIN YANG",
+    artist: "Gedz, Taco Hemingway, Sokos",
+    audioSrc: "/Rap/Gedz/383_YIN_YANG.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Coś jak Słońce i Księżyc, bo doskonale wiemy jak się uzupełnić",
+            start: 0.0,
+            end: 5.82,
+          },
+          {
+            text: "Słucham jej głosu w kółko, jakbym miał na pętli",
+            start: 5.82,
+            end: 9.35,
+          },
+          {
+            text: "Cały czas na rotacji jak pliki pieniędzy",
+            start: 9.35,
+            end: 13.78,
+          },
+          {
+            text: "Ona to sztuka tak jak Banksy",
+            start: 13.78,
+            end: 16.16,
+          },
+          {
+            text: "Wie kiedy ma poważna być, a kiedy kręcić",
+            start: 16.16,
+            end: 19.53,
+          }
+        ],
+      }
+    ],
+  },
+    {
+    id: 385,
+    day: 385,
+    title: "szczury grzyb i kokaina",
+    artist: "Alan",
+    audioSrc: "/Rap/Alan/384_szczury__grzyb_i_kokaina.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Życie układam powoli, nie boli mnie wcale hejt",
+            start: 0.0,
+            end: 2.69,
+          },
+          {
+            text: "Jak Ci nie siada mój numer do Play'a idź se go zmień",
+            start: 2.69,
+            end: 5.01,
+          },
+          {
+            text: "Nieodebranych połączeń mam tyle, co Sasha Grey",
+            start: 5.01,
+            end: 7.27,
+          },
+          {
+            text: "Rap-gra, suka jebana pociąga kutasa w sieć",
+            start: 7.27,
+            end: 9.87,
+          },
+          {
+            text: "Ale bełt, to wyrzygam na tracku wszystko, co mam",
+            start: 9.87,
+            end: 12.19,
+          }
+        ],
+      }
+    ],
+  },
+  {
+    id: 386,
+    day: 386,
+    title: "STRZAŁ",
+    artist: "Alberto",
+    audioSrc: "/Rap/Alberto/387_STRZAŁ.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Dostajesz cepa i gleba",
+            start: 0.0,
+            end: 1.64,
+          },
+          {
+            text: "Strzał, strzał, nie ma co po tobie zbierać",
+            start: 1.64,
+            end: 4.67,
+          },
+          {
+            text: "Nie ma co po tobie zbierać (pow)",
+            start: 4.67,
+            end: 6.51,
+          },
+          {
+            text: "Nie ma co po tobie zbierać",
+            start: 6.51,
+            end: 8.22,
+          },
+          {
+            text: "Strzał - nie ma co po tobie zbierać",
+            start: 8.22,
+            end: 11.6,
+          }
+        ],
+      }
+    ],
+  },
+  {
+    id: 387,
+    day: 387,
+    title: "Z BRATEM ZARABIAM PAPIER",
+    artist: "Alberto, Josef Bratan",
+    audioSrc: "/Rap/Alberto/388_Z_BRATEM_ZARABIAM_PAPIER.mp3",
+    youtubeId: "",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Bo z bratem zarabiam papier",
+            start: 0.0,
+            end: 1.7,
+          },
+          {
+            text: "Bo z bratem zarabiam papier",
+            start: 1.7,
+            end: 3.32,
+          },
+          {
+            text: "Bo z bratem zarabiam papier",
+            start: 3.32,
+            end: 4.95,
+          },
+          {
+            text: "Nocne zasadzki, maski, porachunki od najmłodszych lat",
+            start: 4.95,
+            end: 7.79,
+          },
+          {
+            text: "Świat pojebany jak Matrix, nie można ufać nikomu już tak",
+            start: 7.79,
+            end: 10.88,
+          }
+        ],
+      }
+    ],
+  }
 ];
