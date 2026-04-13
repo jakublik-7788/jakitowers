@@ -415,7 +415,6 @@ export const nonlimitRapAllSongs: SongSuggestion[] = [
   { title: "21 gramów", artist: "Zeamsone" },
   { title: "Padam Na Ryj", artist: "Sobel" },
   { title: "W Peunej Gotowości", artist: "Paktofonika" },
-  { title: "chillwagon", artist: "chillwagon" },
   { title: "Modlitwa", artist: "Kaz Bałagane, Malik Montana" },
   { title: "Lecimy na koncert", artist: "Gang Albanii" },
   { title: "Dla prawdziwych dam", artist: "Gang Albanii" },
