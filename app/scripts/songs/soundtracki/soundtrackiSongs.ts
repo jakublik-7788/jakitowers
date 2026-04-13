@@ -164,7 +164,7 @@ export const soundtrackiSongs: Song[] = [
   {
     id: 26,
     day: 26,
-    title: "Captain America",
+    title: "Kapitan Ameryka",
     artist: "",
     imageUrl: "/soundtracki/Captain America/kapitanameryka.jpg",
     fullAudioSrc: "/soundtracki/Captain America/Captain America.mp3",
