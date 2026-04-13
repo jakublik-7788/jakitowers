@@ -12812,7 +12812,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "Mademoiselle",
     artist: "Blacha 2115",
     audioSrc: "/Rap/Blacha/359_Mademoiselle.mp3",
-    youtubeId: "",
+    youtubeId: "YWjMAWrwpc0",
     lyrics: [
       {
         lineIndex: 0,
@@ -12852,7 +12852,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "Casablanca",
     artist: "Blacha 2115",
     audioSrc: "/Rap/Blacha/360_Casablanca.mp3",
-    youtubeId: "",
+    youtubeId: "Zoa0Ho2HW9E",
     lyrics: [
       {
         lineIndex: 0,
@@ -12892,7 +12892,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "ziarnko do ziarnka",
     artist: "chillwagon",
     audioSrc: "/Rap/chillwagon/362_ziarnko_do_ziarnka.mp3",
-    youtubeId: "",
+    youtubeId: "ILWKUMZHrJ4",
     lyrics: [
       {
         lineIndex: 0,
@@ -12932,7 +12932,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "OSZUKAJ PRZEZNACZENIE",
     artist: "Yung Adisz, Gottastral",
     audioSrc: "/Rap/Adisz/363_OSZUKAJ_PRZEZNACZENIE.mp3",
-    youtubeId: "",
+    youtubeId: "Z0qCXSq7Gj0",
     lyrics: [
       {
         lineIndex: 0,
@@ -12972,7 +12972,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "jeden jeden",
     artist: "chillwagon",
     audioSrc: "/Rap/chillwagon/364_jeden_jeden.mp3",
-    youtubeId: "",
+    youtubeId: "deBuaxtq4-Q",
     lyrics: [
       {
         lineIndex: 0,
@@ -13012,7 +13012,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "jumper",
     artist: "chillwagon",
     audioSrc: "/Rap/chillwagon/365_jumper.mp3",
-    youtubeId: "",
+    youtubeId: "K6pTnhOCmBQ",
     lyrics: [
       {
         lineIndex: 0,
@@ -13053,7 +13053,7 @@ export const nonlimitRapSongs: Song[] = [
     artist:
       "club2020, OKI, Otsochodzi, Taco Hemingway, Young Leosia, Dwa Sławy, Gruby Mielzky",
     audioSrc: "/Rap/club2020/366_Malibu_Barbie.mp3",
-    youtubeId: "",
+    youtubeId: "qundeyQtsQU",
     lyrics: [
       {
         lineIndex: 0,
@@ -13093,7 +13093,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "club2020",
     artist: "club2020, Taco Hemingway, OKI, Otsochodzi, CatchUp, Young Igi",
     audioSrc: "/Rap/club2020/367_club2020.mp3",
-    youtubeId: "",
+    youtubeId: "SycVE-wvQUI",
     lyrics: [
       {
         lineIndex: 0,
@@ -13133,7 +13133,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "Ej mała",
     artist: "club2020, OKI, Young Igi, Otsochodzi, Taco Hemingway",
     audioSrc: "/Rap/club2020/368_Ej__mała_.mp3",
-    youtubeId: "",
+    youtubeId: "5bzcBC8-H7k",
     lyrics: [
       {
         lineIndex: 0,
@@ -13174,7 +13174,7 @@ export const nonlimitRapSongs: Song[] = [
     artist:
       "club2020, PRO8L3M, Łajzol, HAŁASTRA, Avi, Taco Hemingway, Dwa Sławy, Gruby Mielzky",
     audioSrc: "/Rap/club2020/369_Tak_naprawdę.mp3",
-    youtubeId: "",
+    youtubeId: "WRhcHjY0WXc",
     lyrics: [
       {
         lineIndex: 0,
@@ -13214,7 +13214,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "Gucci Mane",
     artist: "Deemz, Bedoes 2115, Young Multi",
     audioSrc: "/Rap/Deemz/370_Gucci_Mane.mp3",
-    youtubeId: "",
+    youtubeId: "VdHOsLA5OqI",
     lyrics: [
       {
         lineIndex: 0,
@@ -13254,7 +13254,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "I Took A Pill In Remiza",
     artist: "Deemz, GOMBAO 33",
     audioSrc: "/Rap/Deemz/372_I_Took_A_Pill_In_Remiza.mp3",
-    youtubeId: "",
+    youtubeId: "mHPGwzB7kR8",
     lyrics: [
       {
         lineIndex: 0,
@@ -13294,7 +13294,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "Wielka szkoda",
     artist: "Diho, Fagata",
     audioSrc: "/Rap/Diho/373_Wielka_szkoda.mp3",
-    youtubeId: "",
+    youtubeId: "47trCBhtExA",
     lyrics: [
       {
         lineIndex: 0,
@@ -13334,7 +13334,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "dno",
     artist: "Yung Adisz",
     audioSrc: "/Rap/Adisz/374_dno.mp3",
-    youtubeId: "",
+    youtubeId: "VkNtS6r08r0",
     lyrics: [
       {
         lineIndex: 0,
@@ -13368,53 +13368,53 @@ export const nonlimitRapSongs: Song[] = [
       },
     ],
   },
-  {
-    id: 365,
-    day: 365,
-    title: "Rose Moët",
-    artist: "Malik Montana, Diho",
-    audioSrc: "/Rap/MalikMontana/376_Rose_Moët.mp3",
-    youtubeId: "",
-    lyrics: [
-      {
-        lineIndex: 0,
-        words: [
-          {
-            text: "Beng",
-            start: 0.0,
-            end: 0.59,
-          },
-          {
-            text: "Bo tu się dzwoni po kopyta, a nie po psy",
-            start: 0.59,
-            end: 3.64,
-          },
-          {
-            text: "W-wa styl, możesz talerze myć",
-            start: 3.64,
-            end: 6.49,
-          },
-          {
-            text: "Bo tu się dzwoni po kopyta, a nie po psy",
-            start: 6.49,
-            end: 9.6,
-          },
-          {
-            text: "W-wa styl, możesz talerze myć",
-            start: 9.6,
-            end: 12.51,
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: 365,
+  //   day: 365,
+  //   title: "Rose Moët",
+  //   artist: "Malik Montana, Diho",
+  //   audioSrc: "/Rap/MalikMontana/376_Rose_Moët.mp3",
+  //   youtubeId: "",
+  //   lyrics: [
+  //     {
+  //       lineIndex: 0,
+  //       words: [
+  //         {
+  //           text: "Beng",
+  //           start: 0.0,
+  //           end: 0.59,
+  //         },
+  //         {
+  //           text: "Bo tu się dzwoni po kopyta, a nie po psy",
+  //           start: 0.59,
+  //           end: 3.64,
+  //         },
+  //         {
+  //           text: "W-wa styl, możesz talerze myć",
+  //           start: 3.64,
+  //           end: 6.49,
+  //         },
+  //         {
+  //           text: "Bo tu się dzwoni po kopyta, a nie po psy",
+  //           start: 6.49,
+  //           end: 9.6,
+  //         },
+  //         {
+  //           text: "W-wa styl, możesz talerze myć",
+  //           start: 9.6,
+  //           end: 12.51,
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     id: 366,
     day: 366,
     title: "Woda Księżycowa",
     artist: "Kubi Producent, bambi, Fukaj, stickxr",
     audioSrc: "/Rap/Fukaj/379_Woda_Księżycowa.mp3",
-    youtubeId: "",
+    youtubeId: "syLU0zUREf4",
     lyrics: [
       {
         lineIndex: 0,
@@ -13454,7 +13454,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "OWOCE 3",
     artist: "Fukaj, charlie moncler",
     audioSrc: "/Rap/Fukaj/380_OWOCE_3.mp3",
-    youtubeId: "",
+    youtubeId: "Br3C0jiIc54",
     lyrics: [
       {
         lineIndex: 0,
@@ -13494,7 +13494,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "BALI",
     artist: "Gedz",
     audioSrc: "/Rap/Gedz/381_BALI.mp3",
-    youtubeId: "",
+    youtubeId: "C29_VoRrnss",
     lyrics: [
       {
         lineIndex: 0,
@@ -13534,7 +13534,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "KOSMITA",
     artist: "Gedz, Sokos, 808Bros",
     audioSrc: "/Rap/Gedz, Sokos, 808Bros/382_KOSMITA.mp3",
-    youtubeId: "",
+    youtubeId: "abvE0Qwyq5A",
     lyrics: [
       {
         lineIndex: 0,
@@ -13574,7 +13574,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "MORFINA",
     artist: "Gedz, LOAA, 808Bros",
     audioSrc: "/Rap/Gedz/385_MORFINA.mp3",
-    youtubeId: "",
+    youtubeId: "1v6vuD9v4Y0",
     lyrics: [
       {
         lineIndex: 0,
@@ -13614,7 +13614,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "Patologika",
     artist: "Alan",
     audioSrc: "/Rap/Alan/386_Patologika.mp3",
-    youtubeId: "",
+    youtubeId: "_DEHbOu6A3w",
     lyrics: [
       {
         lineIndex: 0,
@@ -13774,7 +13774,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "Problemy Luxusowe",
     artist: "Baba Hassan, Pusher, Oska030, @atutowy, Polski Bandyta",
     audioSrc: "/Rap/BabaHassan/355_Problemy_Luxusowe.mp3",
-    youtubeId: "",
+    youtubeId: "-TdBCs7E0yE",
     lyrics: [
       {
         lineIndex: 0,
@@ -13814,7 +13814,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "Chłopaki nie płaczą",
     artist: "Bedoes 2115, Kubi Producent, Taco Hemingway",
     audioSrc: "/Rap/Bedoes/356_Chłopaki_nie_płaczą.mp3",
-    youtubeId: "",
+    youtubeId: "wakbJpklQtI",
     lyrics: [
       {
         lineIndex: 0,
@@ -13854,7 +13854,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "YoMenik",
     artist: "Belmondo, GSP, YoMenik",
     audioSrc: "/Rap/Belmondo/357_YoMenik.mp3",
-    youtubeId: "",
+    youtubeId: "miwyMVT_zU0",
     lyrics: [
       {
         lineIndex: 0,
@@ -13894,7 +13894,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "Yebać",
     artist: "Belmondo, GSP",
     audioSrc: "/Rap/Belmondo/358_Yebać.mp3",
-    youtubeId: "",
+    youtubeId: "UUw15324M1A",
     lyrics: [
       {
         lineIndex: 0,
@@ -13934,7 +13934,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "chillwagon",
     artist: "chillwagon",
     audioSrc: "/Rap/chillwagon/361_chillwagon.mp3",
-    youtubeId: "",
+    youtubeId: "zCO-P29ttj0",
     lyrics: [
       {
         lineIndex: 0,
@@ -13974,7 +13974,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "Fiesta",
     artist: "Deemz, Smolasty, Sobel",
     audioSrc: "/Rap/Deemz/371_Fiesta.mp3",
-    youtubeId: "",
+    youtubeId: "6FustuvzWHQ",
     lyrics: [
       {
         lineIndex: 0,
@@ -14014,7 +14014,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "WAWA022",
     artist: "Sentino, Diho, BNP",
     audioSrc: "/Rap/Sentino/375_WAWA022.mp3",
-    youtubeId: "",
+    youtubeId: "klMPPBhObo4",
     lyrics: [
       {
         lineIndex: 0,
@@ -14054,7 +14054,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "Przeciwko kurestwu i upadkowi zasad",
     artist: "FIRMA, Hemp Gru",
     audioSrc: "/Rap/FIRMA/377_Przeciwko_kurestwu_i_upadkowi_zasad.mp3",
-    youtubeId: "",
+    youtubeId: "ugfsYAiZZZs",
     lyrics: [
       {
         lineIndex: 0,
@@ -14094,7 +14094,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "Zabiorę Cię Tam",
     artist: "Fukaj, Vito Bambino",
     audioSrc: "/Rap/Fukaj/378_Zabiorę_Cię_Tam.mp3",
-    youtubeId: "",
+    youtubeId: "QBEfTXp8Ru4",
     lyrics: [
       {
         lineIndex: 0,
@@ -14134,7 +14134,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "YIN YANG",
     artist: "Gedz, Taco Hemingway, Sokos",
     audioSrc: "/Rap/Gedz/383_YIN_YANG.mp3",
-    youtubeId: "",
+    youtubeId: "lOgmp6fiAxk",
     lyrics: [
       {
         lineIndex: 0,
@@ -14174,7 +14174,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "szczury grzyb i kokaina",
     artist: "Alan",
     audioSrc: "/Rap/Alan/384_szczury__grzyb_i_kokaina.mp3",
-    youtubeId: "",
+    youtubeId: "UvJy1KxNwZc",
     lyrics: [
       {
         lineIndex: 0,
@@ -14214,7 +14214,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "STRZAŁ",
     artist: "Alberto",
     audioSrc: "/Rap/Alberto/387_STRZAŁ.mp3",
-    youtubeId: "",
+    youtubeId: "HkzIt1Oy86A",
     lyrics: [
       {
         lineIndex: 0,
@@ -14254,7 +14254,7 @@ export const nonlimitRapSongs: Song[] = [
     title: "Z BRATEM ZARABIAM PAPIER",
     artist: "Alberto, Josef Bratan",
     audioSrc: "/Rap/Alberto/388_Z_BRATEM_ZARABIAM_PAPIER.mp3",
-    youtubeId: "",
+    youtubeId: "mDDzPOMwR4A",
     lyrics: [
       {
         lineIndex: 0,
