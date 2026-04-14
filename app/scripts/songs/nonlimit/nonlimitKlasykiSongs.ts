@@ -2657,28 +2657,28 @@ export const nonlimitKlasykiSongs: Song[] = [
         lineIndex: 0,
         words: [
           {
-            text: "Czy ten pan i pani są w sobie zakochani?",
+            text: "Ona jest",
             start: 0.0,
-            end: 6.13,
+            end: 5.1,
           },
           {
-            text: "Czy ta pani tego pana chce?",
-            start: 6.13,
-            end: 11.43,
+            text: " Jak prześliczny kwiat",
+            start: 5.1,
+            end: 10.7,
+          },
+          {
+            text: "A on ma",
+            start: 10.7,
+            end: 16.3,
+          },
+          {
+            text: "W oczach szkiełka dwa",
+            start: 16.3,
+            end: 21.7,
           },
           {
             text: "Czy ten pan i pani są w sobie zakochani?",
-            start: 11.43,
-            end: 17.21,
-          },
-          {
-            text: "Czy ta pani tego pana chce?",
-            start: 17.21,
-            end: 25.04,
-          },
-          {
-            text: "O-ho",
-            start: 25.04,
+            start: 21.7,
             end: 28.27,
           },
         ],
