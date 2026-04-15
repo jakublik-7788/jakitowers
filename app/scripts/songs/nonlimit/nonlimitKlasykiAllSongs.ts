@@ -124,7 +124,6 @@ export const nonlimitKlasykiAllSongs: SongSuggestion[] = [
   { title: "W piwnicy u dziadka", artist: "Happysad" },
   { title: "Bez znieczulenia", artist: "Happysad" },
   { title: "A wszystko to...(Bo Ciebie Kocham)", artist: "Ich Troje" },
-  { title: "Powiedz", artist: "Ich Troje" },
   { title: "Wypijmy za to", artist: "Ich Troje" },
   { title: "Peron", artist: "Jamal" },
   { title: "Kiedyś było inaczej", artist: "Jeden Osiem L" },

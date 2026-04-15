@@ -924,46 +924,46 @@ export const nonlimitKlasykiSongs: Song[] = [
       },
     ],
   },
-  {
-    id: 24,
-    day: 24,
-    title: "Powiedz",
-    artist: "Ich Troje",
-    audioSrc: "/Klasyki/Ich Troje/28_Powiedz.mp3",
-    youtubeId: "j0U4lrfzv6U",
-    lyrics: [
-      {
-        lineIndex: 0,
-        words: [
-          {
-            text: "Moich straconych dni",
-            start: 0.0,
-            end: 3.74,
-          },
-          {
-            text: "Moich łez wylanych - łez",
-            start: 3.74,
-            end: 6.7,
-          },
-          {
-            text: "Powiedz nie jestem sam",
-            start: 6.7,
-            end: 9.17,
-          },
-          {
-            text: "I nigdy więcej już nikt nie powie",
-            start: 9.17,
-            end: 12.65,
-          },
-          {
-            text: "Sępie miłości, nie kochasz",
-            start: 12.65,
-            end: 14.88,
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: 24,
+  //   day: 24,
+  //   title: "Powiedz",
+  //   artist: "Ich Troje",
+  //   audioSrc: "/Klasyki/Ich Troje/28_Powiedz.mp3",
+  //   youtubeId: "j0U4lrfzv6U",
+  //   lyrics: [
+  //     {
+  //       lineIndex: 0,
+  //       words: [
+  //         {
+  //           text: "Moich straconych dni",
+  //           start: 0.0,
+  //           end: 3.74,
+  //         },
+  //         {
+  //           text: "Moich łez wylanych - łez",
+  //           start: 3.74,
+  //           end: 6.7,
+  //         },
+  //         {
+  //           text: "Powiedz nie jestem sam",
+  //           start: 6.7,
+  //           end: 9.17,
+  //         },
+  //         {
+  //           text: "I nigdy więcej już nikt nie powie",
+  //           start: 9.17,
+  //           end: 12.65,
+  //         },
+  //         {
+  //           text: "Sępie miłości, nie kochasz",
+  //           start: 12.65,
+  //           end: 14.88,
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     id: 25,
     day: 25,

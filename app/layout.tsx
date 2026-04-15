@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     default: "Jaki To Wers - Codzienna gra muzyczna",
     template: "%s | Jaki To Wers",
   },
-  description: "Jaki To Wers - Codzienna muzyczna gra onlina. Zgaduj utwór z rapu, polskich klasyków oraz słynnych soundtracków.",
+  description: "Jaki To Wers - Codzienna muzyczna gra online. Zgaduj utwór z rapu, polskich klasyków oraz słynnych soundtracków.",
   openGraph: {
     title: "Jaki To Wers - Codzienna gra muzyczna",
     description: "Jaki To Wers - Codzienna muzyczna gra onlina. Zgaduj utwór z rapu, polskich klasyków oraz słynnych soundtracków.",
