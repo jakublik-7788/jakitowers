@@ -431,7 +431,7 @@ export const klasykiSongs: Song[] = [
           {
             text: "Jeśli wiesz o czym ja mówię, natomiast zupełnym rankiem",
             start: 13.4,
-            end: 118.03,
+            end: 18.03,
           },
           {
             text: "Wychylam patrząc tępo ostatnią bez gazu szklankę, he",

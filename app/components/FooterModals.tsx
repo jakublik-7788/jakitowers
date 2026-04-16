@@ -102,6 +102,7 @@ const TYPE_STYLES = {
   improvement: { bg: "bg-blue-500/15", text: "text-blue-400", border: "border-blue-500/30", label: "ULEPSZENIE" },
   fix: { bg: "bg-yellow-500/15", text: "text-yellow-400", border: "border-yellow-500/30", label: "POPRAWKA" },
   info: { bg: "bg-purple-500/15", text: "text-purple-400", border: "border-purple-500/30", label: "INFORMACJA" },
+  coming: { bg: "bg-orange-500/15", text: "text-orange-400", border: "border-orange-500/30", label: "WKRÓTCE" },
 };
 
 // ─── Shared modal shell (wyśrodkowany na wszystkich urządzeniach) ─────────────
