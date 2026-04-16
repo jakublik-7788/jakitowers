@@ -36,6 +36,7 @@ import { RulesModal } from "@/app/components/RulesModal";
 import { useSoundEffects } from "@/app/scripts/useSoundEffects";
 import { useGameStats, GlobalStats } from "@/app/scripts/Usegamestats";
 import { todayDayNumber, maxUnlockedDay } from "@/app/scripts/Usecalendar";
+import { useCursorSetting } from "@/app/scripts/UseCursorSettings";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type GuessStatus = "correct" | "wrong" | "skipped" | "empty" | "artist";
@@ -555,6 +556,7 @@ export default function RapPage() {
   const song = dailySongs.find((s) => s.day === currentDay) || dailySongs[0];
 
   const { play } = useSoundEffects(soundEnabled);
+  const { cursorEnabled, setCursorEnabled } = useCursorSetting();
   const {
     localStats,
     globalStats,
@@ -1208,6 +1210,8 @@ export default function RapPage() {
         }}
         soundEnabled={soundEnabled}
         setSoundEnabled={setSoundEnabled}
+        cursorEnabled={cursorEnabled}
+  setCursorEnabled={setCursorEnabled}
       />
       <AnimatePresence>
         {showRules && (

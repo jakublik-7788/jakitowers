@@ -35,14 +35,14 @@ interface PatchEntry {
   title: string;
   icon: React.ReactNode;
   changes: {
-    type: "new" | "new2" | "improvement" | "fix" | "coming";
+    type: "new" | "new2" | "improvement" | "fix" | "coming" | "info";
     title: string;
     description: string;
   }[];
 }
 
 // ─── Constants ────────────────────────────────────────────────────────────────
-const LS_PATCH_SEEN_KEY = "jakitowers_patch_seen";
+const LS_PATCH_SEEN_KEY = "jakitowers_patch_seen_v2-0";
 
 const TOPICS = [
   { id: "song",   label: "Brakująca piosenka", icon: Music,       desc: "Chcę zgłosić piosenkę do dodania" },
@@ -65,9 +65,20 @@ const FOOTER_LINKS: { key: InfoModalType; label: string; icon: React.ReactNode }
 // ─── Dane aktualności ─────────────────────────────────────────────────────────
 const PATCH_ENTRIES: PatchEntry[] = [
   {
+    id: "v2-0",
+    version: "Aktualizacja 2.0",
+    date: "16 kwietnia 2026",
+    title: "INFORMACJE",
+    icon: <Zap size={14} />,
+    changes: [
+      { type: "info", title: "INFORMACJA", description: "Witam, chciałbym podziękować za dużą aktywność w pierwszych tygodniach gry. Wszystkie wiadomości kierowane do mnie poprzez formularz czytam i biorę pod uwagę. Strona będzie ulepszana i będą dodawane nowe kategorie na bieżąco z czasem. Musicie zrozumieć że zajmuję się stroną wyłącznie sam, a za 20 dni piszę maturę. W miarę możliwości będę pracował i ulepszał stronę. Dziękuje za zrozumienie i miłej gry!" },
+      { type: "new", title: "Możliwość zmiany kursora", description: "Sporo osób twierdziło że  animowany kursor je irytuje, więc na życzenie dodaję możliwość zmiany kursora na systemowy. :)" },
+    ],
+  },
+  {
     id: "v1-0",
     version: "Aktualizacja 1.0",
-    date: "18 kwietnia 2026",
+    date: "6 kwietnia 2026",
     title: "NOWE TRYBY I ULEPSZENIA",
     icon: <Zap size={14} />,
     changes: [
@@ -90,7 +101,7 @@ const TYPE_STYLES = {
   new2: { bg: "bg-purple-500/15", text: "text-purple-400", border: "border-purple-500/30", label: "NOWOŚĆ" },
   improvement: { bg: "bg-blue-500/15", text: "text-blue-400", border: "border-blue-500/30", label: "ULEPSZENIE" },
   fix: { bg: "bg-yellow-500/15", text: "text-yellow-400", border: "border-yellow-500/30", label: "POPRAWKA" },
-  coming: { bg: "bg-purple-500/15", text: "text-purple-400", border: "border-purple-500/30", label: "WKRÓTCE" },
+  info: { bg: "bg-purple-500/15", text: "text-purple-400", border: "border-purple-500/30", label: "INFORMACJA" },
 };
 
 // ─── Shared modal shell (wyśrodkowany na wszystkich urządzeniach) ─────────────

@@ -1,19 +1,26 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CustomCursor } from "./CustomCursor";
 
+const LS_CURSOR_KEY = "jakitowers_custom_cursor";
+
 export const ClientCursorWrapper = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [cursorEnabled, setCursorEnabled] = useState(() => {
+    if (typeof window === "undefined") return true;
+    try {
+      return localStorage.getItem(LS_CURSOR_KEY) !== "false";
+    } catch {
+      return true;
+    }
+  });
 
   useEffect(() => {
-    const check = () => {
-      setIsMobile(window.matchMedia("(hover: none) and (pointer: coarse)").matches);
-    };
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
+    const handler = (e: CustomEvent) => setCursorEnabled(e.detail);
+    window.addEventListener("cursorChange", handler as EventListener);
+    return () => window.removeEventListener("cursorChange", handler as EventListener);
   }, []);
 
-  return !isMobile ? <CustomCursor /> : null;
+  if (!cursorEnabled) return null;
+  return <CustomCursor />;
 };

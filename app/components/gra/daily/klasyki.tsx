@@ -37,6 +37,7 @@ import { useSoundEffects } from "@/app/scripts/useSoundEffects";
 import { useGameStats, GlobalStats } from "@/app/scripts/Usegamestats";
 import { todayDayNumber, maxUnlockedDay } from "@/app/scripts/Usecalendar";
 import { Footer } from "../../Footer";
+import { useCursorSetting } from "@/app/scripts/UseCursorSettings";
 
 // ─── Stała startu trybu ───────────────────────────────────────────────────────
 const KLASYKI_START_DAY = 18;
@@ -546,6 +547,7 @@ export default function KlasykiPage() {
   const song = dailySongs.find((s) => s.day === currentDay) || dailySongs[0];
 
   const { play } = useSoundEffects(soundEnabled);
+  const { cursorEnabled, setCursorEnabled } = useCursorSetting();
   const {
     localStats,
     globalStats,
@@ -1160,6 +1162,8 @@ export default function KlasykiPage() {
         }}
         soundEnabled={soundEnabled}
         setSoundEnabled={setSoundEnabled}
+        cursorEnabled={cursorEnabled}
+  setCursorEnabled={setCursorEnabled}
       />
       <AnimatePresence>
         {showRules && (

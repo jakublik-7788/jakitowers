@@ -31,6 +31,7 @@ import { CalendarModal } from "./CalendarModal";
 import { SettingsModal } from "./SettingsModal";
 import { FooterModals, useContactModal } from "./FooterModals";
 import { useSoundEffects } from "../scripts/useSoundEffects";
+import { useCursorSetting } from "../scripts/UseCursorSettings";
 
 // ─── Stałe blokady trybów ─────────────────────────────────────────────────────
 const KLASYKI_START_DAY = 18;
@@ -305,6 +306,7 @@ export default function Home() {
 
   const { openContact, ContactModalComponent } = useContactModal();
   const { play } = useSoundEffects(soundEnabled);
+  const { cursorEnabled, setCursorEnabled } = useCursorSetting();
 
   const nextMidnight = React.useMemo(() => {
     const d = new Date();
@@ -1102,6 +1104,8 @@ export default function Home() {
         soundEnabled={soundEnabled}
         setSoundEnabled={setSoundEnabled}
         onColorChange={handleColorChange}
+        cursorEnabled={cursorEnabled}
+  setCursorEnabled={setCursorEnabled}
       />
 
       <ContactModalComponent />

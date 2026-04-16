@@ -42,6 +42,7 @@ import { useSoundEffects } from "@/app/scripts/useSoundEffects";
 import { useGameStats, GlobalStats } from "@/app/scripts/Usegamestats";
 import { todayDayNumber, maxUnlockedDay } from "@/app/scripts/Usecalendar";
 import { Song } from "@/app/types/song";
+import { useCursorSetting } from "@/app/scripts/UseCursorSettings";
 
 // ─── Stała startu trybu ───────────────────────────────────────────────────────
 const SOUNDTRACKI_START_DAY = 18;
@@ -768,6 +769,7 @@ export default function DailySoundtracki() {
   const touchStartX = useRef<number | null>(null);
 
   const { play } = useSoundEffects(soundEnabled);
+  const { cursorEnabled, setCursorEnabled } = useCursorSetting();
   const {
     localStats,
     globalStats,
@@ -1334,6 +1336,8 @@ export default function DailySoundtracki() {
         }}
         soundEnabled={soundEnabled}
         setSoundEnabled={setSoundEnabled}
+        cursorEnabled={cursorEnabled}
+  setCursorEnabled={setCursorEnabled}
       />
       <Footer />
     </div>

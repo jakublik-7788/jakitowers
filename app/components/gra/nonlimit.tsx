@@ -37,6 +37,7 @@ import { useSoundEffects } from "@/app/scripts/useSoundEffects";
 import { useNonLimitStats } from "@/app/scripts/Usegamestats";
 import { Song } from "@/app/types/song";
 import { Footer } from "../Footer";
+import { useCursorSetting } from "@/app/scripts/UseCursorSettings";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type GuessStatus = "correct" | "wrong" | "skipped" | "empty" | "artist";
@@ -748,6 +749,7 @@ export default function NonLimitGame() {
   const cleanupLyricsRef = useRef<(() => void) | undefined>(undefined);
 
   const { play } = useSoundEffects(soundEnabled);
+  const { cursorEnabled, setCursorEnabled } = useCursorSetting();
   const { stats, recordResult } = useNonLimitStats(source || "rap");
 
   useEffect(() => {
@@ -1411,6 +1413,8 @@ export default function NonLimitGame() {
         }}
         soundEnabled={soundEnabled}
         setSoundEnabled={setSoundEnabled}
+        cursorEnabled={cursorEnabled}
+  setCursorEnabled={setCursorEnabled}
       />
       <Footer />
     </div>

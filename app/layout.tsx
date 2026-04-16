@@ -87,6 +87,10 @@ export default function RootLayout({
                       b = parseInt(c.slice(5,7),16);
                   root.style.setProperty('--accent-glow', 'rgba('+r+','+g+','+b+',0.4)');
                   root.style.setProperty('--accent-glow-strong', 'rgba('+r+','+g+','+b+',0.2)');
+                  var cur = localStorage.getItem('jakitowers_custom_cursor');
+if (cur === 'false') {
+  document.body.classList.add('cursor-default-mode');
+}
                 }
               } catch(e) {}
             `,
