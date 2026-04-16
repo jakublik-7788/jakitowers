@@ -1998,9 +1998,9 @@ export const nonlimitSoundtrackiSongs: Song[] = [
     },
     "lyrics": [],
     "hint1": "Gra",
-    "hint2": "RPG / Strategia",
-    "hint3": "2020",
-    "hint4": "Nieznane"
+    "hint2": "FPS / Survival Horror",
+    "hint3": "2019",
+    "hint4": "4A Games"
   },
   {
     "id": 101,
