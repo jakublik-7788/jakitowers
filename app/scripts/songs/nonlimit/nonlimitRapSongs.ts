@@ -14287,5 +14287,45 @@ export const nonlimitRapSongs: Song[] = [
         ],
       }
     ],
-  }
+  },
+  {
+    id: 388,
+    day: 388,
+    title: "Bestia",
+    artist: "Young Igi",
+    audioSrc: "/Rap/Igi/Bestia.mp3",
+    youtubeId: "YdJDq_707lg",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Pliki dawaj, pliki dawaj, pliki na plikach",
+            start: 0.0,
+            end: 2.55,
+          },
+          {
+            text: "Poruszamy się jak króle i to chyba widać",
+            start: 2.55,
+            end: 5.1,
+          },
+          {
+            text: "Z takimi jak my to można tylko świat zdobywać",
+            start: 5.1,
+            end: 7.4,
+          },
+          {
+            text: "To auto ma pięć miejsc, ale ona dwa trzyma (trzyma)",
+            start: 7.4,
+            end: 10.45,
+          },
+          {
+            text: "Wielka dupa, wiesz o co chodzi (yeah)",
+            start: 10.45,
+            end: 12.9,
+          },
+        ],
+      },
+    ],
+  },
 ];

@@ -517,5 +517,6 @@ export const nonlimitRapAllSongs: SongSuggestion[] = [
   { title: "MORFINA", artist: "Gedz, LOAA, 808Bros" },
   { title: "Patologika", artist: "Alan" },
   { title: "STRZAŁ", artist: "Alberto" },
-  { title: "Z BRATEM ZARABIAM PAPIER", artist: "Alberto, Josef Bratan" }
+  { title: "Z BRATEM ZARABIAM PAPIER", artist: "Alberto, Josef Bratan" },
+  { title: "Bestia", artist: "Young Igi" }
 ];

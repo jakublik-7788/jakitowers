@@ -681,7 +681,7 @@ export const rapSongs: Song[] = [
       },
     ],
   },
-   {
+  {
     id: 20,
     day: 20,
     title: "Turkus",
@@ -1072,38 +1072,38 @@ export const rapSongs: Song[] = [
   {
     id: 30,
     day: 30,
-    title: "Zdrowie",
-    artist: "Kizo, Janusz Walczuk",
-    audioSrc: "/Rap/Kizo/30_Zdrowie.mp3",
-    youtubeId: "rAiIrtEmsxg",
+    title: "Bestia",
+    artist: "Young Igi",
+    audioSrc: "/Rap/Igi/Bestia.mp3",
+    youtubeId: "YdJDq_707lg",
     lyrics: [
       {
         lineIndex: 0,
         words: [
           {
-            text: "Ej, nic tak nie boli jak słowa, którymi strzelasz w serce",
+            text: "Pliki dawaj, pliki dawaj, pliki na plikach",
             start: 0.0,
-            end: 3.48,
+            end: 2.55,
           },
           {
-            text: "Od życia chcę tylko zdrowia, całą resztę sam wezmę",
-            start: 3.48,
-            end: 6.56,
+            text: "Poruszamy się jak króle i to chyba widać",
+            start: 2.55,
+            end: 5.1,
           },
           {
-            text: "Z wiarą ludzi we mnie, czuję się jak w kamizelce",
-            start: 6.56,
-            end: 9.98,
+            text: "Z takimi jak my to można tylko świat zdobywać",
+            start: 5.1,
+            end: 7.4,
           },
           {
-            text: "Wszystkie moje marzenia stoją gęsiego w kolejce",
-            start: 9.98,
-            end: 13.04,
+            text: "To auto ma pięć miejsc, ale ona dwa trzyma (trzyma)",
+            start: 7.4,
+            end: 10.45,
           },
           {
-            text: "Nie jestem z cukru, bo zmokłem już w deszczu z ciemnych chmur",
-            start: 13.04,
-            end: 16.08,
+            text: "Wielka dupa, wiesz o co chodzi (yeah)",
+            start: 10.45,
+            end: 12.9,
           },
         ],
       },
@@ -1581,8 +1581,7 @@ export const rapSongs: Song[] = [
     day: 44,
     title: "Nowe Szklane Domy",
     artist: "Kaz Bałagane, @atutowy, Taco Hemingway",
-    audioSrc:
-      "/Rap/KazBalagane/343_Nowe_Szklane_Domy.mp3",
+    audioSrc: "/Rap/KazBalagane/343_Nowe_Szklane_Domy.mp3",
     youtubeId: "Bv7ez_6Y_EE",
     lyrics: [
       {
