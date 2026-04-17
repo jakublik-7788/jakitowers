@@ -1782,4 +1782,1484 @@ export const soundtrackiSongs: Song[] = [
     },
     lyrics: []
   },
+    {
+    "id": 107,
+    "day": 107,
+    "title": "FINAL FANTASY VII REMAKE",
+    "artist": "",
+    "imageUrl": "/soundtracki/FINAL FANTASY VII REMAKE/FINAL FANTASY VII REMAKE.jpg",
+    "fullAudioSrc": "/soundtracki/FINAL FANTASY VII REMAKE/FINAL FANTASY VII REMAKE.mp3",
+    "clips": {
+      "1": "/soundtracki/FINAL FANTASY VII REMAKE/FINAL_FANTASY_VII_REMAKE_1s.mp3",
+      "3": "/soundtracki/FINAL FANTASY VII REMAKE/FINAL_FANTASY_VII_REMAKE_3s.mp3",
+      "5": "/soundtracki/FINAL FANTASY VII REMAKE/FINAL_FANTASY_VII_REMAKE_5s.mp3",
+      "10": "/soundtracki/FINAL FANTASY VII REMAKE/FINAL_FANTASY_VII_REMAKE_10s.mp3",
+      "15": "/soundtracki/FINAL FANTASY VII REMAKE/FINAL_FANTASY_VII_REMAKE_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "RPG / Akcja",
+    "hint3": "2020",
+    "hint4": "Square Enix"
+  },
+  {
+    "id": 108,
+    "day": 108,
+    "title": "Ghostrunner",
+    "artist": "",
+    "imageUrl": "/soundtracki/Ghostrunner/Ghostrunner.jpg",
+    "fullAudioSrc": "/soundtracki/Ghostrunner/Ghostrunner.mp3",
+    "clips": {
+      "1": "/soundtracki/Ghostrunner/Ghostrunner_1s.mp3",
+      "3": "/soundtracki/Ghostrunner/Ghostrunner_3s.mp3",
+      "5": "/soundtracki/Ghostrunner/Ghostrunner_5s.mp3",
+      "10": "/soundtracki/Ghostrunner/Ghostrunner_10s.mp3",
+      "15": "/soundtracki/Ghostrunner/Ghostrunner_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Akcja / Parkour",
+    "hint3": "2020",
+    "hint4": "One More Level"
+  },
+  {
+    "id": 109,
+    "day": 109,
+    "title": "Green Hell",
+    "artist": "",
+    "imageUrl": "/soundtracki/Green Hell/Green Hell.jpg",
+    "fullAudioSrc": "/soundtracki/Green Hell/Green Hell.mp3",
+    "clips": {
+      "1": "/soundtracki/Green Hell/Green_Hell_1s.mp3",
+      "3": "/soundtracki/Green Hell/Green_Hell_3s.mp3",
+      "5": "/soundtracki/Green Hell/Green_Hell_5s.mp3",
+      "10": "/soundtracki/Green Hell/Green_Hell_10s.mp3",
+      "15": "/soundtracki/Green Hell/Green_Hell_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Survival",
+    "hint3": "2019",
+    "hint4": "Creepy Jar"
+  },
+  {
+    "id": 110,
+    "day": 110,
+    "title": "Hades",
+    "artist": "",
+    "imageUrl": "/soundtracki/Hades/Hades.jpg",
+    "fullAudioSrc": "/soundtracki/Hades/Hades.mp3",
+    "clips": {
+      "1": "/soundtracki/Hades/Hades_1s.mp3",
+      "3": "/soundtracki/Hades/Hades_3s.mp3",
+      "5": "/soundtracki/Hades/Hades_5s.mp3",
+      "10": "/soundtracki/Hades/Hades_10s.mp3",
+      "15": "/soundtracki/Hades/Hades_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Roguelike / Akcja",
+    "hint3": "2020",
+    "hint4": "Supergiant Games"
+  },
+  {
+    "id": 111,
+    "day": 111,
+    "title": "Half-Life",
+    "artist": "",
+    "imageUrl": "/soundtracki/Half-Life/Half-Life.jpg",
+    "fullAudioSrc": "/soundtracki/Half-Life/Half-Life.mp3",
+    "clips": {
+      "1": "/soundtracki/Half-Life/Half-Life_1s.mp3",
+      "3": "/soundtracki/Half-Life/Half-Life_3s.mp3",
+      "5": "/soundtracki/Half-Life/Half-Life_5s.mp3",
+      "10": "/soundtracki/Half-Life/Half-Life_10s.mp3",
+      "15": "/soundtracki/Half-Life/Half-Life_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "FPS",
+    "hint3": "1998",
+    "hint4": "Valve"
+  },
+  {
+    "id": 112,
+    "day": 112,
+    "title": "Helldivers II",
+    "artist": "",
+    "imageUrl": "/soundtracki/HELLDIVERS 2/HELLDIVERS 2.jpg",
+    "fullAudioSrc": "/soundtracki/HELLDIVERS 2/HELLDIVERS 2.mp3",
+    "clips": {
+      "1": "/soundtracki/HELLDIVERS 2/HELLDIVERS_2_1s.mp3",
+      "3": "/soundtracki/HELLDIVERS 2/HELLDIVERS_2_3s.mp3",
+      "5": "/soundtracki/HELLDIVERS 2/HELLDIVERS_2_5s.mp3",
+      "10": "/soundtracki/HELLDIVERS 2/HELLDIVERS_2_10s.mp3",
+      "15": "/soundtracki/HELLDIVERS 2/HELLDIVERS_2_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Akcja / Shooter",
+    "hint3": "2024",
+    "hint4": "Arrowhead Game Studios"
+  },
+  {
+    "id": 113,
+    "day": 113,
+    "title": "Heroes of Might and Magic III",
+    "artist": "",
+    "imageUrl": "/soundtracki/Heroes of Might and Magic III/Heroes of Might and Magic III.jpg",
+    "fullAudioSrc": "/soundtracki/Heroes of Might and Magic III/Heroes of Might and Magic III.mp3",
+    "clips": {
+      "1": "/soundtracki/Heroes of Might and Magic III/Heroes_of_Might_and_Magic_III_1s.mp3",
+      "3": "/soundtracki/Heroes of Might and Magic III/Heroes_of_Might_and_Magic_III_3s.mp3",
+      "5": "/soundtracki/Heroes of Might and Magic III/Heroes_of_Might_and_Magic_III_5s.mp3",
+      "10": "/soundtracki/Heroes of Might and Magic III/Heroes_of_Might_and_Magic_III_10s.mp3",
+      "15": "/soundtracki/Heroes of Might and Magic III/Heroes_of_Might_and_Magic_III_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Strategia turowa",
+    "hint3": "1999",
+    "hint4": "New World Computing"
+  },
+  {
+    "id": 114,
+    "day": 114,
+    "title": "Horizon Frobidden West",
+    "artist": "",
+    "imageUrl": "/soundtracki/Horizon Frobidden West/Horizon Frobidden West.jpg",
+    "fullAudioSrc": "/soundtracki/Horizon Frobidden West/Horizon Frobidden West.mp3",
+    "clips": {
+      "1": "/soundtracki/Horizon Frobidden West/Horizon_Frobidden_West_1s.mp3",
+      "3": "/soundtracki/Horizon Frobidden West/Horizon_Frobidden_West_3s.mp3",
+      "5": "/soundtracki/Horizon Frobidden West/Horizon_Frobidden_West_5s.mp3",
+      "10": "/soundtracki/Horizon Frobidden West/Horizon_Frobidden_West_10s.mp3",
+      "15": "/soundtracki/Horizon Frobidden West/Horizon_Frobidden_West_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "RPG / Akcja",
+    "hint3": "2022",
+    "hint4": "Guerrilla Games"
+  },
+  {
+    "id": 115,
+    "day": 115,
+    "title": "It Takes Two",
+    "artist": "",
+    "imageUrl": "/soundtracki/It Takes Two/It Takes Two.jpg",
+    "fullAudioSrc": "/soundtracki/It Takes Two/It Takes Two.mp3",
+    "clips": {
+      "1": "/soundtracki/It Takes Two/It_Takes_Two_1s.mp3",
+      "3": "/soundtracki/It Takes Two/It_Takes_Two_3s.mp3",
+      "5": "/soundtracki/It Takes Two/It_Takes_Two_5s.mp3",
+      "10": "/soundtracki/It Takes Two/It_Takes_Two_10s.mp3",
+      "15": "/soundtracki/It Takes Two/It_Takes_Two_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Przygodowa / Kooperacja",
+    "hint3": "2021",
+    "hint4": "Hazelight Studios"
+  },
+  {
+    "id": 116,
+    "day": 116,
+    "title": "Lethal Company",
+    "artist": "",
+    "imageUrl": "/soundtracki/Lethal Company/Lethal Company.jpg",
+    "fullAudioSrc": "/soundtracki/Lethal Company/Lethal Company.mp3",
+    "clips": {
+      "1": "/soundtracki/Lethal Company/Lethal_Company_1s.mp3",
+      "3": "/soundtracki/Lethal Company/Lethal_Company_3s.mp3",
+      "5": "/soundtracki/Lethal Company/Lethal_Company_5s.mp3",
+      "10": "/soundtracki/Lethal Company/Lethal_Company_10s.mp3",
+      "15": "/soundtracki/Lethal Company/Lethal_Company_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Horror / Kooperacja",
+    "hint3": "2023",
+    "hint4": "Zeekerss"
+  },
+  {
+    "id": 117,
+    "day": 117,
+    "title": "Don't Starve Together",
+    "artist": "",
+    "imageUrl": "/soundtracki/Main/Main.jpg",
+    "fullAudioSrc": "/soundtracki/Main/Main.mp3",
+    "clips": {
+      "1": "/soundtracki/Main/Main_1s.mp3",
+      "3": "/soundtracki/Main/Main_3s.mp3",
+      "5": "/soundtracki/Main/Main_5s.mp3",
+      "10": "/soundtracki/Main/Main_10s.mp3",
+      "15": "/soundtracki/Main/Main_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Survival",
+    "hint3": "2016",
+    "hint4": "Klei Entertainment"
+  },
+  {
+    "id": 118,
+    "day": 118,
+    "title": "Marvel's Spider-Man: Miles Morales",
+    "artist": "",
+    "imageUrl": "/soundtracki/Marvel's Spider-Man Miles Morales/Marvel's Spider-Man Miles Morales.jpg",
+    "fullAudioSrc": "/soundtracki/Marvel's Spider-Man Miles Morales/Marvel's Spider-Man Miles Morales.mp3",
+    "clips": {
+      "1": "/soundtracki/Marvel's Spider-Man Miles Morales/Marvel's_Spider-Man_Miles_Morales_1s.mp3",
+      "3": "/soundtracki/Marvel's Spider-Man Miles Morales/Marvel's_Spider-Man_Miles_Morales_3s.mp3",
+      "5": "/soundtracki/Marvel's Spider-Man Miles Morales/Marvel's_Spider-Man_Miles_Morales_5s.mp3",
+      "10": "/soundtracki/Marvel's Spider-Man Miles Morales/Marvel's_Spider-Man_Miles_Morales_10s.mp3",
+      "15": "/soundtracki/Marvel's Spider-Man Miles Morales/Marvel's_Spider-Man_Miles_Morales_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Akcja / Przygodowa",
+    "hint3": "2020",
+    "hint4": "Insomniac Games"
+  },
+  {
+    "id": 119,
+    "day": 119,
+    "title": "Marvel's Spider-Man",
+    "artist": "",
+    "imageUrl": "/soundtracki/Marvel's Spider-Man/Marvel's Spider-Man.jpg",
+    "fullAudioSrc": "/soundtracki/Marvel's Spider-Man/Marvel's Spider-Man.mp3",
+    "clips": {
+      "1": "/soundtracki/Marvel's Spider-Man/Marvel's_Spider-Man_1s.mp3",
+      "3": "/soundtracki/Marvel's Spider-Man/Marvel's_Spider-Man_3s.mp3",
+      "5": "/soundtracki/Marvel's Spider-Man/Marvel's_Spider-Man_5s.mp3",
+      "10": "/soundtracki/Marvel's Spider-Man/Marvel's_Spider-Man_10s.mp3",
+      "15": "/soundtracki/Marvel's Spider-Man/Marvel's_Spider-Man_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Akcja / Przygodowa",
+    "hint3": "2018",
+    "hint4": "Insomniac Games"
+  },
+  {
+    "id": 120,
+    "day": 120,
+    "title": "Palworld",
+    "artist": "",
+    "imageUrl": "/soundtracki/Palworld/Palworld.jpg",
+    "fullAudioSrc": "/soundtracki/Palworld/Palworld.mp3",
+    "clips": {
+      "1": "/soundtracki/Palworld/Palworld_1s.mp3",
+      "3": "/soundtracki/Palworld/Palworld_3s.mp3",
+      "5": "/soundtracki/Palworld/Palworld_5s.mp3",
+      "10": "/soundtracki/Palworld/Palworld_10s.mp3",
+      "15": "/soundtracki/Palworld/Palworld_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Survival / Akcja",
+    "hint3": "2024",
+    "hint4": "Pocketpair"
+  },
+  {
+    "id": 121,
+    "day": 121,
+    "title": "Persona 5",
+    "artist": "",
+    "imageUrl": "/soundtracki/Persona 5/Persona 5.jpg",
+    "fullAudioSrc": "/soundtracki/Persona 5/Persona 5.mp3",
+    "clips": {
+      "1": "/soundtracki/Persona 5/Persona_5_1s.mp3",
+      "3": "/soundtracki/Persona 5/Persona_5_3s.mp3",
+      "5": "/soundtracki/Persona 5/Persona_5_5s.mp3",
+      "10": "/soundtracki/Persona 5/Persona_5_10s.mp3",
+      "15": "/soundtracki/Persona 5/Persona_5_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "JRPG",
+    "hint3": "2016",
+    "hint4": "Atlus"
+  },
+  {
+    "id": 122,
+    "day": 122,
+    "title": "Portal 2",
+    "artist": "",
+    "imageUrl": "/soundtracki/Portal 2/Portal 2.jpg",
+    "fullAudioSrc": "/soundtracki/Portal 2/Portal 2.mp3",
+    "clips": {
+      "1": "/soundtracki/Portal 2/Portal_2_1s.mp3",
+      "3": "/soundtracki/Portal 2/Portal_2_3s.mp3",
+      "5": "/soundtracki/Portal 2/Portal_2_5s.mp3",
+      "10": "/soundtracki/Portal 2/Portal_2_10s.mp3",
+      "15": "/soundtracki/Portal 2/Portal_2_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Logiczna / Przygodowa",
+    "hint3": "2011",
+    "hint4": "Valve"
+  },
+  {
+    "id": 123,
+    "day": 123,
+    "title": "Red Dead Redemption 2",
+    "artist": "",
+    "imageUrl": "/soundtracki/Red Dead Redemption 2/Red Dead Redemption 2.jpg",
+    "fullAudioSrc": "/soundtracki/Red Dead Redemption 2/Red Dead Redemption 2.mp3",
+    "clips": {
+      "1": "/soundtracki/Red Dead Redemption 2/Red_Dead_Redemption_2_1s.mp3",
+      "3": "/soundtracki/Red Dead Redemption 2/Red_Dead_Redemption_2_3s.mp3",
+      "5": "/soundtracki/Red Dead Redemption 2/Red_Dead_Redemption_2_5s.mp3",
+      "10": "/soundtracki/Red Dead Redemption 2/Red_Dead_Redemption_2_10s.mp3",
+      "15": "/soundtracki/Red Dead Redemption 2/Red_Dead_Redemption_2_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Akcja / Przygodowa",
+    "hint3": "2018",
+    "hint4": "Rockstar Games"
+  },
+  {
+    "id": 124,
+    "day": 124,
+    "title": "Resident Evil 4",
+    "artist": "",
+    "imageUrl": "/soundtracki/RESIDENT EVIL 4/RESIDENT EVIL 4.jpg",
+    "fullAudioSrc": "/soundtracki/RESIDENT EVIL 4/RESIDENT EVIL 4.mp3",
+    "clips": {
+      "1": "/soundtracki/RESIDENT EVIL 4/RESIDENT_EVIL_4_1s.mp3",
+      "3": "/soundtracki/RESIDENT EVIL 4/RESIDENT_EVIL_4_3s.mp3",
+      "5": "/soundtracki/RESIDENT EVIL 4/RESIDENT_EVIL_4_5s.mp3",
+      "10": "/soundtracki/RESIDENT EVIL 4/RESIDENT_EVIL_4_10s.mp3",
+      "15": "/soundtracki/RESIDENT EVIL 4/RESIDENT_EVIL_4_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Survival horror",
+    "hint3": "2023",
+    "hint4": "Capcom"
+  },
+  {
+    "id": 125,
+    "day": 125,
+    "title": "Resident Evil Village",
+    "artist": "",
+    "imageUrl": "/soundtracki/RESIDENT EVIL VILLAGE/RESIDENT EVIL VILLAGE.jpg",
+    "fullAudioSrc": "/soundtracki/RESIDENT EVIL VILLAGE/RESIDENT EVIL VILLAGE.mp3",
+    "clips": {
+      "1": "/soundtracki/RESIDENT EVIL VILLAGE/RESIDENT_EVIL_VILLAGE_1s.mp3",
+      "3": "/soundtracki/RESIDENT EVIL VILLAGE/RESIDENT_EVIL_VILLAGE_3s.mp3",
+      "5": "/soundtracki/RESIDENT EVIL VILLAGE/RESIDENT_EVIL_VILLAGE_5s.mp3",
+      "10": "/soundtracki/RESIDENT EVIL VILLAGE/RESIDENT_EVIL_VILLAGE_10s.mp3",
+      "15": "/soundtracki/RESIDENT EVIL VILLAGE/RESIDENT_EVIL_VILLAGE_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Survival horror",
+    "hint3": "2021",
+    "hint4": "Capcom"
+  },
+  {
+    "id": 126,
+    "day": 126,
+    "title": "Returnal",
+    "artist": "",
+    "imageUrl": "/soundtracki/Returnal/Returnal.jpg",
+    "fullAudioSrc": "/soundtracki/Returnal/Returnal.mp3",
+    "clips": {
+      "1": "/soundtracki/Returnal/Returnal_1s.mp3",
+      "3": "/soundtracki/Returnal/Returnal_3s.mp3",
+      "5": "/soundtracki/Returnal/Returnal_5s.mp3",
+      "10": "/soundtracki/Returnal/Returnal_10s.mp3",
+      "15": "/soundtracki/Returnal/Returnal_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Roguelike / TPP",
+    "hint3": "2021",
+    "hint4": "Housemarque"
+  },
+  {
+    "id": 127,
+    "day": 127,
+    "title": "Stray",
+    "artist": "",
+    "imageUrl": "/soundtracki/Stray/Stray.jpg",
+    "fullAudioSrc": "/soundtracki/Stray/Stray.mp3",
+    "clips": {
+      "1": "/soundtracki/Stray/Stray_1s.mp3",
+      "3": "/soundtracki/Stray/Stray_3s.mp3",
+      "5": "/soundtracki/Stray/Stray_5s.mp3",
+      "10": "/soundtracki/Stray/Stray_10s.mp3",
+      "15": "/soundtracki/Stray/Stray_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Przygodowa",
+    "hint3": "2022",
+    "hint4": "BlueTwelve Studio"
+  },
+  {
+    "id": 128,
+    "day": 128,
+    "title": "Subnautica",
+    "artist": "",
+    "imageUrl": "/soundtracki/Subnautica/Subnautica.jpg",
+    "fullAudioSrc": "/soundtracki/Subnautica/Subnautica.mp3",
+    "clips": {
+      "1": "/soundtracki/Subnautica/Subnautica_1s.mp3",
+      "3": "/soundtracki/Subnautica/Subnautica_3s.mp3",
+      "5": "/soundtracki/Subnautica/Subnautica_5s.mp3",
+      "10": "/soundtracki/Subnautica/Subnautica_10s.mp3",
+      "15": "/soundtracki/Subnautica/Subnautica_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Survival / Przygodowa",
+    "hint3": "2018",
+    "hint4": "Unknown Worlds Entertainment"
+  },
+  {
+    "id": 129,
+    "day": 129,
+    "title": "Terraria",
+    "artist": "",
+    "imageUrl": "/soundtracki/Terraria/Terraria.jpg",
+    "fullAudioSrc": "/soundtracki/Terraria/Terraria.mp3",
+    "clips": {
+      "1": "/soundtracki/Terraria/Terraria_1s.mp3",
+      "3": "/soundtracki/Terraria/Terraria_3s.mp3",
+      "5": "/soundtracki/Terraria/Terraria_5s.mp3",
+      "10": "/soundtracki/Terraria/Terraria_10s.mp3",
+      "15": "/soundtracki/Terraria/Terraria_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Akcja / Przygodowa",
+    "hint3": "2011",
+    "hint4": "Re-Logic"
+  },
+  {
+    "id": 130,
+    "day": 130,
+    "title": "The Binding of Isaac",
+    "artist": "",
+    "imageUrl": "/soundtracki/The Binding of Isaac/The Binding of Isaac.jpg",
+    "fullAudioSrc": "/soundtracki/The Binding of Isaac/The Binding of Isaac.mp3",
+    "clips": {
+      "1": "/soundtracki/The Binding of Isaac/The_Binding_of_Isaac_1s.mp3",
+      "3": "/soundtracki/The Binding of Isaac/The_Binding_of_Isaac_3s.mp3",
+      "5": "/soundtracki/The Binding of Isaac/The_Binding_of_Isaac_5s.mp3",
+      "10": "/soundtracki/The Binding of Isaac/The_Binding_of_Isaac_10s.mp3",
+      "15": "/soundtracki/The Binding of Isaac/The_Binding_of_Isaac_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Roguelike",
+    "hint3": "2011",
+    "hint4": "Edmund McMillen"
+  },
+  {
+    "id": 131,
+    "day": 131,
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "artist": "",
+    "imageUrl": "/soundtracki/The Legend of Zelda Breath of the Wild/The Legend of Zelda Breath of the Wild.jpg",
+    "fullAudioSrc": "/soundtracki/The Legend of Zelda Breath of the Wild/The Legend of Zelda Breath of the Wild.mp3",
+    "clips": {
+      "1": "/soundtracki/The Legend of Zelda Breath of the Wild/The_Legend_of_Zelda_Breath_of_the_Wild_1s.mp3",
+      "3": "/soundtracki/The Legend of Zelda Breath of the Wild/The_Legend_of_Zelda_Breath_of_the_Wild_3s.mp3",
+      "5": "/soundtracki/The Legend of Zelda Breath of the Wild/The_Legend_of_Zelda_Breath_of_the_Wild_5s.mp3",
+      "10": "/soundtracki/The Legend of Zelda Breath of the Wild/The_Legend_of_Zelda_Breath_of_the_Wild_10s.mp3",
+      "15": "/soundtracki/The Legend of Zelda Breath of the Wild/The_Legend_of_Zelda_Breath_of_the_Wild_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Akcja / Przygodowa",
+    "hint3": "2017",
+    "hint4": "Nintendo"
+  },
+  {
+    "id": 132,
+    "day": 132,
+    "title": "The Legend of Zelda: Tears of the Kingdom",
+    "artist": "",
+    "imageUrl": "/soundtracki/The Legend of Zelda Tears Of The Kingdom/The Legend of Zelda Tears Of The Kingdom.jpg",
+    "fullAudioSrc": "/soundtracki/The Legend of Zelda Tears Of The Kingdom/The Legend of Zelda Tears Of The Kingdom.mp3",
+    "clips": {
+      "1": "/soundtracki/The Legend of Zelda Tears Of The Kingdom/The_Legend_of_Zelda_Tears_Of_The_Kingdom_1s.mp3",
+      "3": "/soundtracki/The Legend of Zelda Tears Of The Kingdom/The_Legend_of_Zelda_Tears_Of_The_Kingdom_3s.mp3",
+      "5": "/soundtracki/The Legend of Zelda Tears Of The Kingdom/The_Legend_of_Zelda_Tears_Of_The_Kingdom_5s.mp3",
+      "10": "/soundtracki/The Legend of Zelda Tears Of The Kingdom/The_Legend_of_Zelda_Tears_Of_The_Kingdom_10s.mp3",
+      "15": "/soundtracki/The Legend of Zelda Tears Of The Kingdom/The_Legend_of_Zelda_Tears_Of_The_Kingdom_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Akcja / Przygodowa",
+    "hint3": "2023",
+    "hint4": "Nintendo"
+  },
+  {
+    "id": 133,
+    "day": 133,
+    "title": "Uncharted 4: A Thief's End",
+    "artist": "",
+    "imageUrl": "/soundtracki/Uncharted 4/Uncharted 4.jpg",
+    "fullAudioSrc": "/soundtracki/Uncharted 4/Uncharted 4.mp3",
+    "clips": {
+      "1": "/soundtracki/Uncharted 4/Uncharted_4_1s.mp3",
+      "3": "/soundtracki/Uncharted 4/Uncharted_4_3s.mp3",
+      "5": "/soundtracki/Uncharted 4/Uncharted_4_5s.mp3",
+      "10": "/soundtracki/Uncharted 4/Uncharted_4_10s.mp3",
+      "15": "/soundtracki/Uncharted 4/Uncharted_4_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Gra",
+    "hint2": "Akcja / Przygodowa",
+    "hint3": "2016",
+    "hint4": "Naughty Dog"
+  },
+  {
+    "id": 134,
+    "day": 134,
+    "title": "American Horror Story",
+    "artist": "",
+    "imageUrl": "/soundtracki/American Horror Story/American Horror Story.jpg",
+    "fullAudioSrc": "/soundtracki/American Horror Story/American Horror Story.mp3",
+    "clips": {
+      "1": "/soundtracki/American Horror Story/American_Horror_Story_1s.mp3",
+      "3": "/soundtracki/American Horror Story/American_Horror_Story_3s.mp3",
+      "5": "/soundtracki/American Horror Story/American_Horror_Story_5s.mp3",
+      "10": "/soundtracki/American Horror Story/American_Horror_Story_10s.mp3",
+      "15": "/soundtracki/American Horror Story/American_Horror_Story_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Horror / Antologia",
+    "hint3": "2011",
+    "hint4": "Ryan Murphy"
+  },
+  {
+    "id": 135,
+    "day": 135,
+    "title": "Arcane",
+    "artist": "",
+    "imageUrl": "/soundtracki/Arcane/Arcane.jpg",
+    "fullAudioSrc": "/soundtracki/Arcane/Arcane.mp3",
+    "clips": {
+      "1": "/soundtracki/Arcane/Arcane_1s.mp3",
+      "3": "/soundtracki/Arcane/Arcane_3s.mp3",
+      "5": "/soundtracki/Arcane/Arcane_5s.mp3",
+      "10": "/soundtracki/Arcane/Arcane_10s.mp3",
+      "15": "/soundtracki/Arcane/Arcane_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Animacja / Akcja",
+    "hint3": "2021",
+    "hint4": "Riot Games / Fortiche"
+  },
+  {
+    "id": 136,
+    "day": 136,
+    "title": "Biuro",
+    "artist": "",
+    "imageUrl": "/soundtracki/Biuro/Biuro.jpg",
+    "fullAudioSrc": "/soundtracki/Biuro/Biuro.mp3",
+    "clips": {
+      "1": "/soundtracki/Biuro/Biuro_1s.mp3",
+      "3": "/soundtracki/Biuro/Biuro_3s.mp3",
+      "5": "/soundtracki/Biuro/Biuro_5s.mp3",
+      "10": "/soundtracki/Biuro/Biuro_10s.mp3",
+      "15": "/soundtracki/Biuro/Biuro_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Komedia / Mockumentary",
+    "hint3": "2005",
+    "hint4": "Greg Daniels"
+  },
+  {
+    "id": 137,
+    "day": 137,
+    "title": "BoJack Horseman",
+    "artist": "",
+    "imageUrl": "/soundtracki/BoJack Horseman/BoJack Horseman.jpg",
+    "fullAudioSrc": "/soundtracki/BoJack Horseman/BoJack Horseman.mp3",
+    "clips": {
+      "1": "/soundtracki/BoJack Horseman/BoJack_Horseman_1s.mp3",
+      "3": "/soundtracki/BoJack Horseman/BoJack_Horseman_3s.mp3",
+      "5": "/soundtracki/BoJack Horseman/BoJack_Horseman_5s.mp3",
+      "10": "/soundtracki/BoJack Horseman/BoJack_Horseman_10s.mp3",
+      "15": "/soundtracki/BoJack Horseman/BoJack_Horseman_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Komedia / Dramat",
+    "hint3": "2014",
+    "hint4": "Raphael Bob-Waksberg"
+  },
+  {
+    "id": 138,
+    "day": 138,
+    "title": "Chłopi",
+    "artist": "",
+    "imageUrl": "/soundtracki/Chłopi/Chłopi.jpg",
+    "fullAudioSrc": "/soundtracki/Chłopi/Chłopi.mp3",
+    "clips": {
+      "1": "/soundtracki/Chłopi/Chłopi_1s.mp3",
+      "3": "/soundtracki/Chłopi/Chłopi_3s.mp3",
+      "5": "/soundtracki/Chłopi/Chłopi_5s.mp3",
+      "10": "/soundtracki/Chłopi/Chłopi_10s.mp3",
+      "15": "/soundtracki/Chłopi/Chłopi_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Dramat / Animacja",
+    "hint3": "2023",
+    "hint4": "DK Welchman / Hugh Welchman"
+  },
+  {
+    "id": 139,
+    "day": 139,
+    "title": "Cobra Kai",
+    "artist": "",
+    "imageUrl": "/soundtracki/Cobra Kai/Cobra Kai.jpg",
+    "fullAudioSrc": "/soundtracki/Cobra Kai/Cobra Kai.mp3",
+    "clips": {
+      "1": "/soundtracki/Cobra Kai/Cobra_Kai_1s.mp3",
+      "3": "/soundtracki/Cobra Kai/Cobra_Kai_3s.mp3",
+      "5": "/soundtracki/Cobra Kai/Cobra_Kai_5s.mp3",
+      "10": "/soundtracki/Cobra Kai/Cobra_Kai_10s.mp3",
+      "15": "/soundtracki/Cobra Kai/Cobra_Kai_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Akcja / Dramat",
+    "hint3": "2018",
+    "hint4": "Josh Heald / Jon Hurwitz / Hayden Schlossberg"
+  },
+  {
+    "id": 140,
+    "day": 140,
+    "title": "Czarnobyl",
+    "artist": "",
+    "imageUrl": "/soundtracki/Czarnobyl/Czarnobyl.jpg",
+    "fullAudioSrc": "/soundtracki/Czarnobyl/Czarnobyl.mp3",
+    "clips": {
+      "1": "/soundtracki/Czarnobyl/Czarnobyl_1s.mp3",
+      "3": "/soundtracki/Czarnobyl/Czarnobyl_3s.mp3",
+      "5": "/soundtracki/Czarnobyl/Czarnobyl_5s.mp3",
+      "10": "/soundtracki/Czarnobyl/Czarnobyl_10s.mp3",
+      "15": "/soundtracki/Czarnobyl/Czarnobyl_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Historyczny / Dramat",
+    "hint3": "2019",
+    "hint4": "Craig Mazin"
+  },
+  {
+    "id": 141,
+    "day": 141,
+    "title": "Czterej pancerni i pies",
+    "artist": "",
+    "imageUrl": "/soundtracki/Czterej pancerni i pies/Czterej pancerni i pies.jpg",
+    "fullAudioSrc": "/soundtracki/Czterej pancerni i pies/Czterej pancerni i pies.mp3",
+    "clips": {
+      "1": "/soundtracki/Czterej pancerni i pies/Czterej_pancerni_i_pies_1s.mp3",
+      "3": "/soundtracki/Czterej pancerni i pies/Czterej_pancerni_i_pies_3s.mp3",
+      "5": "/soundtracki/Czterej pancerni i pies/Czterej_pancerni_i_pies_5s.mp3",
+      "10": "/soundtracki/Czterej pancerni i pies/Czterej_pancerni_i_pies_10s.mp3",
+      "15": "/soundtracki/Czterej pancerni i pies/Czterej_pancerni_i_pies_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Wojenny / Przygodowy",
+    "hint3": "1966",
+    "hint4": "Konrad Nałęcki"
+  },
+  {
+    "id": 142,
+    "day": 142,
+    "title": "DAHMER",
+    "artist": "",
+    "imageUrl": "/soundtracki/DAHMER/DAHMER.jpg",
+    "fullAudioSrc": "/soundtracki/DAHMER/DAHMER.mp3",
+    "clips": {
+      "1": "/soundtracki/DAHMER/DAHMER_1s.mp3",
+      "3": "/soundtracki/DAHMER/DAHMER_3s.mp3",
+      "5": "/soundtracki/DAHMER/DAHMER_5s.mp3",
+      "10": "/soundtracki/DAHMER/DAHMER_10s.mp3",
+      "15": "/soundtracki/DAHMER/DAHMER_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Kryminał / Dramat",
+    "hint3": "2022",
+    "hint4": "Ryan Murphy / Ian Brennan"
+  },
+  {
+    "id": 143,
+    "day": 143,
+    "title": "DARK",
+    "artist": "",
+    "imageUrl": "/soundtracki/DARK/DARK.jpg",
+    "fullAudioSrc": "/soundtracki/DARK/DARK.mp3",
+    "clips": {
+      "1": "/soundtracki/DARK/DARK_1s.mp3",
+      "3": "/soundtracki/DARK/DARK_3s.mp3",
+      "5": "/soundtracki/DARK/DARK_5s.mp3",
+      "10": "/soundtracki/DARK/DARK_10s.mp3",
+      "15": "/soundtracki/DARK/DARK_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Sci-Fi / Thriller",
+    "hint3": "2017",
+    "hint4": "Baran bo Odar / Jantje Friese"
+  },
+  {
+    "id": 144,
+    "day": 144,
+    "title": "Deadpool & Wolverine",
+    "artist": "",
+    "imageUrl": "/soundtracki/Deadpool & Wolverine/Deadpool & Wolverine.jpg",
+    "fullAudioSrc": "/soundtracki/Deadpool & Wolverine/Deadpool & Wolverine.mp3",
+    "clips": {
+      "1": "/soundtracki/Deadpool & Wolverine/Deadpool_&_Wolverine_1s.mp3",
+      "3": "/soundtracki/Deadpool & Wolverine/Deadpool_&_Wolverine_3s.mp3",
+      "5": "/soundtracki/Deadpool & Wolverine/Deadpool_&_Wolverine_5s.mp3",
+      "10": "/soundtracki/Deadpool & Wolverine/Deadpool_&_Wolverine_10s.mp3",
+      "15": "/soundtracki/Deadpool & Wolverine/Deadpool_&_Wolverine_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Akcja / Komedia",
+    "hint3": "2024",
+    "hint4": "Shawn Levy"
+  },
+  {
+    "id": 145,
+    "day": 145,
+    "title": "Dexter",
+    "artist": "",
+    "imageUrl": "/soundtracki/Dexter/Dexter.jpg",
+    "fullAudioSrc": "/soundtracki/Dexter/Dexter.mp3",
+    "clips": {
+      "1": "/soundtracki/Dexter/Dexter_1s.mp3",
+      "3": "/soundtracki/Dexter/Dexter_3s.mp3",
+      "5": "/soundtracki/Dexter/Dexter_5s.mp3",
+      "10": "/soundtracki/Dexter/Dexter_10s.mp3",
+      "15": "/soundtracki/Dexter/Dexter_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Kryminał / Thriller",
+    "hint3": "2006",
+    "hint4": "James Manos Jr."
+  },
+  {
+    "id": 146,
+    "day": 146,
+    "title": "Donnie Darko",
+    "artist": "",
+    "imageUrl": "/soundtracki/Donnie Darko/Donnie Darko.jpg",
+    "fullAudioSrc": "/soundtracki/Donnie Darko/Donnie Darko.mp3",
+    "clips": {
+      "1": "/soundtracki/Donnie Darko/Donnie_Darko_1s.mp3",
+      "3": "/soundtracki/Donnie Darko/Donnie_Darko_3s.mp3",
+      "5": "/soundtracki/Donnie Darko/Donnie_Darko_5s.mp3",
+      "10": "/soundtracki/Donnie Darko/Donnie_Darko_10s.mp3",
+      "15": "/soundtracki/Donnie Darko/Donnie_Darko_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Sci-Fi / Thriller",
+    "hint3": "2001",
+    "hint4": "Richard Kelly"
+  },
+  {
+    "id": 147,
+    "day": 147,
+    "title": "Dojrzewanie",
+    "artist": "",
+    "imageUrl": "/soundtracki/Dorastanie/Dojrzewanie.jpg",
+    "fullAudioSrc": "/soundtracki/Dorastanie/Dorastanie.mp3",
+    "clips": {
+      "1": "/soundtracki/Dorastanie/Dorastanie_1s.mp3",
+      "3": "/soundtracki/Dorastanie/Dorastanie_3s.mp3",
+      "5": "/soundtracki/Dorastanie/Dorastanie_5s.mp3",
+      "10": "/soundtracki/Dorastanie/Dorastanie_10s.mp3",
+      "15": "/soundtracki/Dorastanie/Dorastanie_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Dramat",
+    "hint3": "2025",
+    "hint4": "Jack Thorne"
+  },
+  {
+    "id": 148,
+    "day": 148,
+    "title": "Euphoria",
+    "artist": "",
+    "imageUrl": "/soundtracki/Euphoria/Euphoria.jpg",
+    "fullAudioSrc": "/soundtracki/Euphoria/Euphoria.mp3",
+    "clips": {
+      "1": "/soundtracki/Euphoria/Euphoria_1s.mp3",
+      "3": "/soundtracki/Euphoria/Euphoria_3s.mp3",
+      "5": "/soundtracki/Euphoria/Euphoria_5s.mp3",
+      "10": "/soundtracki/Euphoria/Euphoria_10s.mp3",
+      "15": "/soundtracki/Euphoria/Euphoria_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Dramat / Nastolatki",
+    "hint3": "2019",
+    "hint4": "Sam Levinson"
+  },
+  {
+    "id": 149,
+    "day": 149,
+    "title": "Forrest Gump",
+    "artist": "",
+    "imageUrl": "/soundtracki/Forrest Gump/Forrest Gump.jpg",
+    "fullAudioSrc": "/soundtracki/Forrest Gump/Forrest Gump.mp3",
+    "clips": {
+      "1": "/soundtracki/Forrest Gump/Forrest_Gump_1s.mp3",
+      "3": "/soundtracki/Forrest Gump/Forrest_Gump_3s.mp3",
+      "5": "/soundtracki/Forrest Gump/Forrest_Gump_5s.mp3",
+      "10": "/soundtracki/Forrest Gump/Forrest_Gump_10s.mp3",
+      "15": "/soundtracki/Forrest Gump/Forrest_Gump_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Dramat / Komedia",
+    "hint3": "1994",
+    "hint4": "Robert Zemeckis"
+  },
+  {
+    "id": 150,
+    "day": 150,
+    "title": "Gambit Królowej",
+    "artist": "",
+    "imageUrl": "/soundtracki/Gambit Kr\u00f3lowej/Gambit Kr\u00f3lowej.jpg",
+    "fullAudioSrc": "/soundtracki/Gambit Kr\u00f3lowej/Gambit Kr\u00f3lowej.mp3",
+    "clips": {
+      "1": "/soundtracki/Gambit Kr\u00f3lowej/Gambit_Kr\u00f3lowej_1s.mp3",
+      "3": "/soundtracki/Gambit Kr\u00f3lowej/Gambit_Kr\u00f3lowej_3s.mp3",
+      "5": "/soundtracki/Gambit Kr\u00f3lowej/Gambit_Kr\u00f3lowej_5s.mp3",
+      "10": "/soundtracki/Gambit Kr\u00f3lowej/Gambit_Kr\u00f3lowej_10s.mp3",
+      "15": "/soundtracki/Gambit Kr\u00f3lowej/Gambit_Kr\u00f3lowej_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Dramat / Sportowy",
+    "hint3": "2020",
+    "hint4": "Scott Frank"
+  },
+  {
+    "id": 151,
+    "day": 151,
+    "title": "Hannibal",
+    "artist": "",
+    "imageUrl": "/soundtracki/Hannibal/Hannibal.jpg",
+    "fullAudioSrc": "/soundtracki/Hannibal/Hannibal.mp3",
+    "clips": {
+      "1": "/soundtracki/Hannibal/Hannibal_1s.mp3",
+      "3": "/soundtracki/Hannibal/Hannibal_3s.mp3",
+      "5": "/soundtracki/Hannibal/Hannibal_5s.mp3",
+      "10": "/soundtracki/Hannibal/Hannibal_10s.mp3",
+      "15": "/soundtracki/Hannibal/Hannibal_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Thriller / Horror",
+    "hint3": "2013",
+    "hint4": "Bryan Fuller"
+  },
+  {
+    "id": 152,
+    "day": 152,
+    "title": "Jhon Wick",
+    "artist": "",
+    "imageUrl": "/soundtracki/Jhon Wick/Jhon Wick.jpg",
+    "fullAudioSrc": "/soundtracki/Jhon Wick/Jhon Wick.mp3",
+    "clips": {
+      "1": "/soundtracki/Jhon Wick/Jhon_Wick_1s.mp3",
+      "3": "/soundtracki/Jhon Wick/Jhon_Wick_3s.mp3",
+      "5": "/soundtracki/Jhon Wick/Jhon_Wick_5s.mp3",
+      "10": "/soundtracki/Jhon Wick/Jhon_Wick_10s.mp3",
+      "15": "/soundtracki/Jhon Wick/Jhon_Wick_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Akcja / Thriller",
+    "hint3": "2014",
+    "hint4": "Chad Stahelski"
+  },
+  {
+    "id": 153,
+    "day": 153,
+    "title": "Kac Vegas",
+    "artist": "",
+    "imageUrl": "/soundtracki/Kac Vegas/Kac Vegas.jpg",
+    "fullAudioSrc": "/soundtracki/Kac Vegas/Kac Vegas.mp3",
+    "clips": {
+      "1": "/soundtracki/Kac Vegas/Kac_Vegas_1s.mp3",
+      "3": "/soundtracki/Kac Vegas/Kac_Vegas_3s.mp3",
+      "5": "/soundtracki/Kac Vegas/Kac_Vegas_5s.mp3",
+      "10": "/soundtracki/Kac Vegas/Kac_Vegas_10s.mp3",
+      "15": "/soundtracki/Kac Vegas/Kac_Vegas_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Komedia",
+    "hint3": "2009",
+    "hint4": "Todd Phillips"
+  },
+  {
+    "id": 154,
+    "day": 154,
+    "title": "La La Land",
+    "artist": "",
+    "imageUrl": "/soundtracki/La La Land/La La Land.jpg",
+    "fullAudioSrc": "/soundtracki/La La Land/La La Land.mp3",
+    "clips": {
+      "1": "/soundtracki/La La Land/La_La_Land_1s.mp3",
+      "3": "/soundtracki/La La Land/La_La_Land_3s.mp3",
+      "5": "/soundtracki/La La Land/La_La_Land_5s.mp3",
+      "10": "/soundtracki/La La Land/La_La_Land_10s.mp3",
+      "15": "/soundtracki/La La Land/La_La_Land_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Musical / Romans",
+    "hint3": "2016",
+    "hint4": "Damien Chazelle"
+  },
+  {
+    "id": 155,
+    "day": 155,
+    "title": "Lucyfer",
+    "artist": "",
+    "imageUrl": "/soundtracki/Lucyfer/Lucyfer.jpg",
+    "fullAudioSrc": "/soundtracki/Lucyfer/Lucyfer.mp3",
+    "clips": {
+      "1": "/soundtracki/Lucyfer/Lucyfer_1s.mp3",
+      "3": "/soundtracki/Lucyfer/Lucyfer_3s.mp3",
+      "5": "/soundtracki/Lucyfer/Lucyfer_5s.mp3",
+      "10": "/soundtracki/Lucyfer/Lucyfer_10s.mp3",
+      "15": "/soundtracki/Lucyfer/Lucyfer_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Fantasy / Kryminał",
+    "hint3": "2016",
+    "hint4": "Tom Kapinos"
+  },
+  {
+    "id": 156,
+    "day": 156,
+    "title": "Lśnienie",
+    "artist": "",
+    "imageUrl": "/soundtracki/L\u015bnienie/L\u015bnienie.jpg",
+    "fullAudioSrc": "/soundtracki/L\u015bnienie/L\u015bnienie.mp3",
+    "clips": {
+      "1": "/soundtracki/L\u015bnienie/L\u015bnienie_1s.mp3",
+      "3": "/soundtracki/L\u015bnienie/L\u015bnienie_3s.mp3",
+      "5": "/soundtracki/L\u015bnienie/L\u015bnienie_5s.mp3",
+      "10": "/soundtracki/L\u015bnienie/L\u015bnienie_10s.mp3",
+      "15": "/soundtracki/L\u015bnienie/L\u015bnienie_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Horror",
+    "hint3": "1980",
+    "hint4": "Stanley Kubrick"
+  },
+  {
+    "id": 157,
+    "day": 157,
+    "title": "Matrix",
+    "artist": "",
+    "imageUrl": "/soundtracki/Matrix/Matrix.jpg",
+    "fullAudioSrc": "/soundtracki/Matrix/Matrix.mp3",
+    "clips": {
+      "1": "/soundtracki/Matrix/Matrix_1s.mp3",
+      "3": "/soundtracki/Matrix/Matrix_3s.mp3",
+      "5": "/soundtracki/Matrix/Matrix_5s.mp3",
+      "10": "/soundtracki/Matrix/Matrix_10s.mp3",
+      "15": "/soundtracki/Matrix/Matrix_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Sci-Fi / Akcja",
+    "hint3": "1999",
+    "hint4": "Wachowscy"
+  },
+  {
+    "id": 158,
+    "day": 158,
+    "title": "MINDHUNTER",
+    "artist": "",
+    "imageUrl": "/soundtracki/Mindhunter/Mindhunter.jpg",
+    "fullAudioSrc": "/soundtracki/Mindhunter/Mindhunter.mp3",
+    "clips": {
+      "1": "/soundtracki/Mindhunter/Mindhunter_1s.mp3",
+      "3": "/soundtracki/Mindhunter/Mindhunter_3s.mp3",
+      "5": "/soundtracki/Mindhunter/Mindhunter_5s.mp3",
+      "10": "/soundtracki/Mindhunter/Mindhunter_10s.mp3",
+      "15": "/soundtracki/Mindhunter/Mindhunter_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Kryminał / Thriller",
+    "hint3": "2017",
+    "hint4": "Joe Penhall"
+  },
+  {
+    "id": 159,
+    "day": 159,
+    "title": "Mr. Robot",
+    "artist": "",
+    "imageUrl": "/soundtracki/Mr. Robot/Mr. Robot.jpg",
+    "fullAudioSrc": "/soundtracki/Mr. Robot/Mr. Robot.mp3",
+    "clips": {
+      "1": "/soundtracki/Mr. Robot/Mr._Robot_1s.mp3",
+      "3": "/soundtracki/Mr. Robot/Mr._Robot_3s.mp3",
+      "5": "/soundtracki/Mr. Robot/Mr._Robot_5s.mp3",
+      "10": "/soundtracki/Mr. Robot/Mr._Robot_10s.mp3",
+      "15": "/soundtracki/Mr. Robot/Mr._Robot_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Thriller / Dramat",
+    "hint3": "2015",
+    "hint4": "Sam Esmail"
+  },
+  {
+    "id": 160,
+    "day": 160,
+    "title": "Naznaczony",
+    "artist": "",
+    "imageUrl": "/soundtracki/Naznaczony/Naznaczony.jpg",
+    "fullAudioSrc": "/soundtracki/Naznaczony/Naznaczony.mp3",
+    "clips": {
+      "1": "/soundtracki/Naznaczony/Naznaczony_1s.mp3",
+      "3": "/soundtracki/Naznaczony/Naznaczony_3s.mp3",
+      "5": "/soundtracki/Naznaczony/Naznaczony_5s.mp3",
+      "10": "/soundtracki/Naznaczony/Naznaczony_10s.mp3",
+      "15": "/soundtracki/Naznaczony/Naznaczony_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Dramat / Romans",
+    "hint3": "2017",
+    "hint4": "Marina Fiedun"
+  },
+  {
+    "id": 161,
+    "day": 161,
+    "title": "Notatnik Śmierci",
+    "artist": "",
+    "imageUrl": "/soundtracki/NotatnikSmierci/NotatnikSmierci.jpg",
+    "fullAudioSrc": "/soundtracki/NotatnikSmierci/NotatnikSmierci.mp3",
+    "clips": {
+      "1": "/soundtracki/NotatnikSmierci/NotatnikSmierci_1s.mp3",
+      "3": "/soundtracki/NotatnikSmierci/NotatnikSmierci_3s.mp3",
+      "5": "/soundtracki/NotatnikSmierci/NotatnikSmierci_5s.mp3",
+      "10": "/soundtracki/NotatnikSmierci/NotatnikSmierci_10s.mp3",
+      "15": "/soundtracki/NotatnikSmierci/NotatnikSmierci_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Thriller / Nadprzyrodzone",
+    "hint3": "2006",
+    "hint4": "Tetsurō Araki"
+  },
+  {
+    "id": 162,
+    "day": 162,
+    "title": "Obcy – ósmy pasażer Nostromo",
+    "artist": "",
+    "imageUrl": "/soundtracki/Obcy/Obcy.jpg",
+    "fullAudioSrc": "/soundtracki/Obcy/Obcy.mp3",
+    "clips": {
+      "1": "/soundtracki/Obcy/Obcy_1s.mp3",
+      "3": "/soundtracki/Obcy/Obcy_3s.mp3",
+      "5": "/soundtracki/Obcy/Obcy_5s.mp3",
+      "10": "/soundtracki/Obcy/Obcy_10s.mp3",
+      "15": "/soundtracki/Obcy/Obcy_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Sci-Fi / Horror",
+    "hint3": "1979",
+    "hint4": "Ridley Scott"
+  },
+  {
+    "id": 163,
+    "day": 163,
+    "title": "Ojciec Chrzestny",
+    "artist": "",
+    "imageUrl": "/soundtracki/Ojciec Chrzestny/Ojciec Chrzestny.jpg",
+    "fullAudioSrc": "/soundtracki/Ojciec Chrzestny/Ojciec Chrzestny.mp3",
+    "clips": {
+      "1": "/soundtracki/Ojciec Chrzestny/Ojciec_Chrzestny_1s.mp3",
+      "3": "/soundtracki/Ojciec Chrzestny/Ojciec_Chrzestny_3s.mp3",
+      "5": "/soundtracki/Ojciec Chrzestny/Ojciec_Chrzestny_5s.mp3",
+      "10": "/soundtracki/Ojciec Chrzestny/Ojciec_Chrzestny_10s.mp3",
+      "15": "/soundtracki/Ojciec Chrzestny/Ojciec_Chrzestny_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Dramat / Gangsterski",
+    "hint3": "1972",
+    "hint4": "Francis Ford Coppola"
+  },
+  {
+    "id": 164,
+    "day": 164,
+    "title": "Pianista",
+    "artist": "",
+    "imageUrl": "/soundtracki/Pianista/Pianista.jpg",
+    "fullAudioSrc": "/soundtracki/Pianista/Pianista.mp3",
+    "clips": {
+      "1": "/soundtracki/Pianista/Pianista_1s.mp3",
+      "3": "/soundtracki/Pianista/Pianista_3s.mp3",
+      "5": "/soundtracki/Pianista/Pianista_5s.mp3",
+      "10": "/soundtracki/Pianista/Pianista_10s.mp3",
+      "15": "/soundtracki/Pianista/Pianista_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Dramat / Wojenny",
+    "hint3": "2002",
+    "hint4": "Roman Polański"
+  },
+  {
+    "id": 165,
+    "day": 165,
+    "title": "Piątek, trzynastego",
+    "artist": "",
+    "imageUrl": "/soundtracki/Pi\u0105tek, trzynastego/Pi\u0105tek, trzynastego.jpg",
+    "fullAudioSrc": "/soundtracki/Pi\u0105tek, trzynastego/Pi\u0105tek, trzynastego.mp3",
+    "clips": {
+      "1": "/soundtracki/Pi\u0105tek, trzynastego/Pi\u0105tek,_trzynastego_1s.mp3",
+      "3": "/soundtracki/Pi\u0105tek, trzynastego/Pi\u0105tek,_trzynastego_3s.mp3",
+      "5": "/soundtracki/Pi\u0105tek, trzynastego/Pi\u0105tek,_trzynastego_5s.mp3",
+      "10": "/soundtracki/Pi\u0105tek, trzynastego/Pi\u0105tek,_trzynastego_10s.mp3",
+      "15": "/soundtracki/Pi\u0105tek, trzynastego/Pi\u0105tek,_trzynastego_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Horror / Slasher",
+    "hint3": "1980",
+    "hint4": "Sean S. Cunningham"
+  },
+  {
+    "id": 166,
+    "day": 166,
+    "title": "Reniferek",
+    "artist": "",
+    "imageUrl": "/soundtracki/Reniferek/Reniferek.jpg",
+    "fullAudioSrc": "/soundtracki/Reniferek/Reniferek.mp3",
+    "clips": {
+      "1": "/soundtracki/Reniferek/Reniferek_1s.mp3",
+      "3": "/soundtracki/Reniferek/Reniferek_3s.mp3",
+      "5": "/soundtracki/Reniferek/Reniferek_5s.mp3",
+      "10": "/soundtracki/Reniferek/Reniferek_10s.mp3",
+      "15": "/soundtracki/Reniferek/Reniferek_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Dramat / Thriller",
+    "hint3": "2024",
+    "hint4": "Richard Gadd"
+  },
+  {
+    "id": 167,
+    "day": 167,
+    "title": "Rozdzielenie",
+    "artist": "",
+    "imageUrl": "/soundtracki/Rozdzielenie/Rozdzielenie.jpg",
+    "fullAudioSrc": "/soundtracki/Rozdzielenie/Rozdzielenie.mp3",
+    "clips": {
+      "1": "/soundtracki/Rozdzielenie/Rozdzielenie_1s.mp3",
+      "3": "/soundtracki/Rozdzielenie/Rozdzielenie_3s.mp3",
+      "5": "/soundtracki/Rozdzielenie/Rozdzielenie_5s.mp3",
+      "10": "/soundtracki/Rozdzielenie/Rozdzielenie_10s.mp3",
+      "15": "/soundtracki/Rozdzielenie/Rozdzielenie_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Thriller / Sci-Fi",
+    "hint3": "2022",
+    "hint4": "Dan Erickson"
+  },
+  {
+    "id": 168,
+    "day": 168,
+    "title": "Sex Education",
+    "artist": "",
+    "imageUrl": "/soundtracki/Sex Education/Sex Education.jpg",
+    "fullAudioSrc": "/soundtracki/Sex Education/Sex Education.mp3",
+    "clips": {
+      "1": "/soundtracki/Sex Education/Sex_Education_1s.mp3",
+      "3": "/soundtracki/Sex Education/Sex_Education_3s.mp3",
+      "5": "/soundtracki/Sex Education/Sex_Education_5s.mp3",
+      "10": "/soundtracki/Sex Education/Sex_Education_10s.mp3",
+      "15": "/soundtracki/Sex Education/Sex_Education_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Komedia / Dramat",
+    "hint3": "2019",
+    "hint4": "Laurie Nunn"
+  },
+  {
+    "id": 169,
+    "day": 169,
+    "title": "Siedem",
+    "artist": "",
+    "imageUrl": "/soundtracki/Siedem/Siedem.jpg",
+    "fullAudioSrc": "/soundtracki/Siedem/Siedem.mp3",
+    "clips": {
+      "1": "/soundtracki/Siedem/Siedem_1s.mp3",
+      "3": "/soundtracki/Siedem/Siedem_3s.mp3",
+      "5": "/soundtracki/Siedem/Siedem_5s.mp3",
+      "10": "/soundtracki/Siedem/Siedem_10s.mp3",
+      "15": "/soundtracki/Siedem/Siedem_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Kryminał / Thriller",
+    "hint3": "1995",
+    "hint4": "David Fincher"
+  },
+  {
+    "id": 170,
+    "day": 170,
+    "title": "Squid Game",
+    "artist": "",
+    "imageUrl": "/soundtracki/Squid Game/Squid Game.jpg",
+    "fullAudioSrc": "/soundtracki/Squid Game/Squid Game.mp3",
+    "clips": {
+      "1": "/soundtracki/Squid Game/Squid_Game_1s.mp3",
+      "3": "/soundtracki/Squid Game/Squid_Game_3s.mp3",
+      "5": "/soundtracki/Squid Game/Squid_Game_5s.mp3",
+      "10": "/soundtracki/Squid Game/Squid_Game_10s.mp3",
+      "15": "/soundtracki/Squid Game/Squid_Game_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Thriller / Dramat",
+    "hint3": "2021",
+    "hint4": "Hwang Dong-hyuk"
+  },
+  {
+    "id": 171,
+    "day": 171,
+    "title": "Sukcesja",
+    "artist": "",
+    "imageUrl": "/soundtracki/Sukcesja/Sukcesja.jpg",
+    "fullAudioSrc": "/soundtracki/Sukcesja/Sukcesja.mp3",
+    "clips": {
+      "1": "/soundtracki/Sukcesja/Sukcesja_1s.mp3",
+      "3": "/soundtracki/Sukcesja/Sukcesja_3s.mp3",
+      "5": "/soundtracki/Sukcesja/Sukcesja_5s.mp3",
+      "10": "/soundtracki/Sukcesja/Sukcesja_10s.mp3",
+      "15": "/soundtracki/Sukcesja/Sukcesja_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Dramat / Komedia",
+    "hint3": "2018",
+    "hint4": "Jesse Armstrong"
+  },
+  {
+    "id": 172,
+    "day": 172,
+    "title": "Szybcy i wściekli",
+    "artist": "",
+    "imageUrl": "/soundtracki/Szybcy i w\u015bciekli/Szybcy i w\u015bciekli.jpg",
+    "fullAudioSrc": "/soundtracki/Szybcy i w\u015bciekli/Szybcy i w\u015bciekli.mp3",
+    "clips": {
+      "1": "/soundtracki/Szybcy i w\u015bciekli/Szybcy_i_w\u015bciekli_1s.mp3",
+      "3": "/soundtracki/Szybcy i w\u015bciekli/Szybcy_i_w\u015bciekli_3s.mp3",
+      "5": "/soundtracki/Szybcy i w\u015bciekli/Szybcy_i_w\u015bciekli_5s.mp3",
+      "10": "/soundtracki/Szybcy i w\u015bciekli/Szybcy_i_w\u015bciekli_10s.mp3",
+      "15": "/soundtracki/Szybcy i w\u015bciekli/Szybcy_i_w\u015bciekli_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Akcja / Kryminał",
+    "hint3": "2001",
+    "hint4": "Rob Cohen"
+  },
+  {
+    "id": 173,
+    "day": 173,
+    "title": "Teardrop",
+    "artist": "",
+    "imageUrl": "/soundtracki/Teardrop/Teardrop.jpg",
+    "fullAudioSrc": "/soundtracki/Teardrop/Teardrop.mp3",
+    "clips": {
+      "1": "/soundtracki/Teardrop/Teardrop_1s.mp3",
+      "3": "/soundtracki/Teardrop/Teardrop_3s.mp3",
+      "5": "/soundtracki/Teardrop/Teardrop_5s.mp3",
+      "10": "/soundtracki/Teardrop/Teardrop_10s.mp3",
+      "15": "/soundtracki/Teardrop/Teardrop_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Horror",
+    "hint3": "2022",
+    "hint4": "Steven R. Monroe"
+  },
+  {
+    "id": 174,
+    "day": 174,
+    "title": "The Boys",
+    "artist": "",
+    "imageUrl": "/soundtracki/The Boys/The Boys.jpg",
+    "fullAudioSrc": "/soundtracki/The Boys/The Boys.mp3",
+    "clips": {
+      "1": "/soundtracki/The Boys/The_Boys_1s.mp3",
+      "3": "/soundtracki/The Boys/The_Boys_3s.mp3",
+      "5": "/soundtracki/The Boys/The_Boys_5s.mp3",
+      "10": "/soundtracki/The Boys/The_Boys_10s.mp3",
+      "15": "/soundtracki/The Boys/The_Boys_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Akcja / Satyra",
+    "hint3": "2019",
+    "hint4": "Eric Kripke"
+  },
+  {
+    "id": 175,
+    "day": 175,
+    "title": "The Punisher",
+    "artist": "",
+    "imageUrl": "/soundtracki/The Punisher/The Punisher.jpg",
+    "fullAudioSrc": "/soundtracki/The Punisher/The Punisher.mp3",
+    "clips": {
+      "1": "/soundtracki/The Punisher/The_Punisher_1s.mp3",
+      "3": "/soundtracki/The Punisher/The_Punisher_3s.mp3",
+      "5": "/soundtracki/The Punisher/The_Punisher_5s.mp3",
+      "10": "/soundtracki/The Punisher/The_Punisher_10s.mp3",
+      "15": "/soundtracki/The Punisher/The_Punisher_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Akcja / Kryminał",
+    "hint3": "2017",
+    "hint4": "Steve Lightfoot"
+  },
+  {
+    "id": 176,
+    "day": 176,
+    "title": "Top Gun",
+    "artist": "",
+    "imageUrl": "/soundtracki/Top Gun/Top Gun.jpg",
+    "fullAudioSrc": "/soundtracki/Top Gun/Top Gun.mp3",
+    "clips": {
+      "1": "/soundtracki/Top Gun/Top_Gun_1s.mp3",
+      "3": "/soundtracki/Top Gun/Top_Gun_3s.mp3",
+      "5": "/soundtracki/Top Gun/Top_Gun_5s.mp3",
+      "10": "/soundtracki/Top Gun/Top_Gun_10s.mp3",
+      "15": "/soundtracki/Top Gun/Top_Gun_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Film",
+    "hint2": "Akcja / Dramat",
+    "hint3": "1986",
+    "hint4": "Tony Scott"
+  },
+  {
+    "id": 177,
+    "day": 177,
+    "title": "Tulsa King",
+    "artist": "",
+    "imageUrl": "/soundtracki/Tulsa King/Tulsa King.jpg",
+    "fullAudioSrc": "/soundtracki/Tulsa King/Tulsa King.mp3",
+    "clips": {
+      "1": "/soundtracki/Tulsa King/Tulsa_King_1s.mp3",
+      "3": "/soundtracki/Tulsa King/Tulsa_King_3s.mp3",
+      "5": "/soundtracki/Tulsa King/Tulsa_King_5s.mp3",
+      "10": "/soundtracki/Tulsa King/Tulsa_King_10s.mp3",
+      "15": "/soundtracki/Tulsa King/Tulsa_King_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Kryminał / Dramat",
+    "hint3": "2022",
+    "hint4": "Taylor Sheridan"
+  },
+  {
+    "id": 178,
+    "day": 178,
+    "title": "Wikingowie",
+    "artist": "",
+    "imageUrl": "/soundtracki/Wikingowie/Wikingowie.jpg",
+    "fullAudioSrc": "/soundtracki/Wikingowie/Wikingowie.mp3",
+    "clips": {
+      "1": "/soundtracki/Wikingowie/Wikingowie_1s.mp3",
+      "3": "/soundtracki/Wikingowie/Wikingowie_3s.mp3",
+      "5": "/soundtracki/Wikingowie/Wikingowie_5s.mp3",
+      "10": "/soundtracki/Wikingowie/Wikingowie_10s.mp3",
+      "15": "/soundtracki/Wikingowie/Wikingowie_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Historyczny / Akcja",
+    "hint3": "2013",
+    "hint4": "Michael Hirst"
+  },
+  {
+    "id": 179,
+    "day": 179,
+    "title": "Wodogrzmoty Małe",
+    "artist": "",
+    "imageUrl": "/soundtracki/Wodogrzmoty Ma\u0142e/Wodogrzmoty Ma\u0142e.jpg",
+    "fullAudioSrc": "/soundtracki/Wodogrzmoty Ma\u0142e/Wodogrzmoty Ma\u0142e.mp3",
+    "clips": {
+      "1": "/soundtracki/Wodogrzmoty Ma\u0142e/Wodogrzmoty_Ma\u0142e_1s.mp3",
+      "3": "/soundtracki/Wodogrzmoty Ma\u0142e/Wodogrzmoty_Ma\u0142e_3s.mp3",
+      "5": "/soundtracki/Wodogrzmoty Ma\u0142e/Wodogrzmoty_Ma\u0142e_5s.mp3",
+      "10": "/soundtracki/Wodogrzmoty Ma\u0142e/Wodogrzmoty_Ma\u0142e_10s.mp3",
+      "15": "/soundtracki/Wodogrzmoty Ma\u0142e/Wodogrzmoty_Ma\u0142e_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Animacja / Komedia",
+    "hint3": "2012",
+    "hint4": "Alex Hirsch"
+  },
+  {
+    "id": 180,
+    "day": 180,
+    "title": "Ślepnąc od świateł",
+    "artist": "",
+    "imageUrl": "/soundtracki/Slepnac/Slepnac.jpg",
+    "fullAudioSrc": "/soundtracki/Slepnac/Slepnac.mp3",
+    "clips": {
+      "1": "/soundtracki/Slepnac/Slepnac_1s.mp3",
+      "3": "/soundtracki/Slepnac/Slepnac_3s.mp3",
+      "5": "/soundtracki/Slepnac/Slepnac_5s.mp3",
+      "10": "/soundtracki/Slepnac/Slepnac_10s.mp3",
+      "15": "/soundtracki/Slepnac/Slepnac_15s.mp3"
+    },
+    "lyrics": [],
+    "hint1": "Serial",
+    "hint2": "Dramat / Kryminał",
+    "hint3": "2018",
+    "hint4": "Krzysztof Skonieczny"
+  }
 ];
