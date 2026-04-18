@@ -8,7 +8,10 @@ export const useCursorSetting = () => {
   const [cursorEnabled, setCursorEnabled] = useState(() => {
     if (typeof window === "undefined") return true;
     try {
-      return localStorage.getItem(LS_CURSOR_KEY) !== "false";
+      const saved = localStorage.getItem(LS_CURSOR_KEY);
+      if (saved !== null) return saved !== "false"; // jeśli user już wybrał → szanuj wybór
+      const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+      return !isMobile; // domyślnie: mobile → wyłączony, desktop → włączony
     } catch {
       return true;
     }
@@ -26,7 +29,9 @@ export const useCursorSetting = () => {
     setCursorEnabled(val);
     try {
       localStorage.setItem(LS_CURSOR_KEY, String(val));
-    } catch { /* ignore */ }
+    } catch {
+      /* ignore */
+    }
     window.dispatchEvent(new CustomEvent("cursorChange", { detail: val }));
   };
 
