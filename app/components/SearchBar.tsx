@@ -176,6 +176,7 @@ export const SearchBar = ({
               if (isAlreadyGuessed) return false;
               return matchesSong(s, searchTerm, normalizedSearchTerm);
             })
+            .sort(() => Math.random() - 0.5)
             .slice(0, 30);
           setSuggestions(filtered);
         } else {
@@ -211,6 +212,7 @@ export const SearchBar = ({
           if (isAlreadyGuessed) return false;
           return matchesSong(s, searchTerm, normalizedSearchTerm);
         })
+        .sort(() => Math.random() - 0.5)
         .slice(0, 30);
       setSuggestions(filtered);
     } else {
