@@ -1605,7 +1605,7 @@ export const soundtrackiSongs: Song[] = [
   {
     id: 98,
     day: 98,
-    title: "Sims 4",
+    title: "The Sims 4",
     artist: "",
     imageUrl: "/soundtracki/Sims 4/sims4.jpg",
     fullAudioSrc: "/soundtracki/Sims 4/Sims 4.mp3",
