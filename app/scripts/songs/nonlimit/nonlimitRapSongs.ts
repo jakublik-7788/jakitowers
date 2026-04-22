@@ -14328,4 +14328,1364 @@ export const nonlimitRapSongs: Song[] = [
       },
     ],
   },
+  {
+    "id": 389,
+    "day": 389,
+    "title": "18",
+    "artist": "White 2115",
+    "audioSrc": "/Rap/White 2115/18.mp3",
+    "youtubeId": "PsobsMRkA_c",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Hej! Sorry, że tak długo, lecz tak wyszło",
+            "start": 0.0,
+            "end": 3.11
+          },
+          {
+            "text": "Od zera do setki się zbierałem jak Fred Flintstone",
+            "start": 3.11,
+            "end": 5.73
+          },
+          {
+            "text": "Przez dwa lata oglądałem bajki i nic",
+            "start": 5.73,
+            "end": 7.87
+          },
+          {
+            "text": "No bo tak bardzo chciałem znowu małym dzieciakiem być",
+            "start": 7.87,
+            "end": 9.95
+          },
+          {
+            "text": "Sentymentalny ze mnie gość, czasem żyję tym co było",
+            "start": 9.95,
+            "end": 13.12
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 390,
+    "day": 390,
+    "title": "KFC",
+    "artist": "Otsochodzi",
+    "audioSrc": "/Rap/Otsochodzi/KFC.mp3",
+    "youtubeId": "7Ei7JDDF3Rk",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Jestem wizjonerem, za te wizje zgarnę gruby przelew",
+            "start": 0.0,
+            "end": 3.16
+          },
+          {
+            "text": "Gnojem, milionerem, nawet jak ładuję zero siedem",
+            "start": 3.16,
+            "end": 6.23
+          },
+          {
+            "text": "Ktoś się nudzi, ma-marudzi, to zapraszam na osiedle",
+            "start": 6.23,
+            "end": 9.4
+          },
+          {
+            "text": "Stoję pod tą szkołą, w której oglądałem Jedyneczkę",
+            "start": 9.4,
+            "end": 12.78
+          },
+          {
+            "text": "Kentucky Fried Chicken, trap z Luizjany (wow)",
+            "start": 12.78,
+            "end": 16.05
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 391,
+    "day": 391,
+    "title": "Mogę dziś umierać",
+    "artist": "White 2115, Chivas",
+    "audioSrc": "/Rap/White 2115/MogeDzisUmierac.mp3",
+    "youtubeId": "cUxliFttSyU",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Barman znowu mi polewa, czystą proszę, nic nie wlewaj",
+            "start": 0.0,
+            "end": 3.64
+          },
+          {
+            "text": "Lodu mam od jubilera",
+            "start": 3.64,
+            "end": 6.02
+          },
+          {
+            "text": "Ciągle w jupiterach, Każdy patrzy na mnie teraz",
+            "start": 6.02,
+            "end": 9.45
+          },
+          {
+            "text": "Mogę wszystko, spójrz w raidera",
+            "start": 9.45,
+            "end": 11.1
+          },
+          {
+            "text": "Zapisane to, że dziś umieram, yeah, yeah, yeah, yeah",
+            "start": 11.1,
+            "end": 15.27
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 392,
+    "day": 392,
+    "title": "Nostalgia",
+    "artist": "Taco Hemingway, Rumak",
+    "audioSrc": "/Rap/TacoHemingway/Nostalgia.mp3",
+    "youtubeId": "pVrbA5y96sk",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Może jednak później, tak do końca nie wiem",
+            "start": 0.0,
+            "end": 2.32
+          },
+          {
+            "text": "Nie wiem skąd ten smutek, znów mnie dopadł czerwiec",
+            "start": 2.32,
+            "end": 4.7
+          },
+          {
+            "text": "Ja na słońcu blednę, chowam się na mieście",
+            "start": 4.7,
+            "end": 7.23
+          },
+          {
+            "text": "Kiedy wieczór zmienia się w świt, coś dobija się do mych drzwi",
+            "start": 7.23,
+            "end": 13.49
+          },
+          {
+            "text": "ayy, ayy nostalgia",
+            "start": 13.49,
+            "end": 16.21
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 393,
+    "day": 393,
+    "title": "Death note",
+    "artist": "Chivas",
+    "audioSrc": "/Rap/Chivas/DeathNote.mp3",
+    "youtubeId": "mB54KJnVBhE",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Ej, kochałem dwie na raz, jedna nie wiedziała",
+            "start": 0.0,
+            "end": 3.72
+          },
+          {
+            "text": "Obie pokochały zielonego Muscle Cara",
+            "start": 3.72,
+            "end": 6.79
+          },
+          {
+            "text": "Zielona pikawa, po co się zakochałaś?",
+            "start": 6.79,
+            "end": 9.76
+          },
+          {
+            "text": "I tak wyląduję w Twoim Death Note",
+            "start": 9.76,
+            "end": 12.75
+          },
+          {
+            "text": "Wydarty papierek, z moim imieniem (Death Note, Death Note)",
+            "start": 12.75,
+            "end": 17.1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 394,
+    "day": 394,
+    "title": "noWy baTmAN",
+    "artist": "Chivas",
+    "audioSrc": "/Rap/Chivas/NowyBatman.mp3",
+    "youtubeId": "fsCT6RdTvKo",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Kiedyś dostałem wpierdol",
+            "start": 0.0,
+            "end": 2.5
+          },
+          {
+            "text": "Za to jak wyglądam i wyglądałem jak panda",
+            "start": 2.5,
+            "end": 7.5
+          },
+          {
+            "text": "I jako urocze dziecko",
+            "start": 7.5,
+            "end": 9.36
+          },
+          {
+            "text": "Życzyłem tym śmieciom, by wylądowali w Arkham (okej, kurwo)",
+            "start": 9.36,
+            "end": 13.69
+          },
+          {
+            "text": "Nowy Batman, umaluję oczy, bo wybiła 12",
+            "start": 13.69,
+            "end": 18.08
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 395,
+    "day": 395,
+    "title": "nóż motylkowy",
+    "artist": "Chivas, White 2115",
+    "audioSrc": "/Rap/Chivas/NozMotylkowy.mp3",
+    "youtubeId": "JKahEPv9xFM",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Miałaś nie tracić głowy, a kiedy jesteśmy sami",
+            "start": 0.0,
+            "end": 2.56
+          },
+          {
+            "text": "Chcesz ją bezpiecznie położyć, najlepiej pomiędzy nogami",
+            "start": 2.56,
+            "end": 5.96
+          },
+          {
+            "text": "Szybkie samochody, sam nie wiem gdzie uciekamy",
+            "start": 5.96,
+            "end": 8.52
+          },
+          {
+            "text": "Wczoraj w nocy umierałem, a dziś",
+            "start": 8.52,
+            "end": 10.8
+          },
+          {
+            "text": "Ej, mam brudne auto, brudne myśli (mam brudne auto, brudne myśli)",
+            "start": 10.8,
+            "end": 14.44
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 396,
+    "day": 396,
+    "title": "OPIUM!",
+    "artist": "Chivas",
+    "audioSrc": "/Rap/Chivas/Opium.mp3",
+    "youtubeId": "uxBOk2Kwej8",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Ja to zaniedbuję, bo chciałem być niewidocznym",
+            "start": 0.0,
+            "end": 2.63
+          },
+          {
+            "text": "Chciałbym czuć, brakuje mi czucia",
+            "start": 2.63,
+            "end": 4.84
+          },
+          {
+            "text": "Czuję się jak duch, ona kocha ducha",
+            "start": 4.84,
+            "end": 7.39
+          },
+          {
+            "text": "Nie odpowiem jej, czy kocham, ale ona dobrze to wie",
+            "start": 7.39,
+            "end": 11.76
+          },
+          {
+            "text": "Czuję tylko Opium na jej bluzie, Opium na jej bluzie",
+            "start": 11.76,
+            "end": 15.45
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 397,
+    "day": 397,
+    "title": "RysunKOwY PoTwóR",
+    "artist": "Chivas",
+    "audioSrc": "/Rap/Chivas/RysunkowyPotwor.mp3",
+    "youtubeId": "KSxslrWN8oM",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Dlaczego ciągle za mną chodzisz?",
+            "start": 0.0,
+            "end": 2.14
+          },
+          {
+            "text": "Bo szkodzisz mi naprawdę, a przecież jesteś na niby",
+            "start": 2.14,
+            "end": 6.08
+          },
+          {
+            "text": "Gadam ze znajomymi",
+            "start": 6.08,
+            "end": 7.55
+          },
+          {
+            "text": "I niby o nim wiedzą, ale nikt go nie widzi",
+            "start": 7.55,
+            "end": 11.31
+          },
+          {
+            "text": "Rysunkowy potwór",
+            "start": 11.31,
+            "end": 12.94
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 398,
+    "day": 398,
+    "title": "Pałac",
+    "artist": "White 2115",
+    "audioSrc": "/Rap/White 2115/Palac.mp3",
+    "youtubeId": "vxbHriySuQw",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Ja sobie wybuduje pałac, yeah",
+            "start": 0.0,
+            "end": 3.1
+          },
+          {
+            "text": "Jak będę chciał to się wydziaram, yeah",
+            "start": 3.1,
+            "end": 6.35
+          },
+          {
+            "text": "Na starość będę chodził w dziarach, yeah",
+            "start": 6.35,
+            "end": 9.75
+          },
+          {
+            "text": "A Ty będziesz o tym gadać (Oj, będziesz gadać)",
+            "start": 9.75,
+            "end": 12.82
+          },
+          {
+            "text": "Proszę ode mnie wypierdalać (wroom, wroom, wroom)",
+            "start": 12.82,
+            "end": 16.32
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 399,
+    "day": 399,
+    "title": "Trzy Butelki",
+    "artist": "White 2115, Chivas",
+    "audioSrc": "/Rap/White 2115/TrzyButelki.mp3",
+    "youtubeId": "d8n1Crr9Lgs",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Moja muza gra ci w duszy",
+            "start": 0.0,
+            "end": 2.23
+          },
+          {
+            "text": "Jeżeli mnie nie lubisz to się pierdol",
+            "start": 2.23,
+            "end": 6.3
+          },
+          {
+            "text": "UA, przy kompozycji braw ja umieram jako pierwszy",
+            "start": 6.3,
+            "end": 16.92
+          },
+          {
+            "text": "UA, nie chcę jej znać nienawidzę mieć depresji",
+            "start": 16.92,
+            "end": 22.38
+          },
+          {
+            "text": "UA, jestem sam no i ze mną trzy butelki",
+            "start": 22.38,
+            "end": 22.38
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 400,
+    "day": 400,
+    "title": "DMC",
+    "artist": "White 2115, Chivas",
+    "audioSrc": "/Rap/White 2115/Dmc.mp3",
+    "youtubeId": "ySPsPsNV9XY",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Tym częściej zbiera się na płacz",
+            "start": 0.0,
+            "end": 2.58
+          },
+          {
+            "text": "Obiecałem, że nie poddam się ot tak",
+            "start": 2.58,
+            "end": 5.03
+          },
+          {
+            "text": "Chociaż w powietrzu unosi się strach",
+            "start": 5.03,
+            "end": 7.86
+          },
+          {
+            "text": "Im więcej widzę zła, im więcej widzę was",
+            "start": 7.86,
+            "end": 10.57
+          },
+          {
+            "text": "Tym częściej Devil May Cry",
+            "start": 10.57,
+            "end": 11.69
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 401,
+    "day": 401,
+    "title": "Następna stacja",
+    "artist": "Taco Hemingway, Rumak",
+    "audioSrc": "/Rap/TacoHemingway/NastepnaStacja.mp3",
+    "youtubeId": "KfBP_JpCDF8",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Przedniojęzykowe \"Ł\", ja cierpię katusze teraz",
+            "start": 0.0,
+            "end": 2.79
+          },
+          {
+            "text": "Zamykam oczy i wróżę, że to już Świętokrzyska",
+            "start": 2.79,
+            "end": 5.24
+          },
+          {
+            "text": "Wraz z kababem wsiedli ludzie, mieląc mięso w pyskach",
+            "start": 5.24,
+            "end": 7.86
+          },
+          {
+            "text": "(NASTĘPNA STACJA) litr wina i pół wódki",
+            "start": 7.86,
+            "end": 10.47
+          },
+          {
+            "text": "I sześć szlugów, byś palił i snuł smutki",
+            "start": 10.47,
+            "end": 13.08
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 402,
+    "day": 402,
+    "title": "Ekodiesel",
+    "artist": "TACONAFIDE, Quebonafide, Taco Hemingway",
+    "audioSrc": "/Rap/TACONAFIDE/Ekodiesel.mp3",
+    "youtubeId": "BfcW0fWSeiw",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Ledwo widzę, ja już ledwo widzę",
+            "start": 0.0,
+            "end": 2.25
+          },
+          {
+            "text": "(Wrum, wrum, wrum)",
+            "start": 2.25,
+            "end": 3.52
+          },
+          {
+            "text": "Staję w BP, leję ekodiesel",
+            "start": 3.52,
+            "end": 5.62
+          },
+          {
+            "text": "(Wrum, wrum, wrum)",
+            "start": 5.62,
+            "end": 6.94
+          },
+          {
+            "text": "Lekką schizę, mam już lekką schizę",
+            "start": 6.94,
+            "end": 8.89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 403,
+    "day": 403,
+    "title": "Chodź",
+    "artist": "Taco Hemingway, Zeppy Zep",
+    "audioSrc": "/Rap/TacoHemingway/Chodz.mp3",
+    "youtubeId": "YlJISUiVJP8",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Zamawiam auto. Czuję mentole i czuję twój szampon",
+            "start": 0.0,
+            "end": 2.97
+          },
+          {
+            "text": "Do samochodu wsiadamy ze szklanką. Życie jest bajką",
+            "start": 2.97,
+            "end": 5.59
+          },
+          {
+            "text": "Czuję się jak młody Zeus kiedy jadę nocą",
+            "start": 5.59,
+            "end": 8.64
+          },
+          {
+            "text": "Czekam, aż to miasto wreszcie mi postawi posąg",
+            "start": 8.64,
+            "end": 12.29
+          },
+          {
+            "text": "Wzięła mnie za rękę: \"chodź\". Nie spytałem dokąd",
+            "start": 12.29,
+            "end": 15.71
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 404,
+    "day": 404,
+    "title": "Café Belga",
+    "artist": "Taco Hemingway, Borucci",
+    "audioSrc": "/Rap/TacoHemingway/CafeBelga.mp3",
+    "youtubeId": "Hyb9wX5Aecc",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Wypili moją krew na hejnał, nie pierwszy raz",
+            "start": 0.0,
+            "end": 5.74
+          },
+          {
+            "text": "Przerzucam sobie cash na PayPal",
+            "start": 5.74,
+            "end": 8.3
+          },
+          {
+            "text": "I uciekam, bo mnie ciągle goni świat",
+            "start": 8.3,
+            "end": 11.33
+          },
+          {
+            "text": "Wypili moją krew na hejnał, nie pierwszy raz",
+            "start": 11.33,
+            "end": 16.05
+          },
+          {
+            "text": "Poleciałem pisać wersy w Café Belga",
+            "start": 16.05,
+            "end": 18.14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 405,
+    "day": 405,
+    "title": "ZTM",
+    "artist": "Taco Hemingway, Borucci",
+    "audioSrc": "/Rap/TacoHemingway/ZTM.mp3",
+    "youtubeId": "Y9MgBuxTorg",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Pytasz kim chcę być w przyszłości, jeszcze nie wiem (jeszcze nie wiem, jeszcze nie wiem, ej)",
+            "start": 0.0,
+            "end": 4.06
+          },
+          {
+            "text": "Chyba wolę sobie marzyć",
+            "start": 4.06,
+            "end": 6.5
+          },
+          {
+            "text": "Wszystkie trasy w głowie prowadzą do ciebie (w ciąż do ciebie, ej)",
+            "start": 6.5,
+            "end": 11.02
+          },
+          {
+            "text": "Chciałbym znaleźć jakiś azyl",
+            "start": 11.02,
+            "end": 12.81
+          },
+          {
+            "text": "Gdzie te czasy, gdy jeździłem zakochany ZTM-em?",
+            "start": 12.81,
+            "end": 16.93
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 406,
+    "day": 406,
+    "title": "2031",
+    "artist": "Taco Hemingway, Rumak",
+    "audioSrc": "/Rap/TacoHemingway/2031.mp3",
+    "youtubeId": "eu-hZ1kTA4Q",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Upłynęło tyle lat (upłynęło tyle lat)",
+            "start": 0.0,
+            "end": 3.53
+          },
+          {
+            "text": "Nie wiem kiedy to minęło nawet (nie wiem)",
+            "start": 3.53,
+            "end": 7.18
+          },
+          {
+            "text": "Nie pamięta o mnie świat",
+            "start": 7.18,
+            "end": 11.77
+          },
+          {
+            "text": "2031, było minęło, jestem pewien",
+            "start": 11.77,
+            "end": 15.48
+          },
+          {
+            "text": "Tyle dobrego, że znów jeżdżę sobie tym ZTM-em",
+            "start": 15.48,
+            "end": 19.04
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 407,
+    "day": 407,
+    "title": "Fiji",
+    "artist": "Taco Hemingway, Borucci",
+    "audioSrc": "/Rap/TacoHemingway/Fiji.mp3",
+    "youtubeId": "lk70ee3UMAc",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "A ja co? Będę sam tutaj",
+            "start": 0.0,
+            "end": 2.11
+          },
+          {
+            "text": "Życia sensu będę sam szukał",
+            "start": 2.11,
+            "end": 4.4
+          },
+          {
+            "text": "Znam te śpiewki, słyszę fałsz w ludziach",
+            "start": 4.4,
+            "end": 6.39
+          },
+          {
+            "text": "Sieją ferment, niby kombucza",
+            "start": 6.39,
+            "end": 9.27
+          },
+          {
+            "text": "Ty przejrzysta jak woda Fiji (i chcę cię na hejnał)",
+            "start": 9.27,
+            "end": 12.89
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 408,
+    "day": 408,
+    "title": "Motorola",
+    "artist": "Taco Hemingway, Rumak",
+    "audioSrc": "/Rap/TacoHemingway/Motorola.mp3",
+    "youtubeId": "kO6Ky8L0nrI",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Szedłem spać kwadrans po piątej, dieta to Mandras i Bombej",
+            "start": 0.0,
+            "end": 4.47
+          },
+          {
+            "text": "Na kawalerski Berussa, na Berlin z Warszawy jak Ondrej",
+            "start": 4.47,
+            "end": 9.15
+          },
+          {
+            "text": "Lepiej żyło się na Motorolach",
+            "start": 9.15,
+            "end": 10.62
+          },
+          {
+            "text": "Moi ludzie nie śpią nocą w domach",
+            "start": 10.62,
+            "end": 13.0
+          },
+          {
+            "text": "Bez pracy prawie trzy dychy",
+            "start": 13.0,
+            "end": 15.05
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 409,
+    "day": 409,
+    "title": "Modigliani",
+    "artist": "Taco Hemingway, Borucci",
+    "audioSrc": "/Rap/TacoHemingway/Modigliani.mp3",
+    "youtubeId": "c7Dv3focuHw",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "U młodu padnę jak Amadeo",
+            "start": 0.0,
+            "end": 1.65
+          },
+          {
+            "text": "Chłopcy twierdzą, że nie płaczą, lecz udają jak Paweł Deląg",
+            "start": 1.65,
+            "end": 5.14
+          },
+          {
+            "text": "Peugeot zmienię na Tesle, mózg kosmiczny jak Elon",
+            "start": 5.14,
+            "end": 8.02
+          },
+          {
+            "text": "Chodzę sobie po mieście, chcą mnie ścigać z kamerą",
+            "start": 8.02,
+            "end": 12.06
+          },
+          {
+            "text": "Jestem Modigliani, Modigliani",
+            "start": 12.06,
+            "end": 14.8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 410,
+    "day": 410,
+    "title": "4 AM in Girona",
+    "artist": "Taco Hemingway, Borucci, Rumak",
+    "audioSrc": "/Rap/TacoHemingway/Girona.mp3",
+    "youtubeId": "Na9x4CPAsOY",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Running from the fame",
+            "start": 0.0,
+            "end": 1.46
+          },
+          {
+            "text": "In a rented Beemer, 140 in the rain",
+            "start": 1.46,
+            "end": 3.97
+          },
+          {
+            "text": "I remember I was hoping for a change",
+            "start": 3.97,
+            "end": 5.92
+          },
+          {
+            "text": "Funny how I really don't want it, once it came",
+            "start": 5.92,
+            "end": 8.29
+          },
+          {
+            "text": "Paparazzi on a lookout",
+            "start": 8.29,
+            "end": 10.48
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 411,
+    "day": 411,
+    "title": "POLSKIE TANGO",
+    "artist": "Taco Hemingway, Lanek",
+    "audioSrc": "/Rap/TacoHemingway/PolskieTango.mp3",
+    "youtubeId": "i84L16VL6c8",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Kto ty jesteś? Polak mały (Polak mały, Polak mały)",
+            "start": 0.0,
+            "end": 2.5
+          },
+          {
+            "text": "Jaki znak twój? Torba z białym (torba z białym, torba z białym)",
+            "start": 2.5,
+            "end": 4.5
+          },
+          {
+            "text": "Gdzie ty mieszkasz? Na strzeżonym (na strzeżonym)",
+            "start": 4.5,
+            "end": 7.5
+          },
+          {
+            "text": "W jakim kraju? Tym popierdolonym (uh)",
+            "start": 7.5,
+            "end": 10.0
+          },
+          {
+            "text": "Czym ta ziemia? To mój zamek z piachu (zamek z piachu)",
+            "start": 10.0,
+            "end": 11.75
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 412,
+    "day": 412,
+    "title": "Dwuzłotówki Dancing",
+    "artist": "Taco Hemingway, Rumak",
+    "audioSrc": "/Rap/TacoHemingway/Dwuzlotowki.mp3",
+    "youtubeId": "xv-3pum3fT8",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Ty jesteś biały, jesteś straight, jesteś równy",
+            "start": 0.0,
+            "end": 3.18
+          },
+          {
+            "text": "A nie masz innej cechy, z której byłbyś dumny, huh?",
+            "start": 3.18,
+            "end": 7.2
+          },
+          {
+            "text": "Głodują dzieciaki, na stole są znowu pustki",
+            "start": 7.2,
+            "end": 10.19
+          },
+          {
+            "text": "Posiłek ostatni, to jak były u komunii",
+            "start": 10.19,
+            "end": 13.05
+          },
+          {
+            "text": "Tańcują na tacy błyszczące dwuzłotówki",
+            "start": 13.05,
+            "end": 16.21
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 413,
+    "day": 413,
+    "title": "Szczękościsk",
+    "artist": "Taco Hemingway, Rumak",
+    "audioSrc": "/Rap/TacoHemingway/Szczekoscisk.mp3",
+    "youtubeId": "8M9IHJ2utjg",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Licencjaty oraz inne dyplomy, żeby teraz stać, mówić: \"proszę PIN i zielony (PIN i zielony)\"",
+            "start": 0.0,
+            "end": 5.67
+          },
+          {
+            "text": "Życie miało w inne iść strony, ale muszę stać, mówić: \"proszę PIN i zielony (PIN i zielony)\"",
+            "start": 5.67,
+            "end": 11.01
+          },
+          {
+            "text": "Grzecznie \"PIN i zielony\" (Grzecznie \"PIN i zielony\")",
+            "start": 11.01,
+            "end": 13.97
+          },
+          {
+            "text": "Oh! Oni to siedzą nad tą kawą ciągle",
+            "start": 13.97,
+            "end": 19.35
+          },
+          {
+            "text": "Się zapychają tapenadą ciągle",
+            "start": 19.35,
+            "end": 25.09
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 414,
+    "day": 414,
+    "title": "KABRIOLETY",
+    "artist": "Taco Hemingway, Zeppy Zep",
+    "audioSrc": "/Rap/TacoHemingway/Kabriolety.mp3",
+    "youtubeId": "DDZFSRBCSdo",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "W kraju, w którym ludzie nienawidzą swoich rodaków",
+            "start": 0.0,
+            "end": 2.61
+          },
+          {
+            "text": "Pomoc dla niepełnosprawnych, kurwa, z moich podatków?",
+            "start": 2.61,
+            "end": 5.46
+          },
+          {
+            "text": "Nie ma szans!",
+            "start": 5.46,
+            "end": 5.96
+          },
+          {
+            "text": "Ciągle martwię się o młodych Polaków",
+            "start": 5.96,
+            "end": 7.96
+          },
+          {
+            "text": "Jedyny pomysł to się zabić lub spierdolić na zachód",
+            "start": 7.96,
+            "end": 10.64
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 415,
+    "day": 415,
+    "title": "6 zer",
+    "artist": "Taco Hemingway, Rumak",
+    "audioSrc": "/Rap/TacoHemingway/6zer.mp3",
+    "youtubeId": "z1K_3YNZo6c",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Mam dwadzieścia parę lat, moje plany giną",
+            "start": 0.0,
+            "end": 2.24
+          },
+          {
+            "text": "Kręcę się po mieście z wiecznie zblazowaną miną",
+            "start": 2.24,
+            "end": 4.79
+          },
+          {
+            "text": "Mózg jak karabin, mógłbym zabić kogoś, zgładzić myślą",
+            "start": 4.79,
+            "end": 7.31
+          },
+          {
+            "text": "Ciągle w pogoni za tą straszną liczbą",
+            "start": 7.31,
+            "end": 9.42
+          },
+          {
+            "text": "Czyli sześć zer - chciałbym kiedyś zrobić sześć zer",
+            "start": 9.42,
+            "end": 14.8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 416,
+    "day": 416,
+    "title": "Białkoholicy",
+    "artist": "Taco Hemingway, Rumak",
+    "audioSrc": "/Rap/TacoHemingway/Bialkoholicy.mp3",
+    "youtubeId": "DyJIz7vDUnA",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Ile w kokainie błonnika? Uhm... Zero gram",
+            "start": 0.0,
+            "end": 4.06
+          },
+          {
+            "text": "Tydzień temu coś zmyślał. \"Już nie robię tego od dzisiaj!\"",
+            "start": 4.06,
+            "end": 8.06
+          },
+          {
+            "text": "Uhm... Zero zmian, takich ludzi wielu znam",
+            "start": 8.06,
+            "end": 11.41
+          },
+          {
+            "text": "W ciągu tygodnia robią, pompki potem jedzą tran",
+            "start": 11.41,
+            "end": 13.81
+          },
+          {
+            "text": "24-7 na siłowni ciągle siedzą tam",
+            "start": 13.81,
+            "end": 16.27
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 417,
+    "day": 417,
+    "title": "A mówiłem ci",
+    "artist": "Taco Hemingway, Rumak",
+    "audioSrc": "/Rap/TacoHemingway/AMowilemCi.mp3",
+    "youtubeId": "AoBEM3DLHKo",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Nikt nie powiedział jej, \"Nie łaź ulicami po nocy",
+            "start": 0.0,
+            "end": 3.05
+          },
+          {
+            "text": "Bo gdy gasną latarnie to ci panowie są wrodzy i biją",
+            "start": 3.05,
+            "end": 7.02
+          },
+          {
+            "text": "Mocno biją i łapią cię gdzieś pod szyją",
+            "start": 7.02,
+            "end": 9.87
+          },
+          {
+            "text": "Te bestie się strachem żywią, a jedząc twą dusze tyją\"",
+            "start": 9.87,
+            "end": 13.02
+          },
+          {
+            "text": "A mówiłem ci, \"Nie łaź ulicami po nocy",
+            "start": 13.02,
+            "end": 16.06
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 418,
+    "day": 418,
+    "title": "Awizo",
+    "artist": "Taco Hemingway, Rumak",
+    "audioSrc": "/Rap/TacoHemingway/Awizo.mp3",
+    "youtubeId": "pPGaR7GhF7E",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Żabką płynie Wujek Sknerus",
+            "start": 0.0,
+            "end": 3.65
+          },
+          {
+            "text": "Jestem Donald, straszny nierób",
+            "start": 3.65,
+            "end": 6.4
+          },
+          {
+            "text": "Każdy wokół Kuzyn Goguś",
+            "start": 6.4,
+            "end": 9.11
+          },
+          {
+            "text": "Wsadź awizo mi do grobu",
+            "start": 9.11,
+            "end": 12.72
+          },
+          {
+            "text": "Wracam i widzę awizo",
+            "start": 12.72,
+            "end": 14.51
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 419,
+    "day": 419,
+    "title": "1-800-OŚWIECENIE",
+    "artist": "Taco Hemingway, Rumak",
+    "audioSrc": "/Rap/TacoHemingway/1-800-Oswiecenie.mp3",
+    "youtubeId": "uhWxxmc1G4U",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "W moich wspomnieniach pulsuje stroboskop",
+            "start": 0.0,
+            "end": 1.82
+          },
+          {
+            "text": "Dosyć myślenia mam, robię to non stop",
+            "start": 1.82,
+            "end": 3.48
+          },
+          {
+            "text": "Znowu mnie rozczarowała dorosłość",
+            "start": 3.48,
+            "end": 5.36
+          },
+          {
+            "text": "Niechaj decyzję podejmie",
+            "start": 5.36,
+            "end": 6.95
+          },
+          {
+            "text": "1-800-OŚWIECENIE (oh)",
+            "start": 6.95,
+            "end": 9.31
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 420,
+    "day": 420,
+    "title": "Nametag",
+    "artist": "Taco Hemingway, OKI, schafter, @atutowy",
+    "audioSrc": "/Rap/TacoHemingway/Nametag.mp3",
+    "youtubeId": "uioGIEHhH7s",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Marek, Mati, Maciek, Marcin czy Kazimierz",
+            "start": 0.0,
+            "end": 2.4
+          },
+          {
+            "text": "Podawałem grabę Marii, Mai, Marcie czy Martynie, kto wie",
+            "start": 2.4,
+            "end": 5.93
+          },
+          {
+            "text": "Pamiętam, jak pod domofonem zastanawiałem się, jak masz na imię",
+            "start": 5.93,
+            "end": 8.85
+          },
+          {
+            "text": "Mimo, że na podwórku wtedy spędzaliśmy razem każdą chwilę",
+            "start": 8.85,
+            "end": 11.71
+          },
+          {
+            "text": "Na szczęście braciszku, mama znała twoją ksywę",
+            "start": 11.71,
+            "end": 14.61
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 421,
+    "day": 421,
+    "title": "1000 Dni Freestyle",
+    "artist": "Taco Hemingway, Zeppy Zep",
+    "audioSrc": "/Rap/TacoHemingway/1000Dni.mp3",
+    "youtubeId": "d10Z05-ZruM",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Ooo, chciałem być znany jako majster od wersów",
+            "start": 0.0,
+            "end": 3.18
+          },
+          {
+            "text": "Odkąd pierwszy raz widziałem \"Blokersów\"",
+            "start": 3.18,
+            "end": 5.27
+          },
+          {
+            "text": "Moje pierwsze wersy po 30 wyświetleń",
+            "start": 5.27,
+            "end": 7.72
+          },
+          {
+            "text": "Moja pierwsza pensja to był kafel i pięć stów",
+            "start": 7.72,
+            "end": 10.32
+          },
+          {
+            "text": "Pierwsze próby to był nieudolny rap po angielsku",
+            "start": 10.32,
+            "end": 12.81
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 422,
+    "day": 422,
+    "title": "Całe Lata",
+    "artist": "Taco Hemingway, Dawid Podsiadlo, @atutowy",
+    "audioSrc": "/Rap/TacoHemingway/CaleLata.mp3",
+    "youtubeId": "d5dzbXwZFeI",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Dziewczyny od chłopców wyższe o pół głowy, irokez żelowy",
+            "start": 0.0,
+            "end": 5.56
+          },
+          {
+            "text": "Proszę ją do tańca, bo się zaczął wolny",
+            "start": 5.56,
+            "end": 8.68
+          },
+          {
+            "text": "Szepcze do mnie: mam chłopaka co chodzi do innej szkoły",
+            "start": 8.68,
+            "end": 14.28
+          },
+          {
+            "text": "Lato trwało całе lata, teraz koło trzech tygodni",
+            "start": 14.28,
+            "end": 20.88
+          },
+          {
+            "text": "Lato dotyka inflacja, podatek od dorosłości",
+            "start": 20.88,
+            "end": 27.21
+          }
+        ]
+      }
+    ]
+  }
 ];
