@@ -2575,46 +2575,46 @@ export const nonlimitRapSongs: Song[] = [
       },
     ],
   },
-  {
-    id: 73,
-    day: 73,
-    title: "Przypadkiem",
-    artist: "OKI, Young Igi, Otsochodzi, OIO, Michał Anioł",
-    audioSrc: "/Rap/OIO/73_Przypadkie.mp3",
-    youtubeId: "_V-IU5npVn8",
-    lyrics: [
-      {
-        lineIndex: 0,
-        words: [
-          {
-            text: "Znowu mordo żałuję, że wybiłem sam z domu",
-            start: 0.0,
-            end: 1.75,
-          },
-          {
-            text: "Kiedyś bym pizgał z buta na M01",
-            start: 1.75,
-            end: 4.57,
-          },
-          {
-            text: "Dziś pizgam wolne jak jadę Uberem (ty się jarasz)",
-            start: 4.57,
-            end: 7.69,
-          },
-          {
-            text: "Bo z klubu wyrwałeś Żanetę",
-            start: 7.69,
-            end: 9.04,
-          },
-          {
-            text: "Co jebie od niej piwskiem i starym kiepem",
-            start: 9.04,
-            end: 12.54,
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: 73,
+  //   day: 73,
+  //   title: "Przypadkiem",
+  //   artist: "OKI, Young Igi, Otsochodzi, OIO, Michał Anioł",
+  //   audioSrc: "/Rap/OIO/73_Przypadkie.mp3",
+  //   youtubeId: "_V-IU5npVn8",
+  //   lyrics: [
+  //     {
+  //       lineIndex: 0,
+  //       words: [
+  //         {
+  //           text: "Znowu mordo żałuję, że wybiłem sam z domu",
+  //           start: 0.0,
+  //           end: 1.75,
+  //         },
+  //         {
+  //           text: "Kiedyś bym pizgał z buta na M01",
+  //           start: 1.75,
+  //           end: 4.57,
+  //         },
+  //         {
+  //           text: "Dziś pizgam wolne jak jadę Uberem (ty się jarasz)",
+  //           start: 4.57,
+  //           end: 7.69,
+  //         },
+  //         {
+  //           text: "Bo z klubu wyrwałeś Żanetę",
+  //           start: 7.69,
+  //           end: 9.04,
+  //         },
+  //         {
+  //           text: "Co jebie od niej piwskiem i starym kiepem",
+  //           start: 9.04,
+  //           end: 12.54,
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     id: 74,
     day: 74,
