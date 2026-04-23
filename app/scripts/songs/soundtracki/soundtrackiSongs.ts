@@ -346,7 +346,7 @@ export const soundtrackiSongs: Song[] = [
     day: 35,
     title: "Jak wytresować smoka",
     artist: "",
-    imageUrl: "/soundtracki/Jak wytresować smoka/jakwyresowacsmoka.jpg",
+    imageUrl: "/soundtracki/Jak wytresować smoka/jakwytresowacsmoka.jpg",
     fullAudioSrc: "/soundtracki/Jak wytresować smoka/Jak wytresować smoka.mp3",
     hint1: "Film",
     hint2: "Animowany / Przygodowy",
