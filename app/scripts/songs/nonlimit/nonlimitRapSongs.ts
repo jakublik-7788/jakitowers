@@ -13533,7 +13533,7 @@ export const nonlimitRapSongs: Song[] = [
     day: 369,
     title: "KOSMITA",
     artist: "Gedz, Sokos, 808Bros",
-    audioSrc: "/Rap/Gedz, Sokos, 808Bros/382_KOSMITA.mp3",
+    audioSrc: "/Rap/Gedz/382_KOSMITA.mp3",
     youtubeId: "abvE0Qwyq5A",
     lyrics: [
       {
