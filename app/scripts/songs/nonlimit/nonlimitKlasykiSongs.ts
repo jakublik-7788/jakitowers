@@ -5126,4 +5126,164 @@ export const nonlimitKlasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    "id": 129,
+    "day": 129,
+    "title": "Piła Tango",
+    "artist": "Strachy Na Lachy",
+    "audioSrc": "/Klasyki/Strachy Na Lachy/PilaTango.mp3",
+    "youtubeId": "mljV3nUVGk4",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Czarna Bandera",
+            "start": 0.0,
+            "end": 3.56
+          },
+          {
+            "text": "Ukłoń się świrom",
+            "start": 3.56,
+            "end": 7.5
+          },
+          {
+            "text": "Żyj, nie umieraj",
+            "start": 7.5,
+            "end": 12.44
+          },
+          {
+            "text": "Gruby jak armata Szczepan błąkał się po kuli ziemskiej",
+            "start": 12.44,
+            "end": 16.17
+          },
+          {
+            "text": "Trafił do Ameryki prosto z Legii Cudzoziemskiej",
+            "start": 16.17,
+            "end": 20.58
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "day": 130,
+    "title": "Cicho",
+    "artist": "Ewa Farna",
+    "audioSrc": "/Klasyki/EwaFarna/Cicho.mp3",
+    "youtubeId": "IvsqIr0_cCQ",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Cicho jakby cały świat",
+            "start": 0.0,
+            "end": 4.02
+          },
+          {
+            "text": "Zgasił światło, poszedł spać",
+            "start": 4.02,
+            "end": 8.27
+          },
+          {
+            "text": "Mamy kłopot - Ty i ja",
+            "start": 8.27,
+            "end": 12.25
+          },
+          {
+            "text": "Jak słów odkryć smak",
+            "start": 12.25,
+            "end": 17.36
+          },
+          {
+            "text": "Między nami nuda, strach",
+            "start": 17.36,
+            "end": 21.88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "day": 131,
+    "title": "Ewakuacja",
+    "artist": "Ewa Farna",
+    "audioSrc": "/Klasyki/EwaFarna/Ewakuacja.mp3",
+    "youtubeId": "mK20ctz5gVc",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "To mój własny ogień",
+            "start": 0.0,
+            "end": 6.2
+          },
+          {
+            "text": "To ja sama płonę",
+            "start": 6.2,
+            "end": 10.79
+          },
+          {
+            "text": "To moje życie",
+            "start": 10.79,
+            "end": 12.74
+          },
+          {
+            "text": "Ogłosiłam w nim",
+            "start": 12.74,
+            "end": 16.4
+          },
+          {
+            "text": "EWAkuację",
+            "start": 16.4,
+            "end": 18.54
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "day": 132,
+    "title": "Znak",
+    "artist": "Ewa Farna",
+    "audioSrc": "/Klasyki/EwaFarna/Znak.mp3",
+    "youtubeId": "7im63Q-KvF8",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Kto to, co to, kto powie co dziwnego dzieje się?",
+            "start": 0.0,
+            "end": 6.59
+          },
+          {
+            "text": "Tańczą nagle w krąg",
+            "start": 6.59,
+            "end": 12.7
+          },
+          {
+            "text": "A ja płaczę",
+            "start": 12.7,
+            "end": 15.1
+          },
+          {
+            "text": "Mogę uciec stąd",
+            "start": 15.1,
+            "end": 21.06
+          },
+          {
+            "text": "Majaczę, dają znak",
+            "start": 21.06,
+            "end": 26.67
+          }
+        ]
+      }
+    ]
+  }
 ];

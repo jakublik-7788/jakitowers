@@ -15687,5 +15687,845 @@ export const nonlimitRapSongs: Song[] = [
         ]
       }
     ]
+  },
+  {
+    "id": 423,
+    "day": 423,
+    "title": "Trap i Grind",
+    "artist": "Kabe",
+    "audioSrc": "/Rap/Kabe/TrapIGrind.mp3",
+    "youtubeId": "RQsvMiejn20",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Póki co robię flex, si t'es mon reufrai we check",
+            "start": 0.0,
+            "end": 3.44
+          },
+          {
+            "text": "Świeci się on my neck, jebie dragami na streecie",
+            "start": 3.44,
+            "end": 8.9
+          },
+          {
+            "text": "I żyję tym trapem po dziś dzień",
+            "start": 8.9,
+            "end": 12.77
+          },
+          {
+            "text": "Dążę do tego, co wyśnię",
+            "start": 12.77,
+            "end": 14.73
+          },
+          {
+            "text": "Trap i grind cały dzień",
+            "start": 14.73,
+            "end": 16.38
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 424,
+    "day": 424,
+    "title": "CHA CHA",
+    "artist": "Sobel, SHDØW, francis",
+    "audioSrc": "/Rap/Sobel/CHACHA.mp3",
+    "youtubeId": "_82qYyVE4ws",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Póki co, zrób coś dla mnie, yeah",
+            "start": 0.0,
+            "end": 3.06
+          },
+          {
+            "text": "Zrzuć to na mnie, yeah",
+            "start": 3.06,
+            "end": 5.13
+          },
+          {
+            "text": "Albo zrzuć to, to, to, to",
+            "start": 5.13,
+            "end": 7.52
+          },
+          {
+            "text": "Albo zrzuć to dla mnie (Hej)",
+            "start": 7.52,
+            "end": 10.18
+          },
+          {
+            "text": "Cha, cha, cha, cha, cha",
+            "start": 10.18,
+            "end": 12.56
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 425,
+    "day": 425,
+    "title": "Małe Krople",
+    "artist": "Young Igi, @atutowy",
+    "audioSrc": "/Rap/Igi/MaleKrople.mp3",
+    "youtubeId": "Jq7hX2mP0jU",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "W świetle jupitera",
+            "start": 0.0,
+            "end": 2.82
+          },
+          {
+            "text": "Dobrze się bawię teraz",
+            "start": 2.82,
+            "end": 5.69
+          },
+          {
+            "text": "Umierając na tych scenach",
+            "start": 5.69,
+            "end": 8.17
+          },
+          {
+            "text": "Wylewając za te wszystkie czasy",
+            "start": 8.17,
+            "end": 11.16
+          },
+          {
+            "text": "Małe krople drążą duże skały",
+            "start": 11.16,
+            "end": 14.31
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 426,
+    "day": 426,
+    "title": "ALE",
+    "artist": "RÓW BABICZE, Kinga Hornik",
+    "audioSrc": "/Rap/rowbabicze/ALE.mp3",
+    "youtubeId": "lNqlWGQRb5M",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Miałem zadbać o siebie, ale znów to olałem",
+            "start": 0.0,
+            "end": 1.75
+          },
+          {
+            "text": "Miałem wrócić wieczorem, ale wracam nad ranem",
+            "start": 1.75,
+            "end": 4.5
+          },
+          {
+            "text": "Miałem nie grać w kasynie, ale kurwa zagrałem",
+            "start": 4.5,
+            "end": 7.75
+          },
+          {
+            "text": "I wybrać tylko stówkę, ale 500 wybrałem",
+            "start": 7.75,
+            "end": 9.75
+          },
+          {
+            "text": "No bo się pojebałem, jeszcze 500 na barze",
+            "start": 9.75,
+            "end": 12.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 427,
+    "day": 427,
+    "title": "Napad na burdel",
+    "artist": "Gang Albanii",
+    "audioSrc": "/Rap/GangAlbanii/NapadNaBurdel.mp3",
+    "youtubeId": "a0FkHZhw5bg",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Wjeżdżam do środka, na głowie kominiara",
+            "start": 0.0,
+            "end": 1.42
+          },
+          {
+            "text": "I na wejściu z wrażenia stanął mi chuj",
+            "start": 1.42,
+            "end": 3.52
+          },
+          {
+            "text": "Podchodzi do mnie w kapciach burdel mama",
+            "start": 3.52,
+            "end": 5.29
+          },
+          {
+            "text": "I na całą koparę krzyczy, \"Niech żyje Król!\"",
+            "start": 5.29,
+            "end": 7.03
+          },
+          {
+            "text": "Śliczna Rumunka otwiera szampana",
+            "start": 7.03,
+            "end": 8.86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 428,
+    "day": 428,
+    "title": "Albański raj",
+    "artist": "Gang Albanii",
+    "audioSrc": "/Rap/GangAlbanii/AlbanskiRaj.mp3",
+    "youtubeId": "a0FkHZhw5bg",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Heszke w meszke him",
+            "start": 0.0,
+            "end": 1.45
+          },
+          {
+            "text": "Keszke w meszke him",
+            "start": 1.45,
+            "end": 3.12
+          },
+          {
+            "text": "Ryszki szyszki, szyszki, to król Albanii!",
+            "start": 3.12,
+            "end": 6.28
+          },
+          {
+            "text": "Szere mere hoczosz tesz tosz sztara sztasz",
+            "start": 6.28,
+            "end": 9.63
+          },
+          {
+            "text": "Rochnisz nisz nisz, ochnisz nisz nisz kurwa szwa!",
+            "start": 9.63,
+            "end": 13.73
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 429,
+    "day": 429,
+    "title": "Napad na bank",
+    "artist": "Gang Albanii",
+    "audioSrc": "/Rap/GangAlbanii/NapadNaBank.mp3",
+    "youtubeId": "jjkNfl7SBzE",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Podchodzę do kasy, kopytem celuję w pysk",
+            "start": 0.0,
+            "end": 0.76
+          },
+          {
+            "text": "I mówię \"habalahabalahesk\"",
+            "start": 0.76,
+            "end": 2.7
+          },
+          {
+            "text": "Wszyscy leżą na ziemi zesrani",
+            "start": 2.7,
+            "end": 4.89
+          },
+          {
+            "text": "Ochraniarzowi krew leci z bani",
+            "start": 4.89,
+            "end": 6.86
+          },
+          {
+            "text": "Borixson w rękach trzyma dynamit",
+            "start": 6.86,
+            "end": 7.88
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 430,
+    "day": 430,
+    "title": "Albańskie Kakao",
+    "artist": "Popek, Borixon, Rozbójnik Alibaba, Gang Albanii",
+    "audioSrc": "/Rap/GangAlbanii/AlbanskieKakao.mp3",
+    "youtubeId": "z0kkxOfNPHA",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "25 tysięcy i po klocku na ryj",
+            "start": 0.0,
+            "end": 4.5
+          },
+          {
+            "text": "Wzięły piękne modelki z zaprzyjaźnionej agencji",
+            "start": 4.5,
+            "end": 7.5
+          },
+          {
+            "text": "25 tysięcy, leci z nieba hajs",
+            "start": 7.5,
+            "end": 11.0
+          },
+          {
+            "text": "Leci z nieba hajs, tak jak z drzewa kasztany",
+            "start": 11.0,
+            "end": 16.0
+          },
+          {
+            "text": "Albańskie kakao, Albańskie kakao (kakao)",
+            "start": 16.0,
+            "end": 20.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 431,
+    "day": 431,
+    "title": "CEO",
+    "artist": "Asster, Kabe",
+    "audioSrc": "/Rap/Asster/Ceo.mp3",
+    "youtubeId": "vcc2mPuZXZc",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Nie wrócę na noc, nie wrócę dzisiaj",
+            "start": 0.0,
+            "end": 1.89
+          },
+          {
+            "text": "Wychodzę w nocy, nie w godzinach szczytu",
+            "start": 1.89,
+            "end": 5.04
+          },
+          {
+            "text": "Ale ty wiesz, że szczyt czeka na nas",
+            "start": 5.04,
+            "end": 7.95
+          },
+          {
+            "text": "Patrzę wygraną i widzę tam dzisiaj swoją twarz",
+            "start": 7.95,
+            "end": 9.44
+          },
+          {
+            "text": "Mówią mi CEO",
+            "start": 9.44,
+            "end": 10.73
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 432,
+    "day": 432,
+    "title": "RONDO",
+    "artist": "Asster, Malik Montana",
+    "audioSrc": "/Rap/Asster/Rondo.mp3",
+    "youtubeId": "VgiX6h4bG1s",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Asster, słyszysz?",
+            "start": 0.0,
+            "end": 2.69
+          },
+          {
+            "text": "Mordo, to jest paka na szyi",
+            "start": 2.69,
+            "end": 4.5
+          },
+          {
+            "text": "Okej, jak grać, gonię hajs",
+            "start": 4.5,
+            "end": 7.07
+          },
+          {
+            "text": "Za nim gonię, gonię cały czas",
+            "start": 7.07,
+            "end": 8.55
+          },
+          {
+            "text": "Za nim powiem mamie co to strach",
+            "start": 8.55,
+            "end": 10.11
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 433,
+    "day": 433,
+    "title": "HORYZONT",
+    "artist": "Asster",
+    "audioSrc": "/Rap/Asster/Horyzont.mp3",
+    "youtubeId": "qFET-CPQPjc",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Ja wiem co mam robić, żeby zwiększyć ci puls",
+            "start": 0.0,
+            "end": 1.5
+          },
+          {
+            "text": "To mój chory horyzont, czego oni chcą",
+            "start": 1.5,
+            "end": 3.41
+          },
+          {
+            "text": "Dolej coli, bo wjechał Bourbon",
+            "start": 3.41,
+            "end": 5.07
+          },
+          {
+            "text": "Pokaż Louis V, one tego chcą",
+            "start": 5.07,
+            "end": 6.85
+          },
+          {
+            "text": "Ziomal mówi mi: \"Teraz idziesz na sto\"",
+            "start": 6.85,
+            "end": 8.43
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 434,
+    "day": 434,
+    "title": "MUSZĘ ZARABIAĆ",
+    "artist": "Asster, Macias",
+    "audioSrc": "/Rap/Asster/MuszeZarabiac.mp3",
+    "youtubeId": "106PqPMIK_I",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Ha, w końcu czuję, że żyję",
+            "start": 0.0,
+            "end": 1.57
+          },
+          {
+            "text": "Mam przebicie swoim słowem",
+            "start": 1.57,
+            "end": 3.1
+          },
+          {
+            "text": "Teraz mam więcej, mam tą siłę",
+            "start": 3.1,
+            "end": 4.47
+          },
+          {
+            "text": "Mam w tym miejsce, mam w tym głowę",
+            "start": 4.47,
+            "end": 6.59
+          },
+          {
+            "text": "Muszę zarabiać, ja kocham guap",
+            "start": 6.59,
+            "end": 8.1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 435,
+    "day": 435,
+    "title": "ORIGINAL",
+    "artist": "Asster, Worek",
+    "audioSrc": "/Rap/Asster/Original.mp3",
+    "youtubeId": "TFGDuvJUUak",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Będę duży, oni to wiedzą",
+            "start": 0.0,
+            "end": 1.42
+          },
+          {
+            "text": "Chcę w tym być, a nie wchodzę na sezon",
+            "start": 1.42,
+            "end": 3.23
+          },
+          {
+            "text": "Boli dalej, a stówy nie leczą mnie",
+            "start": 3.23,
+            "end": 5.61
+          },
+          {
+            "text": "Ale pieniądze cieszą",
+            "start": 5.61,
+            "end": 7.44
+          },
+          {
+            "text": "Wychodzę zawsze fresh, wszystko original",
+            "start": 7.44,
+            "end": 10.86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 436,
+    "day": 436,
+    "title": "TEREN",
+    "artist": "Asster",
+    "audioSrc": "/Rap/Asster/Teren.mp3",
+    "youtubeId": "35P4t3Vr5oQ",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Bardziej lub mniej sprany beret, by-byłem z nimi na blokach, a dziś wprowadzam na scenę",
+            "start": 0.0,
+            "end": 4.76
+          },
+          {
+            "text": "Jestem z okolic kurwa gdzie nigdy nie było wiele",
+            "start": 4.76,
+            "end": 7.0
+          },
+          {
+            "text": "Pu-puszczam to na teren, patrz jak puszczam to na teren",
+            "start": 7.0,
+            "end": 10.59
+          },
+          {
+            "text": "Yeah, okay nie mów do mnie byku, nie ma teraz tygodnia gdzie nie zrobię paru hitów",
+            "start": 10.59,
+            "end": 15.27
+          },
+          {
+            "text": "Mam mocno sprany caban bez kirania narkotyków (bez kirania)",
+            "start": 15.27,
+            "end": 17.98
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 437,
+    "day": 437,
+    "title": "GWIAZDA",
+    "artist": "Asster, whysowavy",
+    "audioSrc": "/Rap/Asster/Gwiazda.mp3",
+    "youtubeId": "sZoYRGZyKQs",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Im więcej na koncie obraca się sosu, dlatego mnie cieszą te liczby",
+            "start": 0.0,
+            "end": 3.27
+          },
+          {
+            "text": "Oddaję serducho, dla moich fanów",
+            "start": 3.27,
+            "end": 4.7
+          },
+          {
+            "text": "Sam kiedyś krzyczałem, by grali bisy",
+            "start": 4.7,
+            "end": 7.67
+          },
+          {
+            "text": "Kiedy krzyczą moją ksywę, chcę to gówno pokazać dzisiaj tu moim najbliższym",
+            "start": 7.67,
+            "end": 9.59
+          },
+          {
+            "text": "Mówią \"Gwiazda, jak się patrzy\"",
+            "start": 9.59,
+            "end": 11.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 438,
+    "day": 438,
+    "title": "LEGENDARNA",
+    "artist": "Asster",
+    "audioSrc": "/Rap/Asster/Legendarna.mp3",
+    "youtubeId": "jTa_tcTM7cA",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Nie może mi tego zabraknąć, to uczucie nigdy nie było tak mocne (tak mocne)",
+            "start": 0.0,
+            "end": 3.34
+          },
+          {
+            "text": "Miałem problemy, jak powiedzieć szczerze, a teraz to wszystko wydaje się proste (się proste)",
+            "start": 3.34,
+            "end": 6.7
+          },
+          {
+            "text": "Ta suka co wierciła banię nie wie, jak pogodzić, choć dzieli to w chuj duży odstęp",
+            "start": 6.7,
+            "end": 10.23
+          },
+          {
+            "text": "Mam nową zbroję by chroniła rany, (tak) mówię do zioma: \"Wyjedziemy w Polskę\"",
+            "start": 10.23,
+            "end": 13.27
+          },
+          {
+            "text": "Ona dla mnie jest legendarna, ona dla mnie jest (yeah, yeah)",
+            "start": 13.27,
+            "end": 17.05
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 439,
+    "day": 439,
+    "title": "W PROJEKTACH",
+    "artist": "Asster, Leeny",
+    "audioSrc": "/Rap/Asster/WProjektach.mp3",
+    "youtubeId": "1QyRIj_dxgo",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Pada coś na głowę jej, to nie deszcz (Ey, Leeny cook this shit up)",
+            "start": 0.0,
+            "end": 2.06
+          },
+          {
+            "text": "Wpada coś na głowę mi - nowy wers",
+            "start": 2.06,
+            "end": 3.89
+          },
+          {
+            "text": "Żyjemy w projektach, jak \"Projekt X\"",
+            "start": 3.89,
+            "end": 5.84
+          },
+          {
+            "text": "Testują to na nas, jak",
+            "start": 5.84,
+            "end": 7.17
+          },
+          {
+            "text": "Yeah, wracam na właściwe tory",
+            "start": 7.17,
+            "end": 8.92
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 440,
+    "day": 440,
+    "title": "KOSMOS",
+    "artist": "Sentino",
+    "audioSrc": "/Rap/Sentino/Kosmos.mp3",
+    "youtubeId": "prbMvjAA9Rs",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Daje mi to coś, co żadna inna nie da",
+            "start": 0.0,
+            "end": 3.29
+          },
+          {
+            "text": "Czekała na mnie rok",
+            "start": 3.29,
+            "end": 5.05
+          },
+          {
+            "text": "Czekała na mnie lata, lata, lata",
+            "start": 5.05,
+            "end": 8.44
+          },
+          {
+            "text": "Polecę za nią w kosmos",
+            "start": 8.44,
+            "end": 10.38
+          },
+          {
+            "text": "Ona ma to coś, co żadna inna nie ma",
+            "start": 10.38,
+            "end": 13.77
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 441,
+    "day": 441,
+    "title": "SKANDAL",
+    "artist": "Sentino",
+    "audioSrc": "/Rap/Sentino/Skandal.mp3",
+    "youtubeId": "ofEt_7sxr4I",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Chcą mnie ugryźć jak kangal, cały w Gucci, c'est la vie",
+            "start": 0.0,
+            "end": 3.5
+          },
+          {
+            "text": "Ona kocha mój perfum, Oud Wood, a u nich weed",
+            "start": 3.5,
+            "end": 6.91
+          },
+          {
+            "text": "Nie mam więcej już nerwów, chodzę w kimono po moim suite",
+            "start": 6.91,
+            "end": 10.39
+          },
+          {
+            "text": "Całe życie mam skandal, pijąc Hennessy Paradis",
+            "start": 10.39,
+            "end": 13.85
+          },
+          {
+            "text": "Chcą mnie ugryźć jak kangal, cały w Gucci, c'est la vie",
+            "start": 13.85,
+            "end": 17.3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 442,
+    "day": 442,
+    "title": "Algeciras",
+    "artist": "Sentino, Alex Rios",
+    "audioSrc": "/Rap/Sentino/Algeciras.mp3",
+    "youtubeId": "7QYc5GdNRdE",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Wеsh Cousin, Sento przysto Boss",
+            "start": 0.0,
+            "end": 2.16
+          },
+          {
+            "text": "W Casablance z braćmi z Mocros",
+            "start": 2.16,
+            "end": 4.03
+          },
+          {
+            "text": "Towar się kruszy jak kuskus",
+            "start": 4.03,
+            "end": 5.63
+          },
+          {
+            "text": "Guardia chce zabrać mój luksus",
+            "start": 5.63,
+            "end": 7.75
+          },
+          {
+            "text": "Zarabiam hajs, rzucam temat w Algeciras yeah, w Algeciras",
+            "start": 7.75,
+            "end": 14.59
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 443,
+    "day": 443,
+    "title": "Rio",
+    "artist": "Sentino, Getmony",
+    "audioSrc": "/Rap/Sentino/Rio.mp3",
+    "youtubeId": "5I1NKNgFUuo",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Nie ma wojny z bratem, chcę dalej",
+            "start": 0.0,
+            "end": 2.17
+          },
+          {
+            "text": "Wtedy Ed Hardy dziś Bad Bunny",
+            "start": 2.17,
+            "end": 3.66
+          },
+          {
+            "text": "Mimo waszym streamom, waszym hejtom, wrócił tío",
+            "start": 3.66,
+            "end": 8.17
+          },
+          {
+            "text": "To jak Fiat Cinquecento i Gran Torino",
+            "start": 8.17,
+            "end": 11.57
+          },
+          {
+            "text": "Siedzę w Rio de Janeiro, stary, w Rio",
+            "start": 11.57,
+            "end": 15.04
+          }
+        ]
+      }
+    ]
   }
 ];

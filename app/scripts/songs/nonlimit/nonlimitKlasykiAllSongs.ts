@@ -135,4 +135,8 @@ export const nonlimitKlasykiAllSongs: SongSuggestion[] = [
   { title: "Życie to są chwile", artist: "Akcent" },
   { title: "Moja gwiazda", artist: "Akcent" },
   { title: "Bananowa Agnieszka", artist: "After Party" },
+  { title: "Piła Tango", artist: "Strachy Na Lachy" },
+  { title: "Cicho", artist: "Ewa Farna" },
+  { title: "Ewakuacja", artist: "Ewa Farna" },
+  { title: "Znak", artist: "Ewa Farna" },
 ];
