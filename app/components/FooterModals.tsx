@@ -384,7 +384,7 @@ const ContactModal = ({ onClose }: { onClose: () => void }) => {
     if (!message.trim() || !topic) return;
     setSendStatus("sending");
     try {
-      const res = await fetch("https://formspree.io/f/xqeygjqg", {
+      const res = await fetch("https://formspree.io/f/xzdyoddd", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({ temat: selectedTopic?.label, nick: name.trim() || "Anonim", wiadomosc: message.trim() }),
