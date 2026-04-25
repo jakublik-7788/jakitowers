@@ -2685,7 +2685,7 @@ export const soundtrackiSongs: Song[] = [
   {
     "id": 152,
     "day": 152,
-    "title": "Jhon Wick",
+    "title": "John Wick",
     "artist": "",
     "imageUrl": "/soundtracki/Jhon Wick/Jhon Wick.jpg",
     "fullAudioSrc": "/soundtracki/Jhon Wick/Jhon Wick.mp3",
@@ -2857,10 +2857,10 @@ export const soundtrackiSongs: Song[] = [
       "15": "/soundtracki/Naznaczony/Naznaczony_15s.mp3"
     },
     "lyrics": [],
-    "hint1": "Serial",
-    "hint2": "Dramat / Romans",
-    "hint3": "2017",
-    "hint4": "Marina Fiedun"
+    "hint1": "Film",
+    "hint2": "Horror",
+    "hint3": "2010",
+    "hint4": "James Wan"
   },
   {
     "id": 161,
