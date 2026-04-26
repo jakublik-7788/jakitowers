@@ -38,6 +38,7 @@ import { useNonLimitStats } from "@/app/scripts/Usegamestats";
 import { Song } from "@/app/types/song";
 import { Footer } from "../Footer";
 import { useCursorSetting } from "@/app/scripts/UseCursorSettings";
+import { cdnUrl } from "@/app/lib/cdnUrl";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type GuessStatus = "correct" | "wrong" | "skipped" | "empty" | "artist";
@@ -573,7 +574,7 @@ const RoundResult = ({
               <div className="mb-5 flex justify-center">
                 <div className="rounded-2xl overflow-hidden border border-white/10 shadow-xl max-w-full">
                   <img
-                    src={song.imageUrl}
+                    src={cdnUrl(song.imageUrl ?? "")}
                     alt={song.title}
                     className="w-full h-auto max-h-[300px] object-contain bg-black/40"
                     onError={(e) => {
@@ -623,7 +624,7 @@ const RoundResult = ({
                 </div>
                 <audio
                   ref={audioRef}
-                  src={song.fullAudioSrc}
+                  src={cdnUrl(song.fullAudioSrc ?? "")}
                   onTimeUpdate={() =>
                     audioRef.current &&
                     setCurrentTime(audioRef.current.currentTime)
@@ -902,9 +903,9 @@ export default function NonLimitGame() {
       sourceRef.current = mode;
       if (mode !== "soundtracki") {
         if (!audioRef.current) {
-          audioRef.current = new Audio(next.audioSrc);
+          audioRef.current = new Audio(cdnUrl(next.audioSrc ?? ""));
         } else {
-          audioRef.current.src = next.audioSrc ?? "";
+          audioRef.current.src = cdnUrl(next.audioSrc ?? "");
           audioRef.current.load();
         }
         audioRef.current.volume = volumeRef.current;
@@ -956,12 +957,12 @@ export default function NonLimitGame() {
       if (!clipUrl) return;
 
       if (!audioRef.current) {
-        audioRef.current = new Audio(clipUrl);
+        audioRef.current = new Audio(cdnUrl(clipUrl));
       } else {
         const currentSrc = audioRef.current.src;
         const isSame = currentSrc === clipUrl || currentSrc.endsWith(clipUrl);
         if (!isSame) {
-          audioRef.current.src = clipUrl;
+          audioRef.current.src = cdnUrl(clipUrl);
           audioRef.current.load();
         }
       }

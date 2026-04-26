@@ -38,6 +38,7 @@ import { useGameStats, GlobalStats } from "@/app/scripts/Usegamestats";
 import { todayDayNumber, maxUnlockedDay } from "@/app/scripts/Usecalendar";
 import { Footer } from "../../Footer";
 import { useCursorSetting } from "@/app/scripts/UseCursorSettings";
+import { cdnUrl } from "@/app/lib/cdnUrl";
 
 // ─── Stała startu trybu ───────────────────────────────────────────────────────
 const KLASYKI_START_DAY = 18;
@@ -710,12 +711,12 @@ export default function KlasykiPage() {
     const isNewSong = currentSongIdRef.current !== newSongId;
 
     if (!audioRef.current) {
-      audioRef.current = new Audio(song.audioSrc);
+      audioRef.current = new Audio(cdnUrl(song.audioSrc ?? ""));
       audioRef.current.volume = volumeRef.current;
       currentSongIdRef.current = newSongId;
     } else if (isNewSong) {
       audioRef.current.pause();
-      audioRef.current.src = song.audioSrc ?? "";
+      audioRef.current.src = cdnUrl(song.audioSrc ?? "");
       audioRef.current.load();
       audioRef.current.volume = volumeRef.current;
       currentSongIdRef.current = newSongId;

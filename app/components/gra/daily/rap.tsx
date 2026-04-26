@@ -37,6 +37,7 @@ import { useSoundEffects } from "@/app/scripts/useSoundEffects";
 import { useGameStats, GlobalStats } from "@/app/scripts/Usegamestats";
 import { todayDayNumber, maxUnlockedDay } from "@/app/scripts/Usecalendar";
 import { useCursorSetting } from "@/app/scripts/UseCursorSettings";
+import { cdnUrl } from "@/app/lib/cdnUrl";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type GuessStatus = "correct" | "wrong" | "skipped" | "empty" | "artist";
@@ -752,12 +753,12 @@ export default function RapPage() {
     const isNewSong = currentSongIdRef.current !== newSongId;
 
     if (!audioRef.current) {
-      audioRef.current = new Audio(song.audioSrc);
+      audioRef.current = new Audio(cdnUrl(song.audioSrc ?? ""));
       audioRef.current.volume = volumeRef.current;
       currentSongIdRef.current = newSongId;
     } else if (isNewSong) {
       audioRef.current.pause();
-      audioRef.current.src = song.audioSrc ?? "";
+      audioRef.current.src = cdnUrl(song.audioSrc ?? "");
       audioRef.current.load();
       audioRef.current.volume = volumeRef.current;
       currentSongIdRef.current = newSongId;

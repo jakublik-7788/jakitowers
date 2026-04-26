@@ -43,6 +43,7 @@ import { useGameStats, GlobalStats } from "@/app/scripts/Usegamestats";
 import { todayDayNumber, maxUnlockedDay } from "@/app/scripts/Usecalendar";
 import { Song } from "@/app/types/song";
 import { useCursorSetting } from "@/app/scripts/UseCursorSettings";
+import { cdnUrl } from "@/app/lib/cdnUrl";
 
 // ─── Stała startu trybu ───────────────────────────────────────────────────────
 const SOUNDTRACKI_START_DAY = 18;
@@ -465,7 +466,7 @@ const EndModal = ({
 
   useEffect(() => {
     if (!song.fullAudioSrc) return;
-    const audio = new Audio(song.fullAudioSrc);
+    const audio = new Audio(cdnUrl(song.fullAudioSrc));
     audioRef.current = audio;
     const handleLoadedMetadata = () => setDuration(audio.duration);
     const handleTimeUpdate = () => setCurrentTime(audio.currentTime);
@@ -557,7 +558,7 @@ const EndModal = ({
             <div className="mb-5 flex justify-center">
               <div className="rounded-2xl overflow-hidden border border-white/10 shadow-xl max-w-full">
                 <img
-                  src={song.imageUrl}
+                  src={cdnUrl(song.imageUrl ?? "")}
                   alt={song.title}
                   className="w-full h-auto max-h-[300px] object-contain bg-black/40"
                   onError={(e) => {
@@ -889,13 +890,13 @@ export default function DailySoundtracki() {
   useEffect(() => {
     if (!currentClipUrl) return;
     if (!audioRef.current) {
-      audioRef.current = new Audio(currentClipUrl);
+      audioRef.current = new Audio(cdnUrl(currentClipUrl));
     } else {
       const currentSrc = audioRef.current.src;
       const isSame =
         currentSrc === currentClipUrl || currentSrc.endsWith(currentClipUrl);
       if (!isSame) {
-        audioRef.current.src = currentClipUrl;
+        audioRef.current.src = cdnUrl(currentClipUrl);
         audioRef.current.load();
       }
     }
