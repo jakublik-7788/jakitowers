@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { rapSongs } from "./songs/rap/rapSongs";
 
-export const GAME_START_DATE = new Date(Date.UTC(2026, 2, 18, 23, 0, 0)); // 19 marca 23:00 UTC = 20 marca 00:00 UTC+1 (zima)
+export const GAME_START_DATE = new Date(Date.UTC(2026, 2, 19, 23, 0, 0)); // 19 marca 23:00 UTC = 20 marca 00:00 UTC+1 (zima)
 
 function getPolandOffset(): number {
   const now = new Date();
