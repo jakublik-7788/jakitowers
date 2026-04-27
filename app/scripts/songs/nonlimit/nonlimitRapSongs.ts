@@ -16527,5 +16527,45 @@ export const nonlimitRapSongs: Song[] = [
         ]
       }
     ]
-  }
+  },
+  {
+    id: 444,
+    day: 444,
+    title: "Ciągle tutaj jestem (diss na raka)",
+    artist: "Bedoes 2115, Maja Mecan & Fundacja_cancerfighters",
+    audioSrc: "/Rap/Bedoes/1_dissnaraka.mp3",
+    youtubeId: "d-kldWAQBzk",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Przyczepiłeś się do małej Mai, żywisz się cudzymi marzeniami",
+            start: 0.0,
+            end: 2.8,
+          },
+          {
+            text: "Przepraszam bardzo za język, ale chyba bardzo dawno ci nie na je.. (Bedi) ",
+            start: 2.8,
+            end: 5.8,
+          },
+          {
+            text: "Z Mają pójdziemy na mani-pedi, z nami sami nasi fani",
+            start: 5.8,
+            end: 7.85,
+          },
+          {
+            text: "Kiedy ciągle tańczymy i ciągle się śmiejemy",
+            start: 7.85,
+            end: 9.45,
+          },
+          {
+            text: "Zaraz po tym jak cię głupku zaje.. (Bedi no)",
+            start: 9.45,
+            end: 12.1,
+          },
+        ],
+      },
+    ],
+  },
 ];

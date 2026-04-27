@@ -1432,45 +1432,38 @@ export const rapSongs: Song[] = [
   {
     id: 40,
     day: 40,
-    title: "PANAMERA",
-    artist: "Gedz, SHDØW, LOAA",
-    audioSrc: "/Rap/Gedz/40_PANAMERA.mp3",
-    youtubeId: "InQQ0qxbkI8",
-    platforms: {
-      spotify:
-        "https://open.spotify.com/track/7AhR3UOgKTcrgsNn7NWEv1?si=d5a92e10317f4bfe",
-      appleMusic:
-        "https://music.apple.com/pl/album/panamera-single/1540082998?l=pl",
-      tidal: "https://tidal.com/track/161965935/u",
-    },
+    title: "Ciągle tutaj jestem (diss na raka)",
+    artist: "Bedoes 2115, Maja Mecan & Fundacja_cancerfighters",
+    audioSrc: "/Rap/Bedoes/1_dissnaraka.mp3",
+    youtubeId: "d-kldWAQBzk",
     lyrics: [
       {
         lineIndex: 0,
         words: [
           {
-            text: "BOR, NNJL, FnD, chory Gedz (ye, ye)",
+            text: "Przyczepiłeś się do małej Mai, żywisz się cudzymi marzeniami",
             start: 0.0,
-            end: 8.75,
+            end: 2.8,
           },
           {
-            text: "U mnie non stop diabelski młyn (non stop)",
-            start: 8.75,
-            end: 11.22,
+            text: "Przepraszam bardzo za język, ale chyba bardzo dawno ci nie na je.. (Bedi) ",
+            start: 2.8,
+            end: 5.8,
           },
           {
-            text: "Moje życie Lunapark, kręcę ciężki film",
-            start: 11.22,
-            end: 13.92,
+            text: "Z Mają pójdziemy na mani-pedi, z nami sami nasi fani",
+            start: 5.8,
+            end: 7.85,
           },
           {
-            text: "W końcu wpada dobry plik mi",
-            start: 13.92,
-            end: 16.04,
+            text: "Kiedy ciągle tańczymy i ciągle się śmiejemy",
+            start: 7.85,
+            end: 9.45,
           },
           {
-            text: "Robię nim flip i wydaję przez blik, blik",
-            start: 16.04,
-            end: 19.54,
+            text: "Zaraz po tym jak cię głupku zaje.. (Bedi no)",
+            start: 9.45,
+            end: 12.1,
           },
         ],
       },
@@ -1843,6 +1836,53 @@ export const rapSongs: Song[] = [
             text: "Kupuję se LV, kupuję Off White'y",
             start: 12.97,
             end: 16.37,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 51,
+    day: 51,
+    title: "PANAMERA",
+    artist: "Gedz, SHDØW, LOAA",
+    audioSrc: "/Rap/Gedz/40_PANAMERA.mp3",
+    youtubeId: "InQQ0qxbkI8",
+    platforms: {
+      spotify:
+        "https://open.spotify.com/track/7AhR3UOgKTcrgsNn7NWEv1?si=d5a92e10317f4bfe",
+      appleMusic:
+        "https://music.apple.com/pl/album/panamera-single/1540082998?l=pl",
+      tidal: "https://tidal.com/track/161965935/u",
+    },
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "BOR, NNJL, FnD, chory Gedz (ye, ye)",
+            start: 0.0,
+            end: 8.75,
+          },
+          {
+            text: "U mnie non stop diabelski młyn (non stop)",
+            start: 8.75,
+            end: 11.22,
+          },
+          {
+            text: "Moje życie Lunapark, kręcę ciężki film",
+            start: 11.22,
+            end: 13.92,
+          },
+          {
+            text: "W końcu wpada dobry plik mi",
+            start: 13.92,
+            end: 16.04,
+          },
+          {
+            text: "Robię nim flip i wydaję przez blik, blik",
+            start: 16.04,
+            end: 19.54,
           },
         ],
       },

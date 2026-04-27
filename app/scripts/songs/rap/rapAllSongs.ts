@@ -623,4 +623,5 @@ export const rapAllSongs: SongSuggestion[] = [
   { title: "SKANDAL", artist: "Sentino" },
   { title: "Algeciras", artist: "Sentino, Alex Rios" },
   { title: "Rio", artist: "Sentino, Getmony" },
+  { title: "Ciągle tutaj jestem (diss na raka)", artist: "Bedoes 2115, Maja Mecan & Fundacja_cancerfighters" },
 ];

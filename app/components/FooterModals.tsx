@@ -42,7 +42,7 @@ interface PatchEntry {
 }
 
 // ─── Constants ────────────────────────────────────────────────────────────────
-const LS_PATCH_SEEN_KEY = "jakitowers_patch_seen_v2-0";
+const LS_PATCH_SEEN_KEY = "jakitowers_patch_seen_v3-0";
 
 const TOPICS = [
   { id: "song",   label: "Brakująca piosenka", icon: Music,       desc: "Chcę zgłosić piosenkę do dodania" },
@@ -64,6 +64,16 @@ const FOOTER_LINKS: { key: InfoModalType; label: string; icon: React.ReactNode }
 
 // ─── Dane aktualności ─────────────────────────────────────────────────────────
 const PATCH_ENTRIES: PatchEntry[] = [
+  {
+    id: "v3-0",
+    version: "INFORMACJA",
+    date: "28 kwietnia 2026",
+    title: "INFORMACJE",
+    icon: <Zap size={14} />,
+    changes: [
+      { type: "info", title: "JEB*Ć RAKA", description: "Walczymy z rakiem i przyłączamy się do zbiórki pieniędzy dla chorych dzieci z fundacji Cancer Fighters. Każda wpłata na buycoffee z dzisiejszego dnia (28.04) zostanie przekazana na zbiórkę. Miłej gry!" },
+    ],
+  },
   {
     id: "v2-0",
     version: "Aktualizacja 2.0",
