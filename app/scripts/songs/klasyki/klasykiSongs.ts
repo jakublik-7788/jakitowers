@@ -849,7 +849,7 @@ export const klasykiSongs: Song[] = [
     day: 39,
     title: "Powiedz",
     artist: "Ich Troje",
-    audioSrc: "/Klasyki/Ich Troje/28_Powiedz.mp3",
+    audioSrc: "/Klasyki/Ich Troje/117_Powiedz.mp3",
     youtubeId: "j0U4lrfzv6U",
     lyrics: [
       {
