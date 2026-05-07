@@ -1284,4 +1284,244 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 50,
+    day: 50,
+    title: "Naiwne pytania",
+    artist: "Dżem",
+    audioSrc: "/Klasyki/Dzem/105_Naiwne_pytania_-_2003_Remaster.mp3",
+    youtubeId: "yDsQ7TUZM1U",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Teraz jestem duży",
+            start: 0.0,
+            end: 3.98,
+          },
+          {
+            text: "I wiem, że w życiu piękne są tylko chwile",
+            start: 3.98,
+            end: 14.51,
+          },
+          {
+            text: "Dlatego czasem warto żyć",
+            start: 14.51,
+            end: 21.78,
+          },
+          {
+            text: "Dlatego czasem warto żyć!",
+            start: 21.78,
+            end: 28.84,
+          },
+          {
+            text: "W życiu piękne są tylko chwile",
+            start: 28.84,
+            end: 36.31,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 51,
+    day: 51,
+    title: "Co ty tutaj robisz",
+    artist: "Elektryczne Gitary",
+    audioSrc: "/Klasyki/Elektryczne Gitary/106_Co_Ty_Tutaj_Robisz.mp3",
+    youtubeId: "ZkdvU7nPM5Q",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Dla wielkich oraz osłów",
+            start: 0.0,
+            end: 1.35,
+          },
+          {
+            text: "By się rzucić z mostu no i łowić.",
+            start: 1.35,
+            end: 4.25,
+          },
+          {
+            text: "Już każdy powiedział to co wiedział",
+            start: 4.25,
+            end: 7.4,
+          },
+          {
+            text: "Trzy razy wysłuchał dobrze mnie",
+            start: 7.4,
+            end: 9.5,
+          },
+          {
+            text: "Wszyscy zgadzają się ze sobą",
+            start: 9.5,
+            end: 11.8,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 52,
+    day: 52,
+    title: "To koniec",
+    artist: "Elektryczne Gitary",
+    audioSrc: "/Klasyki/Elektryczne Gitary/107_To_koniec_-_2014.mp3",
+    youtubeId: "WNnzw90vxrE",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Tak dłubie i gmera, napisze, wymyśli",
+            start: 0.0,
+            end: 2.57,
+          },
+          {
+            text: "Obejdzie wokoło, zabrudzi, wyczyści",
+            start: 2.57,
+            end: 5.11,
+          },
+          {
+            text: "I krzaczek przy drodze i brat przy maszynie",
+            start: 5.11,
+            end: 7.42,
+          },
+          {
+            text: "Jak noga w skarpecie, sprzedawca w kantynie",
+            start: 7.42,
+            end: 10.19,
+          },
+          {
+            text: "Kamyczek na polu i strażnik na straży",
+            start: 10.19,
+            end: 12.4,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 53,
+    day: 53,
+    title: "Tak smakuje życie",
+    artist: "Enej",
+    audioSrc: "/Klasyki/Enej/109_Tak_Smakuje_Życie.mp3",
+    youtubeId: "QUaJF5faWBU",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Teraz twoja kolej",
+            start: 0.0,
+            end: 2.3,
+          },
+          {
+            text: "By zapalić ogień",
+            start: 2.3,
+            end: 5.05,
+          },
+          {
+            text: "Co ogrzeje to uczucie",
+            start: 5.05,
+            end: 7.3,
+          },
+          {
+            text: "Radzą zakochani ludzie",
+            start: 7.3,
+            end: 10.3,
+          },
+          {
+            text: "I powiedzą, że ta",
+            start: 10.3,
+            end: 12.9, // brak kolejnego timestampu
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 54,
+    day: 54,
+    title: "Radio Hello",
+    artist: "Enej",
+    audioSrc: "/Klasyki/Enej/110_Radio_Hello.mp3",
+    youtubeId: "isN0lz_2VBk",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Podaruje ti neperespani dni",
+            start: 0.0,
+            end: 3.46,
+          },
+          {
+            text: "Dobryj deń mersi, dobryj deń tobi!",
+            start: 3.46,
+            end: 10.14,
+          },
+          {
+            text: "Dobryj deń, dobryj deń,",
+            start: 10.14,
+            end: 12.76,
+          },
+          {
+            text: "Tu twoje radio, hello, hello",
+            start: 12.76,
+            end: 17.25,
+          },
+          {
+            text: "Dobryj deń, dobryj deń",
+            start: 17.25,
+            end: 19.75,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 55,
+    day: 55,
+    title: "Łydka",
+    artist: "Happysad",
+    audioSrc: "/Klasyki/Happysad/111_Łydka.mp3",
+    youtubeId: "mDRXULGgh-A",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Wydrylujesz śliną mnie",
+            start: 0.0,
+            end: 3.16,
+          },
+          {
+            text: "Otoczysz sprężystą łydką",
+            start: 3.16,
+            end: 7.07,
+          },
+          {
+            text: "Wydrylujesz śliną mnie",
+            start: 7.07,
+            end: 10.32,
+          },
+          {
+            text: "Otoczysz sprężystą łydką",
+            start: 10.32,
+            end: 16.2,
+          },
+          {
+            text: "Ale to nie wszystko",
+            start: 16.2,
+            end: 19.69,
+          },
+        ],
+      },
+    ],
+  },
 ];

@@ -1888,6 +1888,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    "id": 52,
+    "day": 52,
+    "title": "Rio",
+    "artist": "Sentino, Getmony",
+    "audioSrc": "/Rap/Sentino/Rio.mp3",
+    "youtubeId": "5I1NKNgFUuo",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Nie ma wojny z bratem, chcę dalej",
+            "start": 0.0,
+            "end": 2.17
+          },
+          {
+            "text": "Wtedy Ed Hardy dziś Bad Bunny",
+            "start": 2.17,
+            "end": 3.66
+          },
+          {
+            "text": "Mimo waszym streamom, waszym hejtom, wrócił tío",
+            "start": 3.66,
+            "end": 8.17
+          },
+          {
+            "text": "To jak Fiat Cinquecento i Gran Torino",
+            "start": 8.17,
+            "end": 11.57
+          },
+          {
+            "text": "Siedzę w Rio de Janeiro, stary, w Rio",
+            "start": 11.57,
+            "end": 15.04
+          }
+        ]
+      }
+    ]
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
