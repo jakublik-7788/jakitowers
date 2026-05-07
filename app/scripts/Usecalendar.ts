@@ -50,7 +50,7 @@ export function dateKeyToDayNumber(dateKey: string): number | null {
   const date = new Date(Date.UTC(year, month - 1, day));
   const diff = Math.floor((date.getTime() - GAME_START_DATE.getTime()) / (1000 * 60 * 60 * 24));
   const dayNum = diff + 1;
-  if (dayNum < 1 || dayNum > rapSongs.length) return null;
+  if (dayNum < 1) return null;
   return dayNum;
 }
 

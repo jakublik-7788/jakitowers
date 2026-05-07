@@ -508,7 +508,7 @@ export default function KlasykiPage() {
   const [currentDay, setCurrentDay] = useState<number>(() =>
     Math.max(todayDayNumber(), KLASYKI_START_DAY),
   );
-  const [totalDays] = useState(dailySongs.length);
+  const [totalDays] = useState(maxUnlockedDay());
   const [volume, setVolume] = useState<number | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
