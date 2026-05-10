@@ -1279,7 +1279,7 @@ export default function DailySoundtracki() {
         )}
       </AnimatePresence>
 
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {showAdInterstitial && (
           <AdInterstitial
             onClose={() => {
@@ -1288,7 +1288,7 @@ export default function DailySoundtracki() {
             }}
           />
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       <AnimatePresence>
         {gameStatus && showModal && (
