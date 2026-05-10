@@ -1928,6 +1928,42 @@ export const rapSongs: Song[] = [
       }
     ]
   },
+  {
+    id: 53,
+    day: 53,
+    title: "Gustaw",
+    artist: "Bedoes 2115",
+    audioSrc: "/Rap/Bedoes/62_Gustaw.mp3",
+    youtubeId: "fide4cDt_xo",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          { text: "Widziałem melanże", start: 0.0, end: 1.45 },
+          {
+            text: "Widziałem brzydkie suki, średnie suki, piękne suki, widziałem każde (każde)",
+            start: 1.45,
+            end: 4.95,
+          },
+          {
+            text: "Prawie zamieszkałem na dnie (na dnie), prawie zostałem na winklu",
+            start: 4.95,
+            end: 8.25,
+          },
+          {
+            text: "Gucci nie zmienia niczego, bo byłem tak samo prawdziwy",
+            start: 8.25,
+            end: 10.85,
+          },
+          {
+            text: "Jak chodziłem w ciuchach kupionych na rynku, Borek!",
+            start: 10.85,
+            end: 13.1,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
