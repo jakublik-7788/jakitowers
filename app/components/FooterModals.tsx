@@ -460,8 +460,7 @@ const CookiesContent = () => (
         Brak cookies śledzących
       </p>
       <p className="text-zinc-300 text-xs">
-        JakiTowers nie używa plików cookie do śledzenia, profilowania ani celów
-        reklamowych. Brak Google Analytics, Google AdSense i podobnych.
+        JakiTowers nie używa plików cookie do śledzenia.
       </p>
     </div>
     <div>
