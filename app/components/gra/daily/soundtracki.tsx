@@ -45,7 +45,7 @@ import { Song } from "@/app/types/song";
 import { useCursorSetting } from "@/app/scripts/UseCursorSettings";
 import { cdnUrl } from "@/app/lib/cdnUrl";
 import AdSense from "@/app/components/AdSense";
-import AdInterstitial from "../../Adinterstitial";
+// import AdInterstitial from "../../Adinterstitial";
 
 // ─── Stała startu trybu ───────────────────────────────────────────────────────
 const SOUNDTRACKI_START_DAY = 18;
@@ -766,7 +766,7 @@ export default function DailySoundtracki() {
   const [stateLoaded, setStateLoaded] = useState(false);
   const [hasStartedGame, setHasStartedGame] = useState(false);
   const [revealedHintsCount, setRevealedHintsCount] = useState(0);
-  const [showAdInterstitial, setShowAdInterstitial] = useState(false);
+  // const [showAdInterstitial, setShowAdInterstitial] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const isPlayingRef = useRef(isPlaying);
@@ -1068,7 +1068,7 @@ export default function DailySoundtracki() {
       setResults(r);
       saveResults(r);
       recordResult(true, currentStep + 1);
-      setShowAdInterstitial(true);
+      setShowModal(true);
       setShowGlobalStatsMini(true); // ← NOWE
       play("win");
     } else if (currentStep < MAX_ATTEMPTS - 1) {
@@ -1081,7 +1081,7 @@ export default function DailySoundtracki() {
       setResults(r);
       saveResults(r);
       recordResult(false, null);
-      setShowAdInterstitial(true);
+      setShowModal(true);
       setShowGlobalStatsMini(true); // ← NOWE
       play("lose");
     }

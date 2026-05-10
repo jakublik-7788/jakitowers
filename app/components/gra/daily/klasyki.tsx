@@ -39,7 +39,7 @@ import { todayDayNumber, maxUnlockedDay } from "@/app/scripts/Usecalendar";
 import { Footer } from "../../Footer";
 import { useCursorSetting } from "@/app/scripts/UseCursorSettings";
 import { cdnUrl } from "@/app/lib/cdnUrl";
-import AdInterstitial from "../../Adinterstitial";
+// import AdInterstitial from "../../Adinterstitial";
 
 // ─── Stała startu trybu ───────────────────────────────────────────────────────
 const KLASYKI_START_DAY = 18;
@@ -504,7 +504,7 @@ export default function KlasykiPage() {
   const searchParams = useSearchParams();
 
   const [showModal, setShowModal] = useState(false);
-  const [showAdInterstitial, setShowAdInterstitial] = useState(false);
+  // const [showAdInterstitial, setShowAdInterstitial] = useState(false);
   const [showRules, setShowRules] = useState(false);
   const [inputError, setInputError] = useState(false);
   const [currentDay, setCurrentDay] = useState<number>(() =>
@@ -872,7 +872,7 @@ export default function KlasykiPage() {
       saveKlasykiResults(r);
       recordResult(true, currentStep + 1);
       setGameStatus("win");
-      setShowAdInterstitial(true);
+      setShowModal(true);
       setShowGlobalStatsMini(true);
       play("win");
     } else if (currentStep < 4) {
@@ -884,7 +884,7 @@ export default function KlasykiPage() {
       saveKlasykiResults(r);
       recordResult(false, null);
       setGameStatus("lose");
-      setShowAdInterstitial(true);
+      setShowModal(true);
       setShowGlobalStatsMini(true);
       play("lose");
     }
@@ -1111,7 +1111,7 @@ export default function KlasykiPage() {
         )}
       </AnimatePresence>
 
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {showAdInterstitial && (
           <AdInterstitial
             onClose={() => {
@@ -1120,7 +1120,7 @@ export default function KlasykiPage() {
             }}
           />
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       <AnimatePresence>
         {gameStatus && showModal && (

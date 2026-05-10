@@ -38,7 +38,7 @@ import { useGameStats, GlobalStats } from "@/app/scripts/Usegamestats";
 import { todayDayNumber, maxUnlockedDay } from "@/app/scripts/Usecalendar";
 import { useCursorSetting } from "@/app/scripts/UseCursorSettings";
 import { cdnUrl } from "@/app/lib/cdnUrl";
-import AdInterstitial from "../../Adinterstitial";
+// import AdInterstitial from "../../Adinterstitial";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type GuessStatus = "correct" | "wrong" | "skipped" | "empty" | "artist";
@@ -516,7 +516,7 @@ export default function RapPage() {
   const searchParams = useSearchParams();
 
   const [showModal, setShowModal] = useState(false);
-  const [showAdInterstitial, setShowAdInterstitial] = useState(false);
+  // const [showAdInterstitial, setShowAdInterstitial] = useState(false);
   const [showRules, setShowRules] = useState(false);
   const [inputError, setInputError] = useState(false);
   const [currentDay, setCurrentDay] = useState<number>(() => todayDayNumber());
@@ -915,7 +915,7 @@ export default function RapPage() {
       saveRapResults(r);
       recordResult(true, currentStep + 1);
       setGameStatus("win");
-      setShowAdInterstitial(true);
+      setShowModal(true);
       setShowGlobalStatsMini(true);
       play("win");
     } else if (currentStep < 4) {
@@ -927,7 +927,7 @@ export default function RapPage() {
       saveRapResults(r);
       recordResult(false, null);
       setGameStatus("lose");
-      setShowAdInterstitial(true);
+      setShowModal(true);
       setShowGlobalStatsMini(true);
       play("lose");
     }
@@ -1160,7 +1160,7 @@ export default function RapPage() {
         )}
       </AnimatePresence>
 
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {showAdInterstitial && (
           <AdInterstitial
             onClose={() => {
@@ -1169,7 +1169,7 @@ export default function RapPage() {
             }}
           />
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       <AnimatePresence>
         {gameStatus && showModal && (
