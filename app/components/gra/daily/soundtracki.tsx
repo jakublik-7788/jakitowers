@@ -44,6 +44,8 @@ import { todayDayNumber, maxUnlockedDay } from "@/app/scripts/Usecalendar";
 import { Song } from "@/app/types/song";
 import { useCursorSetting } from "@/app/scripts/UseCursorSettings";
 import { cdnUrl } from "@/app/lib/cdnUrl";
+import AdSense from "@/app/components/AdSense";
+import AdInterstitial from "../../Adinterstitial";
 
 // ─── Stała startu trybu ───────────────────────────────────────────────────────
 const SOUNDTRACKI_START_DAY = 18;
@@ -615,6 +617,7 @@ const EndModal = ({
               </div>
             </div>
           )}
+
           <div className="flex flex-col gap-2.5">
             <div className="w-full bg-zinc-900/80 py-3 rounded-2xl font-black tracking-widest uppercase italic border border-white/10 flex items-center justify-center gap-2 text-sm">
               <Clock size={14} className="text-zinc-500" />
@@ -763,6 +766,7 @@ export default function DailySoundtracki() {
   const [stateLoaded, setStateLoaded] = useState(false);
   const [hasStartedGame, setHasStartedGame] = useState(false);
   const [revealedHintsCount, setRevealedHintsCount] = useState(0);
+  const [showAdInterstitial, setShowAdInterstitial] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const isPlayingRef = useRef(isPlaying);
@@ -1064,7 +1068,7 @@ export default function DailySoundtracki() {
       setResults(r);
       saveResults(r);
       recordResult(true, currentStep + 1);
-      setShowModal(true);
+      setShowAdInterstitial(true);
       setShowGlobalStatsMini(true); // ← NOWE
       play("win");
     } else if (currentStep < MAX_ATTEMPTS - 1) {
@@ -1077,7 +1081,7 @@ export default function DailySoundtracki() {
       setResults(r);
       saveResults(r);
       recordResult(false, null);
-      setShowModal(true);
+      setShowAdInterstitial(true);
       setShowGlobalStatsMini(true); // ← NOWE
       play("lose");
     }
@@ -1276,6 +1280,17 @@ export default function DailySoundtracki() {
       </AnimatePresence>
 
       <AnimatePresence>
+        {showAdInterstitial && (
+          <AdInterstitial
+            onClose={() => {
+              setShowAdInterstitial(false);
+              setShowModal(true);
+            }}
+          />
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
         {gameStatus && showModal && (
           <EndModal
             status={gameStatus}
@@ -1338,7 +1353,7 @@ export default function DailySoundtracki() {
         soundEnabled={soundEnabled}
         setSoundEnabled={setSoundEnabled}
         cursorEnabled={cursorEnabled}
-  setCursorEnabled={setCursorEnabled}
+        setCursorEnabled={setCursorEnabled}
       />
       <Footer />
     </div>

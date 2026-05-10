@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ClientCursorWrapper } from "./components/ClientCursorWrapper"; // nowy import
+import Script from 'next/script';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,20 +15,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://jakitowers.pl'),
+  metadataBase: new URL("https://jakitowers.pl"),
   title: {
     default: "Jaki To Wers - Codzienna gra muzyczna",
     template: "%s | Jaki To Wers",
   },
-  description: "Jaki To Wers - Codzienna muzyczna gra online. Zgaduj utwór z rapu, polskich klasyków oraz słynnych soundtracków.",
+  description:
+    "Jaki To Wers - Codzienna muzyczna gra online. Zgaduj utwór z rapu, polskich klasyków oraz słynnych soundtracków.",
   openGraph: {
     title: "Jaki To Wers - Codzienna gra muzyczna",
-    description: "Jaki To Wers - Codzienna muzyczna gra online. Zgaduj utwór z rapu, polskich klasyków oraz słynnych soundtracków.",
+    description:
+      "Jaki To Wers - Codzienna muzyczna gra online. Zgaduj utwór z rapu, polskich klasyków oraz słynnych soundtracków.",
     url: "https://jakitowers.pl",
     siteName: "JAKITOWERS",
     locale: "pl_PL",
     type: "website",
-     images: [
+    images: [
       {
         url: "/Logo1.jpg",
         width: 1200,
@@ -39,13 +42,14 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Jaki To Wers - Codzienna gra muzyczna",
-    description: "Jaki To Wers - Codzienna muzyczna gra online. Zgaduj utwór z rapu, polskich klasyków oraz słynnych soundtracków.",
+    description:
+      "Jaki To Wers - Codzienna muzyczna gra online. Zgaduj utwór z rapu, polskich klasyków oraz słynnych soundtracków.",
     images: ["/LogoTwitter.jpg"],
   },
   robots: "index, follow",
-  keywords: "jaki to wers, jakitowers, jaki to wers gra, zgadnij piosenkę, polski rap gra, codzienna gra muzyczna, rapdle, rap quiz, hip hop gra, jaki to wers online, hit, co to za hit, cotozahit, 100hitow, 100 hitow",
+  keywords:
+    "jaki to wers, jakitowers, jaki to wers gra, zgadnij piosenkę, polski rap gra, codzienna gra muzyczna, rapdle, rap quiz, hip hop gra, jaki to wers online, hit, co to za hit, cotozahit, 100hitow, 100 hitow",
 };
-
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -112,6 +116,11 @@ if (cur === 'false') {
         <main className="relative z-10">{children}</main>
         <ClientCursorWrapper />
       </body>
+      <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1823374601361792"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
     </html>
   );
 }

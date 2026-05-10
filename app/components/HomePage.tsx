@@ -872,7 +872,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
       {/* ── SOCIAL KAFELKI ── */}
       <section className="relative z-10 w-full max-w-4xl mx-auto px-4 pb-8">
         {/* DESKTOP */}

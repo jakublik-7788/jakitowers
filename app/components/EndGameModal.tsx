@@ -6,6 +6,7 @@ import { Trophy, X, Share2, Check, Clock } from "lucide-react";
 import { Song } from "@/app/types/song";
 import { CountdownTimer } from "./CountdownTimer";
 import { domToPng } from "modern-screenshot";
+import AdSense from "./AdSense";
 
 const SpotifyIcon = () => (
   <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
@@ -15,7 +16,10 @@ const SpotifyIcon = () => (
 
 const AppleMusicIcon = () => (
   <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
-    <path fillRule="evenodd" d="m10.995 0 .573.001q.241 0 .483.007c.35.01.705.03 1.051.093.352.063.68.166.999.329a3.36 3.36 0 0 1 1.47 1.468c.162.32.265.648.328 1 .063.347.084.7.093 1.051q.007.241.007.483l.001.573v5.99l-.001.573q0 .241-.008.483c-.01.35-.03.704-.092 1.05a3.5 3.5 0 0 1-.33 1 3.36 3.36 0 0 1-1.468 1.468 3.5 3.5 0 0 1-1 .33 7 7 0 0 1-1.05.092q-.241.007-.483.008l-.573.001h-5.99l-.573-.001q-.241 0-.483-.008a7 7 0 0 1-1.052-.092 3.6 3.6 0 0 1-.998-.33 3.36 3.36 0 0 1-1.47-1.468 3.6 3.6 0 0 1-.328-1 7 7 0 0 1-.093-1.05Q.002 11.81 0 11.568V5.005l.001-.573q0-.241.007-.483c.01-.35.03-.704.093-1.05a3.6 3.6 0 0 1 .329-1A3.36 3.36 0 0 1 1.9.431 3.5 3.5 0 0 1 2.896.1 7 7 0 0 1 3.95.008Q4.19.002 4.432 0h.573zm-.107 2.518-4.756.959H6.13a.66.66 0 0 0-.296.133.5.5 0 0 0-.16.31c-.004.027-.01.08-.01.16v5.952c0 .14-.012.275-.106.39-.095.115-.21.15-.347.177l-.31.062c-.393.08-.65.133-.881.223a1.4 1.4 0 0 0-.519.333 1.25 1.25 0 0 0-.332.995c.031.297.166.582.395.792.156.142.35.25.578.296.236.047.49.031.858-.043.196-.04.38-.102.555-.205a1.4 1.4 0 0 0 .438-.405 1.5 1.5 0 0 0 .233-.55c.042-.202.052-.386.052-.588V6.347c0-.276.08-.35.302-.404.024-.005 3.954-.797 4.138-.833.257-.049.378.025.378.294v3.524c0 .14-.001.28-.096.396-.094.115-.211.15-.348.178l-.31.062c-.393.08-.649.133-.88.223a1.4 1.4 0 0 0-.52.334 1.26 1.26 0 0 0-.34.994c.03.297.174.582.404.792a1.2 1.2 0 0 0 .577.294c.237.048.49.03.858-.044.197-.04.381-.098.556-.202a1.4 1.4 0 0 0 .438-.405q.173-.252.233-.549a2.7 2.7 0 0 0 .044-.589V2.865c0-.273-.143-.443-.4-.42-.04.003-.383.064-.424.073" />
+    <path
+      fillRule="evenodd"
+      d="m10.995 0 .573.001q.241 0 .483.007c.35.01.705.03 1.051.093.352.063.68.166.999.329a3.36 3.36 0 0 1 1.47 1.468c.162.32.265.648.328 1 .063.347.084.7.093 1.051q.007.241.007.483l.001.573v5.99l-.001.573q0 .241-.008.483c-.01.35-.03.704-.092 1.05a3.5 3.5 0 0 1-.33 1 3.36 3.36 0 0 1-1.468 1.468 3.5 3.5 0 0 1-1 .33 7 7 0 0 1-1.05.092q-.241.007-.483.008l-.573.001h-5.99l-.573-.001q-.241 0-.483-.008a7 7 0 0 1-1.052-.092 3.6 3.6 0 0 1-.998-.33 3.36 3.36 0 0 1-1.47-1.468 3.6 3.6 0 0 1-.328-1 7 7 0 0 1-.093-1.05Q.002 11.81 0 11.568V5.005l.001-.573q0-.241.007-.483c.01-.35.03-.704.093-1.05a3.6 3.6 0 0 1 .329-1A3.36 3.36 0 0 1 1.9.431 3.5 3.5 0 0 1 2.896.1 7 7 0 0 1 3.95.008Q4.19.002 4.432 0h.573zm-.107 2.518-4.756.959H6.13a.66.66 0 0 0-.296.133.5.5 0 0 0-.16.31c-.004.027-.01.08-.01.16v5.952c0 .14-.012.275-.106.39-.095.115-.21.15-.347.177l-.31.062c-.393.08-.65.133-.881.223a1.4 1.4 0 0 0-.519.333 1.25 1.25 0 0 0-.332.995c.031.297.166.582.395.792.156.142.35.25.578.296.236.047.49.031.858-.043.196-.04.38-.102.555-.205a1.4 1.4 0 0 0 .438-.405 1.5 1.5 0 0 0 .233-.55c.042-.202.052-.386.052-.588V6.347c0-.276.08-.35.302-.404.024-.005 3.954-.797 4.138-.833.257-.049.378.025.378.294v3.524c0 .14-.001.28-.096.396-.094.115-.211.15-.348.178l-.31.062c-.393.08-.649.133-.88.223a1.4 1.4 0 0 0-.52.334 1.26 1.26 0 0 0-.34.994c.03.297.174.582.404.792a1.2 1.2 0 0 0 .577.294c.237.048.49.03.858-.044.197-.04.381-.098.556-.202a1.4 1.4 0 0 0 .438-.405q.173-.252.233-.549a2.7 2.7 0 0 0 .044-.589V2.865c0-.273-.143-.443-.4-.42-.04.003-.383.064-.424.073"
+    />
   </svg>
 );
 
@@ -32,29 +36,47 @@ const TidalIcon = () => (
 );
 
 const PLATFORMS = [
-  { key: "spotify",    Icon: SpotifyIcon,    color: "#1DB954", label: "Spotify" },
-  { key: "appleMusic", Icon: AppleMusicIcon, color: "#FC3C44", label: "Apple Music" },
-  { key: "soundcloud", Icon: SoundCloudIcon, color: "#FF5500", label: "SoundCloud" },
-  { key: "tidal",      Icon: TidalIcon,      color: "#00FFFF", label: "Tidal" },
+  { key: "spotify", Icon: SpotifyIcon, color: "#1DB954", label: "Spotify" },
+  {
+    key: "appleMusic",
+    Icon: AppleMusicIcon,
+    color: "#FC3C44",
+    label: "Apple Music",
+  },
+  {
+    key: "soundcloud",
+    Icon: SoundCloudIcon,
+    color: "#FF5500",
+    label: "SoundCloud",
+  },
+  { key: "tidal", Icon: TidalIcon, color: "#00FFFF", label: "Tidal" },
 ] as const;
 
 const SITE_URL = "https://www.jakitowers.pl";
 
 const getGameModeLabel = (mode: string): string => {
   switch (mode) {
-    case "rap": return "RAP";
-    case "klasyki": return "KLASYKI";
-    case "soundtracki": return "SOUNDTRACKI";
-    default: return "DAILY";
+    case "rap":
+      return "RAP";
+    case "klasyki":
+      return "KLASYKI";
+    case "soundtracki":
+      return "SOUNDTRACKI";
+    default:
+      return "DAILY";
   }
 };
 
 const getGameModeDescription = (mode: string): string => {
   switch (mode) {
-    case "rap": return "DZISIEJSZY RAPOWY HIT";
-    case "klasyki": return "DZISIEJSZY POLSKI KLASYK";
-    case "soundtracki": return "DZISIEJSZY SOUNDTRACK";
-    default: return "DZISIEJSZA NUTKA";
+    case "rap":
+      return "DZISIEJSZY RAPOWY HIT";
+    case "klasyki":
+      return "DZISIEJSZY POLSKI KLASYK";
+    case "soundtracki":
+      return "DZISIEJSZY SOUNDTRACK";
+    default:
+      return "DZISIEJSZA NUTKA";
   }
 };
 
@@ -67,96 +89,141 @@ interface EndGameModalProps {
   gameMode: "rap" | "klasyki" | "soundtracki";
 }
 
-export const EndGameModal = ({ status, song, onClose, dayNumber, attempts, gameMode }: EndGameModalProps) => {
-  const availablePlatforms = PLATFORMS.filter(p => song.platforms?.[p.key]);
+export const EndGameModal = ({
+  status,
+  song,
+  onClose,
+  dayNumber,
+  attempts,
+  gameMode,
+}: EndGameModalProps) => {
+  const availablePlatforms = PLATFORMS.filter((p) => song.platforms?.[p.key]);
   const modeLabel = getGameModeLabel(gameMode);
   const modeDescription = getGameModeDescription(gameMode);
 
-  const handleMidnight = useCallback(() => { window.location.reload(); }, []);
+  const handleMidnight = useCallback(() => {
+    window.location.reload();
+  }, []);
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      onClick={e => e.target === e.currentTarget && onClose()}
+      onClick={(e) => e.target === e.currentTarget && onClose()}
       className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/97 cursor-pointer overflow-y-auto"
     >
       <motion.div
         initial={{ scale: 0.9, y: 20, opacity: 0 }}
         animate={{ scale: 1, y: 0, opacity: 1 }}
         exit={{ scale: 0.9, y: 20, opacity: 0 }}
-        onClick={e => e.stopPropagation()}
+        onClick={(e) => e.stopPropagation()}
         className="bg-zinc-950 border-2 border-accent/40 rounded-[32px] p-6 md:p-8 max-w-lg w-full shadow-[0_0_60px_var(--accent-glow)] text-center relative overflow-hidden cursor-default my-4"
       >
         {/* Bg glow */}
-        <div className={`absolute -top-20 -left-20 w-56 h-56 blur-[100px] rounded-full pointer-events-none opacity-20`}
-          style={{ background: status === "win" ? "#22c55e" : "#ef4444" }} />
+        <div
+          className={`absolute -top-20 -left-20 w-56 h-56 blur-[100px] rounded-full pointer-events-none opacity-20`}
+          style={{ background: status === "win" ? "#22c55e" : "#ef4444" }}
+        />
 
         {/* Close */}
-        <button onClick={onClose}
-          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-500 hover:text-white hover:bg-white/10 transition-all z-10">
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-500 hover:text-white hover:bg-white/10 transition-all z-10"
+        >
           <X size={14} />
         </button>
 
         {/* Status icon */}
         <div className="flex justify-center mb-3">
-          <div className={`w-14 h-14 rounded-2xl flex items-center justify-center border-2
-            ${status === "win"
-              ? "bg-green-500/15 border-green-500/40 shadow-[0_0_30px_rgba(34,197,94,0.3)]"
-              : "bg-red-500/15 border-red-500/40 shadow-[0_0_30px_rgba(239,68,68,0.3)]"}`}>
-            {status === "win"
-              ? <Trophy size={24} className="text-green-400" />
-              : <span className="text-red-400 text-2xl font-black">✕</span>}
+          <div
+            className={`w-14 h-14 rounded-2xl flex items-center justify-center border-2
+            ${
+              status === "win"
+                ? "bg-green-500/15 border-green-500/40 shadow-[0_0_30px_rgba(34,197,94,0.3)]"
+                : "bg-red-500/15 border-red-500/40 shadow-[0_0_30px_rgba(239,68,68,0.3)]"
+            }`}
+          >
+            {status === "win" ? (
+              <Trophy size={24} className="text-green-400" />
+            ) : (
+              <span className="text-red-400 text-2xl font-black">✕</span>
+            )}
           </div>
         </div>
 
-        <h2 className={`text-3xl md:text-4xl font-[1000] italic uppercase tracking-tighter mb-0.5
-          ${status === "win" ? "text-green-400" : "text-red-500"}`}>
+        <h2
+          className={`text-3xl md:text-4xl font-[1000] italic uppercase tracking-tighter mb-0.5
+          ${status === "win" ? "text-green-400" : "text-red-500"}`}
+        >
           {status === "win" ? "GRATULACJE!" : "NIESTETY..."}
         </h2>
         <p className="text-zinc-500 text-[10px] font-black tracking-[0.3em] uppercase mb-4">
-          {status === "win" ? `DZIEŃ #${dayNumber} · ${attempts}/5 PRÓB` : `DZIEŃ #${dayNumber} · SPRÓBUJ JUTRO!`}
+          {status === "win"
+            ? `DZIEŃ #${dayNumber} · ${attempts}/5 PRÓB`
+            : `DZIEŃ #${dayNumber} · SPRÓBUJ JUTRO!`}
         </p>
 
         {/* Song info – ABOVE youtube */}
 
         {/* YouTube – BELOW song info */}
         <div className="aspect-video w-full rounded-2xl overflow-hidden border border-white/8 mb-5 bg-black">
-          <iframe width="100%" height="100%"
+          <iframe
+            width="100%"
+            height="100%"
             src={`https://www.youtube.com/embed/${song.youtubeId}?autoplay=1`}
-            title="YouTube video player" frameBorder="0"
+            title="YouTube video player"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen />
+            allowFullScreen
+          />
         </div>
 
         <div className="mb-4 p-4 rounded-2xl bg-white/4 border border-white/8">
-          <h3 className="text-white font-[1000] italic uppercase text-xl md:text-2xl tracking-tight leading-tight">{song.title}</h3>
-          <p className="text-accent font-bold tracking-widest uppercase text-sm mt-1">{song.artist}</p>
+          <h3 className="text-white font-[1000] italic uppercase text-xl md:text-2xl tracking-tight leading-tight">
+            {song.title}
+          </h3>
+          <p className="text-accent font-bold tracking-widest uppercase text-sm mt-1">
+            {song.artist}
+          </p>
           {availablePlatforms.length > 0 && (
             <div className="flex items-center justify-center gap-2 mt-3">
               {availablePlatforms.map(({ key, Icon, color, label }) => (
-                <a key={key} href={song.platforms![key]!} target="_blank" rel="noopener noreferrer" aria-label={label}
+                <a
+                  key={key}
+                  href={song.platforms![key]!}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
                   className="w-7 h-7 rounded-full flex items-center justify-center bg-white/5 border border-white/10 hover:bg-white/15 hover:scale-110 active:scale-95 transition-all duration-200"
-                  style={{ color }}>
+                  style={{ color }}
+                >
                   <Icon />
                 </a>
               ))}
             </div>
           )}
         </div>
-
         {/* Actions */}
         <div className="flex flex-col gap-2.5">
           {/* Countdown */}
           <div className="w-full bg-zinc-900/80 text-white py-3 rounded-2xl font-black tracking-widest uppercase italic border border-white/10 flex items-center justify-center gap-2 text-sm">
             <Clock size={14} className="text-zinc-500" />
             <span className="text-zinc-400 text-xs">Nowa piosenka za</span>
-            <CountdownTimer onMidnight={handleMidnight} className="text-accent font-mono text-sm" />
+            <CountdownTimer
+              onMidnight={handleMidnight}
+              className="text-accent font-mono text-sm"
+            />
           </div>
 
           {/* Share */}
-          <ShareButton status={status} song={song} dayNumber={dayNumber} attempts={attempts} gameMode={gameMode} />
+          <ShareButton
+            status={status}
+            song={song}
+            dayNumber={dayNumber}
+            attempts={attempts}
+            gameMode={gameMode}
+          />
         </div>
       </motion.div>
     </motion.div>
@@ -164,8 +231,18 @@ export const EndGameModal = ({ status, song, onClose, dayNumber, attempts, gameM
 };
 
 // ─── Share button ─────────────────────────────────────────────────────────────
-const ShareButton = ({ status, song, dayNumber, attempts, gameMode }: {
-  status: "win" | "lose"; song: Song; dayNumber: number; attempts: number; gameMode: "rap" | "klasyki" | "soundtracki";
+const ShareButton = ({
+  status,
+  song,
+  dayNumber,
+  attempts,
+  gameMode,
+}: {
+  status: "win" | "lose";
+  song: Song;
+  dayNumber: number;
+  attempts: number;
+  gameMode: "rap" | "klasyki" | "soundtracki";
 }) => {
   const [copied, setCopied] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -191,19 +268,38 @@ const ShareButton = ({ status, song, dayNumber, attempts, gameMode }: {
 
   return (
     <>
-      <button onClick={handleShare}
-        className="flex items-center justify-center gap-2 w-full bg-white/5 border border-white/10 text-white py-3 rounded-2xl font-black tracking-widest hover:bg-white/10 active:scale-95 transition-all uppercase italic text-sm">
-        {copied
-          ? <><Check size={16} className="text-green-400" /><span className="text-green-400">Link skopiowany!</span></>
-          : <><Share2 size={16} className="text-accent" />Pobierz wynik</>}
+      <button
+        onClick={handleShare}
+        className="flex items-center justify-center gap-2 w-full bg-white/5 border border-white/10 text-white py-3 rounded-2xl font-black tracking-widest hover:bg-white/10 active:scale-95 transition-all uppercase italic text-sm"
+      >
+        {copied ? (
+          <>
+            <Check size={16} className="text-green-400" />
+            <span className="text-green-400">Link skopiowany!</span>
+          </>
+        ) : (
+          <>
+            <Share2 size={16} className="text-accent" />
+            Pobierz wynik
+          </>
+        )}
       </button>
-      {!copied && <p className="text-zinc-700 text-[10px] text-center -mt-1 tracking-wide">Link do strony zostanie skopiowany do schowka</p>}
+      {!copied && (
+        <p className="text-zinc-700 text-[10px] text-center -mt-1 tracking-wide">
+          Link do strony zostanie skopiowany do schowka
+        </p>
+      )}
 
       {/* Hidden share card */}
       <div className="fixed left-[-9999px] top-0">
-        <div ref={cardRef} className="w-[1080px] h-[1920px] bg-[#050505] flex flex-col items-center justify-between p-24 overflow-hidden relative">
-          <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] blur-[150px] rounded-full opacity-20 ${isWin ? "bg-green-500" : "bg-red-500"}`} />
-          
+        <div
+          ref={cardRef}
+          className="w-[1080px] h-[1920px] bg-[#050505] flex flex-col items-center justify-between p-24 overflow-hidden relative"
+        >
+          <div
+            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] blur-[150px] rounded-full opacity-20 ${isWin ? "bg-green-500" : "bg-red-500"}`}
+          />
+
           {/* Górna sekcja z trybem gry */}
           <div className="relative z-10 text-center mt-12">
             <div className="flex items-center justify-center gap-4 mb-6">
@@ -217,32 +313,61 @@ const ShareButton = ({ status, song, dayNumber, attempts, gameMode }: {
                 </p>
               </div>
             </div>
-            <p className="text-accent text-4xl font-black tracking-widest mb-4">DZIEŃ #{dayNumber}</p>
-            <h1 className="text-8xl font-[1000] italic tracking-tighter uppercase select-none leading-none text-white">JAKI<span className="text-accent">TO</span>WERS</h1>
+            <p className="text-accent text-4xl font-black tracking-widest mb-4">
+              DZIEŃ #{dayNumber}
+            </p>
+            <h1 className="text-8xl font-[1000] italic tracking-tighter uppercase select-none leading-none text-white">
+              JAKI<span className="text-accent">TO</span>WERS
+            </h1>
             <div className="h-1.5 w-40 bg-accent mx-auto mt-6 shadow-[0_0_20px_var(--accent-glow)]" />
           </div>
 
           {/* Środkowa sekcja z wynikiem */}
           <div className="relative z-10 text-center">
-            <div className={`text-[130px] font-[1000] italic leading-none uppercase tracking-tighter mb-8 ${isWin ? "text-green-400" : "text-red-500"}`}>
+            <div
+              className={`text-[130px] font-[1000] italic leading-none uppercase tracking-tighter mb-8 ${isWin ? "text-green-400" : "text-red-500"}`}
+            >
               {isWin ? "ZGADNIĘTE" : "Niezgadnięte"}
             </div>
-            {isWin && <div className="mb-10"><p className="text-white text-7xl font-black italic tracking-tighter">{attempts}/5</p><p className="text-zinc-500 text-2xl font-bold uppercase tracking-widest mt-2">wykorzystane próby</p></div>}
-            <div className={`px-12 py-4 rounded-full border-4 inline-block ${isWin ? "border-green-400/30 text-green-400" : "border-red-500/30 text-red-500"}`}>
-              <span className="text-4xl font-black tracking-widest uppercase">{isWin ? "GRATULACJE" : "SPRÓBUJ JUTRO"}</span>
+            {isWin && (
+              <div className="mb-10">
+                <p className="text-white text-7xl font-black italic tracking-tighter">
+                  {attempts}/5
+                </p>
+                <p className="text-zinc-500 text-2xl font-bold uppercase tracking-widest mt-2">
+                  wykorzystane próby
+                </p>
+              </div>
+            )}
+            <div
+              className={`px-12 py-4 rounded-full border-4 inline-block ${isWin ? "border-green-400/30 text-green-400" : "border-red-500/30 text-red-500"}`}
+            >
+              <span className="text-4xl font-black tracking-widest uppercase">
+                {isWin ? "GRATULACJE" : "SPRÓBUJ JUTRO"}
+              </span>
             </div>
           </div>
 
           {/* Dolna sekcja z piosenką */}
           <div className="relative z-10 w-full bg-zinc-900/60 border-2 border-white/10 rounded-[50px] p-16 backdrop-blur-3xl mb-12">
             <div className="flex flex-col items-center text-center">
-              <p className="text-zinc-500 text-2xl font-bold tracking-[0.4em] uppercase mb-8">{modeDescription}</p>
-              <h2 className="text-white text-7xl font-[1000] uppercase italic leading-tight mb-4">{song.title}</h2>
-              <p className="text-accent text-4xl font-bold uppercase tracking-[0.2em]">{song.artist}</p>
+              <p className="text-zinc-500 text-2xl font-bold tracking-[0.4em] uppercase mb-8">
+                {modeDescription}
+              </p>
+              <h2 className="text-white text-7xl font-[1000] uppercase italic leading-tight mb-4">
+                {song.title}
+              </h2>
+              <p className="text-accent text-4xl font-bold uppercase tracking-[0.2em]">
+                {song.artist}
+              </p>
             </div>
           </div>
 
-          <div className="relative z-10 opacity-30"><p className="text-white text-3xl font-bold tracking-[0.6em] uppercase">{SITE_URL.replace("https://", "")}</p></div>
+          <div className="relative z-10 opacity-30">
+            <p className="text-white text-3xl font-bold tracking-[0.6em] uppercase">
+              {SITE_URL.replace("https://", "")}
+            </p>
+          </div>
         </div>
       </div>
     </>
