@@ -1964,6 +1964,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    "id": 54,
+    "day": 54,
+    "title": "LEGENDARNA",
+    "artist": "Asster",
+    "audioSrc": "/Rap/Asster/Legendarna.mp3",
+    "youtubeId": "jTa_tcTM7cA",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Nie może mi tego zabraknąć, to uczucie nigdy nie było tak mocne (tak mocne)",
+            "start": 0.0,
+            "end": 3.34
+          },
+          {
+            "text": "Miałem problemy, jak powiedzieć szczerze, a teraz to wszystko wydaje się proste (się proste)",
+            "start": 3.34,
+            "end": 6.7
+          },
+          {
+            "text": "Ta suka co wierciła banię nie wie, jak pogodzić, choć dzieli to w chuj duży odstęp",
+            "start": 6.7,
+            "end": 10.23
+          },
+          {
+            "text": "Mam nową zbroję by chroniła rany, (tak) mówię do zioma: \"Wyjedziemy w Polskę\"",
+            "start": 10.23,
+            "end": 13.27
+          },
+          {
+            "text": "Ona dla mnie jest legendarna, ona dla mnie jest (yeah, yeah)",
+            "start": 13.27,
+            "end": 17.05
+          }
+        ]
+      }
+    ]
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
