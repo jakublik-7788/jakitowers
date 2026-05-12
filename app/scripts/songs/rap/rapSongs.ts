@@ -2004,6 +2004,46 @@ export const rapSongs: Song[] = [
       }
     ]
   },
+  {
+    "id": 55,
+    "day": 55,
+    "title": "ALE",
+    "artist": "RÓW BABICZE, Kinga Hornik",
+    "audioSrc": "/Rap/rowbabicze/ALE.mp3",
+    "youtubeId": "lNqlWGQRb5M",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Miałem zadbać o siebie, ale znów to olałem",
+            "start": 0.0,
+            "end": 1.75
+          },
+          {
+            "text": "Miałem wrócić wieczorem, ale wracam nad ranem",
+            "start": 1.75,
+            "end": 4.5
+          },
+          {
+            "text": "Miałem nie grać w kasynie, ale kurwa zagrałem",
+            "start": 4.5,
+            "end": 7.75
+          },
+          {
+            "text": "I wybrać tylko stówkę, ale 500 wybrałem",
+            "start": 7.75,
+            "end": 9.75
+          },
+          {
+            "text": "No bo się pojebałem, jeszcze 500 na barze",
+            "start": 9.75,
+            "end": 12.5
+          }
+        ]
+      }
+    ]
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
