@@ -2044,6 +2044,46 @@ export const rapSongs: Song[] = [
       }
     ]
   },
+  {
+    "id": 56,
+    "day": 56,
+    "title": "Nametag",
+    "artist": "Taco Hemingway, OKI, schafter, @atutowy",
+    "audioSrc": "/Rap/TacoHemingway/Nametag.mp3",
+    "youtubeId": "uioGIEHhH7s",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Marek, Mati, Maciek, Marcin czy Kazimierz",
+            "start": 0.0,
+            "end": 2.4
+          },
+          {
+            "text": "Podawałem grabę Marii, Mai, Marcie czy Martynie, kto wie",
+            "start": 2.4,
+            "end": 5.93
+          },
+          {
+            "text": "Pamiętam, jak pod domofonem zastanawiałem się, jak masz na imię",
+            "start": 5.93,
+            "end": 8.85
+          },
+          {
+            "text": "Mimo, że na podwórku wtedy spędzaliśmy razem każdą chwilę",
+            "start": 8.85,
+            "end": 11.71
+          },
+          {
+            "text": "Na szczęście braciszku, mama znała twoją ksywę",
+            "start": 11.71,
+            "end": 14.61
+          }
+        ]
+      }
+    ]
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays

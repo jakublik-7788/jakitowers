@@ -1524,4 +1524,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 56,
+    day: 56,
+    title: "Płoną góry płoną lasy",
+    artist: "Czerwone Gitary",
+    audioSrc: "/Klasyki/CzerwoneGitary/49_Płoną_góry__płoną_lasy.mp3",
+    youtubeId: "1WlgS-gYMcs",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Płoną góry, płoną lasy, nim je zgasi zmierzch,",
+            start: 0.0,
+            end: 6.46,
+          },
+          {
+            text: "Znowu minie noc, znowu minie dzień.",
+            start: 6.46,
+            end: 13.65,
+          },
+          {
+            text: "Płoną góry, płoną lasy, lecz nie dla mnie już,",
+            start: 13.65,
+            end: 19.85,
+          },
+          {
+            text: "Brak mi zwierzeń Twych, ciszy Twego snu.",
+            start: 19.85,
+            end: 27.95,
+          },
+          {
+            text: "Rzuć między nas najdłuższy lot,",
+            start: 27.95,
+            end: 39.35,
+          },
+        ],
+      },
+    ],
+  },
 ];
