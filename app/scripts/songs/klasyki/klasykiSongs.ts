@@ -1564,4 +1564,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 57,
+    day: 57,
+    title: "Dni których nie znamy",
+    artist: "Marek Grechuta",
+    audioSrc: "/Klasyki/Marek Grechuta/55_Dni__których_nie_znamy.mp3",
+    youtubeId: "kOzQ7yR7w74",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Gdy żałujesz tych",
+            start: 0.0,
+            end: 3.91,
+          },
+          {
+            text: "Z których nie masz nic",
+            start: 3.91,
+            end: 7.5,
+          },
+          {
+            text: "Jedno warto znać",
+            start: 7.5,
+            end: 10.89,
+          },
+          {
+            text: "Jedno tylko wiedz",
+            start: 10.89,
+            end: 14.27,
+          },
+          {
+            text: "Że ważne są tylko te dni, których jeszcze nie znamy",
+            start: 14.27,
+            end: 21.39,
+          },
+        ],
+      },
+    ],
+  },
 ];

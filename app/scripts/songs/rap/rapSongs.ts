@@ -2084,6 +2084,46 @@ export const rapSongs: Song[] = [
       }
     ]
   },
+  {
+    id: 57,
+    day: 57,
+    title: "Zabiorę Cię Tam",
+    artist: "Fukaj, Vito Bambino",
+    audioSrc: "/Rap/Fukaj/378_Zabiorę_Cię_Tam.mp3",
+    youtubeId: "QBEfTXp8Ru4",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ona mmm, ona woo",
+            start: 0.0,
+            end: 2.25,
+          },
+          {
+            text: "Jej strój w szwach pęka",
+            start: 2.25,
+            end: 7.65,
+          },
+          {
+            text: "Ona musi być z piekła (woo)",
+            start: 7.65,
+            end: 10.09,
+          },
+          {
+            text: "Niczym duch mnie traktuje, jakbym był z powietrza (mmm)",
+            start: 10.09,
+            end: 17.36,
+          },
+          {
+            text: "A jego dusza jest lekka (woo)",
+            start: 17.36,
+            end: 20.52,
+          }
+        ],
+      }
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
