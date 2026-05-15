@@ -1604,4 +1604,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 58,
+    day: 58,
+    title: "W Kinie W Lublinie - Kochaj Mnie",
+    artist: "Brathanki",
+    audioSrc: "/Klasyki/Brathanki/89_W_Kinie_W_Lublinie_-_Kochaj_Mnie.mp3",
+    youtubeId: "kWRhdN2XusA",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ale z calej siły kochaj",
+            start: 0.0,
+            end: 2.97,
+          },
+          {
+            text: "W gminie, w Kętrzynie - kochaj mnie",
+            start: 2.97,
+            end: 5.37,
+          },
+          {
+            text: "W metrze i w swetrze - kochaj mnie",
+            start: 5.37,
+            end: 7.54,
+          },
+          {
+            text: "Czy miasto czy wiocha ty mnie z całej siły kochaj",
+            start: 7.54,
+            end: 12.45,
+          },
+          {
+            text: "W radości no i w smutku",
+            start: 12.45,
+            end: 13.95,
+          },
+        ],
+      },
+    ],
+  },
 ];

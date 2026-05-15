@@ -2124,6 +2124,46 @@ export const rapSongs: Song[] = [
       }
     ],
   },
+  {
+    id: 58,
+    day: 58,
+    title: "Czerwony Rum",
+    artist: "Słoń, Chris Carson",
+    audioSrc: "/Rap/Słoń/293_Czerwony_Rum.mp3",
+    youtubeId: "auaIB_FWnys",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Śmieciu, oby chuj cię strzelił",
+            start: 0.0,
+            end: 2.14,
+          },
+          {
+            text: "Mam gadkę jakbym zamiast gumy Orbit żuł C4",
+            start: 2.14,
+            end: 4.46,
+          },
+          {
+            text: "Mam również żółte zęby i przeokropnie cuchnę",
+            start: 4.46,
+            end: 7.05,
+          },
+          {
+            text: "Bo moje myśli są tak brudne, że się pocę gównem",
+            start: 7.05,
+            end: 9.49,
+          },
+          {
+            text: "Co tam u mnie? Hmm, no bywa nielekko",
+            start: 9.49,
+            end: 12.14,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
