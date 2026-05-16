@@ -2164,6 +2164,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 59,
+    day: 59,
+    title: "joint i sport",
+    artist: "kuqe 2115, francis",
+    audioSrc: "/Rap/kuqe/291_joint_i_sport.mp3",
+    youtubeId: "6WGXvhBNE64",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Jest już późna pora, patrzę się na zioma",
+            start: 0.0,
+            end: 2.54,
+          },
+          {
+            text: "Wygląda, jakby miał zaraz, kurwa, zwymiotować",
+            start: 2.54,
+            end: 5.19,
+          },
+          {
+            text: "Myślę - olaboga, to wadliwy towar",
+            start: 5.19,
+            end: 7.64,
+          },
+          {
+            text: "A się okazało, że on wcześniej pił alkohol",
+            start: 7.64,
+            end: 9.87,
+          },
+          {
+            text: "To jest joint i sport, każdy wie, o co kaman",
+            start: 9.87,
+            end: 12.62,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays

@@ -1644,4 +1644,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 59,
+    day: 59,
+    title: "Jezioro szczęścia",
+    artist: "Bajm",
+    audioSrc: "/Klasyki/Bajm/82_Jezioro_szczęścia.mp3",
+    youtubeId: "DveOTb29CgE",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Wspomnienia jak lawa gorąca",
+            start: 0.0,
+            end: 4.04,
+          },
+          {
+            text: "Uciekam przed nimi tak co noc",
+            start: 4.04,
+            end: 28.19,
+          },
+          {
+            text: "Jezioro ma Twój zapach",
+            start: 28.19,
+            end: 31.11,
+          },
+          {
+            text: "I twój smak",
+            start: 31.11,
+            end: 36.16,
+          },
+          {
+            text: "Czuję to, gdy tylko",
+            start: 36.16,
+            end: 38.52,
+          },
+        ],
+      },
+    ],
+  },
 ];
