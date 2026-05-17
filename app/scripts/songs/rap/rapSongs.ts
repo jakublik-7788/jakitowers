@@ -2204,6 +2204,86 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 259,
+    day: 259,
+    title: "Nowy sezon",
+    artist: "Young Multi",
+    audioSrc: "/Rap/Multi/261_Nowy_sezon.mp3",
+    youtubeId: "IftH7Yrpqw0",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Jak wbijamy w klubie one chciałyby nas mieć",
+            start: 0.0,
+            end: 2.37,
+          },
+          {
+            text: "To jest nowy wymiar, jak zrozumiesz zbijaj pięć",
+            start: 2.37,
+            end: 4.73,
+          },
+          {
+            text: "Mózg mam milionera, mierzę dużo wyżej tam",
+            start: 4.73,
+            end: 6.97,
+          },
+          {
+            text: "W dół nie lecę, ja to satelita wyżej was",
+            start: 6.97,
+            end: 9.28,
+          },
+          {
+            text: "W drodze na szczyt będą ciągle chcieli zabić nas",
+            start: 9.28,
+            end: 11.6,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 60,
+    day: 60,
+    title: "Nowy sezon",
+    artist: "Young Multi",
+    audioSrc: "/Rap/Multi/261_Nowy_sezon.mp3",
+    youtubeId: "IftH7Yrpqw0",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Jak wbijamy w klubie one chciałyby nas mieć",
+            start: 0.0,
+            end: 2.37,
+          },
+          {
+            text: "To jest nowy wymiar, jak zrozumiesz zbijaj pięć",
+            start: 2.37,
+            end: 4.73,
+          },
+          {
+            text: "Mózg mam milionera, mierzę dużo wyżej tam",
+            start: 4.73,
+            end: 6.97,
+          },
+          {
+            text: "W dół nie lecę, ja to satelita wyżej was",
+            start: 6.97,
+            end: 9.28,
+          },
+          {
+            text: "W drodze na szczyt będą ciągle chcieli zabić nas",
+            start: 9.28,
+            end: 11.6,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays

@@ -1684,4 +1684,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 60,
+    day: 60,
+    title: "Rapapara",
+    artist: "Łydka Grubasa",
+    audioSrc: "/Klasyki/Łydka Grubasa/63_Rapapara.mp3",
+    youtubeId: "KfUDsnSpesc",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Lecz ciągle widział ten wielki ryj",
+            start: 0.0,
+            end: 3.92,
+          },
+          {
+            text: "W łóżku i w pracy, noce i dnie",
+            start: 3.92,
+            end: 7.7,
+          },
+          {
+            text: "Z hipopotamem kojarzył się",
+            start: 7.7,
+            end: 11.34,
+          },
+          {
+            text: "Rapapara, rapapara miała ryja jak kopara",
+            start: 11.34,
+            end: 18.91,
+          },
+          {
+            text: "Rapapara, rapapara miała ryja jak kopara",
+            start: 18.91,
+            end: 26,
+          },
+        ],
+      },
+    ],
+  },
 ];
