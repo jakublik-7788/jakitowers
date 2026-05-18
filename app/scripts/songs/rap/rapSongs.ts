@@ -2284,6 +2284,47 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 61,
+    day: 61,
+    title: "3 w nocy w Międzyzdrojach",
+    artist:
+      "SB Maffija, Mata, White 2115, Wyguś, WoLa, slowez, Mario, Pedro, wxrrior, SHDØW",
+    audioSrc: "/Rap/SBM/250_3_w_nocy_w_Międzyzdrojach.mp3",
+    youtubeId: "ZYAKFD0tycw",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Czekaj na mnie, proszę, jak emeryt na rentę",
+            start: 0.0,
+            end: 2.76,
+          },
+          {
+            text: "Czekaj na mnie, proszę, jak pierścionek na rękę",
+            start: 2.76,
+            end: 5.35,
+          },
+          {
+            text: "Czekaj na mnie, proszę, jak suka na komendę",
+            start: 5.35,
+            end: 7.93,
+          },
+          {
+            text: "Może kiedyś będę i zrobimy sobie zdjęcie",
+            start: 7.93,
+            end: 11.34,
+          },
+          {
+            text: "Ej mała, jesteśmy tu, yeah",
+            start: 11.34,
+            end: 13.43,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
