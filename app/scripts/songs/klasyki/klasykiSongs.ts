@@ -1724,4 +1724,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+   {
+    id: 61,
+    day: 61,
+    title: "Zamki na piasku",
+    artist: "Lady Pank",
+    audioSrc: "/Klasyki/Lady Pank/67_Zamki_na_piasku.mp3",
+    youtubeId: "IWnnhRNUOMQ",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Jesteś idolem",
+            start: 0.0,
+            end: 2.7,
+          },
+          {
+            text: "Wielbi cię tłum",
+            start: 2.7,
+            end: 5.43,
+          },
+          {
+            text: "Gdzie się pojawisz słychać",
+            start: 5.43,
+            end: 8.14,
+          },
+          {
+            text: "Zdumionych głosów szum",
+            start: 8.14,
+            end: 10.86,
+          },
+          {
+            text: "W porannej prasie widzisz",
+            start: 10.86,
+            end: 13,
+          },
+        ],
+      },
+    ],
+  },
 ];
