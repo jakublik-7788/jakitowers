@@ -1764,4 +1764,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 62,
+    day: 62,
+    title: "Psychologa",
+    artist: "Happysad",
+    audioSrc: "/Klasyki/Happysad/112_Psychologa___.mp3",
+    youtubeId: "z2OUQcf7xUM",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Zdolności kredytowej",
+            start: 0.0,
+            end: 3.57,
+          },
+          {
+            text: "Ja sobie sam poradzę",
+            start: 3.57,
+            end: 5.44,
+          },
+          {
+            text: "Mam dosyć Twoich marzeń",
+            start: 5.44,
+            end: 7.43,
+          },
+          {
+            text: "Ja sobie sam poradzę",
+            start: 7.43,
+            end: 10.74,
+          },
+          {
+            text: "Wszyscy politycy, dziennikarze",
+            start: 10.74,
+            end: 12.8,
+          },
+        ],
+      },
+    ],
+  },
 ];

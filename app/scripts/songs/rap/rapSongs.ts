@@ -2325,6 +2325,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 62,
+    day: 62,
+    title: "Nicea",
+    artist: "PRO8L3M",
+    audioSrc: "/Rap/PROBLEM/255_Nicea.mp3",
+    youtubeId: "846ml4oPRiU",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "W szklance - lód, mięta, limeta, Olmeca",
+            start: 0.0,
+            end: 1.79,
+          },
+          {
+            text: "Cook wypieka steka",
+            start: 1.79,
+            end: 4.14,
+          },
+          {
+            text: "Na ścianie olejny Moneta, kurwa nie tapeta",
+            start: 4.14,
+            end: 7.35,
+          },
+          {
+            text: "Kolega wygląda jak Przemek Saleta, blondyna to kurwa Aneta",
+            start: 7.35,
+            end: 10.94,
+          },
+          {
+            text: "W wicie Berreta, w niej stygnie full metal",
+            start: 10.94,
+            end: 14.93,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
