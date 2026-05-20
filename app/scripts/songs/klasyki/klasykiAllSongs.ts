@@ -138,4 +138,5 @@ export const klasykiAllSongs: SongSuggestion[] = [
   { title: "Cicho", artist: "Ewa Farna" },
   { title: "Ewakuacja", artist: "Ewa Farna" },
   { title: "Znak", artist: "Ewa Farna" },
+  { title: "W Kinie W Lublinie - Kochaj Mnie", artist: "Brathanki" },
 ];
