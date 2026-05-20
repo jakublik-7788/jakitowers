@@ -1804,4 +1804,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 63,
+    day: 63,
+    title: "Kiedyś było inaczej",
+    artist: "Jeden Osiem L",
+    audioSrc: "/Klasyki/Jeden Osiem L/120_Kiedyś_było_inaczej.mp3",
+    youtubeId: "6cvoB3OS19w",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Porażkami się nie przejmuj",
+            start: 0.0,
+            end: 1.56,
+          },
+          {
+            text: "Chociaż było ich tyle",
+            start: 1.56,
+            end: 3.0,
+          },
+          {
+            text: "Kiedyś było inaczej",
+            start: 3.0,
+            end: 4.25,
+          },
+          {
+            text: "Zapamiętaj dobre chwile",
+            start: 4.25,
+            end: 5.87,
+          },
+          {
+            text: "Porażkami się nie przejmuj",
+            start: 5.87,
+            end: 7.18,
+          },
+        ],
+      },
+    ],
+  },
 ];

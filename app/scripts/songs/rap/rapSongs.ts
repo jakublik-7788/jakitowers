@@ -2365,6 +2365,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 63,
+    day: 63,
+    title: "Cześć",
+    artist: "Sokół, Sarius, Zeppy Zep",
+    audioSrc: "/Rap/Sokol/256_Cześć.mp3",
+    youtubeId: "SpYGMFeuv4c",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: 'Jeden mówił na mnie "Pościg", szukałem go po melanżach',
+            start: 0.0,
+            end: 5.56,
+          },
+          {
+            text: "Ksywka nie do wiadomości, takie czasy, taka branża",
+            start: 5.56,
+            end: 10.52,
+          },
+          {
+            text: 'Moje byłe mówią "Uf", a co innego mówią po trzecim winie',
+            start: 10.52,
+            end: 14.97,
+          },
+          {
+            text: 'Mój manager po weekendzie znów, mówi o mnie "Cud, że żyję"',
+            start: 14.97,
+            end: 19.6,
+          },
+          {
+            text: 'Bonus mówił, "Wojtuś dawaj", stoję murem jak pół Polski',
+            start: 19.6,
+            end: 23.23,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
