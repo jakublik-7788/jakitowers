@@ -1844,4 +1844,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+   {
+    id: 64,
+    day: 64,
+    title: "Historia jednej znajomości",
+    artist: "Czerwone Gitary",
+    audioSrc: "/Klasyki/CzerwoneGitary/98_Historia_jednej_znajomości.mp3",
+    youtubeId: "t9Y5om7VaPQ",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Upływały razem nam",
+            start: 0.0,
+            end: 4.56,
+          },
+          {
+            text: "Rano skwer, plaża lub",
+            start: 4.56,
+            end: 9.16,
+          },
+          {
+            text: "Molo gdy zapadał zmierzch",
+            start: 9.16,
+            end: 12.68,
+          },
+          {
+            text: "Molo gdy zapadał zmierzch",
+            start: 12.68,
+            end: 17.88,
+          },
+          {
+            text: "Sia-la-la-la-la-la-la-la-la-la",
+            start: 17.88,
+            end: 21.85,
+          },
+        ],
+      },
+    ],
+  },
 ];

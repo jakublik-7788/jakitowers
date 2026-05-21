@@ -2405,6 +2405,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 64,
+    day: 64,
+    title: "LATAWCE",
+    artist: "bambi, SecretiveSuicide",
+    audioSrc: "/Rap/Bambi/257_LATAWCE.mp3",
+    youtubeId: "8Tc3Iurkv8",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Za mały koszt mamy all-inclusive travel",
+            start: 0.0,
+            end: 3.66,
+          },
+          {
+            text: "Zamawiam jazz, nie ten na głośniku",
+            start: 3.66,
+            end: 5.21,
+          },
+          {
+            text: "Obok twoja ex, najebała się Malibu",
+            start: 5.21,
+            end: 7.05,
+          },
+          {
+            text: "Potyka się o nogi, zaraz zrobi fiku-miku",
+            start: 7.05,
+            end: 8.8,
+          },
+          {
+            text: "Wykręciła taki lot, jak stąd do Kairu",
+            start: 8.8,
+            end: 10.83,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
