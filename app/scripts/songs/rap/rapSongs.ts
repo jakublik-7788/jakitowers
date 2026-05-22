@@ -2445,6 +2445,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 65,
+    day: 65,
+    title: "Doja Cat",
+    artist: "OKI, @atutowy",
+    audioSrc: "/Rap/OKI/258_Doja_Cat.mp3",
+    youtubeId: "foMoXXA476k",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Wszystko oversize, jej dupa plus size",
+            start: 0.0,
+            end: 2.48,
+          },
+          {
+            text: "Twoją twarz, dziś podkreśla mój ice",
+            start: 2.48,
+            end: 4.4,
+          },
+          {
+            text: "Proszę daj mi jeszcze chwilę",
+            start: 4.4,
+            end: 6.12,
+          },
+          {
+            text: "Bo ten rap to w jedną stronę bilet",
+            start: 6.12,
+            end: 8.66,
+          },
+          {
+            text: "Daj mi chwilę",
+            start: 8.66,
+            end: 9.44,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays

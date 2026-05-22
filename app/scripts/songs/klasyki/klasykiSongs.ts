@@ -1884,4 +1884,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 65,
+    day: 65,
+    title: "Iść W Stronę Słońca",
+    artist: "Dwa plus Jeden",
+    audioSrc: "/Klasyki/Dwa plus Jeden/99_Słońca.mp3",
+    youtubeId: "aWQz6lrZ3Pw",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Iść ciągle iść w stronę słońca",
+            start: 0.0,
+            end: 7.65,
+          },
+          {
+            text: "W stronę słońca aż po horyzontu kres",
+            start: 7.65,
+            end: 15.35,
+          },
+          {
+            text: "Iść ciągle iść tak bez końca",
+            start: 15.35,
+            end: 24.75,
+          },
+          {
+            text: "Witać jeden przebudzony właśnie dzień",
+            start: 24.75,
+            end: 32.55,
+          },
+          {
+            text: "Wciąż witać go jak nadziei dobry znak",
+            start: 32.55,
+            end: 41.6,
+          },
+        ],
+      },
+    ],
+  },
 ];
