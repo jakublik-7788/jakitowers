@@ -1924,4 +1924,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 66,
+    day: 66,
+    title: "Byłaś dla Mnie Wszystkim",
+    artist: "Poparzeni Kawą Trzy",
+    audioSrc: "/Klasyki/Poparzeni Kawą Trzy/53_Byłaś_dla_Mnie_Wszystkim.mp3",
+    youtubeId: "bRircB2hwSU",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Lekarstwem na zgagę",
+            start: 0.05,
+            end: 1.37,
+          },
+          {
+            text: "Promocją w spożywczym",
+            start: 1.37,
+            end: 2.76,
+          },
+          {
+            text: "Tramwajem na Pragę",
+            start: 2.76,
+            end: 4.32,
+          },
+          {
+            text: "Napojem odżywczym",
+            start: 4.32,
+            end: 5.62,
+          },
+          {
+            text: "Paczką papierosów",
+            start: 5.62,
+            end: 7.5,
+          },
+        ],
+      },
+    ],
+  },
 ];
