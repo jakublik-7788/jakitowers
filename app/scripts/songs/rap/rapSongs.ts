@@ -2525,6 +2525,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 67,
+    day: 67,
+    title: "Labirynt",
+    artist: "Waima",
+    audioSrc: "/Rap/Waima/260_Labirynt.mp3",
+    youtubeId: "ey671dBpapU",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Zdzieram dla nich gardło, teraz to nie muszę nic pomiędzy wybierać",
+            start: 0.0,
+            end: 3.27,
+          },
+          {
+            text: "To nie takie proste jest, (yeah, yeah) blokuje im dostęp, yeah (yeah, yeah)",
+            start: 3.27,
+            end: 6.69,
+          },
+          {
+            text: "No bo te emocje są fejk jak chuj, a ja bardzo cenię swój czas (yeah)",
+            start: 6.69,
+            end: 10.24,
+          },
+          {
+            text: "Nie chcę tych rozterek, (yeah, yeah) bo ryją mi beret (yeah, yeah)",
+            start: 10.24,
+            end: 13.64,
+          },
+          {
+            text: "Robię zawijkę i puszczam z dymem ten syf, co by kopał nas",
+            start: 13.64,
+            end: 16.94,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays

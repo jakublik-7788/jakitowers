@@ -1964,4 +1964,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 67,
+    day: 67,
+    title: "Chodź na kolana",
+    artist: "Czadoman",
+    audioSrc: "/Klasyki/Czadoman/96_Chodź_na_kolana.mp3",
+    youtubeId: "p_PJM7F9_jc",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Powiedz mi, czego chciałabyś dziewczyno",
+            start: 0.0,
+            end: 3.72,
+          },
+          {
+            text: "Po środku nocy, sami ze sobą",
+            start: 3.72,
+            end: 7.13,
+          },
+          {
+            text: "Tak bardzo chciałbym zostać tutaj z Tobą",
+            start: 7.13,
+            end: 10.41,
+          },
+          {
+            text: "Choć na kolana i nie mów, że nie wypada",
+            start: 10.41,
+            end: 16.74,
+          },
+          {
+            text: "No chodź na kolana i nie mów, że nie wypada",
+            start: 16.74,
+            end: 23.87,
+          },
+        ],
+      },
+    ],
+  },
 ];
