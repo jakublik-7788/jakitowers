@@ -2485,6 +2485,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 66,
+    day: 66,
+    title: "Nowy biggie",
+    artist: "Białas",
+    audioSrc: "/Rap/Bialas/259_Nowy_biggie.mp3",
+    youtubeId: "9Zd9OeEqlHs",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Który tam odperdolił ćwiarę",
+            start: 0.0,
+            end: 2.2,
+          },
+          {
+            text: "Ja jestem raperem",
+            start: 2.2,
+            end: 3.04,
+          },
+          {
+            text: "Zajmuje się punchem",
+            start: 3.04,
+            end: 3.92,
+          },
+          {
+            text: "Ty jesteś gangsterem",
+            start: 3.92,
+            end: 4.89,
+          },
+          {
+            text: "Aż nie przyjdzie gangster",
+            start: 4.89,
+            end: 7.33,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
