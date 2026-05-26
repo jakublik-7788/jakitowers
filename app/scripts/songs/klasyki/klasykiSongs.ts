@@ -2004,4 +2004,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+      id: 68,
+      day: 68,
+      title: "Kwiaty we włosach",
+      artist: "Czerwone Gitary",
+      audioSrc: "/Klasyki/CzerwoneGitary/97_Kwiaty_we_włosach.mp3",
+      youtubeId: "e0Flwrc7oAQ",
+      lyrics: [
+        {
+          lineIndex: 0,
+          words: [
+            {
+              text: "Nie powiem, Tak, nie powiem, Nie",
+              start: 0.0,
+              end: 4.51,
+            },
+            {
+              text: "Bez wspomnień czasem łatwiej żyć",
+              start: 4.51,
+              end: 8.56,
+            },
+            {
+              text: "Nie wraca nic",
+              start: 8.56,
+              end: 14.11,
+            },
+            {
+              text: "Kwiaty we włosach potargał wiatr",
+              start: 14.11,
+              end: 18.48,
+            },
+            {
+              text: "Wyrzuć z pamięci ostatni ślad",
+              start: 18.48,
+              end: 22.51,
+            },
+          ],
+        },
+      ],
+    },
 ];

@@ -2565,6 +2565,42 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 179,
+    day: 179,
+    title: "DRESSCODE",
+    artist: "2115, Bedoes 2115, White 2115, prześwit, Taco Hemingway",
+    audioSrc: "/Rap/2115/179_DRESSCODE.mp3",
+    youtubeId: "AYRRolY_pek",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Czuję się jak gwiazda, kiedy na mnie Céline i Dior",
+            start: 0.0,
+            end: 2.89,
+          },
+          {
+            text: "Dziś mam humor znów na mały fell in love",
+            start: 2.89,
+            end: 5.48,
+          },
+          {
+            text: "Każde moje słowo podpisuję jako Pretty Boy",
+            start: 5.48,
+            end: 7.96,
+          },
+          { text: "Ona ma na sobie tank top (hej)", start: 7.96, end: 10.72 },
+          {
+            text: "Ja na głowie znowu bankroll, honey",
+            start: 10.72,
+            end: 13.35,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
