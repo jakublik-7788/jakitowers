@@ -2601,6 +2601,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+      id: 69,
+      day:690,
+      title: "Crash Test",
+      artist: "PRO8L3M",
+      audioSrc: "/Rap/PROBLEM/180_CrashTest.mp3",
+      youtubeId: "zKOzQdmXotI",
+      lyrics: [
+        {
+          lineIndex: 0,
+          words: [
+            {
+              text: "Ja, ona, zawsze, niszczę to jak kastet (to jak kastet)",
+              start: 0.0,
+              end: 3.93,
+            },
+            {
+              text: "Odpalam Kraftwerk, auto, mur, crash test",
+              start: 3.93,
+              end: 7.5,
+            },
+            {
+              text: "(I've been so lonely since you went away)",
+              start: 7.5,
+              end: 11.05,
+            },
+            {
+              text: "(I've been so lonely without you everyday)",
+              start: 11.05,
+              end: 14.09,
+            },
+            {
+              text: 'Ja nie mówię jej "kocham", gdy pyta czy zostać',
+              start: 14.09,
+              end: 17.59,
+            },
+          ],
+        },
+      ],
+    },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays

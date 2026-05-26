@@ -2044,4 +2044,44 @@ export const klasykiSongs: Song[] = [
         },
       ],
     },
+    {
+    id: 69,
+    day: 69,
+    title: "Rudy się żeni",
+    artist: "Big Cyc",
+    audioSrc: "/Klasyki/Big Cyc/87_Rudy_Się_Żeni_-_Live.mp3",
+    youtubeId: "7XbHztbxX60",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ja nie wierzę w to do dzisiaj, że Rudy się żeni",
+            start: 0.0,
+            end: 8,
+          },
+          {
+            text: "On pił piwo, słuchał punka i lubił się bić",
+            start: 8,
+            end: 16,
+          },
+          {
+            text: "Ale ona go kocha i ona to zmieni",
+            start: 16,
+            end: 24,
+          },
+          {
+            text: "Bo w kagańcu w potulną owcę, zmienia się dziki lew",
+            start: 24,
+            end: 32,
+          },
+          {
+            text: "Rudy, Rudy się żeni",
+            start: 32,
+            end: 36,
+          },
+        ],
+      },
+    ],
+  },
 ];
