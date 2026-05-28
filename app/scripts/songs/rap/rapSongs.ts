@@ -2641,6 +2641,86 @@ export const rapSongs: Song[] = [
         },
       ],
     },
+    {
+    id: 70,
+    day: 70,
+    title: "Papi Papi",
+    artist: "Deemz, Beteo, Kizo, Kabe",
+    audioSrc: "/Rap/Deemz/336_Papi_Papi.mp3",
+    youtubeId: "SXFS1-BEtaQ",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Szkło w górę i nie pamiętam tej sytuacji",
+            start: 0.0,
+            end: 3.5,
+          },
+          {
+            text: "Papi papi, papi chulo",
+            start: 3.5,
+            end: 5.75,
+          },
+          {
+            text: "Mami mami, vaffanculo",
+            start: 5.75,
+            end: 8.1,
+          },
+          {
+            text: "Jaka wifey, do kolacji",
+            start: 8.1,
+            end: 10.15,
+          },
+          {
+            text: "Szkło w górę i nie pamiętam tej sytuacji",
+            start: 10.15,
+            end: 12.67,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 71,
+    day: 71,
+    title: "Brak snu stres i używki",
+    artist: "Żabson, Szpaku",
+    audioSrc: "/Rap/Zabson/337_Brak_snu__stres_i_używki.mp3",
+    youtubeId: "lXkQaLMHNys",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Chcieli mnie zatłuc brachu i nadal chcą",
+            start: 0.0,
+            end: 2.56,
+          },
+          {
+            text: "Bo byłem nie raz szczerszy od wariografu",
+            start: 2.56,
+            end: 4.92,
+          },
+          {
+            text: "Przez to dziś strzelam wersy jak z automatu",
+            start: 4.92,
+            end: 7.57,
+          },
+          {
+            text: "Dlatego lecą hajsy z bankomatu",
+            start: 7.57,
+            end: 9.9,
+          },
+          {
+            text: "Jak masz do tego zdrowie, to idź sam to zarób",
+            start: 9.9,
+            end: 12.63,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays

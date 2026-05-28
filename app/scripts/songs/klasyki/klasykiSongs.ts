@@ -2084,4 +2084,84 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    "id": 70,
+    "day": 70,
+    "title": "Piła Tango",
+    "artist": "Strachy Na Lachy",
+    "audioSrc": "/Klasyki/Strachy Na Lachy/PilaTango.mp3",
+    "youtubeId": "mljV3nUVGk4",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Czarna Bandera",
+            "start": 0.0,
+            "end": 3.56
+          },
+          {
+            "text": "Ukłoń się świrom",
+            "start": 3.56,
+            "end": 7.5
+          },
+          {
+            "text": "Żyj, nie umieraj",
+            "start": 7.5,
+            "end": 12.44
+          },
+          {
+            "text": "Gruby jak armata Szczepan błąkał się po kuli ziemskiej",
+            "start": 12.44,
+            "end": 16.17
+          },
+          {
+            "text": "Trafił do Ameryki prosto z Legii Cudzoziemskiej",
+            "start": 16.17,
+            "end": 20.58
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "day": 71,
+    "title": "Cicho",
+    "artist": "Ewa Farna",
+    "audioSrc": "/Klasyki/EwaFarna/Cicho.mp3",
+    "youtubeId": "IvsqIr0_cCQ",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Cicho jakby cały świat",
+            "start": 0.0,
+            "end": 4.02
+          },
+          {
+            "text": "Zgasił światło, poszedł spać",
+            "start": 4.02,
+            "end": 8.27
+          },
+          {
+            "text": "Mamy kłopot - Ty i ja",
+            "start": 8.27,
+            "end": 12.25
+          },
+          {
+            "text": "Jak słów odkryć smak",
+            "start": 12.25,
+            "end": 17.36
+          },
+          {
+            "text": "Między nami nuda, strach",
+            "start": 17.36,
+            "end": 21.88
+          }
+        ]
+      }
+    ]
+  },
 ];
