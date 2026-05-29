@@ -2164,4 +2164,44 @@ export const klasykiSongs: Song[] = [
       }
     ]
   },
+  {
+    id: 72,
+    day: 72,
+    title: "Tylko ona jedyna",
+    artist: "After Party",
+    audioSrc: "/Klasyki/AfterParty/80_Tylko_ona_jedyna_-_Radio_Edit.mp3",
+    youtubeId: "cVLIqMSYNls",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ja na Ciebie bardzo lubię patrzeć",
+            start: 0.0,
+            end: 2.55,
+          },
+          {
+            text: "Bo jesteś dla mnie wszystkim, jesteś moim skarbem",
+            start: 2.55,
+            end: 6.85,
+          },
+          {
+            text: "Whoa",
+            start: 6.85,
+            end: 8.45,
+          },
+          {
+            text: "Jesteś moim skarbem, whoa (whoa)",
+            start: 8.45,
+            end: 12.95,
+          },
+          {
+            text: "Skarbem...",
+            start: 12.95,
+            end: 15, // brak kolejnego timestampu
+          },
+        ],
+      },
+    ],
+  },
 ];

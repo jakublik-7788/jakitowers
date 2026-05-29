@@ -2721,6 +2721,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 72,
+    day: 72,
+    title: "Plata o Plomo II",
+    artist: "Bambo the Smuggler, Zachim, Mobbyn",
+    audioSrc: "/Rap/Mobbyn/339_Plata_o_Plomo_II.mp3",
+    youtubeId: "olE0KiPA-cg",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Czy jakiś Łukasz co nie śmierdzi groszem, sypie proszek",
+            start: 0.0,
+            end: 3.45,
+          },
+          {
+            text: "Zawijam se rakietę, a ty Federer Roger, a ty Federer Roger",
+            start: 3.45,
+            end: 8.18,
+          },
+          {
+            text: "Wpierdalasz Felix w puszkach, mi towar Felix puszcza",
+            start: 8.18,
+            end: 11.09,
+          },
+          {
+            text: "Nie słucham Kiki, KEKE i nie słucham DJ Musztard",
+            start: 11.09,
+            end: 14.21,
+          },
+          {
+            text: "Hajsy w papierkach mam bo wyjebane na twój pierdolony PayPal mam",
+            start: 14.21,
+            end: 19.94,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
