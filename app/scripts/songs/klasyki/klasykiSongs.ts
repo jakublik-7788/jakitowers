@@ -2204,4 +2204,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 73,
+    day: 73,
+    title: "Mniej niż zero",
+    artist: "Lady Pank",
+    audioSrc: "/Klasyki/Lady Pank/79_Mniej_niż_zero.mp3",
+    youtubeId: "Lc-26SnSmok",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Specjaliści od śpiewu i mas",
+            start: 0.0,
+            end: 3.29,
+          },
+          {
+            text: "Choćbyś nie chciał i tak znajdą sposób",
+            start: 3.29,
+            end: 6.73,
+          },
+          {
+            text: "Na swej wadze położą nie raz",
+            start: 6.73,
+            end: 10.4,
+          },
+          {
+            text: "Choć to fizyce wbrew",
+            start: 10.4,
+            end: 14.27,
+          },
+          {
+            text: "Wskazówka cofa się",
+            start: 14.27,
+            end: 16.39,
+          },
+        ],
+      },
+    ],
+  },
 ];

@@ -2761,6 +2761,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 73,
+    day: 73,
+    title: "Patocelebryta",
+    artist: "Kizo, Sergiusz",
+    audioSrc: "/Rap/Kizo/341_Patocelebryta.mp3",
+    youtubeId: "lNX-W2QYgHg",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Całe życie w dresie, dusza ubrana w kewlar (ej)",
+            start: 0.0,
+            end: 3.33,
+          },
+          {
+            text: "Z prostytutkami (hejka) na hejka, z psami na bakier",
+            start: 3.33,
+            end: 6.87,
+          },
+          {
+            text: "Pato-celebryta raper (ej)",
+            start: 6.87,
+            end: 9.13,
+          },
+          {
+            text: "Biorę diabła na chatę (ej), mam anioła na masce (ej)",
+            start: 9.13,
+            end: 12.03,
+          },
+          {
+            text: "Pokazałem Burj Khalifę (ej), potem zrobiła laskę (wooahu)",
+            start: 12.03,
+            end: 16.55,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
