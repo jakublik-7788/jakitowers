@@ -2244,4 +2244,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 74,
+    day: 74,
+    title: "Dzień jeden w roku",
+    artist: "Czerwone Gitary",
+    audioSrc: "/Klasyki/CzerwoneGitary/78_Dzień_jeden_w_roku.mp3",
+    youtubeId: "XWRRK-ws2Sk",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Tylko jeden raz do roku",
+            start: 0.0,
+            end: 4.51,
+          },
+          {
+            text: "Dzień, zwykły dzień",
+            start: 4.51,
+            end: 9.02,
+          },
+          {
+            text: "Który liczy się od zmroku",
+            start: 9.02,
+            end: 15.3,
+          },
+          {
+            text: "Jest taki dzień",
+            start: 15.3,
+            end: 19.03,
+          },
+          {
+            text: "Gdy jesteśmy wszyscy razem",
+            start: 19.03,
+            end: 24.45,
+          },
+        ],
+      },
+    ],
+  },
 ];

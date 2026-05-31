@@ -2801,6 +2801,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 74,
+    day: 74,
+    title: "Młody Boss",
+    artist: "Żabson",
+    audioSrc: "/Rap/Zabson/334_Młody_Boss.mp3",
+    youtubeId: "rTf0G9AY4w0",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ciągle rosnę, jakbym grał w Mario Bros",
+            start: 0.0,
+            end: 4.28,
+          },
+          {
+            text: "Sam się rządzę, pierdolę każdy rząd",
+            start: 4.28,
+            end: 7.78,
+          },
+          {
+            text: "Chcą zabrać me pieniądze i ustawić mnie w rząd",
+            start: 7.78,
+            end: 11.9,
+          },
+          {
+            text: "Zabronić jarać sort, a ja to młody boss",
+            start: 11.9,
+            end: 17.04,
+          },
+          {
+            text: "Ciągle rosnę, jakbym grał w Mario Bros",
+            start: 17.04,
+            end: 21.44,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
