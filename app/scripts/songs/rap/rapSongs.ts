@@ -2841,6 +2841,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 75,
+    day: 75,
+    title: "WAWA022",
+    artist: "Sentino, Diho, BNP",
+    audioSrc: "/Rap/Sentino/375_WAWA022.mp3",
+    youtubeId: "klMPPBhObo4",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "I niejeden dostał w mordę, bo chciał coś pierdolić do mnie",
+            start: 0.0,
+            end: 3.31,
+          },
+          {
+            text: "To się działo gdzieś, na Dzikim Wschodzie",
+            start: 3.31,
+            end: 6.12,
+          },
+          {
+            text: "Nie przeszkadzał nam brak auta, bo się tankowało co dzień",
+            start: 6.12,
+            end: 9.13,
+          },
+          {
+            text: "A po drodze się gadało o zegarkach i o modzie",
+            start: 9.13,
+            end: 11.83,
+          },
+          {
+            text: "A jak chciało się coś nagrać, to studio było pod nosem",
+            start: 11.83,
+            end: 15.41,
+          }
+        ],
+      }
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays

@@ -2284,4 +2284,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 75,
+    day: 75,
+    title: "Miłość w Zakopanem",
+    artist: "Sławomir",
+    audioSrc: "/Klasyki/Sławomir/71_Miłość_w_Zakopanem.mp3",
+    youtubeId: "n2hJA78YuWw",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Lecz to w ojczyźnie właśnie nam się przydarzyła",
+            start: 0.0,
+            end: 5.78,
+          },
+          {
+            text: "Miłość, miłość w Zakopanem",
+            start: 5.78,
+            end: 8.9,
+          },
+          {
+            text: "Polewamy się szampanem",
+            start: 8.9,
+            end: 12.35,
+          },
+          {
+            text: "Rycerzem jestem ja, a ty królową nocy",
+            start: 12.35,
+            end: 17.9,
+          },
+          {
+            text: "Miłość żarzy w twoje oczy",
+            start: 17.9,
+            end: 20.72,
+          },
+        ],
+      },
+    ],
+  },
 ];
