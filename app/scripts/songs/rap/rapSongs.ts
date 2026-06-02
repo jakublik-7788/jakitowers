@@ -2881,6 +2881,46 @@ export const rapSongs: Song[] = [
       }
     ],
   },
+  {
+    id: 76,
+    day: 76,
+    title: "Chłopaki nie płaczą",
+    artist: "Bedoes 2115, Kubi Producent, Taco Hemingway",
+    audioSrc: "/Rap/Bedoes/356_Chłopaki_nie_płaczą.mp3",
+    youtubeId: "wakbJpklQtI",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Na to nie jest bracie za późno",
+            start: 0.0,
+            end: 4.01,
+          },
+          {
+            text: "Też kiedyś dostałem w mordę i miałem złamaną rękę",
+            start: 4.01,
+            end: 6.57,
+          },
+          {
+            text: "Też kiedyś dostałem kosza i miałem złamane serce",
+            start: 6.57,
+            end: 9.5,
+          },
+          {
+            text: "Też kiedyś było źle, też kiedyś było słabo",
+            start: 9.5,
+            end: 14.48,
+          },
+          {
+            text: "Też kiedyś dostałem w mordę i miałem złamaną rękę",
+            start: 14.48,
+            end: 16.77,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays

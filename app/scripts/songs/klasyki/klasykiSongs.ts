@@ -2324,4 +2324,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 76,
+    day: 76,
+    title: "Kamień z Napisem Love",
+    artist: "Enej",
+    audioSrc: "/Klasyki/Enej/70_Kamień_z_Napisem_Love.mp3",
+    youtubeId: "vBj5P71Mci4",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Dałbym tobie kwiatów nawet cały kosz",
+            start: 0.0,
+            end: 4.26,
+          },
+          {
+            text: "I tak kochałabyś i pogłaskałabyś",
+            start: 4.26,
+            end: 9.99,
+          },
+          {
+            text: "Potem z głodu łokcie będę gryźć",
+            start: 9.99,
+            end: 14.69,
+          },
+          {
+            text: "Dałem Ci kamień z wielkim Love",
+            start: 14.69,
+            end: 17.24,
+          },
+          {
+            text: "No bo kwiaty szybko schną",
+            start: 17.24,
+            end: 20.02,
+          },
+        ],
+      },
+    ],
+  },
 ];
