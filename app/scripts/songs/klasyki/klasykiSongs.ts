@@ -2364,4 +2364,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 77,
+    day: 77,
+    title: "W piwnicy u dziadka",
+    artist: "Happysad",
+    audioSrc: "/Klasyki/Happysad/114_W_piwnicy_u_dziadka.mp3",
+    youtubeId: "WRdLw-vnwqo",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "A mróz trzaskał jak bat.",
+            start: 0.0,
+            end: 3.2,
+          },
+          {
+            text: "No a jeśli wychylaliśmy nosa",
+            start: 3.2,
+            end: 6.7,
+          },
+          {
+            text: "No to tylko na moment nad staw",
+            start: 6.7,
+            end: 10,
+          },
+          {
+            text: "A co by rybom podać tlen",
+            start: 10,
+            end: 12.95,
+          },
+          {
+            text: "No ale póki jeszcze był dzień wracaliśmy pod dach.",
+            start: 12.95,
+            end: 17.2,
+          },
+        ],
+      },
+    ],
+  },
 ];

@@ -2921,6 +2921,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 77,
+    day: 77,
+    title: "Problemy Luxusowe",
+    artist: "Baba Hassan, Pusher, Oska030, @atutowy, Polski Bandyta",
+    audioSrc: "/Rap/BabaHassan/355_Problemy_Luxusowe.mp3",
+    youtubeId: "-TdBCs7E0yE",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Niby roszpunka z niej, to całą noc ciągnie ją za te warkocze",
+            start: 0.0,
+            end: 3.69,
+          },
+          {
+            text: "Każdy z nas prawdziwy jest",
+            start: 3.69,
+            end: 5.41,
+          },
+          {
+            text: "Żaden scenariusz to nie bracia Mroczek",
+            start: 5.41,
+            end: 7.27,
+          },
+          {
+            text: "Chcemy wyjść, a ty chcesz wejść, na ulicy jebiesz tylko moczem",
+            start: 7.27,
+            end: 10.67,
+          },
+          {
+            text: "Ciroc a nie Soplica, policja nas tu ściga",
+            start: 10.67,
+            end: 14.58,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
