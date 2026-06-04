@@ -2961,6 +2961,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 78,
+    day: 78,
+    title: "I Took A Pill In Remiza",
+    artist: "Deemz, GOMBAO 33",
+    audioSrc: "/Rap/Deemz/372_I_Took_A_Pill_In_Remiza.mp3",
+    youtubeId: "mHPGwzB7kR8",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Browar, wódka, refill, woda",
+            start: 0.0,
+            end: 3.58,
+          },
+          {
+            text: "Jestem smakoszem kebsów, no bo to moja metoda na głoda",
+            start: 3.58,
+            end: 7.08,
+          },
+          {
+            text: "Ona chce centymetrów (dużo)",
+            start: 7.08,
+            end: 9.52,
+          },
+          {
+            text: "Dzwonię do Biesiadowa",
+            start: 9.52,
+            end: 11.39,
+          },
+          {
+            text: "52 cm, szynka, salami 30 PLN",
+            start: 11.39,
+            end: 14.89,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays

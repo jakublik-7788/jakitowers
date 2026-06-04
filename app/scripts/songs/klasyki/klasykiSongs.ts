@@ -2404,4 +2404,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+      id: 78,
+      day: 78,
+      title: "Bez znieczulenia",
+      artist: "Happysad",
+      audioSrc: "/Klasyki/Happysad/115_Bez_znieczulenia.mp3",
+      youtubeId: "lWV6CKrj1e4",
+      lyrics: [
+        {
+          lineIndex: 0,
+          words: [
+            {
+              text: "Hej, ja przed Tobą się rozbieram",
+              start: 0.0,
+              end: 6.96,
+            },
+            {
+              text: "Zrzucam zmięte, brudne myśli",
+              start: 6.96,
+              end: 15.14,
+            },
+            {
+              text: "I przed Tobą umieram",
+              start: 15.14,
+              end: 21.14,
+            },
+            {
+              text: " Chore serce otwieram bez znieczulenia",
+              start: 21.14,
+              end: 34.5,
+            },
+            {
+              text: "Hej, ja przed Tobą się rozklejam",
+              start: 34.5,
+              end: 38.8,
+            },
+          ],
+        },
+      ],
+    },
 ];
