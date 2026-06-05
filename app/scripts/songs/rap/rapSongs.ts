@@ -3001,6 +3001,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 79,
+    day: 79,
+    title: "Kontrola Jakości",
+    artist: "Paluch, Szpaku",
+    audioSrc: "/Rap/Paluch/295_Kontrola_Jakości.mp3",
+    youtubeId: "cVv2ZOXVYkQ",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Znam Twego producenta, nie rozliczasz się za bity",
+            start: 0.0,
+            end: 2.92,
+          },
+          {
+            text: "Błaźnie, zamknij mordę, jesteś pusty, a nie chytry",
+            start: 2.92,
+            end: 6.21,
+          },
+          {
+            text: "Ważne, by nie czuli głodu bliscy, gdy sam jesteś syty",
+            start: 6.21,
+            end: 9.05,
+          },
+          {
+            text: "Ja wolę być biedny, niż mieć tylko siano (tylko siano)",
+            start: 9.05,
+            end: 12.7,
+          },
+          {
+            text: "Prosta maksyma dla wszystkich ziomali",
+            start: 12.7,
+            end: 15.89,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays

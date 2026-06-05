@@ -2444,4 +2444,44 @@ export const klasykiSongs: Song[] = [
         },
       ],
     },
+    {
+    id: 79,
+    day: 79,
+    title: "Ta sama chwila",
+    artist: "Bajm",
+    audioSrc: "/Klasyki/Bajm/84_Ta_sama_chwila.mp3",
+    youtubeId: "RgunsXL9Lo0",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Nie odnajdzie więcej nas, ta sama chwila",
+            start: 0.0,
+            end: 9.89,
+          },
+          {
+            text: "Nie odnajdzie więcej nas, ta sama chwila",
+            start: 9.89,
+            end: 21.98,
+          },
+          {
+            text: "Niech każdy dzień dodaje nam sił",
+            start: 21.98,
+            end: 29.64,
+          },
+          {
+            text: "Może znajdziemy siebie znów",
+            start: 29.64,
+            end: 39.56,
+          },
+          {
+            text: "Nie odnajdzie więcej nas, ta sama chwila",
+            start: 39.56,
+            end: 49.44,
+          },
+        ],
+      },
+    ],
+  },
 ];
