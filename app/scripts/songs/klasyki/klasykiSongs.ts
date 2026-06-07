@@ -2484,4 +2484,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 80,
+    day: 80,
+    title: "Ona Tańczy Dla Mnie",
+    artist: "Weekend",
+    audioSrc: "/Klasyki/Weekend/74_Ona_Tańczy_Dla_Mnie.mp3",
+    youtubeId: "JvxG3zl_WhU",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "I w sercu schowam na dnie, bo...",
+            start: 0.0,
+            end: 6.31,
+          },
+          {
+            text: "Ja uwielbiam ją, ona tu jest",
+            start: 6.31,
+            end: 10.88,
+          },
+          {
+            text: "I tańczy dla mnie",
+            start: 10.88,
+            end: 13.46,
+          },
+          {
+            text: "Bo dobrze to wie, że porwę ją",
+            start: 13.46,
+            end: 17.94,
+          },
+          {
+            text: "I w sercu schowam na dnie",
+            start: 17.94,
+            end: 20.05,
+          },
+        ],
+      },
+    ],
+  },
 ];

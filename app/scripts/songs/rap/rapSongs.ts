@@ -3041,6 +3041,37 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 80,
+    day: 80,
+    title: "ADHD",
+    artist: "OKI, Taco Hemingway",
+    audioSrc: "/Rap/OKI/240_ADHD.mp3",
+    youtubeId: "mQ7h1ujKiG4",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Poryty bez muzyki (ha), to już są moje tiki (hu)",
+            start: 0.0,
+            end: 3.21,
+          },
+          {
+            text: "Ona widzi we mnie ADHD, ja w głowie mam melodyjki (ej)",
+            start: 3.21,
+            end: 6.76,
+          },
+          {
+            text: "Ona widzi we mnie ADHD, ja w głowie mam linijki (ej)",
+            start: 6.76,
+            end: 10.55,
+          },
+          { text: "Tylko muzę w głowie mam i ADHD", start: 10.55, end: 13.93 },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
