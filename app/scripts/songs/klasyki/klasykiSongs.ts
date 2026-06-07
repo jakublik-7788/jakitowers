@@ -2524,4 +2524,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 81,
+    day: 81,
+    title: "Kocham wolność",
+    artist: "Chłopcy z Placu Broni",
+    audioSrc: "/Klasyki/Chłopcy z Placu Broni/77_Kocham_wolność.mp3",
+    youtubeId: "nYMiNuJJyYM",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Tak niewiele słyszałem",
+            start: 0.0,
+            end: 3.59,
+          },
+          {
+            text: "Tak niewiele potrafię",
+            start: 3.59,
+            end: 8.23,
+          },
+          {
+            text: "Wolność, kocham i rozumiem",
+            start: 8.23,
+            end: 10.86,
+          },
+          {
+            text: "Wolności, oddać nie umiem",
+            start: 10.86,
+            end: 14.41,
+          },
+          {
+            text: "Wolność, kocham i rozumiem",
+            start: 14.41,
+            end: 17.12,
+          },
+        ],
+      },
+    ],
+  },
 ];

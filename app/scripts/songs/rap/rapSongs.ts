@@ -3072,6 +3072,42 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+   {
+    id: 81,
+    day: 81,
+    title: "Jungle Boyz",
+    artist: "Malik Montana",
+    audioSrc: "/Rap/MalikMontana/239_JungleBoyz.mp3",
+    youtubeId: "yq3hsG4BBvc",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Gdzie nie pójdę, wszędzie obserwacja",
+            start: 0.0,
+            end: 2.23,
+          },
+          { text: "ABW, przestępczość gospodarcza", start: 2.23, end: 4.43 },
+          {
+            text: "VAT się kręci, tak rząd sie okrada",
+            start: 4.43,
+            end: 6.66,
+          },
+          {
+            text: "Procenty, lichwa, mieszkania pod zastaw",
+            start: 6.66,
+            end: 9.05,
+          },
+          {
+            text: "Ja, ich hör' sie labern, doch ist alles egal",
+            start: 9.05,
+            end: 12.55,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
