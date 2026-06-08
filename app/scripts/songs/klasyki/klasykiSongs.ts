@@ -2564,4 +2564,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 82,
+    day: 82,
+    title: "Bal wszystkich świętych",
+    artist: "Budka Suflera",
+    audioSrc: "/Klasyki/Budka Suflera/92_Bal_wszystkich_świętych.mp3",
+    youtubeId: "kE87oI5rdew",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Lub o tydzień cofnąć czas, ale nie da się",
+            start: 0.0,
+            end: 7.65,
+          },
+          {
+            text: "Chociaż samotności smak aż do bolu znam",
+            start: 7.65,
+            end: 15.85,
+          },
+          {
+            text: "Kiedy innych niedziel brak, trudno co mi tam...",
+            start: 15.85,
+            end: 25.45,
+          },
+          {
+            text: "Wszyscy święci balują w niebie",
+            start: 25.45,
+            end: 29.35,
+          },
+          {
+            text: "Złoty sypie się kurz",
+            start: 29.35,
+            end: 33.4,
+          },
+        ],
+      },
+    ],
+  },
 ];

@@ -3108,6 +3108,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 82,
+    day: 82,
+    title: "Jolie Jolie",
+    artist: "Blacha 2115, Venom Valentino",
+    audioSrc: "/Rap/Blacha/254_Jolie_Jolie.mp3",
+    youtubeId: "2eMXuFdh8Vw",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "I nie wiem, jak ma ci powiedzieć inaczej",
+            start: 0.0,
+            end: 2.13,
+          },
+          {
+            text: "Więc śpiewam pijany",
+            start: 2.13,
+            end: 3.11,
+          },
+          {
+            text: "Jesteś taka Jolie Jolie, Bela Bela, hej",
+            start: 3.11,
+            end: 6.13,
+          },
+          {
+            text: "(Na moich ustach Twój błyszczyk)",
+            start: 6.13,
+            end: 7.48,
+          },
+          {
+            text: "Jolie Jolie, Bela Bela, hej",
+            start: 7.48,
+            end: 9.94,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
