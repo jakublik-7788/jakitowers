@@ -3148,6 +3148,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+      id: 83,
+      day: 83,
+      title: "Twerk",
+      artist: "Białas, Tomb, Wac Toja, Solar, Koldi",
+      audioSrc: "/Rap/Bialas/311_Twerk.mp3",
+      youtubeId: "RnFunBmZQ70",
+      lyrics: [
+        {
+          lineIndex: 0,
+          words: [
+            {
+              text: "Chce zgubić swego pantofelka",
+              start: 0.0,
+              end: 2.28,
+            },
+            {
+              text: "Chce skraść twój klucz do serca",
+              start: 2.28,
+              end: 4.79,
+            },
+            {
+              text: "Potem wyniszczy Cię jak salmonella",
+              start: 4.79,
+              end: 6.83,
+            },
+            {
+              text: "Ej płać, cały bar w kolejkach",
+              start: 6.83,
+              end: 9.9,
+            },
+            {
+              text: "Tu nikt nie płacze, to nie koncert Drake'a",
+              start: 9.9,
+              end: 11.96,
+            },
+          ],
+        },
+      ],
+    },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays

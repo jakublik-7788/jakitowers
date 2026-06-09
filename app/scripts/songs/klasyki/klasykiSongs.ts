@@ -2604,4 +2604,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 83,
+    day: 83,
+    title: "Wypijmy za to",
+    artist: "Ich Troje",
+    audioSrc: "/Klasyki/Ich Troje/118_Wypijmy_Za_To__.mp3",
+    youtubeId: "YL0N1ARFrsA",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "I będzie tylko ze mną",
+            start: 0.0,
+            end: 2.29,
+          },
+          {
+            text: "Przez wszystkie dni i noce",
+            start: 2.29,
+            end: 4.5,
+          },
+          {
+            text: "Zostaniesz sam",
+            start: 4.5,
+            end: 6.07,
+          },
+          {
+            text: "Sam siebie będziesz miał",
+            start: 6.07,
+            end: 9.85,
+          },
+          {
+            text: "I kochał",
+            start: 9.85,
+            end: 11.03,
+          },
+        ],
+      },
+    ],
+  },
 ];
