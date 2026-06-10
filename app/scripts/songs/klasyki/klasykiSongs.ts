@@ -2644,4 +2644,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 84,
+    day: 84,
+    title: "Bo jesteś ty",
+    artist: "Krzysztof Krawczyk",
+    audioSrc: "/Klasyki/Krzysztof Krawczyk/124_Bo_jesteś_Ty.mp3",
+    youtubeId: "vVMvZFomaeY",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Chciałbym tak trwać nawet tysiąc lat",
+            start: 0.0,
+            end: 6.72,
+          },
+          {
+            text: "♪",
+            start: 6.72,
+            end: 9.63,
+          },
+          {
+            text: "Bo jesteś Ty",
+            start: 9.63,
+            end: 13.43,
+          },
+          {
+            text: "Znów przy mnie budzisz się",
+            start: 13.43,
+            end: 17.76,
+          },
+          {
+            text: "Bo jesteś Ty",
+            start: 17.76,
+            end: 22.16,
+          },
+        ],
+      },
+    ],
+  },
 ];

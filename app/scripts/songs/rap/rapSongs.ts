@@ -3188,6 +3188,46 @@ export const rapSongs: Song[] = [
         },
       ],
     },
+    {
+    id: 84,
+    day: 84,
+    title: "BALI",
+    artist: "Gedz",
+    audioSrc: "/Rap/Gedz/381_BALI.mp3",
+    youtubeId: "C29_VoRrnss",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ja zabiorę cię wyżej, mówią mi Gagarin",
+            start: 0.0,
+            end: 3.42,
+          },
+          {
+            text: "W głowie rodeo jak Travis",
+            start: 3.42,
+            end: 5.48,
+          },
+          {
+            text: "Myślę o rzeczach, których nie da się naprawić",
+            start: 5.48,
+            end: 7.68,
+          },
+          {
+            text: "Ty chciałabyś móc się bawić",
+            start: 7.68,
+            end: 9.59,
+          },
+          {
+            text: "Ale od rana tylko sprawy, sprawy, sprawy",
+            start: 9.59,
+            end: 11.87,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
