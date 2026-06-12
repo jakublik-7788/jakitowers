@@ -2724,4 +2724,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+      id: 86,
+      day: 86,
+      title: "Nie stało się nic",
+      artist: "Robert Gawlinski",
+      audioSrc: "/Klasyki/RobertGawlinski/42_Nie_stało_się_nic.mp3",
+      youtubeId: "uMCqZFXBU8s",
+      lyrics: [
+        {
+          lineIndex: 0,
+          words: [
+            {
+              text: "Tańczę, wódkę piję",
+              start: 0.0,
+              end: 4.37,
+            },
+            {
+              text: "Może dziś to będziesz ty",
+              start: 4.37,
+              end: 7.83,
+            },
+            {
+              text: "Przecież mama cię nie zbije",
+              start: 7.83,
+              end: 12.25,
+            },
+            {
+              text: "Jesteśmy tu, ludzi tłum",
+              start: 12.25,
+              end: 16.63,
+            },
+            {
+              text: "A myśli dookoła",
+              start: 16.63,
+              end: 20.99,
+            },
+          ],
+        },
+      ],
+    },
 ];

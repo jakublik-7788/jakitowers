@@ -3268,6 +3268,46 @@ export const rapSongs: Song[] = [
         }
       ]
     },
+    {
+        id: 86,
+        day: 86,
+        title: "Afryka",
+        artist: "Szpaku, PSR",
+        audioSrc: "/Rap/Szpaku/279_Afryka.mp3",
+        youtubeId: "3K_3HBhbOrY",
+        lyrics: [
+          {
+            lineIndex: 0,
+            words: [
+              {
+                text: "To safari pełne lwów, za nieśmiałych gubi jak busz",
+                start: 0.0,
+                end: 6.88,
+              },
+              {
+                text: "Dzika Afryka, nocami susz",
+                start: 6.88,
+                end: 9.33,
+              },
+              {
+                text: "Gibony, małpki, węże (u, a) - nasze chwilowe szczęście (u, u, a)",
+                start: 9.33,
+                end: 14.47,
+              },
+              {
+                text: "(Ooo) tu rządzi forsa, gdzie jest Wasz Bóg?",
+                start: 14.47,
+                end: 18.48,
+              },
+              {
+                text: "To safari pełne lwów, za nieśmiałych gubi jak busz",
+                start: 18.48,
+                end: 25.19,
+              },
+            ],
+          },
+        ],
+      },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
