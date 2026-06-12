@@ -3228,6 +3228,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+      "id": 85,
+      "day": 85,
+      "title": "Café Belga",
+      "artist": "Taco Hemingway, Borucci",
+      "audioSrc": "/Rap/TacoHemingway/CafeBelga.mp3",
+      "youtubeId": "Hyb9wX5Aecc",
+      "lyrics": [
+        {
+          "lineIndex": 0,
+          "words": [
+            {
+              "text": "Wypili moją krew na hejnał, nie pierwszy raz",
+              "start": 0.0,
+              "end": 5.74
+            },
+            {
+              "text": "Przerzucam sobie cash na PayPal",
+              "start": 5.74,
+              "end": 8.3
+            },
+            {
+              "text": "I uciekam, bo mnie ciągle goni świat",
+              "start": 8.3,
+              "end": 11.33
+            },
+            {
+              "text": "Wypili moją krew na hejnał, nie pierwszy raz",
+              "start": 11.33,
+              "end": 16.05
+            },
+            {
+              "text": "Poleciałem pisać wersy w Café Belga",
+              "start": 16.05,
+              "end": 18.14
+            }
+          ]
+        }
+      ]
+    },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays

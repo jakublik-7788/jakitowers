@@ -2684,4 +2684,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 85,
+    day: 85,
+    title: "Za ostatni grosz",
+    artist: "Budka Suflera",
+    audioSrc: "/Klasyki/Budka Suflera/93_Za_ostatni_grosz.mp3",
+    youtubeId: "PYpg4BypJoA",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Wczoraj blekitny wiatr, dzisiaj duszny, zly sen",
+            start: 0.0,
+            end: 5.25,
+          },
+          {
+            text: "Z drugiej strony mych snów, wszystko lepszy ma smak",
+            start: 5.25,
+            end: 10.16,
+          },
+          {
+            text: "Bo w powietrzu jest luz i muzyka wciąż gra",
+            start: 10.16,
+            end: 18.5,
+          },
+          {
+            text: "Za ostatni grosz kupię dziś chociaż cień tamtych dni",
+            start: 18.5,
+            end: 29,
+          },
+          {
+            text: "Za ostatni grosz wino z zielonych lat chcę znów pić",
+            start: 29,
+            end: 36.3,
+          },
+        ],
+      },
+    ],
+  },
 ];
