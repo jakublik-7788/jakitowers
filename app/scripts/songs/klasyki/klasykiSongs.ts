@@ -2764,4 +2764,44 @@ export const klasykiSongs: Song[] = [
         },
       ],
     },
+    {
+    id: 87,
+    day: 87,
+    title: "Przekorny Los",
+    artist: "Akcent",
+    audioSrc: "/Klasyki/Akcent/66_Przekorny_Los.mp3",
+    youtubeId: "MWilsN_5Y-s",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Cuda przecież się zdarzają i marzenia się spełniają",
+            start: 0.0,
+            end: 3.72,
+          },
+          {
+            text: "Los przekorny znowu miłość da",
+            start: 3.72,
+            end: 6.33,
+          },
+          {
+            text: "Paraparapapa, ooo, ooo, aaa",
+            start: 6.33,
+            end: 13.55,
+          },
+          {
+            text: "Paraparapapa, ooo, ooo, aaa",
+            start: 13.55,
+            end: 37.52,
+          },
+          {
+            text: "Ludzie mówią, że po nocy wstaje dzień",
+            start: 37.52,
+            end: 40.87,
+          },
+        ],
+      },
+    ],
+  },
 ];

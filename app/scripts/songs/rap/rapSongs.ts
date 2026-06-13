@@ -3308,6 +3308,46 @@ export const rapSongs: Song[] = [
           },
         ],
       },
+      {
+    id: 87,
+    day: 87,
+    title: "Rose Moët",
+    artist: "Malik Montana, Diho",
+    audioSrc: "/Rap/MalikMontana/333_Rose_Moët.mp3",
+    youtubeId: "Mg5aYjgqrMU",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Czasem rozjebany łeb jest wnioskiem z głupiej kłótni",
+            start: 0.0,
+            end: 3.37,
+          },
+          {
+            text: "Jak mam za krótkie ręce, to mu jebne z butli",
+            start: 3.37,
+            end: 6.38,
+          },
+          {
+            text: "Byli tacy cwani, zgaszeni jak żarówki",
+            start: 6.38,
+            end: 9.18,
+          },
+          {
+            text: "Mój mały kolega, robi steki z karkówki",
+            start: 9.18,
+            end: 12.36,
+          },
+          {
+            text: "Czasem krwią na ścianie abstrakcyjne są malunki",
+            start: 12.36,
+            end: 15.31,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
