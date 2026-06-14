@@ -3348,6 +3348,46 @@ export const rapSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 88,
+    day: 88,
+    title: "YoMenik",
+    artist: "Belmondo, GSP, YoMenik",
+    audioSrc: "/Rap/Belmondo/357_YoMenik.mp3",
+    youtubeId: "miwyMVT_zU0",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "YoMenik, znowu upaleni",
+            start: 0.0,
+            end: 3.46,
+          },
+          {
+            text: "YoMenik, menik, menik, pakuj hajs do kieszeni, YoMenik",
+            start: 3.46,
+            end: 7.44,
+          },
+          {
+            text: "O rety, kotlety, na stole leży paka Mary, Mary",
+            start: 7.44,
+            end: 11.63,
+          },
+          {
+            text: "Dajcieże mnie wstać z pakamery",
+            start: 11.63,
+            end: 14.08,
+          },
+          {
+            text: "Dzwonię do kolegi, to YoMenik, Co tam leci?",
+            start: 14.08,
+            end: 17.19,
+          }
+        ],
+      }
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays

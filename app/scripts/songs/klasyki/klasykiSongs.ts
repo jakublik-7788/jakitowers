@@ -2804,4 +2804,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 88,
+    day: 88,
+    title: "King Bruce Lee Karate Mistrz",
+    artist: "Franek Kimono",
+    audioSrc: "/Klasyki/Franek Kimono/49_King_Bruce_Lee_Karate_Mistrz.mp3",
+    youtubeId: "ePgCs1XkhPo",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Ja jestem King Bruce Lee Karate Mistrz",
+            start: 0.0,
+            end: 4.85,
+          },
+          {
+            text: "King Bruce Lee Karate Mistrz",
+            start: 4.85,
+            end: 11.74,
+          },
+          {
+            text: "Już Ci mówiłem, mała, nie rycz",
+            start: 11.74,
+            end: 15.32,
+          },
+          {
+            text: "Mam w sobie dzikość żółtej pantery",
+            start: 15.32,
+            end: 19.16,
+          },
+          {
+            text: "W tej dyskotece nie ma frajera",
+            start: 19.16,
+            end: 23.0,
+          },
+        ],
+      },
+    ],
+  },
 ];
