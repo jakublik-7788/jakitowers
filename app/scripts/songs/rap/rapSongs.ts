@@ -3388,6 +3388,46 @@ export const rapSongs: Song[] = [
       }
     ],
   },
+  {
+    "id": 89,
+    "day": 89,
+    "title": "RONDO",
+    "artist": "Asster, Malik Montana",
+    "audioSrc": "/Rap/Asster/Rondo.mp3",
+    "youtubeId": "VgiX6h4bG1s",
+    "lyrics": [
+      {
+        "lineIndex": 0,
+        "words": [
+          {
+            "text": "Asster, słyszysz?",
+            "start": 0.0,
+            "end": 2.69
+          },
+          {
+            "text": "Mordo, to jest paka na szyi",
+            "start": 2.69,
+            "end": 4.5
+          },
+          {
+            "text": "Okej, jak grać, gonię hajs",
+            "start": 4.5,
+            "end": 7.07
+          },
+          {
+            "text": "Za nim gonię, gonię cały czas",
+            "start": 7.07,
+            "end": 8.55
+          },
+          {
+            "text": "Za nim powiem mamie co to strach",
+            "start": 8.55,
+            "end": 10.11
+          }
+        ]
+      }
+    ]
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays

@@ -2844,4 +2844,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+      id: 89,
+      day: 89,
+      title: "Urke",
+      artist: "Wilki",
+      audioSrc: "/Klasyki/Wilki/Urke.mp3",
+      youtubeId: "8YKAHgwLEMg",
+      lyrics: [
+        {
+          lineIndex: 0,
+          words: [
+            {
+              text: "Zaufaj przeznaczeniu",
+              start: 0.0,
+              end: 4.55,
+            },
+            {
+              text: "Pijemy za lepszy czas",
+              start: 4.55,
+              end: 6.15,
+            },
+            {
+              text: "Za każdy dzień, który w życiu trwa",
+              start: 6.15,
+              end: 10.89,
+            },
+            {
+              text: "Za każde wspomnienie co żyje w nas",
+              start: 10.89,
+              end: 14.86,
+            },
+            {
+              text: "Niech żyje jeszcze przez chwilę",
+              start: 14.86,
+              end: 19.22,
+            },
+          ],
+        },
+      ],
+    },
 ];
