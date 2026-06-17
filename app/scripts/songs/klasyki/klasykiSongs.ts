@@ -2884,4 +2884,44 @@ export const klasykiSongs: Song[] = [
         },
       ],
     },
+    {
+    id: 90,
+    day: 90,
+    title: "Co mi Panie dasz",
+    artist: "Bajm",
+    audioSrc: "/Klasyki/Bajm/81_Co_mi_Panie_dasz.mp3",
+    youtubeId: "RrAn5pGqu_w",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Tu wszystko wypada",
+            start: 0.0,
+            end: 3.1,
+          },
+          {
+            text: "Co mi, Panie, dasz",
+            start: 3.1,
+            end: 6.38,
+          },
+          {
+            text: "W ten niepewny czas?",
+            start: 6.38,
+            end: 9.35,
+          },
+          {
+            text: "Jakie słowa ukołyszą",
+            start: 9.35,
+            end: 11.25,
+          },
+          {
+            text: "Moją duszę, moją przyszłość",
+            start: 11.25,
+            end: 12.76,
+          },
+        ],
+      },
+    ],
+  },
 ];
