@@ -2924,4 +2924,44 @@ export const klasykiSongs: Song[] = [
       },
     ],
   },
+  {
+    id: 91,
+    day: 91,
+    title: "Prawy Do Lewego",
+    artist: "Kayah, Goran Bregović",
+    audioSrc: "/Klasyki/Kayah/54_Prawy_Do_Lewego.mp3",
+    youtubeId: "cKF2GjRAUtE",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Balony pani Mani",
+            start: 0.0,
+            end: 4.28,
+          },
+          {
+            text: "Racja brachu",
+            start: 4.28,
+            end: 5.7,
+          },
+          {
+            text: "Wypijmy za to",
+            start: 5.7,
+            end: 7.5,
+          },
+          {
+            text: "Kto z nami nie wypije",
+            start: 7.5,
+            end: 8.81,
+          },
+          {
+            text: "Tego we dwa kije",
+            start: 8.81,
+            end: 10.15,
+          },
+        ],
+      },
+    ],
+  },
 ];

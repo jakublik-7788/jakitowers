@@ -3468,6 +3468,47 @@ export const rapSongs: Song[] = [
       }
     ]
   },
+   {
+    id: 91,
+    day: 91,
+    title: "Tak naprawdę",
+    artist:
+      "club2020, PRO8L3M, Łajzol, HAŁASTRA, Avi, Taco Hemingway, Dwa Sławy, Gruby Mielzky",
+    audioSrc: "/Rap/club2020/369_Tak_naprawdę.mp3",
+    youtubeId: "WRhcHjY0WXc",
+    lyrics: [
+      {
+        lineIndex: 0,
+        words: [
+          {
+            text: "Tak szczerze to chuj mnie czy jeździsz se mazdą czy starym ogórkiem",
+            start: 0.0,
+            end: 3.35,
+          },
+          {
+            text: "Czy może G-klasą? Chociaż nigdy w życiu nie miałeś pod górkę",
+            start: 3.35,
+            end: 7.08,
+          },
+          {
+            text: "Tak serio, gdy pytasz; Wiesz kim ja jestem?",
+            start: 7.08,
+            end: 9.29,
+          },
+          {
+            text: "To kurwa nie wiem kim jesteś",
+            start: 9.29,
+            end: 11.15,
+          },
+          {
+            text: "Bo jestem gościem co wie czego chce no i wie kogo nie chce",
+            start: 11.15,
+            end: 14.34,
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // Opcjonalnie możesz dodać też eksport totalRapDays
